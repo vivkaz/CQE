@@ -26,6 +26,11 @@ See the example in [example.py](example.py) as well. Run
 ```python
 python3 example.py
 ```
+you can also install the package using on the root directory of the package. 
+```
+python setup.py install
+
+```
 ### File and folder structure 
 | File                                                                          | Description                                                                                                                                                                                                  |
 |-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -55,7 +60,8 @@ The evaluation data can be found in `/data/formatted_test_set` and consists of 5
 
 ### Units
 The units used for normalization of the unit of an extracted quantity are stored in the [unit.json](data/unit.json) . Each of the 531 units has surfaces, symbols, prefixes, entity, URI, dimensions and currency_code. For composing the file, the list of units from [quantulum3](https://github.com/nielstron/quantulum3/blob/dev/quantulum3/units.json), the list of units from [Wikipedia](https://en.wikipedia.org/wiki/Template:Convert/list_of_units), the surfaces from [Microsoft.Recognizers.Text](https://github.com/microsoft/Recognizers-Text/blob/master/Patterns/English/English-NumbersWithUnit.yaml) ,the [UCUM](https://github.com/lhncbc/ucum-lhc/blob/master/data/ucumDefs.json) units and surfaces and 
-wikipedia page of [units] (https://en.wikipedia.org/wiki/Template:Convert/list_of_units) were used.
+wikipedia page of [units] (https://en.wikipedia.org/wiki/Template:Convert/list_of_units)
+were used.
 
 Example:
 ```json

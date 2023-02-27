@@ -6,7 +6,7 @@ setup(
     packages=['rule_set', 'evaluation', 'evaluation.gpt-3'],
     url='',
     license='',
-    author='satyaalmasian',
+    author='satyaalmasian,viviankazakova',
     author_email='satya.almasian@gmail.com',
     description='CQE: quantity extractor'
 )
