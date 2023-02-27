@@ -1,0 +1,11 @@
+	P	R	F1	model	type
+0	88.2	86.8	87.5	CQE-Numparser	value
+1	87.4	86.0	86.7	CQE-Numparser	value+unit
+2	76.9	93.4	84.3	quantulum3	value
+3	65.3	79.3	71.6	quantulum3	value+unit
+4	73.6	90.1	81.0	text-recognizer	value
+5	51.4	62.8	56.5	text-recognizer	value+unit
+6	66.7	79.3	72.5	ccg_nlp	value
+7	47.9	57.0	52.1	ccg_nlp	value+unit
+8	82.6	82.6	82.6	GPT3	value
+9	69.4	69.4	69.4	GPT3	value+unit

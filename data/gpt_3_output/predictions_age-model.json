@@ -1,0 +1,198 @@
+[
+  {
+    "text": "When she was five years old, she learned to ride a bike.",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "This saga is ten years old.",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "I'm only 29 years old!",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "Now, after ninety five years of age, perspectives change.",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "The Great Wall of China is more than 500 years old and extends for more than 5,000 miles.",
+    "quantities": [
+      [
+        ">",
+        " 500",
+        " years",
+        " years",
+        " Great Wall of China"
+      ],
+      [
+        ">",
+        " 5000",
+        " miles",
+        " miles",
+        " Great Wall of China"
+      ]
+    ]
+  },
+  {
+    "text": "She's 60 years old; she was born in May 8, 1945.",
+    "quantities": [
+      [
+        "=",
+        " 60",
+        " years",
+        " year",
+        " She"
+      ],
+      [
+        "= ",
+        "8",
+        " May",
+        " May",
+        " She"
+      ]
+    ]
+  },
+  {
+    "text": "25% of cases are not diagnosed until around 3 years of age.",
+    "quantities": [
+      [
+        "=",
+        " 25",
+        " percent",
+        " percentage",
+        " cases"
+      ]
+    ]
+  },
+  {
+    "text": "When will there be pressure to fulfil a promise that is one year old?",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "It happened when the baby was only ten months old.",
+    "quantities": [
+      [
+        "=",
+        " 10",
+        " months",
+        " months",
+        " baby"
+      ]
+    ]
+  },
+  {
+    "text": "The committee proposal is 8 months old.",
+    "quantities": [
+      [
+        "=",
+        " 8",
+        " months",
+        " month",
+        " proposal"
+      ]
+    ]
+  },
+  {
+    "text": "Aproximately 50% of cases are diagnosed at around eighteen months of age.",
+    "quantities": [
+      [
+        "=",
+        " 50",
+        " percent",
+        " percentage",
+        " cases"
+      ],
+      [
+        "=",
+        " 18",
+        " months",
+        " months",
+        " age"
+      ]
+    ]
+  },
+  {
+    "text": "It is possible, but in 2006 95% of them were younger than three months old.",
+    "quantities": [
+      [
+        "=",
+        " 95",
+        " %",
+        " percentage",
+        " them"
+      ],
+      [
+        "= ",
+        "3",
+        " months",
+        " months",
+        " them"
+      ]
+    ]
+  },
+  {
+    "text": "If we go ahead in December, it will be three weeks old.",
+    "quantities": [
+      [
+        "=",
+        " 3",
+        " week",
+        " weeks",
+        " old"
+      ]
+    ]
+  },
+  {
+    "text": "At 6 weeks of age, one can already celebrate Christmas.",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "A 90 day old utilities bill is quite late.",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "He is about 40 - 50 years old.",
+    "quantities": [
+      [
+        "~",
+        " 40-50",
+        " years",
+        " years",
+        " He"
+      ]
+    ]
+  },
+  {
+    "text": "The patient is a 87 yo man with history of hypertension, GERD, and chronic phase CML.",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "Yo dude!",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "The patient is a man of age 87 with history of hypertension, GERD, and chronic phase CML.",
+    "quantities": [
+      []
+    ]
+  }
+]

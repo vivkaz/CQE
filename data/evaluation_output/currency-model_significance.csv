@@ -1,0 +1,5 @@
+	value	unit	system_b
+0	0.016900000000000026	0.0	quantulum3
+1	0.0675	0.0	text-recognizer
+2	9.999999999998899e-05	0.0	ccg_nlp
+3	0.0	0.0	GPT3

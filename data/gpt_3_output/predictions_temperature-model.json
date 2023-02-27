@@ -1,0 +1,407 @@
+[
+  {
+    "text": "the temperature outside is 40 deg celsius",
+    "quantities": [
+      [
+        "=",
+        " 40",
+        " deg",
+        " degree",
+        " temperature"
+      ]
+    ]
+  },
+  {
+    "text": "its 90 fahrenheit in texas",
+    "quantities": [
+      [
+        "=",
+        " 90",
+        " Fahrenheit",
+        " Fahrenheit",
+        " Texas"
+      ]
+    ]
+  },
+  {
+    "text": "-5 degree fahrenheit",
+    "quantities": [
+      [
+        "=",
+        " -5",
+        " degree",
+        " degree",
+        " Fahrenheit"
+      ]
+    ]
+  },
+  {
+    "text": "6 deg c",
+    "quantities": [
+      [
+        "=",
+        " 6",
+        " deg",
+        " degree",
+        " c"
+      ]
+    ]
+  },
+  {
+    "text": "98.6 degrees f is normal temperature",
+    "quantities": [
+      [
+        "=",
+        " 98.6",
+        " degrees",
+        " degrees",
+        " temperature"
+      ]
+    ]
+  },
+  {
+    "text": "set the temperature to 30 degrees celsius",
+    "quantities": [
+      [
+        "=",
+        " 30",
+        " degrees",
+        " degrees",
+        " celsius"
+      ]
+    ]
+  },
+  {
+    "text": "normal temperature is 98.6 degrees fahrenheit",
+    "quantities": [
+      [
+        "=",
+        " 98.6",
+        " degrees",
+        " degrees",
+        " fahrenheit"
+      ]
+    ]
+  },
+  {
+    "text": "100 degrees f",
+    "quantities": [
+      [
+        "=",
+        " 100",
+        " degrees",
+        " degrees",
+        " f"
+      ]
+    ]
+  },
+  {
+    "text": "20 degrees c",
+    "quantities": [
+      [
+        "=",
+        " 20",
+        " degrees",
+        " degrees",
+        " c"
+      ]
+    ]
+  },
+  {
+    "text": "100.2 degrees farenheit is low",
+    "quantities": [
+      [
+        "=",
+        "100.2",
+        " degrees",
+        " degrees",
+        " farenheit"
+      ]
+    ]
+  },
+  {
+    "text": "10.5 celcius",
+    "quantities": [
+      [
+        "=",
+        " 10.5",
+        " celcius",
+        " celcius",
+        " -"
+      ]
+    ]
+  },
+  {
+    "text": "20 degrees celsius",
+    "quantities": [
+      [
+        "=",
+        " 20",
+        " degrees",
+        " degrees",
+        " Celsius"
+      ]
+    ]
+  },
+  {
+    "text": "20.3 celsius",
+    "quantities": [
+      [
+        "=",
+        " 20.3",
+        " celsius",
+        " celsius",
+        " -"
+      ]
+    ]
+  },
+  {
+    "text": "34.5 celcius",
+    "quantities": [
+      [
+        "=",
+        " 34.5",
+        " celcius",
+        " celcius",
+        " -"
+      ]
+    ]
+  },
+  {
+    "text": "the temperature outside is 98 degrees",
+    "quantities": [
+      [
+        "=",
+        " 98",
+        " degrees",
+        " degrees",
+        " temperature"
+      ]
+    ]
+  },
+  {
+    "text": "set the thermostat to 85°",
+    "quantities": [
+      [
+        "=",
+        " 85",
+        " °",
+        " degree",
+        " thermostat"
+      ]
+    ]
+  },
+  {
+    "text": "raise the temperature by 5 degrees",
+    "quantities": [
+      [
+        "=",
+        " 5",
+        " degrees",
+        " degree",
+        " temperature"
+      ]
+    ]
+  },
+  {
+    "text": "set the temperature to 70 degrees f",
+    "quantities": [
+      [
+        "=",
+        " 70",
+        " degrees",
+        " degrees",
+        " temperature"
+      ]
+    ]
+  },
+  {
+    "text": "raise the temperature by 20 degrees",
+    "quantities": [
+      [
+        "=",
+        " 20",
+        " degrees",
+        " degrees",
+        " temperature"
+      ]
+    ]
+  },
+  {
+    "text": "set the temperature to 100 degrees",
+    "quantities": [
+      [
+        "=",
+        " 100",
+        " degrees",
+        " degrees",
+        " temperature"
+      ]
+    ]
+  },
+  {
+    "text": "keep the temperature at 75 degrees f",
+    "quantities": [
+      [
+        "= ",
+        "75",
+        " degrees",
+        " degrees",
+        " temperature"
+      ]
+    ]
+  },
+  {
+    "text": "let the temperature be at 40 celsius",
+    "quantities": [
+      [
+        "=",
+        " 40",
+        " Celsius",
+        " Celsius",
+        " temperature"
+      ]
+    ]
+  },
+  {
+    "text": "let the temperature be at 50 deg. ",
+    "quantities": [
+      [
+        "=",
+        " 50",
+        " deg",
+        " degree",
+        " temperature"
+      ]
+    ]
+  },
+  {
+    "text": "convert 10 celsius to fahrenheit",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "34.9 centigrate to farenheit",
+    "quantities": [
+      [
+        "=",
+        " 34.9",
+        " centigrate",
+        " centigrade",
+        " -"
+      ]
+    ]
+  },
+  {
+    "text": "convert 200 celsius into fahrenheit",
+    "quantities": [
+      [
+        "=",
+        " 200",
+        " Celsius",
+        " Celsius",
+        " -"
+      ],
+      [
+        "=",
+        " 392",
+        " Fahrenheit",
+        " Fahrenheit",
+        " -"
+      ]
+    ]
+  },
+  {
+    "text": "fahrenheit to celsius 101 fahrenheit is how much celsius",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "50 degrees celsius to fahrenheit",
+    "quantities": [
+      [
+        "=",
+        " 50",
+        " degrees",
+        " degrees",
+        " Celsius"
+      ],
+      [
+        "=",
+        " 50",
+        " Fahrenheit",
+        " Fahrenheit",
+        " Celsius"
+      ]
+    ]
+  },
+  {
+    "text": "could you convert 51 fahrenheit to degrees celsius",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "convert 106 degree fahrenheit to degrees celsius",
+    "quantities": [
+      [
+        "= ",
+        "106",
+        " degree",
+        " degree",
+        " fahrenheit"
+      ]
+
+    ]
+  },
+  {
+    "text": "convert 45 degrees fahrenheit to celsius",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "how to convert - 20 degrees fahrenheit to celsius",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "Jane Doe, 123 Random Street, Cloud City, PA 23456 F Block",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "SCP-173C",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "turn a 45 degrees angle",
+    "quantities": [
+      [
+        "=",
+        " 45",
+        " degrees",
+        " degrees",
+        " angle"
+      ]
+    ]
+  },
+  {
+    "text": "Rotate 90°",
+    "quantities": [
+      [
+        "=",
+        " 90",
+        " °",
+        " degree",
+        " rotate"
+      ]
+    ]
+  }
+]

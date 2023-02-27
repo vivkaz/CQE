@@ -1,0 +1,8327 @@
+{
+  "abkhazian apsar": {
+    "surfaces": [
+      "abkhazian apsar",
+      "apsars"
+    ],
+    "entity": "currency",
+    "URI": "Apsar",
+    "dimensions": [],
+    "symbols": [],
+    "currency_code": "_AA"
+  },
+  "afghan afghani": {
+    "surfaces": [
+      "afghan afghani",
+      "afghani",
+      "afghanis",
+      "afn"
+    ],
+    "entity": "currency",
+    "URI": "Afghani",
+    "dimensions": [],
+    "symbols": [
+      "\u060b"
+    ],
+    "currency_code": "AFN"
+  },
+  "albanian lek": {
+    "surfaces": [
+      "albanian lek",
+      "lek"
+    ],
+    "entity": "currency",
+    "URI": "Lek",
+    "dimensions": [],
+    "symbols": [],
+    "currency_code": "ALL"
+  },
+  "angolan kwanza": {
+    "surfaces": [
+      "angolan kwanza",
+      "angolan kwanzas",
+      "kwanza"
+    ],
+    "entity": "currency",
+    "URI": "Kwanza",
+    "dimensions": [],
+    "symbols": [
+      "kz",
+      "aoa"
+    ],
+    "currency_code": "AOA"
+  },
+  "argentine peso": {
+    "surfaces": [
+      "argentine peso",
+      "argentina peso",
+      "argentine pesos",
+      "argentina pesos"
+    ],
+    "entity": "currency",
+    "URI": "Argentine_peso",
+    "dimensions": [],
+    "symbols": [
+      "ARS",
+      "ars"
+    ],
+    "currency_code": "ARS"
+  },
+  "armenian dram": {
+    "surfaces": [
+      "armenian dram",
+      "dram"
+    ],
+    "entity": "currency",
+    "URI": "Dram",
+    "dimensions": [],
+    "symbols": [],
+    "currency_code": "AMD"
+  },
+  "aruban florin": {
+    "surfaces": [
+      "aruban florin",
+      "aruban florins"
+    ],
+    "entity": "currency",
+    "URI": "Florin",
+    "dimensions": [],
+    "symbols": [
+      "awg",
+      "\u0192"
+    ],
+    "currency_code": "AWG"
+  },
+  "australian dollar": {
+    "surfaces": [
+      "australian dollar",
+      "australian dollars"
+    ],
+    "entity": "currency",
+    "URI": "Australian_dollar",
+    "dimensions": [],
+    "symbols": [
+      "AUD",
+      "aud",
+      "AUD$",
+      "aud$",
+      "AUD $",
+      "aud $",
+      "A$",
+      "A $",
+      "AU$",
+      "AU $"
+    ],
+    "currency_code": "AUD"
+  },
+  "azerbaijani manat": {
+    "surfaces": [
+      "azerbaijani manat"
+    ],
+    "entity": "currency",
+    "URI": "Amanat",
+    "dimensions": [],
+    "symbols": [
+      "azn"
+    ],
+    "currency_code": "AZN"
+  },
+  "bangladeshi taka": {
+    "surfaces": [
+      "bangladeshi taka",
+      "taka",
+      "takas",
+      "bangladeshi takas"
+    ],
+    "entity": "currency",
+    "URI": "Taka",
+    "dimensions": [],
+    "symbols": [
+      "bdt",
+      "\u09f3"
+    ],
+    "currency_code": "BDT"
+  },
+  "belarusian ruble": {
+    "surfaces": [
+      "belarusian ruble",
+      "belarus ruble",
+      "belarusian rouble",
+      "belarus rubles",
+      "belarusian rubles"
+    ],
+    "entity": "currency",
+    "URI": "Belarusian_ruble",
+    "dimensions": [],
+    "symbols": [],
+    "currency_code": "BYN"
+  },
+  "belgian franc": {
+    "surfaces": [
+      "belgian franc",
+      "belgium franc"
+    ],
+    "entity": "currency",
+    "URI": "Belgian_franc",
+    "dimensions": [],
+    "symbols": [
+      "bef",
+      "bi.",
+      "b.fr."
+    ],
+    "currency_code": "BEF"
+  },
+  "bhutanese ngultrum": {
+    "surfaces": [
+      "bhutanese ngultrum"
+    ],
+    "entity": "currency",
+    "URI": "Ngultrum",
+    "dimensions": [],
+    "symbols": [
+      "nu.",
+      "btn"
+    ],
+    "currency_code": "BTN"
+  },
+  "bitcoin": {
+    "surfaces": [
+      "bitcoin",
+      "bitcoins"
+    ],
+    "entity": "currency",
+    "URI": "Bitcoin",
+    "dimensions": [],
+    "symbols": [
+      "\u20bf",
+      "btc",
+      "BTC",
+      "xbt"
+    ],
+    "currency_code": "BTC"
+  },
+  "bolivian boliviano": {
+    "surfaces": [
+      "bolivian boliviano",
+      "bolivia boliviano",
+      "bolivia bolivianos",
+      "bolivian bolivianos"
+    ],
+    "entity": "currency",
+    "URI": "Boliviano",
+    "dimensions": [],
+    "symbols": [
+      "bs.",
+      "bob"
+    ],
+    "currency_code": "BOB"
+  },
+  "bosnia and Herzegovina convertible mark": {
+    "surfaces": [
+      "Bosnia and Herzegovina convertible mark",
+      "bam"
+    ],
+    "entity": "currency",
+    "URI": "Bam",
+    "dimensions": [],
+    "symbols": [],
+    "currency_code": "BAM"
+  },
+  "botswana pula": {
+    "surfaces": [
+      "botswana pula",
+      "pula",
+      "pulas",
+      "botswana pulas"
+    ],
+    "entity": "currency",
+    "URI": "Pula",
+    "dimensions": [],
+    "symbols": [
+      "bwp"
+    ],
+    "currency_code": "BWP"
+  },
+  "brazilian real": {
+    "surfaces": [
+      "brazilian real",
+      "brazilian reals",
+      "real",
+      "reais",
+      "brazil real",
+      "brazil reals"
+    ],
+    "entity": "currency",
+    "URI": "South_African_rand",
+    "dimensions": [],
+    "symbols": [
+      "R$",
+      "BRL",
+      "brl"
+    ],
+    "currency_code": "BRL"
+  },
+  "bulgarian lev": {
+    "surfaces": [
+      "lev",
+      "bulgarian lev",
+      "bulgaria lev",
+      "bulgaria levs",
+      "bulgarian levs"
+    ],
+    "entity": "currency",
+    "URI": "Lev",
+    "dimensions": [],
+    "symbols": [
+      "bgn",
+      "BGN",
+      "\u043b\u0432"
+    ],
+    "currency_code": "BGN"
+  },
+  "cambodian riel": {
+    "surfaces": [
+      "cambodian riel",
+      "cambodia riel",
+      "cambodia riels",
+      "cambodian riels"
+    ],
+    "entity": "currency",
+    "URI": "Riels",
+    "dimensions": [],
+    "symbols": [
+      "khr",
+      "\u17db"
+    ],
+    "currency_code": "KHR"
+  },
+  "canadian dollar": {
+    "surfaces": [
+      "canadian dollar",
+      "canadian dollars"
+    ],
+    "entity": "currency",
+    "URI": "Pound_sterling",
+    "dimensions": [],
+    "symbols": [
+      "CAD",
+      "cad",
+      "CA $",
+      "ca $",
+      "C$",
+      "c$",
+      "C $",
+      "c $"
+    ],
+    "currency_code": "CAD"
+  },
+  "cape verdean escudo": {
+    "surfaces": [
+      "cape verdean escudo"
+    ],
+    "entity": "currency",
+    "URI": "Escudo",
+    "dimensions": [],
+    "symbols": [
+      "cve"
+    ],
+    "currency_code": "CVE"
+  },
+  "cent": {
+    "surfaces": [
+      "cent"
+    ],
+    "entity": "currency",
+    "URI": "Cent_(currency)",
+    "dimensions": [],
+    "symbols": [
+      "\u00a2",
+      "cts",
+      "Ct.",
+      "c"
+    ]
+  },
+  "centavo": {
+    "surfaces": [
+      "centavo"
+    ],
+    "entity": "currency",
+    "URI": "Centavo",
+    "dimensions": [],
+    "symbols": [
+      "\u00a2",
+      "cts",
+      "ctvs",
+      "cvs",
+      "CT",
+      "c"
+    ]
+  },
+  "chilean peso": {
+    "surfaces": [
+      "chilean peso",
+      "chile peso",
+      "chilean pesos",
+      "chile pesos"
+    ],
+    "entity": "currency",
+    "URI": "Chile_peso",
+    "dimensions": [],
+    "symbols": [
+      "clp"
+    ],
+    "currency_code": "CLP"
+  },
+  "chinese yuan": {
+    "surfaces": [
+      "chinese yuan",
+      "yuan",
+      "kuai"
+    ],
+    "entity": "currency",
+    "URI": "Chinese_yuan",
+    "dimensions": [],
+    "symbols": [
+      "\u00a5",
+      "\u5143",
+      "CNY",
+      "rmb"
+    ],
+    "currency_code": "CNY"
+  },
+  "colombian peso": {
+    "surfaces": [
+      "colombian peso",
+      "colombian pesos",
+      "colombia peso",
+      "colombia pesos"
+    ],
+    "entity": "currency",
+    "URI": "Colombian_peso",
+    "dimensions": [],
+    "symbols": [
+      "cop"
+    ],
+    "currency_code": "COP"
+  },
+  "costa rican col\u00f3n": {
+    "surfaces": [
+      "costa rican col\u00f3n",
+      "costa rican col\u00f3ns",
+      "costa rica col\u00f3n",
+      "costa rica col\u00f3ns",
+      "costa rican colon",
+      "costa rican colons",
+      "costa rica colon",
+      "costa rica colons"
+    ],
+    "entity": "currency",
+    "URI": "CostaRicaCol\u00f3n",
+    "dimensions": [],
+    "symbols": [
+      "crc",
+      "\u20a1"
+    ],
+    "currency_code": "CRC"
+  },
+  "croatian kuna": {
+    "surfaces": [
+      "croatian kuna",
+      "croatian kunas"
+    ],
+    "entity": "currency",
+    "URI": "Kuna",
+    "dimensions": [],
+    "symbols": [
+      "kn",
+      "hrk",
+      "HRK"
+    ],
+    "currency_code": "HRK"
+  },
+  "cuban peso": {
+    "surfaces": [
+      "cuban peso",
+      "cuba pesos",
+      "cuban pesos",
+      "cuba peso"
+    ],
+    "entity": "currency",
+    "URI": "Cuba_peso",
+    "dimensions": [],
+    "symbols": [],
+    "currency_code": "CUP"
+  },
+  "czech koruna": {
+    "surfaces": [
+      "czech koruna",
+      "czech crown",
+      "czech korunas"
+    ],
+    "entity": "currency",
+    "URI": "Koruna",
+    "dimensions": [],
+    "symbols": [
+      "czk",
+      "k\u010d"
+    ],
+    "currency_code": "CZK"
+  },
+  "danish krone": {
+    "surfaces": [
+      "danish krone",
+      "danish crown",
+      "denmark krone",
+      "danish krones",
+      "denmark krones"
+    ],
+    "entity": "currency",
+    "URI": "Dkk",
+    "dimensions": [],
+    "symbols": [
+      "dkk"
+    ],
+    "currency_code": "DKK"
+  },
+  "dime": {
+    "surfaces": [
+      "dime"
+    ],
+    "entity": "currency",
+    "URI": "Dime_(United_States_coin)",
+    "dimensions": [],
+    "symbols": [
+      "\u20ab"
+    ]
+  },
+  "eritrean nakfa": {
+    "surfaces": [
+      "eritrean nakfa",
+      "eritrean nakfas"
+    ],
+    "entity": "currency",
+    "URI": "Nakfa",
+    "dimensions": [],
+    "symbols": [
+      "nfk",
+      "ern"
+    ],
+    "currency_code": "ERN"
+  },
+  "ethiopian birr": {
+    "surfaces": [
+      "ethiopian birr"
+    ],
+    "entity": "currency",
+    "URI": "Ebirr",
+    "dimensions": [],
+    "symbols": [
+      "etb"
+    ],
+    "currency_code": "ETB"
+  },
+  "euro": {
+    "surfaces": [
+      "euro",
+      "euros",
+      "Euro",
+      "Euros"
+    ],
+    "entity": "currency",
+    "URI": "Euro",
+    "dimensions": [],
+    "symbols": [
+      "\u20ac",
+      "EUR",
+      "eur"
+    ],
+    "currency_code": "EUR"
+  },
+  "finnish markka": {
+    "surfaces": [
+      "finnish markka",
+      "suomen markka",
+      "finsk mark",
+      "markkaa",
+      "markka"
+    ],
+    "entity": "currency",
+    "URI": "Markka",
+    "dimensions": [],
+    "symbols": [
+      "fim"
+    ],
+    "currency_code": "FIM"
+  },
+  "georgian lari": {
+    "surfaces": [
+      "georgian lari",
+      "lari"
+    ],
+    "entity": "currency",
+    "URI": "Gel",
+    "dimensions": [],
+    "symbols": [
+      "gel",
+      "\u20be"
+    ],
+    "currency_code": "GEL"
+  },
+  "ghanaian cedi": {
+    "surfaces": [
+      "ghanaian cedi"
+    ],
+    "entity": "currency",
+    "URI": "Cedi",
+    "dimensions": [],
+    "symbols": [
+      "ghs",
+      "gh\u20b5",
+      "\u20b5"
+    ],
+    "currency_code": "GHS"
+  },
+  "guatemalan quetzal": {
+    "surfaces": [
+      "guatemalan quetzal",
+      "guatemala quetzal"
+    ],
+    "entity": "currency",
+    "URI": "Qutzal",
+    "dimensions": [],
+    "symbols": [
+      "gtq"
+    ],
+    "currency_code": "GTQ"
+  },
+  "haitian gourde": {
+    "surfaces": [
+      "haitian gourde"
+    ],
+    "entity": "currency",
+    "URI": "Gourde",
+    "dimensions": [],
+    "symbols": [
+      "htg"
+    ],
+    "currency_code": "HTG"
+  },
+  "honduran lempira": {
+    "surfaces": [
+      "honduran lempira"
+    ],
+    "entity": "currency",
+    "URI": "Lempira",
+    "dimensions": [],
+    "symbols": [
+      "hnl"
+    ],
+    "currency_code": "HNL"
+  },
+  "hong kong dollar": {
+    "surfaces": [
+      "hong kong dollar",
+      "hong kong dollars",
+      "hong kong $",
+      "hk dollar",
+      "hk dollars",
+      "hongkong$",
+      "hongkong $"
+    ],
+    "entity": "currency",
+    "URI": "HK_dollar",
+    "dimensions": [],
+    "symbols": [
+      "hkd",
+      "HKD",
+      "HK$",
+      "hk$",
+      "HK $",
+      "hk $"
+    ],
+    "currency_code": "HKD"
+  },
+  "hungarian forint": {
+    "surfaces": [
+      "hungarian forint",
+      "hungarian forints",
+      "hungary forint",
+      "hungary forints"
+    ],
+    "entity": "currency",
+    "URI": "forint",
+    "dimensions": [],
+    "symbols": [
+      "huf",
+      "Ft"
+    ],
+    "currency_code": "HUF"
+  },
+  "indian rupee": {
+    "surfaces": [
+      "indian rupee"
+    ],
+    "entity": "currency",
+    "URI": "Indian_rupee",
+    "dimensions": [],
+    "symbols": [
+      "\u20b9",
+      "INR"
+    ],
+    "currency_code": "INR"
+  },
+  "indonesian rupiah": {
+    "surfaces": [
+      "indonesian rupiah",
+      "rupiah",
+      "perak"
+    ],
+    "entity": "currency",
+    "URI": "Indonesia_rupiah",
+    "dimensions": [],
+    "symbols": [
+      "rp",
+      "idr"
+    ],
+    "currency_code": "IDR"
+  },
+  "iranian rial": {
+    "surfaces": [
+      "iranian rial",
+      "iran rial"
+    ],
+    "entity": "currency",
+    "URI": "Lempira",
+    "dimensions": [],
+    "symbols": [
+      "irr"
+    ],
+    "currency_code": "IRR"
+  },
+  "japanese yen": {
+    "surfaces": [
+      "japanese yen",
+      "japanese yens",
+      "japan yen",
+      "japan yens",
+      "yen",
+      "YEN",
+      "yens"
+    ],
+    "entity": "currency",
+    "URI": "Japanese_yen",
+    "dimensions": [],
+    "symbols": [
+      "\u5186",
+      "\u5713",
+      "\u00a5",
+      "JPY",
+      "jpy"
+    ],
+    "currency_code": "JPY"
+  },
+  "kazakhstani tenge": {
+    "surfaces": [
+      "kazakhstani tenge",
+      "kazakh tenge",
+      "kazak tenge"
+    ],
+    "entity": "currency",
+    "URI": "Tenge",
+    "dimensions": [],
+    "symbols": [
+      "kzt"
+    ],
+    "currency_code": "KZT"
+  },
+  "kenyan shilling": {
+    "surfaces": [
+      "kenyan shilling"
+    ],
+    "entity": "currency",
+    "URI": "Kes",
+    "dimensions": [],
+    "symbols": [
+      "kes"
+    ],
+    "currency_code": "KES"
+  },
+  "kyrgyzstani som": {
+    "surfaces": [
+      "kyrgyzstani som"
+    ],
+    "entity": "currency",
+    "URI": "Ksom",
+    "dimensions": [],
+    "symbols": [
+      "kgs"
+    ],
+    "currency_code": "KGS"
+  },
+  "lao kip": {
+    "surfaces": [
+      "lao kip"
+    ],
+    "entity": "currency",
+    "URI": "Kip",
+    "dimensions": [],
+    "symbols": [
+      "lak",
+      "\u20ad",
+      "\u20adn"
+    ],
+    "currency_code": "LAK"
+  },
+  "lesotho loti": {
+    "surfaces": [
+      "lesotho loti",
+      "loti"
+    ],
+    "entity": "currency",
+    "URI": "Loti",
+    "dimensions": [],
+    "symbols": [
+      "lsl"
+    ],
+    "currency_code": "LSL"
+  },
+  "lithuanian litas": {
+    "surfaces": [
+      "lithuanian litas",
+      "lithuan litas",
+      "lithuanian lit",
+      "lithuan lit"
+    ],
+    "entity": "currency",
+    "URI": "Lit",
+    "dimensions": [],
+    "symbols": [
+      "ltl"
+    ],
+    "currency_code": "LTL"
+  },
+  "macanese pataca": {
+    "surfaces": [
+      "macanese pataca"
+    ],
+    "entity": "currency",
+    "URI": "Mpataca",
+    "dimensions": [],
+    "symbols": [
+      "mop"
+    ],
+    "currency_code": "MOP"
+  },
+  "malagasy ariary": {
+    "surfaces": [
+      "malagasy ariary"
+    ],
+    "entity": "currency",
+    "URI": "Ariary",
+    "dimensions": [],
+    "symbols": [
+      "mga"
+    ],
+    "currency_code": "MGA"
+  },
+  "malawian kwach": {
+    "surfaces": [
+      "malawian kwach"
+    ],
+    "entity": "currency",
+    "URI": "Kwach",
+    "dimensions": [],
+    "symbols": [
+      "mk",
+      "mwk"
+    ],
+    "currency_code": "MWK"
+  },
+  "malaysian ringgit": {
+    "surfaces": [
+      "malaysian ringgit",
+      "malaysia ringgit"
+    ],
+    "entity": "currency",
+    "URI": "Ringgit",
+    "dimensions": [],
+    "symbols": [
+      "rm",
+      "myr"
+    ],
+    "currency_code": "MYR"
+  },
+  "mexican peso": {
+    "surfaces": [
+      "mexican peso",
+      "mexico peso",
+      "peso",
+      "mexican pesos",
+      "mexico pesos",
+      "pesos"
+    ],
+    "entity": "currency",
+    "URI": "Mexican_peso",
+    "dimensions": [],
+    "symbols": [
+      "MXN",
+      "mxn",
+      "Mex$"
+    ],
+    "currency_code": "MXN"
+  },
+  "mill": {
+    "surfaces": [
+      "mill",
+      "mil"
+    ],
+    "entity": "currency",
+    "URI": "Mill_(currency)",
+    "dimensions": [],
+    "symbols": [
+      "\u20a5"
+    ]
+  },
+  "moroccan dirham": {
+    "surfaces": [
+      "moroccan dirham"
+    ],
+    "entity": "currency",
+    "URI": "Mdirham",
+    "dimensions": [],
+    "symbols": [
+      "mad"
+    ],
+    "currency_code": "MAD"
+  },
+  "netherlands guilde": {
+    "surfaces": [
+      "netherlands guilde",
+      "netherlands antillean guilde",
+      "guilder",
+      "netherlands guilder",
+      "gulden",
+      "nederlandse gulden",
+      "florin",
+      "dutch guilder",
+      "dutch guilde",
+      "dutch guilders"
+    ],
+    "entity": "currency",
+    "URI": "Guilde",
+    "dimensions": [],
+    "symbols": [
+      "ang"
+    ],
+    "currency_code": "ANG"
+  },
+  "new zealand dollar": {
+    "surfaces": [
+      "new zealand dollar",
+      "new zealand dollars",
+      "New Zealand dollar", 
+      "New Zealand dollars"
+    ],
+    "entity": "currency",
+    "URI": "New_Zealand_dollar",
+    "dimensions": [],
+    "symbols": [
+      "NZD",
+      "nzd",
+      "NZ$",
+      "nz$",
+      "NZ $",
+      "nz $"
+    ],
+    "currency_code": "NZD"
+  },
+  "north korean won": {
+    "surfaces": [
+      "north korean won",
+      "north korean wons"
+    ],
+    "entity": "currency",
+    "URI": "South_Korean_won",
+    "dimensions": [],
+    "symbols": [
+      "KPW",
+      "kpw"
+    ],
+    "currency_code": "KPW"
+  },
+  "norwegian krone": {
+    "surfaces": [
+      "norwegian krone",
+      "norwegian crown",
+      "norway krone",
+      "norwegian krones",
+      "norway krones"
+    ],
+    "entity": "currency",
+    "URI": "Nok",
+    "dimensions": [],
+    "symbols": [
+      "nok"
+    ],
+    "currency_code": "NOK"
+  },
+  "point": {
+    "surfaces": [
+      "point",
+      "points"
+    ],
+    "entity": "dimensionless",
+    "URI": "point",
+    "dimensions": [],
+    "symbols": [
+      "p"
+    ]
+  },
+  "penny": {
+    "surfaces": [
+      "penny",
+      "pence"
+    ],
+    "entity": "currency",
+    "URI": "Penny",
+    "dimensions": [],
+    "symbols": [
+      "p",
+      "d."
+    ]
+  },
+  "peruvian sol": {
+    "surfaces": [
+      "peruvian sol",
+      "sol",
+      "soles",
+      "peruvian nuevo sol"
+    ],
+    "entity": "currency",
+    "URI": "Sol",
+    "dimensions": [],
+    "symbols": [],
+    "currency_code": "PEN"
+  },
+  "polish z\u0142oty": {
+    "surfaces": [
+      "polish z\u0142oty",
+      "z\u0142oty",
+      "polish zloty",
+      "poland zloty",
+      "poland z\u0142oty"
+    ],
+    "entity": "currency",
+    "URI": "Zloty",
+    "dimensions": [],
+    "symbols": [
+      "pln",
+      "z\u0142"
+    ],
+    "currency_code": "PLN"
+  },
+  "pound sterling": {
+    "surfaces": [
+      "pound sterling",
+      "pound",
+      "pounds",
+      "sterling",
+      "british pound",
+      "pound scot",
+      "avoirdupois pounds, international pounds",
+      "av lbs"
+    ],
+    "entity": "currency",
+    "URI": "Pound_sterling",
+    "dimensions": [],
+    "symbols": [
+      "\u00a3",
+      "GBP",
+      "gbp",
+      "$ sterling",
+      "[lb_av]"
+    ],
+    "currency_code": "GBP"
+  },
+  "rappen": {
+    "surfaces": [
+      "rappen"
+    ],
+    "entity": "currency",
+    "URI": "Rappen",
+    "dimensions": [],
+    "symbols": []
+  },
+  "russian ruble": {
+    "surfaces": [
+      "russian ruble",
+      "russian rubles",
+      "russian rouble",
+      "russia ruble",
+      "russia rubles",
+      "ruble",
+      "rouble"
+    ],
+    "entity": "currency",
+    "URI": "Russian_ruble",
+    "dimensions": [],
+    "symbols": [
+      "\u20bd",
+      "RUB",
+      "rub"
+    ],
+    "currency_code": "RUB"
+  },
+  "salvadoran col\u00f3n": {
+    "surfaces": [
+      "salvadoran col\u00f3n",
+      "salvadoran col\u00f3ns",
+      "salvador col\u00f3n",
+      "salvador col\u00f3ns",
+      "salvadoran colon",
+      "salvadoran colons",
+      "salvador colon",
+      "salvador colons"
+    ],
+    "entity": "currency",
+    "URI": "SalvadorCol\u00f3n",
+    "dimensions": [],
+    "symbols": [
+      "svc"
+    ],
+    "currency_code": "SVC"
+  },
+  "satoshi": {
+    "surfaces": [
+      "satoshi",
+      "satoshis"
+    ],
+    "entity": "currency",
+    "URI": "Satoshi",
+    "dimensions": [],
+    "symbols": []
+  },
+  "saudi riyal": {
+    "surfaces": [
+      "saudi riyal"
+    ],
+    "entity": "currency",
+    "URI": "Sriyal",
+    "dimensions": [],
+    "symbols": [
+      "sar"
+    ],
+    "currency_code": "SAR"
+  },
+  "sen": {
+    "surfaces": [
+      "sen"
+    ],
+    "entity": "currency",
+    "URI": "Sen",
+    "dimensions": [],
+    "symbols": [],
+    "currency_code": "SEN"
+  },
+  "south african rand": {
+    "surfaces": [
+      "south african rand",
+      "south africa rand",
+      "south african rands",
+      "south africa rands",
+      "rand"
+    ],
+    "entity": "currency",
+    "URI": "South_African_rand",
+    "dimensions": [],
+    "symbols": [
+      "R",
+      "ZAR",
+      "zar"
+    ],
+    "currency_code": "ZAR"
+  },
+  "south korean won": {
+    "surfaces": [
+      "south korean won",
+      "south korean wons",
+      "won",
+      "korean republic won"
+    ],
+    "entity": "currency",
+    "URI": "South_Korean_won",
+    "dimensions": [],
+    "symbols": [
+      "\uc6d0",
+      "\u20a9",
+      "KRW",
+      "kwr"
+    ],
+    "currency_code": "KRW"
+  },
+  "sri lankan rupee": {
+    "surfaces": [
+      "sri lankan rupee",
+      "sri lanka rupee"
+    ],
+    "entity": "currency",
+    "URI": "Srilanka_rupee",
+    "dimensions": [],
+    "symbols": [
+      "lkr",
+      "\u0dbb\u0dd4",
+      "\u0bb0\u0bc2"
+    ],
+    "currency_code": "LKR"
+  },
+  "rupee": {
+    "surfaces": [
+      "rupee",
+      "rupees"
+    ],
+    "entity": "currency",
+    "URI": "Rupee",
+    "dimensions": [],
+    "symbols": [
+      "rs"
+    ],
+    "currency_code": "__R"
+  },
+  "swedish krone": {
+    "surfaces": [
+      "swedish krone",
+      "swedish crown",
+      "swedan krone"
+    ],
+    "entity": "currency",
+    "URI": "Sek",
+    "dimensions": [],
+    "symbols": [
+      "sek"
+    ],
+    "currency_code": "SEK"
+  },
+  "swiss franc": {
+    "surfaces": [
+      "swiss franc",
+      "franc"
+    ],
+    "entity": "currency",
+    "URI": "Swiss_franc",
+    "dimensions": [],
+    "symbols": [
+      "SFr",
+      "FS",
+      "CHF",
+      "chf",
+      "sfr."
+    ],
+    "currency_code": "CHF"
+  },
+  "turkish lira": {
+    "surfaces": [
+      "turkish lira",
+      "turkey lira",
+      "turkish liras",
+      "turkey liras"
+    ],
+    "entity": "currency",
+    "URI": "Try",
+    "dimensions": [],
+    "symbols": [
+      "try",
+      "tl"
+    ],
+    "currency_code": "TRY"
+  },
+  "ukrainian hryvnia": {
+    "surfaces": [
+      "ukrainian hryvnia",
+      "hyrvnia",
+      "ukrain hryvnia"
+    ],
+    "entity": "currency",
+    "URI": "Hryvnia",
+    "dimensions": [],
+    "symbols": [
+      "uah"
+    ],
+    "currency_code": "UAH"
+  },
+  "united arab emirates dirham": {
+    "surfaces": [
+      "united arab emirates dirham"
+    ],
+    "entity": "currency",
+    "URI": "Arabdirham",
+    "dimensions": [],
+    "symbols": [
+      "aed"
+    ],
+    "currency_code": "AED"
+  },
+  "dollar": {
+    "surfaces": [
+      "united states dollar",
+      "united states dollars",
+      "us dollar",
+      "US dollar",
+      "us dollars",
+      "US dollars",
+      "american dollar",
+      "american dollars",
+      "dollar",
+      "dollars"
+    ],
+    "entity": "currency",
+    "URI": "United_States_dollar",
+    "dimensions": [],
+    "symbols": [
+      "USD",
+      "usd",
+      "US$",
+      "us$",
+      "US $",
+      "us $",
+      "USD$",
+      "usd$",
+      "USD $",
+      "usd $",
+      "$ US",
+      "$ us",
+      "$"
+    ],
+    "currency_code": "USD"
+  },
+  "uzbekitan som": {
+    "surfaces": [
+      "uzbekitan som"
+    ],
+    "entity": "currency",
+    "URI": "Usom",
+    "dimensions": [],
+    "symbols": [
+      "uzs"
+    ],
+    "currency_code": "UZS"
+  },
+  "basis point": {
+    "surfaces": [
+      "basis point",
+      "bip",
+      "beep",
+      "permyriad",
+      "per myriad",
+      "per ten thousand"
+    ],
+    "entity": "dimensionless",
+    "URI": "Basis_point",
+    "dimensions": [],
+    "symbols": [
+      "\u2031"
+    ]
+  },
+  "count": {
+    "surfaces": [
+      "instance",
+      "time",
+      "count",
+      "10^3",
+      "thousand"
+    ],
+    "entity": "dimensionless",
+    "URI": "Count_data",
+    "dimensions": [],
+    "symbols": [
+      "10*3"
+    ]
+  },
+  "dozen": {
+    "surfaces": [
+      "dozen",
+      "group of twelve"
+    ],
+    "entity": "dimensionless",
+    "URI": "Dozen",
+    "dimensions": [],
+    "symbols": [
+      "dz",
+      "doz"
+    ]
+  },
+  "great gross": {
+    "surfaces": [
+      "great gross",
+      "cubic gross",
+      "dozen gross",
+      "grand gross"
+    ],
+    "entity": "dimensionless",
+    "URI": "1728_(number)",
+    "dimensions": [
+      {
+        "base": "dozen",
+        "power": 3
+      }
+    ],
+    "symbols": []
+  },
+  "gross": {
+    "surfaces": [
+      "gross",
+      "square dozen"
+    ],
+    "entity": "dimensionless",
+    "URI": "Gross_(unit)",
+    "dimensions": [
+      {
+        "base": "dozen",
+        "power": 2
+      }
+    ],
+    "symbols": [
+      "gro",
+      "gt",
+      "GT"
+    ]
+  },
+  "long hundred": {
+    "surfaces": [
+      "long hundred",
+      "great hundred",
+      "twelfty",
+      "small gross",
+      "centum"
+    ],
+    "entity": "dimensionless",
+    "URI": "Long_hundred",
+    "dimensions": [],
+    "symbols": []
+  },
+  "pair": {
+    "surfaces": [
+      "pair"
+    ],
+    "entity": "dimensionless",
+    "URI": "2",
+    "dimensions": [],
+    "symbols": []
+  },
+  "parts-per-billion": {
+    "surfaces": [
+      "parts-per-billion",
+      "parts per billion",
+      "ppb",
+      "10^-9"
+    ],
+    "entity": "dimensionless",
+    "URI": "Parts-per_notation",
+    "dimensions": [],
+    "symbols": [
+      "[ppb]"
+    ]
+  },
+  "parts-per-million": {
+    "surfaces": [
+      "parts-per-million",
+      "parts per million",
+      "ppm",
+      "10^-6"
+    ],
+    "entity": "dimensionless",
+    "URI": "Parts-per_notation",
+    "dimensions": [],
+    "symbols": []
+  },
+  "parts-per-trillion": {
+    "surfaces": [
+      "parts-per-trillion",
+      "parts per trillion",
+      "pptr",
+      "10^-12"
+    ],
+    "entity": "dimensionless",
+    "URI": "Parts-per_notation",
+    "dimensions": [],
+    "symbols": [
+      "ppt",
+      "[pptr]"
+    ]
+  },
+  "per mille": {
+    "surfaces": [
+      "per mille",
+      "permill",
+      "permil",
+      "permille",
+      "per mil",
+      "per mill"
+    ],
+    "entity": "dimensionless",
+    "URI": "Per_mille",
+    "dimensions": [],
+    "symbols": [
+      "\u2030"
+    ]
+  },
+  "percentage": {
+    "surfaces": [
+      "percentage",
+      "percent",
+      "pc"
+    ],
+    "entity": "dimensionless",
+    "URI": "Percentage",
+    "dimensions": [],
+    "symbols": [
+      "%",
+      "pct",
+      "pct."
+    ]
+  },
+  "set": {
+    "surfaces": [
+      "set",
+      "pack",
+      "piece"
+    ],
+    "entity": "dimensionless",
+    "URI": "Set_(mathematics)",
+    "dimensions": [],
+    "symbols": []
+  },
+  "turn": {
+    "surfaces": [
+      "turn",
+      "revolution",
+      "cycle",
+      "circle"
+    ],
+    "entity": "dimensionless",
+    "URI": "Turn_(geometry)",
+    "dimensions": [],
+    "symbols": []
+  },
+  "unk": {
+    "surfaces": [
+      "unk"
+    ],
+    "entity": "dimensionless",
+    "URI": "Dimensionless_quantity",
+    "dimensions": [],
+    "symbols": []
+  },
+  "astronomical unit": {
+    "surfaces": [
+      "astronomical unit"
+    ],
+    "entity": "length",
+    "URI": "Astronomical_unit",
+    "dimensions": [],
+    "symbols": [
+      "au",
+      "AU",
+      "ua",
+      "UA"
+    ]
+  },
+  "barn": {
+    "surfaces": [
+      "barn",
+      "barns"
+    ],
+    "entity": "length",
+    "URI": "Barn_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "b"
+    ],
+    "prefixes": [
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "Gi",
+      "Ki",
+      "Mi",
+      "Ti"
+    ]
+  },
+  "base pair": {
+    "surfaces": [
+      "base pair"
+    ],
+    "entity": "length",
+    "URI": "Base_pair",
+    "dimensions": [],
+    "symbols": [
+      "bp"
+    ]
+  },
+  "centimetre": {
+    "surfaces": [
+      "centimetre",
+      "centimeter",
+      "centimetres",
+      "centimeters"
+    ],
+    "entity": "length",
+    "URI": "Centimetre",
+    "dimensions": [],
+    "symbols": [
+      "cm"
+    ]
+  },
+  "cicero": {
+    "surfaces": [
+      "Didot's pica",
+      "ciceros",
+      "picas"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[cicero]"
+    ]
+  },
+  "cubit": {
+    "surfaces": [
+      "cubit"
+    ],
+    "entity": "length",
+    "URI": "Cubit",
+    "dimensions": [],
+    "symbols": []
+  },
+  "decametre": {
+    "surfaces": [
+      "decametre",
+      "decameter",
+      "dekametre",
+      "dekameter"
+    ],
+    "entity": "length",
+    "URI": "Decametre",
+    "dimensions": [],
+    "symbols": [
+      "dam",
+      "Dm",
+      "dkm"
+    ]
+  },
+  "decimetre": {
+    "surfaces": [
+      "decimetre",
+      "decimeter"
+    ],
+    "entity": "length",
+    "URI": "Decimetre",
+    "dimensions": [],
+    "symbols": [
+      "dm"
+    ]
+  },
+  "ell": {
+    "surfaces": [
+      "ell"
+    ],
+    "entity": "length",
+    "URI": "Ell",
+    "dimensions": [],
+    "symbols": []
+  },
+  "fathom": {
+    "surfaces": [
+      "fathom",
+      "international fathoms",
+      "US fathoms",
+      "fathom USA",
+      "fth us",
+      "British fathoms",
+      "imperial fathoms",
+      "br fth",
+      "imp fth"
+    ],
+    "entity": "length",
+    "URI": "Fathom",
+    "dimensions": [],
+    "symbols": [
+      "fath",
+      "[fth_i]",
+      "[fth_us]",
+      "[fth_br]"
+    ]
+  },
+  "femtometre": {
+    "surfaces": [
+      "femtometres",
+      "femtometers",
+      "femtometer",
+      "femtometre"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "fm"
+    ]
+  },
+  "foot": {
+    "surfaces": [
+      "foot",
+      "ft",
+      "fts",
+      "international foot",
+      "feet",
+      "international feet",
+      "height",
+      "US foot",
+      "foot US",
+      "us ft",
+      "ft us",
+      "visual distance",
+      "British Foot",
+      "Imperial Foot",
+      "imp fts",
+      "br fts"
+    ],
+    "entity": "length",
+    "URI": "Foot_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "'",
+      "\u2032",
+      "[ft_i]",
+      "[bf_i]",
+      "[ft_us]",
+      "[ft_br]"
+    ]
+  },
+  "furlong": {
+    "surfaces": [
+      "furlong",
+      "US furlongs",
+      "fur us"
+    ],
+    "entity": "length",
+    "URI": "Furlong",
+    "dimensions": [],
+    "symbols": [
+      "fur",
+      "[fur_us]"
+    ]
+  },
+  "giga base pair": {
+    "surfaces": [
+      "giga base pair"
+    ],
+    "entity": "length",
+    "URI": "Base_pair",
+    "dimensions": [],
+    "symbols": [
+      "Gbp"
+    ]
+  },
+  "Gunter's chain - US": {
+    "surfaces": [
+      "surveyor's chain",
+      "Surveyor's chain USA",
+      "Gunter\u2019s measurement",
+      "surveyor\u2019s measurement",
+      "Gunter's Chain USA"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[ch_us]"
+    ]
+  },
+  "hectometre": {
+    "surfaces": [
+      "hectometre",
+      "hectometer"
+    ],
+    "entity": "length",
+    "URI": "Hectometre",
+    "dimensions": [],
+    "symbols": [
+      "hm"
+    ]
+  },
+  "inch": {
+    "surfaces": [
+      "inch",
+      "inches",
+      "in",
+      "international inch",
+      "body height",
+      "US inches",
+      "in us",
+      "us in",
+      "inch US",
+      "imperial inches",
+      "imp in",
+      "br in",
+      "british inches"
+    ],
+    "entity": "length",
+    "URI": "Inch",
+    "dimensions": [],
+    "symbols": [
+      "\"",
+      "\u2033",
+      "\u201d",
+      "[in_i]",
+      "[in_us]",
+      "[in_br]"
+    ]
+  },
+  "inverse femtobarn": {
+    "surfaces": [
+      "inverse femtobarn"
+    ],
+    "entity": "length",
+    "URI": "Barn_(unit)",
+    "dimensions": [
+      {
+        "base": "femtobarn",
+        "power": -1,
+        "surface": "fb-1"
+      }
+    ],
+    "symbols": [
+      "fb-1",
+      "fb\u22121"
+    ]
+  },
+  "kilo base pair": {
+    "surfaces": [
+      "kilo base pair"
+    ],
+    "entity": "length",
+    "URI": "Base_pair",
+    "dimensions": [],
+    "symbols": [
+      "kbp"
+    ]
+  },
+  "kilometre": {
+    "surfaces": [
+      "kilometers",
+      "kilometer",
+      "kilometres",
+      "kilometre",
+      "Kilometres",
+      "Kilometre",
+      "Kilometers",
+      "Kilometer"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "km"
+    ]
+  },
+  "league": {
+    "surfaces": [
+      "league",
+      "nautical league"
+    ],
+    "entity": "length",
+    "URI": "League_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "lea",
+      "st lea",
+      "n lea",
+      "n league",
+      "st league"
+    ]
+  },
+  "light-year": {
+    "surfaces": [
+      "light-year",
+      "light year",
+      "light years"
+    ],
+    "entity": "length",
+    "URI": "Light-year",
+    "dimensions": [],
+    "symbols": [
+      "ly"
+    ]
+  },
+  "ligne": {
+    "surfaces": [
+      "Paris lines",
+      "lignes"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[ligne]"
+    ]
+  },
+  "line": {
+    "surfaces": [
+      "British lines",
+      "br L"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[lne]"
+    ]
+  },
+  "link for Gunter's chain - US": {
+    "surfaces": [
+      "Links for Gunter's Chain USA"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[lk_us]"
+    ]
+  },
+  "link for Ramden's chain - US": {
+    "surfaces": [
+      "links for Ramsden's chain"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[rlk_us]"
+    ]
+  },
+  "mega base pair": {
+    "surfaces": [
+      "mega base pair"
+    ],
+    "entity": "length",
+    "URI": "Base_pair",
+    "dimensions": [],
+    "symbols": [
+      "Mbp"
+    ]
+  },
+  "metre": {
+    "surfaces": [
+      "metre",
+      "meter",
+      "meters",
+      "metres",
+      "meter-long",
+      "metre-long"
+    ],
+    "entity": "length",
+    "URI": "Metre",
+    "dimensions": [],
+    "symbols": [
+      "m"
+    ],
+    "prefixes": [
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "Gi",
+      "Ki",
+      "Mi",
+      "Ti"
+    ]
+  },
+  "micrometre": {
+    "surfaces": [
+      "micrometre",
+      "micrometer",
+      "micron"
+    ],
+    "entity": "length",
+    "URI": "Micrometre",
+    "dimensions": [],
+    "symbols": [
+      "\u00b5m"
+    ]
+  },
+  "mil - US": {
+    "surfaces": [
+      "thou, thousandth",
+      "mils"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[mil_us]"
+    ]
+  },
+  "mile": {
+    "surfaces": [
+      "mile",
+      "statute mile",
+      "international miles",
+      "mi I",
+      "nautical mile",
+      "nautical miles",
+      "international nautical mile",
+      "international nautical miles",
+      "n.m.",
+      "nmi",
+      "U.S. Survey Miles",
+      "US statute miles",
+      "survey mi",
+      "US mi",
+      "imperial miles",
+      "British miles",
+      "English statute miles",
+      "imp mi, br mi",
+      "British nautical miles",
+      "Imperial nautical miles",
+      "Admiralty miles",
+      "n.m. br",
+      "imp nm"
+    ],
+    "entity": "length",
+    "URI": "Mile",
+    "dimensions": [],
+    "symbols": [
+      "mi",
+      "[mi_i]",
+      "[nmi_i]",
+      "[mi_us]",
+      "[mi_br]",
+      "[nmi_br]"
+    ]
+  },
+  "nanometre": {
+    "surfaces": [
+      "nanometers",
+      "nanometres",
+      "nanometer",
+      "nanometre"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "nm"
+    ]
+  },
+  "nucleotide": {
+    "surfaces": [
+      "nucleotide"
+    ],
+    "entity": "length",
+    "URI": "Nucleotide",
+    "dimensions": [],
+    "symbols": [
+      "nt"
+    ]
+  },
+  "pace - British": {
+    "surfaces": [
+      "British paces",
+      "br pc"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[pc_br]"
+    ]
+  },
+  "parsec": {
+    "surfaces": [
+      "parsec",
+      "parsecs",
+      "pc"
+    ],
+    "entity": "length",
+    "URI": "Parsec",
+    "dimensions": [],
+    "symbols": []
+  },
+  "pica (typography)": {
+    "surfaces": [
+      "picas"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[pca]"
+    ]
+  },
+  "picometre": {
+    "surfaces": [
+      "picometers",
+      "picometres",
+      "picometer",
+      "picometre"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "pm"
+    ]
+  },
+  "point (typography)": {
+    "surfaces": [
+      "DTP points",
+      "desktop publishing point",
+      "pt",
+      "pnt"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[pnt]"
+    ]
+  },
+  "pouce": {
+    "surfaces": [
+      "historical French inches",
+      "French royal inches"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[pouce]"
+    ]
+  },
+  "Printer's pica  (typography)": {
+    "surfaces": [
+      "pca pr",
+      "Printer's picas"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[pca_pr]"
+    ]
+  },
+  "Printer's point (typography)": {
+    "surfaces": [
+      "pnt pr"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[pnt_pr]"
+    ]
+  },
+  "Ramden's chain - US": {
+    "surfaces": [
+      "Ramsden's chain",
+      "engineer's chains"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[rch_us]"
+    ]
+  },
+  "rod": {
+    "surfaces": [
+      "US rod",
+      "US rods",
+      "rd US",
+      "US rd",
+      "Britisch rod",
+      "British rods",
+      "br rd",
+      "rd"
+    ],
+    "entity": "length",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[rd_us]",
+      "[rd_br]"
+    ]
+  },
+  "span": {
+    "surfaces": [
+      "span"
+    ],
+    "entity": "length",
+    "URI": "Span_(unit)",
+    "dimensions": [],
+    "symbols": []
+  },
+  "twip": {
+    "surfaces": [
+      "twip"
+    ],
+    "entity": "length",
+    "URI": "Twip",
+    "dimensions": [],
+    "symbols": []
+  },
+  "yard": {
+    "surfaces": [
+      "yard",
+      "international yards",
+      "yds",
+      "US yards",
+      "us yds",
+      "British yards",
+      "Br yds"
+    ],
+    "entity": "length",
+    "URI": "Yard",
+    "dimensions": [],
+    "symbols": [
+      "yd",
+      "[yd_i]",
+      "[yd_us]",
+      "[yd_br]"
+    ]
+  },
+  "\u00e5ngstr\u00f6m": {
+    "surfaces": [
+      "Angstrom",
+      "\u00e5ngstr\u00f6m",
+      "\u00e5ngstrom",
+      "angstr\u00f6m",
+      "angstrom",
+      "\u00c5",
+      "Angstroms",
+      "Ao",
+      "\u00c5ngstr\u00f6ms"
+    ],
+    "entity": "length",
+    "URI": "\u00c5ngstr\u00f6m",
+    "dimensions": [],
+    "symbols": [
+      "\u00c5"
+    ]
+  },
+  "atomic mass unit": {
+    "surfaces": [
+      "atomic mass unit",
+      "unified atomic mass unit",
+      "dalton",
+      "unified atomic mass units",
+      "amu",
+      "Dalton",
+      "Da"
+    ],
+    "entity": "mass",
+    "URI": "Atomic_mass_unit",
+    "dimensions": [],
+    "symbols": [
+      "u"
+    ]
+  },
+  "bushel": {
+    "surfaces": [
+      "bushel",
+      "US bushels",
+      "US bsh",
+      "US bu",
+      "British bushels",
+      "imperial",
+      "br bsh",
+      "br bu",
+      "imp"
+    ],
+    "entity": "mass",
+    "URI": "Bushel",
+    "dimensions": [],
+    "symbols": [
+      "bsh",
+      "bu",
+      "[bu_us]",
+      "[bu_br]"
+    ]
+  },
+  "carat": {
+    "surfaces": [
+      "carat",
+      "carats",
+      "ct",
+      "car m",
+      "karats",
+      "car au",
+      "car AU"
+    ],
+    "entity": "mass",
+    "URI": "Carat_(mass)",
+    "dimensions": [],
+    "symbols": []
+  },
+  "centigram": {
+    "surfaces": [
+      "centigrams",
+      "cg",
+      "cgm"
+    ],
+    "entity": "mass",
+    "URI": "",
+    "dimensions": [],
+    "symbols": []
+  },
+  "decigram": {
+    "surfaces": [
+      "decigrams",
+      "dgm",
+      "0.1 grams",
+      "1/10 gm"
+    ],
+    "entity": "mass",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "dg"
+    ]
+  },
+  "dram": {
+    "surfaces": [
+      "dram",
+      "drachma",
+      "US fluid drams",
+      "fdr us",
+      "British fluid drams",
+      "fdr br",
+      "Dram",
+      "drams avoirdupois",
+      "avoidupois dram",
+      "international dram",
+      "\u0292",
+      "drachm",
+      "apothecaries drams",
+      "dr ap",
+      "dram ap"
+    ],
+    "entity": "mass",
+    "URI": "Dram",
+    "dimensions": [],
+    "symbols": [
+      "dr",
+      "[fdr_us]",
+      "[fdr_br]",
+      "[dr_av]",
+      "[dr_ap]"
+    ]
+  },
+  "earth mass": {
+    "surfaces": [
+      "earth mass"
+    ],
+    "entity": "mass",
+    "URI": "Earth_mass",
+    "dimensions": [],
+    "symbols": [
+      "M\u2295"
+    ]
+  },
+  "electron mass": {
+    "surfaces": [
+      "electron rest mass",
+      "me"
+    ],
+    "entity": "mass",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[m_e]"
+    ]
+  },
+  "femtogram": {
+    "surfaces": [
+      "fg",
+      "fgm",
+      "femtograms"
+    ],
+    "entity": "mass",
+    "URI": "",
+    "dimensions": [],
+    "symbols": []
+  },
+  "grain": {
+    "surfaces": [
+      "gr",
+      "grains"
+    ],
+    "entity": "mass",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[gr]"
+    ]
+  },
+  "gram": {
+    "surfaces": [
+      "gram",
+      "gramme",
+      "grams",
+      "gm"
+    ],
+    "entity": "mass",
+    "URI": "Gram",
+    "dimensions": [],
+    "symbols": [
+      "g"
+    ],
+    "prefixes": [
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "Gi",
+      "Ki",
+      "Mi",
+      "Ti"
+    ]
+  },
+  "kilogram": {
+    "surfaces": [
+      "kilogram",
+      "kilogramme",
+      "kilo",
+      "kilograms"
+    ],
+    "entity": "mass",
+    "URI": "Kilogram",
+    "dimensions": [],
+    "symbols": [
+      "kg"
+    ]
+  },
+  "long ton": {
+    "surfaces": [
+      "long ton",
+      "imperial ton",
+      "weight ton",
+      "british long ton",
+      "imperial tons",
+      "weight tons",
+      "British long tons",
+      "long ton avoirdupois"
+    ],
+    "entity": "mass",
+    "URI": "Long_ton",
+    "dimensions": [],
+    "symbols": [
+      "LT",
+      "[lton_av]"
+    ]
+  },
+  "metric ton": {
+    "surfaces": [
+      "tonne",
+      "metric ton",
+      "tonnes",
+      "megagrams"
+    ],
+    "entity": "mass",
+    "URI": "Tonne",
+    "dimensions": [],
+    "symbols": [
+      "t"
+    ]
+  },
+  "microgram": {
+    "surfaces": [
+      "microgram",
+      "micrograms",
+      "microgramme",
+      "microgrammes",
+      "micro gram",
+      "micro grams",
+      "mcg",
+      "ug",
+      "10^-6 grams",
+      "10-6 grams"
+    ],
+    "entity": "mass",
+    "URI": "Microgram",
+    "dimensions": [],
+    "symbols": [
+      "\u00b5g"
+    ]
+  },
+  "milligram": {
+    "surfaces": [
+      "milligram",
+      "milligramme",
+      "milligrams"
+    ],
+    "entity": "mass",
+    "URI": "Gram",
+    "dimensions": [],
+    "symbols": [
+      "mg"
+    ]
+  },
+  "nanogram": {
+    "surfaces": [
+      "nanograms"
+    ],
+    "entity": "mass",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "ng"
+    ]
+  },
+  "ounce": {
+    "surfaces": [
+      "ounce",
+      "ounces",
+      "international ounces",
+      "avoirdupois ounces",
+      "av ozs",
+      "US fluid ounces",
+      "fl ozs",
+      "FO",
+      "fl. oz.",
+      "foz us",
+      "metric fluid ounces",
+      "fozs m",
+      "fl ozs m",
+      "British fluid ounces",
+      "Imperial fluid ounces",
+      "br fozs",
+      "imp fozs",
+      "br fl ozs",
+      "troy ounces",
+      "tr ozs",
+      "apothecary ounces",
+      "oz ap",
+      "ap ozs",
+      "ozs ap",
+      "metric ounces",
+      "m ozs"
+    ],
+    "entity": "mass",
+    "URI": "Ounce",
+    "dimensions": [],
+    "symbols": [
+      "oz",
+      "\u2125",
+      "[oz_av]",
+      "[foz_us]",
+      "[foz_m]",
+      "[foz_br]",
+      "[oz_tr]",
+      "[oz_ap]",
+      "[oz_m]"
+    ]
+  },
+  "pennyweight - troy": {
+    "surfaces": [
+      "dwt",
+      "denarius weights"
+    ],
+    "entity": "mass",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[pwt_tr]"
+    ]
+  },
+  "picogram": {
+    "surfaces": [
+      "picograms"
+    ],
+    "entity": "mass",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "pg"
+    ]
+  },
+  "pound - apothecary": {
+    "surfaces": [
+      "apothecary pounds",
+      "apothecaries pounds",
+      "ap lb",
+      "lb ap",
+      "ap lbs",
+      "lbs ap"
+    ],
+    "entity": "mass",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[lb_ap]"
+    ]
+  },
+  "pound - troy": {
+    "surfaces": [
+      "troy pounds",
+      "tr lbs"
+    ],
+    "entity": "mass",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[lb_tr]"
+    ]
+  },
+  "pound-mass": {
+    "surfaces": [
+      "pound",
+      "pounds",
+      "pound-mass"
+    ],
+    "entity": "mass",
+    "URI": "Pound_(mass)",
+    "dimensions": [],
+    "symbols": [
+      "lb",
+      "lbm",
+      "lbs"
+    ]
+  },
+  "proton mass": {
+    "surfaces": [
+      "mp",
+      "masses"
+    ],
+    "entity": "mass",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[m_p]"
+    ]
+  },
+  "quarter": {
+    "surfaces": [
+      "quarter"
+    ],
+    "entity": "mass",
+    "URI": "Quarter_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "qr"
+    ]
+  },
+  "quintal": {
+    "surfaces": [
+      "quintal"
+    ],
+    "entity": "mass",
+    "URI": "Quintal",
+    "dimensions": [],
+    "symbols": [
+      "q"
+    ]
+  },
+  "scruple": {
+    "surfaces": [
+      "scruples",
+      "sc ap"
+    ],
+    "entity": "mass",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[sc_ap]"
+    ]
+  },
+  "short ton": {
+    "surfaces": [
+      "short ton",
+      "us short ton",
+      "US tons",
+      "avoirdupois tons"
+    ],
+    "entity": "mass",
+    "URI": "Short_ton",
+    "dimensions": [],
+    "symbols": [
+      "ST",
+      "[ston_av]"
+    ]
+  },
+  "solar mass": {
+    "surfaces": [
+      "solar mass"
+    ],
+    "entity": "mass",
+    "URI": "Solar_mass",
+    "dimensions": [],
+    "symbols": [
+      "M\u2609"
+    ]
+  },
+  "stone - British": {
+    "surfaces": [
+      "British stones",
+      "avoirdupois"
+    ],
+    "entity": "mass",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[stone_av]"
+    ]
+  },
+  "ton": {
+    "surfaces": [
+      "ton",
+      "tons"
+    ],
+    "entity": "mass",
+    "URI": "Ton",
+    "dimensions": [],
+    "symbols": [
+      "tn"
+    ]
+  },
+  "acre foot": {
+    "surfaces": [
+      "acre foot",
+      "acre-foot"
+    ],
+    "entity": "volume",
+    "URI": "Acre-foot",
+    "dimensions": [
+      {
+        "base": "acre",
+        "power": 1
+      },
+      {
+        "base": "foot",
+        "power": 1
+      }
+    ],
+    "symbols": [
+      "ac*ft"
+    ]
+  },
+  "barrel": {
+    "surfaces": [
+      "barrel",
+      "barrel dry",
+      "dry barrel"
+    ],
+    "entity": "volume",
+    "URI": "Barrel_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "bbl",
+      "bbl dry",
+      "[bbl_us]"
+    ]
+  },
+  "centilitre": {
+    "surfaces": [
+      "centiliter",
+      "centilitre"
+    ],
+    "entity": "volume",
+    "URI": "Centilitre",
+    "dimensions": [],
+    "symbols": [
+      "cl",
+      "cL"
+    ]
+  },
+  "cord": {
+    "surfaces": [
+      "crd I",
+      "international cords",
+      "crd",
+      "US cord",
+      "US cords",
+      "crd us",
+      "us crd"
+    ],
+    "entity": "volume",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[cr_i]",
+      "cr"
+    ]
+  },
+  "cubic foot": {
+    "surfaces": [
+      "cubic foot",
+      "cu foot",
+      "ft3",
+      "ft^3",
+      "ft*3",
+      "cu. ft",
+      "cubic feet",
+      "cubed",
+      "[ft_i]3"
+    ],
+    "entity": "volume",
+    "URI": "Cubic_foot",
+    "dimensions": [
+      {
+        "base": "foot",
+        "power": 3
+      }
+    ],
+    "symbols": [
+      "cu ft",
+      "[cft_i]"
+    ]
+  },
+  "cubic inch": {
+    "surfaces": [
+      "cubic inch",
+      "cu inch",
+      "in3",
+      "in^3",
+      "in*3",
+      "inches^3",
+      "inches*3",
+      "cu. in",
+      "cu in",
+      "cubic inches",
+      "inches cubed",
+      "cin"
+    ],
+    "entity": "volume",
+    "URI": "Cubic_inch",
+    "dimensions": [
+      {
+        "base": "inch",
+        "power": 3
+      }
+    ],
+    "symbols": []
+  },
+  "cubic kilometre": {
+    "surfaces": [
+      "cubic kilometre",
+      "cubic kilometer"
+    ],
+    "entity": "volume",
+    "URI": "Cubic_metre",
+    "dimensions": [
+      {
+        "base": "kilometre",
+        "power": 3
+      }
+    ],
+    "symbols": [
+      "km3"
+    ]
+  },
+  "cubic metre": {
+    "surfaces": [
+      "cubic metre",
+      "cubic metres",
+      "cubic meter",
+      "cubic meters",
+      "kiloliter",
+      "kilolitre"
+    ],
+    "entity": "volume",
+    "URI": "Cubic_metre",
+    "dimensions": [
+      {
+        "base": "metre",
+        "power": 3
+      }
+    ],
+    "symbols": [
+      "cu m",
+      "kL",
+      "m3",
+      "m\u00b3",
+      "m^3"
+    ]
+  },
+  "cubic mile": {
+    "surfaces": [
+      "cubic mile",
+      "cu mile"
+    ],
+    "entity": "volume",
+    "URI": "Cubic_mile",
+    "dimensions": [
+      {
+        "base": "mile",
+        "power": 3
+      }
+    ],
+    "symbols": [
+      "cu mi"
+    ]
+  },
+  "cubic millimetre": {
+    "surfaces": [
+      "cubic millimetre",
+      "cubic millimeter",
+      "microliter",
+      "microlitre"
+    ],
+    "entity": "volume",
+    "URI": "Cubic_metre",
+    "dimensions": [
+      {
+        "base": "millimetre",
+        "power": 3
+      }
+    ],
+    "symbols": [
+      "\u00b5l",
+      "\u00b5L"
+    ]
+  },
+  "cubic yard": {
+    "surfaces": [
+      "cubic yard",
+      "cu yard",
+      "cubic yards",
+      "cubic yds",
+      "cu yards",
+      "CYs",
+      "yards^3",
+      "yd^3",
+      "yds^3",
+      "yd3",
+      "yds3"
+    ],
+    "entity": "volume",
+    "URI": "Cubic_yard",
+    "dimensions": [
+      {
+        "base": "yard",
+        "power": 3
+      }
+    ],
+    "symbols": [
+      "cu yd",
+      "[cyd_i]"
+    ]
+  },
+  "cup": {
+    "surfaces": [
+      "cup",
+      "cup us",
+      "us cups",
+      "cup m",
+      "metric cups"
+    ],
+    "entity": "volume",
+    "URI": "Cup_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "[cup_us]",
+      "[cup_m]"
+    ]
+  },
+  "decilitre": {
+    "surfaces": [
+      "decilitre",
+      "deciliter"
+    ],
+    "entity": "volume",
+    "URI": "Decilitre",
+    "dimensions": [],
+    "symbols": [
+      "dl",
+      "dL"
+    ]
+  },
+  "dessertspoon": {
+    "surfaces": [
+      "dessertspoon",
+      "dessert spoon"
+    ],
+    "entity": "volume",
+    "URI": "Dessert_spoon",
+    "dimensions": [],
+    "symbols": [
+      "dstspn"
+    ]
+  },
+  "drop": {
+    "surfaces": [
+      "drop",
+      "drop dosing units",
+      "metric drops",
+      "gtt"
+    ],
+    "entity": "volume",
+    "URI": "Drop_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "[drp]"
+    ]
+  },
+  "femtoliter": {
+    "surfaces": [
+      "femtolitres",
+      "femtoliters"
+    ],
+    "entity": "volume",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "fL"
+    ]
+  },
+  "fluid ounce": {
+    "surfaces": [
+      "fluid ounce"
+    ],
+    "entity": "volume",
+    "URI": "Fluid_ounce",
+    "dimensions": [],
+    "symbols": [
+      "fl oz",
+      "oz fl",
+      "floz",
+      "ozfl",
+      "fl. oz"
+    ]
+  },
+  "gallon": {
+    "surfaces": [
+      "gallon",
+      "US gallons",
+      "US liquid gallon",
+      "gal us",
+      "Queen Anne's wine gallon",
+      "Corn Gallon British",
+      "Dry Gallon US",
+      "Gallons Historical",
+      "Grain Gallon British",
+      "Winchester Corn Gallon",
+      "historical winchester gallons",
+      "wi gal",
+      "imperial gallons, UK gallons",
+      "British gallons",
+      "br gal",
+      "imp gal"
+    ],
+    "entity": "volume",
+    "URI": "Gallon",
+    "dimensions": [],
+    "symbols": [
+      "gal",
+      "[gal_us]",
+      "[gal_wi]",
+      "[gal_br]"
+    ]
+  },
+  "hectolitre": {
+    "surfaces": [
+      "hectorlitre",
+      "hectorliter"
+    ],
+    "entity": "volume",
+    "URI": "Hectolitre",
+    "dimensions": [],
+    "symbols": [
+      "hl",
+      "hL"
+    ]
+  },
+  "litre": {
+    "surfaces": [
+      "cubic decimetre",
+      "cubic decimeter",
+      "litre",
+      "liter",
+      "liters"
+    ],
+    "entity": "volume",
+    "URI": "Litre",
+    "dimensions": [
+      {
+        "base": "decimetre",
+        "power": 3
+      }
+    ],
+    "symbols": [
+      "l",
+      "L",
+      "ltr",
+      "\u2113"
+    ]
+  },
+  "millilitre": {
+    "surfaces": [
+      "cubic centimetre",
+      "cubic centimetres",
+      "cubic centimeter",
+      "cubic centimeters",
+      "millilitre",
+      "milliliter"
+    ],
+    "entity": "volume",
+    "URI": "Cubic_centimetre",
+    "dimensions": [
+      {
+        "base": "centimetre",
+        "power": 3
+      }
+    ],
+    "symbols": [
+      "cc",
+      "ccm",
+      "mL",
+      "ml",
+      "mls"
+    ]
+  },
+  "nanoliter": {
+    "surfaces": [
+      "nanoliters",
+      "nanolitres"
+    ],
+    "entity": "volume",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "nL"
+    ]
+  },
+  "peck": {
+    "surfaces": [
+      "peck",
+      "US pecks",
+      "US pk",
+      "imperial pecks",
+      "British pecks",
+      "br pk",
+      "imp pk"
+    ],
+    "entity": "volume",
+    "URI": "Peck",
+    "dimensions": [],
+    "symbols": [
+      "pk",
+      "[pk_us]",
+      "[pk_br]"
+    ]
+  },
+  "picoliter": {
+    "surfaces": [
+      "picoliters",
+      "picolitres"
+    ],
+    "entity": "volume",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "pL"
+    ]
+  },
+  "pint": {
+    "surfaces": [
+      "pint",
+      "dry pint",
+      "liquid pint",
+      "pint dry",
+      "pint liquid",
+      "fluid pint",
+      "US pints",
+      "pint US",
+      "pt us",
+      "us pt",
+      "dry pints",
+      "dry pint US",
+      "US dry pint",
+      "dry pt",
+      "dpt",
+      "dpt us",
+      "British pints",
+      "imperial pints",
+      "pt br",
+      "br pt",
+      "imp pt",
+      "pt imp"
+    ],
+    "entity": "volume",
+    "URI": "Pint",
+    "dimensions": [],
+    "symbols": [
+      "pt",
+      "pt liq",
+      "pt dry",
+      "fl pt",
+      "[pt_us]",
+      "[dpt_us]",
+      "[pt_br]"
+    ]
+  },
+  "quart": {
+    "surfaces": [
+      "quart",
+      "dry quart",
+      "liquid quart",
+      "quart dry",
+      "quart liquid",
+      "US quarts",
+      "us qts",
+      "dry quarts",
+      "dry quart US",
+      "US dry quart",
+      "dry qt",
+      "us dry qt",
+      "dqt",
+      "dqt us",
+      "British quarts",
+      "imperial quarts",
+      "br qts"
+    ],
+    "entity": "volume",
+    "URI": "Quart",
+    "dimensions": [],
+    "symbols": [
+      "qt",
+      "qt liq",
+      "qt dry",
+      "fl qt",
+      "[qt_us]",
+      "[dqt_us]",
+      "[qt_br]"
+    ]
+  },
+  "stere": {
+    "surfaces": [
+      "stere",
+      "st\u00e8re",
+      "cubic meter",
+      "m3",
+      "m\u00b3",
+      "m^3",
+      "meters cubed"
+    ],
+    "entity": "volume",
+    "URI": "Stere",
+    "dimensions": [],
+    "symbols": [
+      "st"
+    ]
+  },
+  "tablespoon": {
+    "surfaces": [
+      "tablespoon",
+      "table spoon",
+      "tablespoonful",
+      "Tbs",
+      "tbs us",
+      "US tablespoons",
+      "metric tablespoons",
+      "tbs m"
+    ],
+    "entity": "volume",
+    "URI": "Tablespoon",
+    "dimensions": [],
+    "symbols": [
+      "tbsp",
+      "tbsp.",
+      "tbl",
+      "tbl.",
+      "tbs",
+      "tbs.",
+      "T.",
+      "Tb.",
+      "tbls.",
+      "[tbs_us]",
+      "[tbs_m]"
+    ]
+  },
+  "teaspoon": {
+    "surfaces": [
+      "teaspoon",
+      "tea spoon",
+      "teaspoonful",
+      "US teaspoons",
+      "metric teaspoons"
+    ],
+    "entity": "volume",
+    "URI": "Teaspoon",
+    "dimensions": [],
+    "symbols": [
+      "tsp",
+      "tsp.",
+      "t.",
+      "ts.",
+      "tspn",
+      "tspn.",
+      "[tsp_us]",
+      "[tsp_m]"
+    ]
+  },
+  "board-foot": {
+    "surfaces": [
+      "board-foot",
+      "board foot"
+    ],
+    "entity": "volume (lumber)",
+    "URI": "Board_foot",
+    "dimensions": [],
+    "symbols": [
+      "FBM",
+      "BDFT",
+      "BF"
+    ]
+  },
+  "gill": {
+    "surfaces": [
+      "US gills",
+      "gil us",
+      "imperial gills",
+      "British gills",
+      "imp gill, br gill"
+    ],
+    "entity": "fluid volume",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[gil_us]",
+      "[gil_br]"
+    ]
+  },
+  "minim": {
+    "surfaces": [
+      "min US",
+      "US min",
+      "\u264f US",
+      "min br",
+      "br min",
+      "\u264f br"
+    ],
+    "entity": "fluid volume",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[min_us]",
+      "[min_br]"
+    ]
+  },
+  "peripheral vascular resistance unit": {
+    "surfaces": [
+      "peripheral vascular resistance units",
+      "peripheral resistance unit",
+      "peripheral resistance units",
+      "PRU"
+    ],
+    "entity": "fluid resistance",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[PRU]"
+    ]
+  },
+  "Wood unit": {
+    "surfaces": [
+      "hybrid reference units",
+      "HRU",
+      "mmHg.min/L",
+      "vascular resistance"
+    ],
+    "entity": "fluid resistance",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[wood'U]"
+    ]
+  },
+  "celsius": {
+    "surfaces": [
+      "degree celsius",
+      "degree celcius",
+      "degree Celsius",
+      "degree Celcius",
+      "degrees celsius",
+      "degrees celcius",
+      "degrees Celsius",
+      "degrees Celcius",
+      "degree centigrade",
+      "degree centigrate",
+      "degree Centigrade",
+      "degree Centigrate",
+      "degrees centigrade",
+      "degrees centigrate",
+      "degrees Centigrade",
+      "degrees Centigrate",
+      "degree c",
+      "degrees c",
+      "degree C",
+      "degrees C",
+      "degree-c",
+      "degrees-c",
+      "degree-C",
+      "degrees-C",
+      "deg celsius",
+      "degs celsius",
+      "deg celcius",
+      "degs celcius",
+      "Celsius",
+      "Celcius",
+      "celsius",
+      "celcius",
+      "centigrade",
+      "centigrate",
+      "Centigrade",
+      "Centigrate",
+      "degC",
+      "degc",
+      "deg C",
+      "deg c"
+    ],
+    "entity": "temperature",
+    "URI": "Celsius",
+    "dimensions": [],
+    "symbols": [
+      "C",
+      "c",
+      "\u00b0C",
+      "Cel"
+    ]
+  },
+  "degree rankine": {
+    "surfaces": [
+      "degree rankine",
+      "Rankine",
+      "rankine"
+    ],
+    "entity": "temperature",
+    "URI": "Rankine_scale",
+    "dimensions": [],
+    "symbols": [
+      "\u00b0R",
+      "\u00b0Ra"
+    ]
+  },
+  "fahrenheit": {
+    "surfaces": [
+      "degree fahrenheit",
+      "degree farenheit",
+      "degrees fahrenheit",
+      "degrees farenheit",
+      "degree Fahrenheit",
+      "degree Farenheit",
+      "degrees Fahrenheit",
+      "degrees Farenheit",
+      "Fahrenheit",
+      "Farenheit",
+      "fahrenheit",
+      "farenheit",
+      "deg fahrenheit",
+      "deg farenheit",
+      "degs fahrenheit",
+      "degs farenheit",
+      "degree-f",
+      "degree-F",
+      "degree F",
+      "degree f",
+      "degrees-f",
+      "degrees-F",
+      "degrees F",
+      "degrees f",
+      "degF",
+      "degf",
+      "deg F",
+      "deg f"
+    ],
+    "entity": "temperature",
+    "URI": "Fahrenheit",
+    "dimensions": [],
+    "symbols": [
+      "F",
+      "f",
+      "\u00b0F",
+      "[degF]"
+    ]
+  },
+  "kelvin": {
+    "surfaces": [
+      "kelvin",
+      "Kelvin"
+    ],
+    "entity": "temperature",
+    "URI": "Kelvin",
+    "dimensions": [],
+    "symbols": [
+      "K",
+      "\u00b0K",
+      "k"
+    ]
+  },
+  "acre": {
+    "surfaces": [
+      "acre",
+      "Imperial acres",
+      "a",
+      "ac",
+      "ar",
+      "acr",
+      "Acre USA Survey",
+      "Acre USA",
+      "survey acres"
+    ],
+    "entity": "area",
+    "URI": "Acre",
+    "dimensions": [],
+    "symbols": []
+  },
+  "are": {
+    "surfaces": [
+      "100 m2",
+      "100 m^2",
+      "100 square meter",
+      "meters squared"
+    ],
+    "entity": "area",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "ar"
+    ]
+  },
+  "circular mil": {
+    "surfaces": [
+      "circular mil",
+      "circular mils",
+      "cml I"
+    ],
+    "entity": "area",
+    "URI": "Circular_mil",
+    "dimensions": [],
+    "symbols": [
+      "cmil",
+      "[cml_i]"
+    ]
+  },
+  "hectare": {
+    "surfaces": [
+      "hectare",
+      "hectares",
+      "square hectometre",
+      "square hectometres",
+      "sq hectometre",
+      "sq hectometres",
+      "square hectometer",
+      "square hectometers",
+      "sq hectometer",
+      "sq hectometers"
+    ],
+    "entity": "area",
+    "URI": "Hectare",
+    "dimensions": [
+      {
+        "base": "hectometre",
+        "power": 2
+      }
+    ],
+    "symbols": [
+      "sq hm",
+      "ha",
+      "hm2",
+      "hm^2",
+      "hm\u00b2"
+    ]
+  },
+  "square centimetre": {
+    "surfaces": [
+      "square centimetre",
+      "sq centimetre",
+      "square centimetres",
+      "sq centimetres",
+      "square centimeter",
+      "sq centimeter",
+      "square centimeters",
+      "sq centimeters"
+    ],
+    "entity": "area",
+    "URI": "Square_centimetre",
+    "dimensions": [
+      {
+        "base": "centimetre",
+        "power": 2
+      }
+    ],
+    "symbols": [
+      "sq cm",
+      "cm2"
+    ]
+  },
+  "square foot": {
+    "surfaces": [
+      "square foot",
+      "sq foot",
+      "sq feet",
+      "square feet",
+      "sqft",
+      "feet2",
+      "ft2",
+      "ft^2",
+      "ft squared",
+      "sq ft"
+    ],
+    "entity": "area",
+    "URI": "Square_foot",
+    "dimensions": [
+      {
+        "base": "foot",
+        "power": 2
+      }
+    ],
+    "symbols": [
+      "[sft_i]"
+    ]
+  },
+  "square inch": {
+    "surfaces": [
+      "square inch",
+      "sq inch",
+      "square inches",
+      "inches squared"
+    ],
+    "entity": "area",
+    "URI": "Square_inch",
+    "dimensions": [
+      {
+        "base": "inch",
+        "power": 2
+      }
+    ],
+    "symbols": [
+      "sq in",
+      "in2",
+      "in^2",
+      "[sin_i]"
+    ]
+  },
+  "square kilometre": {
+    "surfaces": [
+      "square kilometre",
+      "square kilometres",
+      "sq kilometre",
+      "sq kilometres",
+      "square kilometer",
+      "square kilometers",
+      "sq kilometer",
+      "sq kilometers"
+    ],
+    "entity": "area",
+    "URI": "Square_kilometre",
+    "dimensions": [
+      {
+        "base": "kilometre",
+        "power": 2
+      }
+    ],
+    "symbols": [
+      "sq km",
+      "km2",
+      "km^2",
+      "km\u00b2"
+    ]
+  },
+  "square metre": {
+    "surfaces": [
+      "square metre",
+      "sq metre",
+      "square metres",
+      "sq metres",
+      "square meter",
+      "sq meter",
+      "square meters",
+      "sq meters"
+    ],
+    "entity": "area",
+    "URI": "Square_metre",
+    "dimensions": [
+      {
+        "base": "metre",
+        "power": 2
+      }
+    ],
+    "symbols": [
+      "sq m",
+      "sqm",
+      "m2",
+      "m^2",
+      "m\u00b2"
+    ]
+  },
+  "square mile": {
+    "surfaces": [
+      "square mile",
+      "sq mi",
+      "sq mile",
+      "sqmiles",
+      "square miles"
+    ],
+    "entity": "area",
+    "URI": "Square_mile",
+    "dimensions": [
+      {
+        "base": "mile",
+        "power": 2
+      }
+    ],
+    "symbols": [
+      "mi2",
+      "mi^2",
+      "mi\u00b2"
+    ]
+  },
+  "square millimetre": {
+    "surfaces": [
+      "square millimetre",
+      "sq millimetre",
+      "square millimetres",
+      "sq millimetres",
+      "square millimeter",
+      "sq millimeter",
+      "square millimeters",
+      "sq millimeters"
+    ],
+    "entity": "area",
+    "URI": "Square_millimetre",
+    "dimensions": [
+      {
+        "base": "millimetre",
+        "power": 2
+      }
+    ],
+    "symbols": [
+      "sq mm",
+      "mm2"
+    ]
+  },
+  "square rod": {
+    "surfaces": [
+      "square rod",
+      "rod2",
+      "rod^2",
+      "sq. rod",
+      "rods squared"
+    ],
+    "entity": "area",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[srd_us]"
+    ]
+  },
+  "square yard": {
+    "surfaces": [
+      "square yard",
+      "gaj",
+      "sq yd",
+      "sq yard",
+      "sq yards",
+      "square yards",
+      "yd2",
+      "yd^2",
+      "sq. yds",
+      "yards squared"
+    ],
+    "entity": "area",
+    "URI": "Square_yard",
+    "dimensions": [
+      {
+        "base": "yard",
+        "power": 2
+      }
+    ],
+    "symbols": [
+      "yd\u00b2",
+      "[syd_i]"
+    ]
+  },
+  "township": {
+    "surfaces": [
+      "twp",
+      "townships"
+    ],
+    "entity": "area",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[twp]"
+    ]
+  },
+  "bar": {
+    "surfaces": [
+      "bar",
+      "bars"
+    ],
+    "entity": "pressure",
+    "URI": "Bar_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "bar"
+    ],
+    "prefixes": [
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "Gi",
+      "Ki",
+      "Mi",
+      "Ti"
+    ]
+  },
+  "barye": {
+    "surfaces": [
+      "barye",
+      "barad",
+      "barrie",
+      "bary",
+      "baryd",
+      "baryed",
+      "barie"
+    ],
+    "entity": "pressure",
+    "URI": "Barye",
+    "dimensions": [],
+    "symbols": [
+      "Ba"
+    ]
+  },
+  "centimeter of mercury": {
+    "surfaces": [
+      "centimeters of mercury",
+      "cmHg",
+      "cm Hg"
+    ],
+    "entity": "pressure",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "cm[Hg]"
+    ]
+  },
+  "centimeter of water": {
+    "surfaces": [
+      "centimeter of water",
+      "centimetre of water",
+      "cm H2O",
+      "cmH2O"
+    ],
+    "entity": "pressure",
+    "URI": "Centimetre_of_water",
+    "dimensions": [],
+    "symbols": [
+      "cm[H2O]"
+    ]
+  },
+  "gigapascal": {
+    "surfaces": [
+      "gigapascal"
+    ],
+    "entity": "pressure",
+    "URI": "Pascal_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "GPa"
+    ]
+  },
+  "hectopascal": {
+    "surfaces": [
+      "hectopascal"
+    ],
+    "entity": "pressure",
+    "URI": "Pascal_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "hPa"
+    ]
+  },
+  "inch of mercury": {
+    "surfaces": [
+      "inch of mercury",
+      "inch mercury"
+    ],
+    "entity": "pressure",
+    "URI": "Inch_of_mercury",
+    "dimensions": [],
+    "symbols": [
+      "inHg",
+      "\"Hg"
+    ]
+  },
+  "inch of water": {
+    "surfaces": [
+      "inch of water",
+      "inch water column"
+    ],
+    "entity": "pressure",
+    "URI": "Inch_of_water",
+    "dimensions": [],
+    "symbols": [
+      "inH2O",
+      "inAq"
+    ]
+  },
+  "kilopascal": {
+    "surfaces": [
+      "kilopascal",
+      "kilopascals"
+    ],
+    "entity": "pressure",
+    "URI": "Pascal_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "kPa",
+      "\u33aa"
+    ]
+  },
+  "kilopound per square inch": {
+    "surfaces": [
+      "kilopound per square inch",
+      "kilopounds per square inch",
+      "kilopound-force per square inch"
+    ],
+    "entity": "pressure",
+    "URI": "Kilopounds_per_square_inch",
+    "dimensions": [
+      {
+        "base": "pound-mass",
+        "power": 1
+      },
+      {
+        "base": "inch",
+        "power": -2
+      }
+    ],
+    "symbols": [
+      "ksi"
+    ]
+  },
+  "megapascal": {
+    "surfaces": [
+      "megapascal"
+    ],
+    "entity": "pressure",
+    "URI": "Pascal_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "MPa"
+    ]
+  },
+  "meter of mercury column": {
+    "surfaces": [
+      "mHg",
+      "m Hg",
+      "meters of mercury column"
+    ],
+    "entity": "pressure",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "m[Hg]"
+    ]
+  },
+  "meter of water column": {
+    "surfaces": [
+      "mH2O",
+      "m H2O",
+      "meters of water column"
+    ],
+    "entity": "pressure",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "m[H2O]"
+    ]
+  },
+  "millibar": {
+    "surfaces": [
+      "millibars"
+    ],
+    "entity": "pressure",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "mbar"
+    ]
+  },
+  "millimeter of mercury": {
+    "surfaces": [
+      "millimetre of mercury",
+      "millimetre mercury",
+      "millimeter of mercury",
+      "millimeter mercury",
+      "mmHg",
+      "mm Hg",
+      "millimeters of mercury",
+      "millimetres"
+    ],
+    "entity": "pressure",
+    "URI": "Millimeter_of_mercury",
+    "dimensions": [],
+    "symbols": []
+  },
+  "millipascal": {
+    "surfaces": [
+      "millipascal",
+      "millipascals"
+    ],
+    "entity": "pressure",
+    "URI": "Pascal_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "mPa"
+    ]
+  },
+  "pascal": {
+    "surfaces": [
+      "pascal",
+      "pascals"
+    ],
+    "entity": "pressure",
+    "URI": "Pascal_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "Pa",
+      "\u33a9"
+    ]
+  },
+  "pound per square inch": {
+    "surfaces": [
+      "pound per square inch",
+      "pound-force per square inch",
+      "psi",
+      "lb/in2",
+      "lb per in2"
+    ],
+    "entity": "pressure",
+    "URI": "Pounds_per_square_inch",
+    "dimensions": [
+      {
+        "base": "pound-mass",
+        "power": 1
+      },
+      {
+        "base": "inch",
+        "power": -2
+      }
+    ],
+    "symbols": []
+  },
+  "standard atmosphere": {
+    "surfaces": [
+      "standard atmosphere",
+      "atmosphere",
+      "reference pressure",
+      "atmos",
+      "std atmosphere"
+    ],
+    "entity": "pressure",
+    "URI": "Atmosphere_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "atm"
+    ]
+  },
+  "technical atmosphere": {
+    "surfaces": [
+      "technical atmosphere",
+      "at",
+      "tech atm",
+      "tech atmosphere",
+      "kgf/cm2",
+      "atms",
+      "atmospheres"
+    ],
+    "entity": "pressure",
+    "URI": "Technical_atmosphere",
+    "dimensions": [],
+    "symbols": [
+      "att"
+    ]
+  },
+  "torr": {
+    "surfaces": [
+      "torr",
+      "torrs"
+    ],
+    "entity": "pressure",
+    "URI": "Torr",
+    "dimensions": [],
+    "symbols": [
+      "Torr"
+    ]
+  },
+  "british thermal unit": {
+    "surfaces": [
+      "british thermal unit",
+      "btu",
+      "BTU",
+      "Btu",
+      "B.T.U. ",
+      "B.Th.U.",
+      "BThU",
+      "British thermal units",
+      "BTU 39F",
+      "BTU 39 F",
+      "B.T.U. 39 F",
+      "B.Th.U. 39 F",
+      "BThU 39 F",
+      "BTU 59 F",
+      "BTU 59F",
+      "B.T.U. 59 F",
+      "B.Th.U. 59 F",
+      "BThU 59F",
+      "BTU 60 F",
+      "BTU 60F",
+      "B.T.U. 60 F",
+      "B.Th.U. 60 F",
+      "BThU 60 F",
+      "British thermal units 60 F",
+      "BTU mean",
+      "B.T.U. mean",
+      "B.Th.U. mean",
+      "BThU mean",
+      "British thermal units mean",
+      "",
+      "BTU IT",
+      "B.T.U. IT",
+      "B.Th.U. IT",
+      "BThU IT",
+      "British thermal units IT",
+      "BTU Th",
+      "B.T.U. Th",
+      "B.Th.U. Th",
+      "BThU Th",
+      "thermochemical British thermal units"
+    ],
+    "entity": "energy",
+    "URI": "British_thermal_unit",
+    "dimensions": [],
+    "symbols": [
+      "[Btu]",
+      "[Btu_39]",
+      "[Btu_59]",
+      "[Btu_60]",
+      "[Btu_m]",
+      "[Btu_IT]",
+      "[Btu_th]"
+    ]
+  },
+  "calorie": {
+    "surfaces": [
+      "calorie",
+      "small calorie",
+      "gram calorie",
+      "gram calories",
+      "small calories",
+      "calorie 15 C",
+      "cals 15 C",
+      "calories at 15 C",
+      "calorie 20 C",
+      "cal 20 C",
+      "calories at 20 C",
+      "mean cals",
+      "mean calories",
+      "calories IT",
+      "IT cals",
+      "international steam table calories",
+      "thermochemical calories",
+      "th cals"
+    ],
+    "entity": "energy",
+    "URI": "Calorie",
+    "dimensions": [],
+    "symbols": [
+      "cal",
+      "cal_[15]",
+      "cal_[20]",
+      "cal_m",
+      "cal_IT",
+      "cal_th"
+    ]
+  },
+  "electronvolt": {
+    "surfaces": [
+      "electron volt",
+      "electronvolt",
+      "electron-volt",
+      "Electron Volts",
+      "electronvolts"
+    ],
+    "entity": "energy",
+    "URI": "Electronvolt",
+    "dimensions": [],
+    "symbols": [
+      "eV"
+    ]
+  },
+  "erg": {
+    "surfaces": [
+      "erg",
+      "10^-7 Joules, 10-7 Joules",
+      "100 nJ",
+      "100 nanoJoules",
+      "1 dyne cm",
+      "1 g.cm2/s2"
+    ],
+    "entity": "energy",
+    "URI": "Erg",
+    "dimensions": [],
+    "symbols": []
+  },
+  "gigaelectronvolt": {
+    "surfaces": [
+      "gigaelectron volt",
+      "gigaelectronvolt",
+      "gigaelectron-volt",
+      "bevatron"
+    ],
+    "entity": "energy",
+    "URI": "Electronvolt",
+    "dimensions": [],
+    "symbols": [
+      "GeV",
+      "BeV"
+    ]
+  },
+  "gigajoule": {
+    "surfaces": [
+      "gigajoule"
+    ],
+    "entity": "energy",
+    "URI": "Joule",
+    "dimensions": [],
+    "symbols": [
+      "GJ"
+    ]
+  },
+  "gigaton": {
+    "surfaces": [
+      "gigaton",
+      "gigatonne"
+    ],
+    "entity": "energy",
+    "URI": "TNT_equivalent",
+    "dimensions": [],
+    "symbols": [
+      "Gt",
+      "Gton"
+    ]
+  },
+  "gigawatt hour": {
+    "surfaces": [
+      "gigawatt hour",
+      "gigawatthour",
+      "gigawatt-hour"
+    ],
+    "entity": "energy",
+    "URI": "Gigawatt_hour",
+    "dimensions": [
+      {
+        "base": "gigawatt",
+        "power": 1
+      },
+      {
+        "base": "hour",
+        "power": 1
+      }
+    ],
+    "symbols": [
+      "GWh",
+      "gwh"
+    ]
+  },
+  "hartree": {
+    "surfaces": [
+      "hartree",
+      "hartree energy"
+    ],
+    "entity": "energy",
+    "URI": "Hartree",
+    "dimensions": [],
+    "symbols": [
+      "Eh",
+      "Ha"
+    ]
+  },
+  "hectojoule": {
+    "surfaces": [
+      "hectojoule"
+    ],
+    "entity": "energy",
+    "URI": "Joule",
+    "dimensions": [],
+    "symbols": [
+      "hJ"
+    ]
+  },
+  "horsepower-hour": {
+    "surfaces": [
+      "horsepower hour",
+      "horsepowerhour",
+      "horsepower-hour"
+    ],
+    "entity": "energy",
+    "URI": "Horsepower-hour",
+    "dimensions": [
+      {
+        "base": "horsepower",
+        "power": 1
+      },
+      {
+        "base": "hour",
+        "power": 1
+      }
+    ],
+    "symbols": [
+      "hph"
+    ]
+  },
+  "joule": {
+    "surfaces": [
+      "joule",
+      "joules"
+    ],
+    "entity": "energy",
+    "URI": "Joule",
+    "dimensions": [],
+    "symbols": [
+      "J"
+    ]
+  },
+  "kilocalorie": {
+    "surfaces": [
+      "kilocalorie",
+      "large calorie",
+      "kilogram calorie",
+      "kilogram calories",
+      "large calories",
+      "kcals"
+    ],
+    "entity": "energy",
+    "URI": "Calorie",
+    "dimensions": [],
+    "symbols": [
+      "kcal",
+      "Cal"
+    ]
+  },
+  "kiloelectronvolt": {
+    "surfaces": [
+      "kiloelectron volt",
+      "kiloelectronvolt",
+      "kiloelectron-volt"
+    ],
+    "entity": "energy",
+    "URI": "Electronvolt",
+    "dimensions": [],
+    "symbols": [
+      "keV"
+    ]
+  },
+  "kilojoule": {
+    "surfaces": [
+      "kilojoule"
+    ],
+    "entity": "energy",
+    "URI": "Joule",
+    "dimensions": [],
+    "symbols": [
+      "kJ"
+    ]
+  },
+  "kiloton": {
+    "surfaces": [
+      "kiloton",
+      "kilotonne"
+    ],
+    "entity": "energy",
+    "URI": "TNT_equivalent",
+    "dimensions": [],
+    "symbols": [
+      "kt",
+      "kton"
+    ]
+  },
+  "kilowatt hour": {
+    "surfaces": [
+      "kilowatt hour",
+      "kilowatthour",
+      "kilowatt-hour"
+    ],
+    "entity": "energy",
+    "URI": "Kilowatt_hour",
+    "dimensions": [
+      {
+        "base": "kilowatt",
+        "power": 1
+      },
+      {
+        "base": "hour",
+        "power": 1
+      }
+    ],
+    "symbols": [
+      "kWh",
+      "kwh"
+    ]
+  },
+  "mega british thermal unit": {
+    "surfaces": [
+      "mega british thermal unit"
+    ],
+    "entity": "energy",
+    "URI": "British_thermal_unit",
+    "dimensions": [],
+    "symbols": [
+      "MBTU",
+      "MMBtu",
+      "mmBtu",
+      "mmBTU"
+    ]
+  },
+  "megaelectronvolt": {
+    "surfaces": [
+      "megaelectron volt",
+      "megaelectronvolt",
+      "megaelectron-volt"
+    ],
+    "entity": "energy",
+    "URI": "Electronvolt",
+    "dimensions": [],
+    "symbols": [
+      "MeV"
+    ]
+  },
+  "megajoule": {
+    "surfaces": [
+      "megajoule"
+    ],
+    "entity": "energy",
+    "URI": "Joule",
+    "dimensions": [],
+    "symbols": [
+      "MJ"
+    ]
+  },
+  "megaton": {
+    "surfaces": [
+      "megaton",
+      "megatonne"
+    ],
+    "entity": "energy",
+    "URI": "TNT_equivalent",
+    "dimensions": [],
+    "symbols": [
+      "Mt",
+      "Mton"
+    ]
+  },
+  "megawatt hour": {
+    "surfaces": [
+      "megawatt hour",
+      "megawatthour",
+      "megawatt-hour"
+    ],
+    "entity": "energy",
+    "URI": "Megawatt_hour",
+    "dimensions": [
+      {
+        "base": "megawatt",
+        "power": 1
+      },
+      {
+        "base": "hour",
+        "power": 1
+      }
+    ],
+    "symbols": [
+      "MWh",
+      "mwh"
+    ]
+  },
+  "millielectronvolt": {
+    "surfaces": [
+      "millielectron volt",
+      "millielectronvolt",
+      "millielectron-volt"
+    ],
+    "entity": "energy",
+    "URI": "Electronvolt",
+    "dimensions": [],
+    "symbols": [
+      "meV"
+    ]
+  },
+  "millijoule": {
+    "surfaces": [
+      "millijoule"
+    ],
+    "entity": "energy",
+    "URI": "Joule",
+    "dimensions": [],
+    "symbols": [
+      "mJ"
+    ]
+  },
+  "nanojoule": {
+    "surfaces": [
+      "nanojoule"
+    ],
+    "entity": "energy",
+    "URI": "Joule",
+    "dimensions": [],
+    "symbols": [
+      "nJ"
+    ]
+  },
+  "nutrition label Calories": {
+    "surfaces": [
+      "food calories",
+      "Cal",
+      "kcal"
+    ],
+    "entity": "energy",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[Cal]"
+    ]
+  },
+  "quad": {
+    "surfaces": [
+      "quad",
+      "quadrillion british thermal unit"
+    ],
+    "entity": "energy",
+    "URI": "Quad_(unit)",
+    "dimensions": [],
+    "symbols": []
+  },
+  "teraelectronvolt": {
+    "surfaces": [
+      "teraelectron volt",
+      "teraelectronvolt",
+      "teraelectron-volt"
+    ],
+    "entity": "energy",
+    "URI": "Electronvolt",
+    "dimensions": [],
+    "symbols": [
+      "TeV"
+    ]
+  },
+  "terawatt hour": {
+    "surfaces": [
+      "terawatt hour",
+      "terawatthour",
+      "terawatt-hour"
+    ],
+    "entity": "energy",
+    "URI": "Terawatt_hour",
+    "dimensions": [
+      {
+        "base": "terawatt",
+        "power": 1
+      },
+      {
+        "base": "hour",
+        "power": 1
+      }
+    ],
+    "symbols": [
+      "TWh",
+      "twh"
+    ]
+  },
+  "therm": {
+    "surfaces": [
+      "therm",
+      "thermie"
+    ],
+    "entity": "energy",
+    "URI": "Therm",
+    "dimensions": [],
+    "symbols": [
+      "thm"
+    ]
+  },
+  "watt second": {
+    "surfaces": [
+      "watt second",
+      "watt-second",
+      "wattsecond"
+    ],
+    "entity": "energy",
+    "URI": "Watt_second",
+    "dimensions": [
+      {
+        "base": "watt",
+        "power": 1
+      },
+      {
+        "base": "second",
+        "power": 1
+      }
+    ],
+    "symbols": [
+      "Ws"
+    ]
+  },
+  "brake horsepower": {
+    "surfaces": [
+      "brake horsepower"
+    ],
+    "entity": "power",
+    "URI": "Horsepower",
+    "dimensions": [],
+    "symbols": [
+      "bhp"
+    ]
+  },
+  "horsepower": {
+    "surfaces": [
+      "horsepower",
+      "pferdestarke",
+      "uk horsepower",
+      "british horsepower",
+      "boiler horsepower",
+      "metric horsepower",
+      "hydraulic horsepower",
+      "imperial horsepowers"
+    ],
+    "entity": "power",
+    "URI": "Horsepower",
+    "dimensions": [],
+    "symbols": [
+      "hp",
+      "PS",
+      "[HP]"
+    ]
+  },
+  "ton of refrigeration": {
+    "surfaces": [
+      "ton of refrigeration",
+      "refrigeration ton"
+    ],
+    "entity": "power",
+    "URI": "Ton_of_refrigeration",
+    "dimensions": [],
+    "symbols": [
+      "TR"
+    ]
+  },
+  "volt-ampere": {
+    "surfaces": [
+      "volt-ampere",
+      "volt ampere",
+      "voltampere"
+    ],
+    "entity": "power",
+    "URI": "Volt-ampere",
+    "dimensions": [
+      {
+        "base": "volt",
+        "power": 1
+      },
+      {
+        "base": "ampere",
+        "power": 1
+      }
+    ],
+    "symbols": [
+      "VA"
+    ]
+  },
+  "watt": {
+    "surfaces": [
+      "watt",
+      "watts"
+    ],
+    "entity": "power",
+    "URI": "Watt",
+    "dimensions": [],
+    "prefixes": [
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "Gi",
+      "Ki",
+      "Mi",
+      "Ti"
+    ],
+    "symbols": [
+      "W"
+    ]
+  },
+  "dyne": {
+    "surfaces": [
+      "dyne",
+      "dynes"
+    ],
+    "entity": "force",
+    "URI": "Dyne",
+    "dimensions": [],
+    "symbols": [
+      "dyn"
+    ]
+  },
+  "foot pound-force": {
+    "surfaces": [
+      "foot pound-force",
+      "foot-pound-force",
+      "foot-pound",
+      "foot pound"
+    ],
+    "entity": "force",
+    "URI": "Pound_(force)",
+    "dimensions": [],
+    "symbols": [
+      "lb-ft",
+      "ftlbf",
+      "ftlb-f",
+      "ft-lbf",
+      "ft-lb"
+    ]
+  },
+  "giganewton": {
+    "surfaces": [
+      "giganewton"
+    ],
+    "entity": "force",
+    "URI": "Newton_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "GN"
+    ]
+  },
+  "gram-force": {
+    "surfaces": [
+      "gram-force",
+      "gram force",
+      "gramforce",
+      "pond",
+      "force gram",
+      "gram forces"
+    ],
+    "entity": "force",
+    "URI": "Kilogram-force",
+    "dimensions": [],
+    "symbols": [
+      "gf"
+    ]
+  },
+  "kilodyne": {
+    "surfaces": [
+      "kilodyne"
+    ],
+    "entity": "force",
+    "URI": "Dyne",
+    "dimensions": [],
+    "symbols": [
+      "kdyn"
+    ]
+  },
+  "kilogram-force": {
+    "surfaces": [
+      "kilogram-force",
+      "kilogram force",
+      "kilogramforce",
+      "kilopond",
+      "force kilogram"
+    ],
+    "entity": "force",
+    "URI": "Kilogram-force",
+    "dimensions": [],
+    "symbols": [
+      "kgf",
+      "kp"
+    ]
+  },
+  "kilonewton": {
+    "surfaces": [
+      "kilonewton"
+    ],
+    "entity": "force",
+    "URI": "Newton_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "kN"
+    ]
+  },
+  "kip": {
+    "surfaces": [
+      "kip",
+      "kip-force",
+      "kip force",
+      "kipforce"
+    ],
+    "entity": "force",
+    "URI": "Kip_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "klb",
+      "kipf",
+      "klbf"
+    ]
+  },
+  "megadyne": {
+    "surfaces": [
+      "megadyne"
+    ],
+    "entity": "force",
+    "URI": "Dyne",
+    "dimensions": [],
+    "symbols": [
+      "Mdyn"
+    ]
+  },
+  "meganewton": {
+    "surfaces": [
+      "meganewton"
+    ],
+    "entity": "force",
+    "URI": "Newton_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "MN"
+    ]
+  },
+  "millidyne": {
+    "surfaces": [
+      "millidyne"
+    ],
+    "entity": "force",
+    "URI": "Dyne",
+    "dimensions": [],
+    "symbols": [
+      "mdyn"
+    ]
+  },
+  "milligram-force": {
+    "surfaces": [
+      "milligram-force",
+      "milligram force",
+      "milligramforce",
+      "millipond",
+      "force milligram"
+    ],
+    "entity": "force",
+    "URI": "Kilogram-force",
+    "dimensions": [],
+    "symbols": [
+      "mgf"
+    ]
+  },
+  "newton": {
+    "surfaces": [
+      "newton",
+      "newtons",
+      "Newton",
+      "Newtons"
+    ],
+    "entity": "force",
+    "URI": "Newton_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "N"
+    ]
+  },
+  "ounce-force": {
+    "surfaces": [
+      "ounce-force",
+      "ounce force",
+      "ounceforce",
+      "force ounce"
+    ],
+    "entity": "force",
+    "URI": "Pound_(force)",
+    "dimensions": [],
+    "symbols": [
+      "ozf"
+    ]
+  },
+  "pound-force": {
+    "surfaces": [
+      "pound-force",
+      "pound force",
+      "poundforce",
+      "force pound",
+      "lbfs",
+      "US lbf",
+      "US pound forces"
+    ],
+    "entity": "force",
+    "URI": "Pound_(force)",
+    "dimensions": [],
+    "symbols": [
+      "lbf",
+      "[lbf_av]"
+    ]
+  },
+  "poundal": {
+    "surfaces": [
+      "poundal"
+    ],
+    "entity": "force",
+    "URI": "Poundal",
+    "dimensions": [],
+    "symbols": [
+      "pdl"
+    ]
+  },
+  "ton-force": {
+    "surfaces": [
+      "ton-force",
+      "ton force",
+      "tonforce",
+      "force ton",
+      "force tonne",
+      "tonne-force",
+      "tonne force",
+      "tonneforce"
+    ],
+    "entity": "force",
+    "URI": "Ton-force",
+    "dimensions": [],
+    "symbols": [
+      "tf",
+      "tonf"
+    ]
+  },
+  "century": {
+    "surfaces": [
+      "century"
+    ],
+    "entity": "time",
+    "URI": "Century",
+    "dimensions": [],
+    "symbols": [
+      "c.",
+      "C."
+    ]
+  },
+  "day": {
+    "surfaces": [
+      "day",
+      "days",
+      "dy",
+      "24 hours",
+      "24 hrs"
+    ],
+    "entity": "time",
+    "URI": "Day",
+    "dimensions": [],
+    "symbols": [
+      "d"
+    ]
+  },
+  "decade": {
+    "surfaces": [
+      "decade"
+    ],
+    "entity": "time",
+    "URI": "Decade",
+    "dimensions": [],
+    "symbols": [
+      "dec"
+    ]
+  },
+  "fortnight": {
+    "surfaces": [
+      "fortnight"
+    ],
+    "entity": "time",
+    "URI": "Fortnight",
+    "dimensions": [],
+    "symbols": []
+  },
+  "hour": {
+    "surfaces": [
+      "hour",
+      "hours",
+      "hrs"
+    ],
+    "entity": "time",
+    "URI": "Hour",
+    "dimensions": [],
+    "symbols": [
+      "h",
+      "hr",
+      "hs"
+    ]
+  },
+  "kilosecond": {
+    "surfaces": [
+      "kiloseconds",
+      "ksec"
+    ],
+    "entity": "time",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "ks"
+    ]
+  },
+  "lustrum": {
+    "surfaces": [
+      "lustrum"
+    ],
+    "entity": "time",
+    "URI": "Lustrum",
+    "dimensions": [],
+    "symbols": []
+  },
+  "megasecond": {
+    "surfaces": [
+      "megaseconds"
+    ],
+    "entity": "time",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "Ms"
+    ]
+  },
+  "microsecond": {
+    "surfaces": [
+      "\u00b5s",
+      "microsecond",
+      "microseconds"
+    ],
+    "entity": "time",
+    "URI": "Microsecond",
+    "dimensions": [],
+    "symbols": [
+      "\u03bcs",
+      "\u03bcsec",
+      "us"
+    ]
+  },
+  "millennium": {
+    "surfaces": [
+      "millennium"
+    ],
+    "entity": "time",
+    "URI": "Millennium",
+    "dimensions": [],
+    "symbols": []
+  },
+  "millisecond": {
+    "surfaces": [
+      "millisecond",
+      "milliseconds"
+    ],
+    "entity": "time",
+    "URI": "Millisecond",
+    "dimensions": [],
+    "symbols": [
+      "ms",
+      "msec"
+    ]
+  },
+  "minute": {
+    "surfaces": [
+      "minute",
+      "minutes"
+    ],
+    "entity": "time",
+    "URI": "Minute",
+    "dimensions": [],
+    "symbols": [
+      "min",
+      "'",
+      "\u2032"
+    ]
+  },
+  "month": {
+    "surfaces": [
+      "month",
+      "months",
+      "Moon",
+      "synodic month",
+      "lunar month",
+      "mo-s",
+      "mo s",
+      "moons",
+      "mo-julian",
+      "mo Julian",
+      "month-gregorian",
+      "mo-gregorian",
+      "mo"
+    ],
+    "entity": "time",
+    "URI": "Month",
+    "dimensions": [],
+    "symbols": [
+      "mo_s",
+      "mo_j",
+      "mo_g"
+    ]
+  },
+  "nanosecond": {
+    "surfaces": [
+      "nanosecond",
+      "nanoseconds"
+    ],
+    "entity": "time",
+    "URI": "Nanosecond",
+    "dimensions": [],
+    "symbols": [
+      "ns",
+      "nsec"
+    ]
+  },
+  "picosecond": {
+    "surfaces": [
+      "picoseconds",
+      "psec"
+    ],
+    "entity": "time",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "ps"
+    ]
+  },
+  "second": {
+    "surfaces": [
+      "second",
+      "seconds"
+    ],
+    "entity": "time",
+    "URI": "Second",
+    "dimensions": [],
+    "symbols": [
+      "s",
+      "sec",
+      "\"",
+      "\u2033"
+    ]
+  },
+  "shake": {
+    "surfaces": [
+      "shake"
+    ],
+    "entity": "time",
+    "URI": "Shake_(unit)",
+    "dimensions": [],
+    "symbols": []
+  },
+  "week": {
+    "surfaces": [
+      "week",
+      "weeks",
+      "wks"
+    ],
+    "entity": "time",
+    "URI": "Week",
+    "dimensions": [],
+    "symbols": [
+      "wk"
+    ]
+  },
+  "year": {
+    "surfaces": [
+      "year",
+      "annum",
+      "years",
+      "a",
+      "yr",
+      "yrs",
+      "solar years",
+      "a tropical",
+      "mean Julian yr",
+      "a julian",
+      "mean Gregorian yr",
+      "a gregorian"
+    ],
+    "entity": "time",
+    "URI": "Year",
+    "dimensions": [],
+    "symbols": [
+      "a",
+      "y",
+      "a_t",
+      "a_j",
+      "a_g"
+    ],
+    "prefixes": [
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "Gi",
+      "Ki",
+      "Mi",
+      "Ti"
+    ]
+  },
+  "day of age": {
+    "surfaces": [
+      "day of age",
+      "days of age",
+      "days old",
+      "days-old",
+      "day old",
+      "-day-old"
+    ],
+    "entity": "age",
+    "URI": "Age",
+    "dimensions": [],
+    "symbols": []
+  },
+  "month of age": {
+    "surfaces": [
+      "months old",
+      "month old",
+      "months-old",
+      "month-old",
+      "-month-old"
+    ],
+    "entity": "age",
+    "URI": "Age",
+    "dimensions": [],
+    "symbols": [
+      "mo"
+    ]
+  },
+  "week of age": {
+    "surfaces": [
+      "week of age",
+      "weeks of age",
+      "weeks old",
+      "weeks-old",
+      "week old",
+      "-week-old",
+      "-weeks-old"
+    ],
+    "entity": "age",
+    "URI": "Age",
+    "dimensions": [],
+    "symbols": []
+  },
+  "year of age": {
+    "surfaces": [
+      "year-old",
+      "year old",
+      "years old",
+      "years-old",
+      "-year-old",
+      "-years-old",
+      "years of age",
+      "year of age",
+      "old"
+    ],
+    "entity": "age",
+    "URI": "Age",
+    "dimensions": [],
+    "symbols": [
+      "yo"
+    ]
+  },
+  "foot per second": {
+    "surfaces": [
+      "foot per second"
+    ],
+    "entity": "speed",
+    "URI": "Foot_per_second",
+    "dimensions": [
+      {
+        "base": "foot",
+        "power": 1
+      },
+      {
+        "base": "second",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "fps",
+      "ft/s"
+    ]
+  },
+  "inch per second": {
+    "surfaces": [
+      "inch per second"
+    ],
+    "entity": "speed",
+    "URI": "Inch_per_second",
+    "dimensions": [
+      {
+        "base": "inch",
+        "power": 1
+      },
+      {
+        "base": "second",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "ips"
+    ]
+  },
+  "kilometre per hour": {
+    "surfaces": [
+      "kilometre per hour",
+      "kilometer per hour",
+      "km per h"
+    ],
+    "entity": "speed",
+    "URI": "Kilometres_per_hour",
+    "dimensions": [
+      {
+        "base": "kilometre",
+        "power": 1
+      },
+      {
+        "base": "hour",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "kph",
+      "km / h",
+      "km/h",
+      "km/hr",
+      "kmph"
+    ]
+  },
+  "kilometre per millisecond": {
+    "surfaces": [
+      "kilometre per millisecond",
+      "kilometer per millisecond"
+    ],
+    "entity": "speed",
+    "URI": "Kilometre_per_millisecond",
+    "dimensions": [
+      {
+        "base": "kilometre",
+        "power": 1
+      },
+      {
+        "base": "millisecond",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "km/ms"
+    ]
+  },
+  "kilometre per second": {
+    "surfaces": [
+      "kilometre per second",
+      "kilometer per second"
+    ],
+    "entity": "speed",
+    "URI": "Metre_per_second",
+    "dimensions": [
+      {
+        "base": "kilometre",
+        "power": 1
+      },
+      {
+        "base": "second",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "km/s"
+    ]
+  },
+  "knot": {
+    "surfaces": [
+      "knot",
+      "international knots",
+      "British knots",
+      "kn br"
+    ],
+    "entity": "speed",
+    "URI": "Knot_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "kn",
+      "kt"
+    ]
+  },
+  "metre per hour": {
+    "surfaces": [
+      "metre per hour",
+      "meter per hour"
+    ],
+    "entity": "speed",
+    "URI": "Metre_per_hour",
+    "dimensions": [
+      {
+        "base": "metre",
+        "power": 1
+      },
+      {
+        "base": "hour",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "m/h"
+    ]
+  },
+  "metre per millisecond": {
+    "surfaces": [
+      "metre per millisecond",
+      "meter per millisecond"
+    ],
+    "entity": "speed",
+    "URI": "Metre_per_millisecond",
+    "dimensions": [
+      {
+        "base": "metre",
+        "power": 1
+      },
+      {
+        "base": "millisecond",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "m/ms"
+    ]
+  },
+  "metre per second": {
+    "surfaces": [
+      "metre per second",
+      "meter per second"
+    ],
+    "entity": "speed",
+    "URI": "Metre_per_second",
+    "dimensions": [
+      {
+        "base": "metre",
+        "power": 1
+      },
+      {
+        "base": "second",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "mps",
+      "m/s"
+    ]
+  },
+  "mile per hour": {
+    "surfaces": [
+      "mile per hour",
+      "miles per hour",
+      "mile an hour",
+      "miles an hour"
+    ],
+    "entity": "speed",
+    "URI": "Miles_per_hour",
+    "dimensions": [
+      {
+        "base": "mile",
+        "power": 1
+      },
+      {
+        "base": "hour",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "MPH",
+      "mph",
+      "mi/hr",
+      "mi/h"
+    ]
+  },
+  "mile per gallon": {
+    "surfaces": [
+      "mile per gallon",
+      "miles per gallon"
+    ],
+    "entity": "distance",
+    "URI": "Miles_per_gallon",
+    "dimensions": [
+      {
+        "base": "mile",
+        "power": 1
+      },
+      {
+        "base": "gallon",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "MPG",
+      "mpg"
+    ]
+  },
+  "speed of light": {
+    "surfaces": [
+      "speed of light",
+      "lightspeed"
+    ],
+    "entity": "speed",
+    "URI": "Speed_of_light",
+    "dimensions": [],
+    "symbols": [
+      "c"
+    ]
+  },
+  "degree": {
+    "surfaces": [
+      "degree",
+      "degrees",
+      "degree of arc",
+      "arc degree",
+      "arcdegree",
+      "angular degree",
+      "degree angle",
+      "deg",
+      "deg.",
+      "arcdeg",
+      "\u00b0",
+      "angle"
+    ],
+    "entity": "angle",
+    "URI": "Degree_(angle)",
+    "dimensions": [],
+    "symbols": [
+      "\u00b0"
+    ]
+  },
+  "minute of arc": {
+    "surfaces": [
+      "minute of arc",
+      "arcminute",
+      "minute arc",
+      "angular minute",
+      "arc minute"
+    ],
+    "entity": "angle",
+    "URI": "Minute_and_second_of_arc",
+    "dimensions": [],
+    "symbols": [
+      "\u2032",
+      "MOA",
+      "arcmin",
+      "amin"
+    ]
+  },
+  "radian": {
+    "surfaces": [
+      "radian",
+      "radians"
+    ],
+    "entity": "angle",
+    "URI": "Radian",
+    "dimensions": [],
+    "symbols": [
+      "rad",
+      "\u33ad"
+    ]
+  },
+  "second of arc": {
+    "surfaces": [
+      "second of arc",
+      "arcsecond",
+      "second arc",
+      "angular second",
+      "arc second"
+    ],
+    "entity": "angle",
+    "URI": "Minute_and_second_of_arc",
+    "dimensions": [],
+    "symbols": [
+      "\"",
+      "\u2033",
+      "SOA",
+      "arcsec",
+      "asec"
+    ]
+  },
+  "steradian": {
+    "surfaces": [
+      "steradian",
+      "square radian",
+      "rad2",
+      "rad^2"
+    ],
+    "entity": "angle",
+    "URI": "Steradian",
+    "dimensions": [],
+    "symbols": [
+      "sr"
+    ]
+  },
+  "gon": {
+    "surfaces": [
+      "gon (grade)",
+      "gons"
+    ],
+    "entity": "plane angle",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "gon"
+    ]
+  },
+  "bit": {
+    "surfaces": [
+      "bit",
+      "bits"
+    ],
+    "entity": "data storage",
+    "URI": "Bit",
+    "dimensions": [],
+    "symbols": [
+      "b"
+    ],
+    "prefixes": [
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "Gi",
+      "Ki",
+      "Mi",
+      "Ti"
+    ]
+  },
+  "byte": {
+    "surfaces": [
+      "byte",
+      "bytes",
+      "Byte",
+      "Bytes"
+    ],
+    "entity": "data storage",
+    "URI": "Byte",
+    "dimensions": [],
+    "symbols": [
+      "B",
+      "By"
+    ],
+    "prefixes": [
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "Gi",
+      "Ki",
+      "Mi",
+      "Ti"
+    ]
+  },
+  "exabit": {
+    "surfaces": [
+      "exabit"
+    ],
+    "entity": "data storage",
+    "URI": "Exabit",
+    "dimensions": [],
+    "symbols": [
+      "Eb",
+      "Ebit"
+    ]
+  },
+  "exabyte": {
+    "surfaces": [
+      "exabyte"
+    ],
+    "entity": "data storage",
+    "URI": "Exabyte",
+    "dimensions": [],
+    "symbols": [
+      "EB"
+    ]
+  },
+  "exbibit": {
+    "surfaces": [
+      "exbibit"
+    ],
+    "entity": "data storage",
+    "URI": "Exbibit",
+    "dimensions": [],
+    "symbols": [
+      "Eibit"
+    ]
+  },
+  "exbibyte": {
+    "surfaces": [
+      "exbibyte"
+    ],
+    "entity": "data storage",
+    "URI": "Exbibyte",
+    "dimensions": [],
+    "symbols": [
+      "EiB"
+    ]
+  },
+  "gibibit": {
+    "surfaces": [
+      "gibibit"
+    ],
+    "entity": "data storage",
+    "URI": "Gibibit",
+    "dimensions": [],
+    "symbols": [
+      "Gibit"
+    ]
+  },
+  "gibibyte": {
+    "surfaces": [
+      "gibibyte"
+    ],
+    "entity": "data storage",
+    "URI": "Gibibyte",
+    "dimensions": [],
+    "symbols": [
+      "GiB"
+    ]
+  },
+  "gigabit": {
+    "surfaces": [
+      "gigabit",
+      "gigabits"
+    ],
+    "entity": "data storage",
+    "URI": "Gigabit",
+    "dimensions": [],
+    "symbols": [
+      "gb",
+      "gbit",
+      "Gb",
+      "Gbit"
+    ]
+  },
+  "gigabyte": {
+    "surfaces": [
+      "gigabyte",
+      "gigabytes",
+      "giga byte",
+      "giga bytes"
+    ],
+    "entity": "data storage",
+    "URI": "Gigabyte",
+    "dimensions": [],
+    "symbols": [
+      "GB",
+      "gB",
+      "gbyte"
+    ]
+  },
+  "kibibit": {
+    "surfaces": [
+      "kibibit"
+    ],
+    "entity": "data storage",
+    "URI": "Kibibit",
+    "dimensions": [],
+    "symbols": [
+      "Kibit"
+    ]
+  },
+  "kibibyte": {
+    "surfaces": [
+      "kibibyte"
+    ],
+    "entity": "data storage",
+    "URI": "Kibibyte",
+    "dimensions": [],
+    "symbols": [
+      "KiB",
+      "KB"
+    ]
+  },
+  "kilobit": {
+    "surfaces": [
+      "kilobit",
+      "kilobits"
+    ],
+    "entity": "data storage",
+    "URI": "Kilobit",
+    "dimensions": [],
+    "symbols": [
+      "kb",
+      "Kb",
+      "kbit"
+    ]
+  },
+  "kilobyte": {
+    "surfaces": [
+      "kilobyte",
+      "kilobytes",
+      "kilo byte",
+      "kilo bytes"
+    ],
+    "entity": "data storage",
+    "URI": "Kilobyte",
+    "dimensions": [],
+    "symbols": [
+      "kB",
+      "KB",
+      "kbyte"
+    ]
+  },
+  "mebibit": {
+    "surfaces": [
+      "mebibit"
+    ],
+    "entity": "data storage",
+    "URI": "Mebibit",
+    "dimensions": [],
+    "symbols": [
+      "Mibit"
+    ]
+  },
+  "megabit": {
+    "surfaces": [
+      "megabit",
+      "megabits"
+    ],
+    "entity": "data storage",
+    "URI": "Megabit",
+    "dimensions": [],
+    "symbols": [
+      "mb",
+      "mbit",
+      "Mb",
+      "Mbit"
+    ]
+  },
+  "megabyte": {
+    "surfaces": [
+      "megabyte",
+      "megabytes",
+      "mega byte",
+      "mega bytes"
+    ],
+    "entity": "data storage",
+    "URI": "Megabyte",
+    "dimensions": [],
+    "symbols": [
+      "MB",
+      "MByte",
+      "mB",
+      "mbyte"
+    ]
+  },
+  "mibibyte": {
+    "surfaces": [
+      "mibibyte"
+    ],
+    "entity": "data storage",
+    "URI": "Mibibyte",
+    "dimensions": [],
+    "symbols": [
+      "MiB"
+    ]
+  },
+  "nibble": {
+    "surfaces": [
+      "nibble",
+      "nybble",
+      "nyble",
+      "half-byte",
+      "tetrad",
+      "tetrade",
+      "semi-octet",
+      "quadbit",
+      "quartet"
+    ],
+    "entity": "data storage",
+    "URI": "Nibble",
+    "dimensions": [],
+    "symbols": []
+  },
+  "pebibit": {
+    "surfaces": [
+      "pebibit"
+    ],
+    "entity": "data storage",
+    "URI": "Pebibit",
+    "dimensions": [],
+    "symbols": [
+      "Pibit"
+    ]
+  },
+  "pebibyte": {
+    "surfaces": [
+      "pebibyte"
+    ],
+    "entity": "data storage",
+    "URI": "Pebibyte",
+    "dimensions": [],
+    "symbols": [
+      "PiB"
+    ]
+  },
+  "petabit": {
+    "surfaces": [
+      "petabit",
+      "petabits"
+    ],
+    "entity": "data storage",
+    "URI": "Petabit",
+    "dimensions": [],
+    "symbols": [
+      "pb",
+      "pbit",
+      "Pb",
+      "Pbit"
+    ]
+  },
+  "petabyte": {
+    "surfaces": [
+      "petabyte",
+      "petabytes",
+      "peta byte",
+      "peta bytes"
+    ],
+    "entity": "data storage",
+    "URI": "Petabyte",
+    "dimensions": [],
+    "symbols": [
+      "PB",
+      "pB",
+      "pbyte"
+    ]
+  },
+  "quantum bit": {
+    "surfaces": [
+      "quantum bit",
+      "qubit",
+      "qbit"
+    ],
+    "entity": "data storage",
+    "URI": "Qubit",
+    "dimensions": [],
+    "symbols": []
+  },
+  "tebibit": {
+    "surfaces": [
+      "tebibit"
+    ],
+    "entity": "data storage",
+    "URI": "Tebibit",
+    "dimensions": [],
+    "symbols": [
+      "Tibit"
+    ]
+  },
+  "tebibyte": {
+    "surfaces": [
+      "tebibyte"
+    ],
+    "entity": "data storage",
+    "URI": "Tebibyte",
+    "dimensions": [],
+    "symbols": [
+      "TiB"
+    ]
+  },
+  "terabit": {
+    "surfaces": [
+      "terabit",
+      "terabits"
+    ],
+    "entity": "data storage",
+    "URI": "Terabit",
+    "dimensions": [],
+    "symbols": [
+      "tb",
+      "tbit",
+      "Tb",
+      "Tbit"
+    ]
+  },
+  "terabyte": {
+    "surfaces": [
+      "terabyte",
+      "terabytes",
+      "tera byte",
+      "tera bytes"
+    ],
+    "entity": "data storage",
+    "URI": "Terabyte",
+    "dimensions": [],
+    "symbols": [
+      "TB",
+      "tB",
+      "tbyte"
+    ]
+  },
+  "yobibit": {
+    "surfaces": [
+      "yobibit"
+    ],
+    "entity": "data storage",
+    "URI": "Yobibit",
+    "dimensions": [],
+    "symbols": [
+      "Yibit"
+    ]
+  },
+  "yobibyte": {
+    "surfaces": [
+      "yobibyte"
+    ],
+    "entity": "data storage",
+    "URI": "Yobibyte",
+    "dimensions": [],
+    "symbols": [
+      "YiB"
+    ]
+  },
+  "yottabit": {
+    "surfaces": [
+      "yottabit"
+    ],
+    "entity": "data storage",
+    "URI": "Yottabit",
+    "dimensions": [],
+    "symbols": [
+      "Yb",
+      "Ybit"
+    ]
+  },
+  "yottabyte": {
+    "surfaces": [
+      "yottabyte"
+    ],
+    "entity": "data storage",
+    "URI": "Yottabyte",
+    "dimensions": [],
+    "symbols": [
+      "YB"
+    ]
+  },
+  "zebibit": {
+    "surfaces": [
+      "zebibit"
+    ],
+    "entity": "data storage",
+    "URI": "Zebibit",
+    "dimensions": [],
+    "symbols": [
+      "Zibit"
+    ]
+  },
+  "zebibyte": {
+    "surfaces": [
+      "zebibyte"
+    ],
+    "entity": "data storage",
+    "URI": "Zebibyte",
+    "dimensions": [],
+    "symbols": [
+      "ZiB"
+    ]
+  },
+  "zettabit": {
+    "surfaces": [
+      "zettabit"
+    ],
+    "entity": "data storage",
+    "URI": "Zettabit",
+    "dimensions": [],
+    "symbols": [
+      "Zb",
+      "Zbit"
+    ]
+  },
+  "zettabyte": {
+    "surfaces": [
+      "zettabyte"
+    ],
+    "entity": "data storage",
+    "URI": "Zettabyte",
+    "dimensions": [],
+    "symbols": [
+      "ZB"
+    ]
+  },
+  "foot per square second": {
+    "surfaces": [
+      "foot per second squared",
+      "foot per square second"
+    ],
+    "entity": "acceleration",
+    "URI": "Foot_per_second_squared",
+    "dimensions": [
+      {
+        "base": "foot",
+        "power": 1
+      },
+      {
+        "base": "second",
+        "power": -2
+      }
+    ],
+    "symbols": [
+      "ft/s2",
+      "ft/sec2",
+      "ft/s/s",
+      "ft/sec/sec",
+      "ft s\u22122"
+    ]
+  },
+  "gal": {
+    "surfaces": [
+      "gal",
+      "galileo",
+      "galileos",
+      "Gals"
+    ],
+    "entity": "acceleration",
+    "URI": "Gal_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "Gal"
+    ]
+  },
+  "metre per square second": {
+    "surfaces": [
+      "metre per second squared",
+      "meter per second squared",
+      "metre per square second",
+      "meter per square second"
+    ],
+    "entity": "acceleration",
+    "URI": "Metre_per_second_squared",
+    "dimensions": [
+      {
+        "base": "metre",
+        "power": 1
+      },
+      {
+        "base": "second",
+        "power": -2
+      }
+    ],
+    "symbols": [
+      "m/s2",
+      "m/sec2"
+    ]
+  },
+  "newton metre": {
+    "surfaces": [
+      "newton metre",
+      "newton meter",
+      "newton-meter",
+      "newton-metre"
+    ],
+    "entity": "torque",
+    "URI": "Newton_metre",
+    "dimensions": [
+      {
+        "base": "newton",
+        "power": 1
+      },
+      {
+        "base": "metre",
+        "power": 1
+      }
+    ],
+    "symbols": [
+      "Nm"
+    ]
+  },
+  "pound-foot": {
+    "surfaces": [
+      "pound-foot",
+      "pound foot",
+      "pound-feet",
+      "pound feet",
+      "pound-feet of torque",
+      "pound feet of torque"
+    ],
+    "entity": "torque",
+    "URI": "Pound_(force)",
+    "dimensions": [],
+    "symbols": [
+      "lbf-ft"
+    ]
+  },
+  "centipoise": {
+    "surfaces": [
+      "centipoise",
+      "cps",
+      "centiposes"
+    ],
+    "entity": "dynamic viscosity",
+    "URI": "Poise_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "cP"
+    ]
+  },
+  "poise": {
+    "surfaces": [
+      "poise",
+      "dynamic viscosity",
+      "poises"
+    ],
+    "entity": "dynamic viscosity",
+    "URI": "Poise_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "P"
+    ]
+  },
+  "stokes": {
+    "surfaces": [
+      "stokes",
+      "stoke",
+      "kinematic viscosity"
+    ],
+    "entity": "kinematic viscosity",
+    "URI": "Viscosity",
+    "dimensions": [],
+    "symbols": [
+      "St"
+    ]
+  },
+  "centistoke": {
+    "surfaces": [
+      "centistoke",
+      "centistokes"
+    ],
+    "entity": "kinematic viscosity",
+    "URI": "Viscosity",
+    "dimensions": [],
+    "symbols": [
+      "cSt"
+    ]
+  },
+  "rhe": {
+    "surfaces": [
+      "rhe",
+      "reciprocal poise"
+    ],
+    "entity": "fluidity",
+    "URI": "Viscosity#Fluidity",
+    "dimensions": [],
+    "symbols": []
+  },
+  "decibel": {
+    "surfaces": [
+      "decibel",
+      "decibels"
+    ],
+    "entity": "sound level",
+    "URI": "Decibel",
+    "dimensions": [],
+    "symbols": [
+      "dB"
+    ]
+  },
+  "candela per square metre": {
+    "surfaces": [
+      "candela per square metre",
+      "candela per square meter",
+      "nit"
+    ],
+    "entity": "luminance",
+    "URI": "Candela_per_square_metre",
+    "dimensions": [
+      {
+        "base": "candela",
+        "power": 1
+      },
+      {
+        "base": "metre",
+        "power": -2
+      }
+    ],
+    "symbols": [
+      "cd/m2"
+    ]
+  },
+  "stilb": {
+    "surfaces": [
+      "stilb",
+      "stilbs"
+    ],
+    "entity": "luminance",
+    "URI": "Stilb_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "sb"
+    ]
+  },
+  "candela": {
+    "surfaces": [
+      "candela",
+      "candle",
+      "candelas"
+    ],
+    "entity": "luminous intensity",
+    "URI": "Candela",
+    "dimensions": [],
+    "symbols": [
+      "cd"
+    ]
+  },
+  "lumen": {
+    "surfaces": [
+      "lumen",
+      "luminous flux",
+      "lumens"
+    ],
+    "entity": "luminous flux",
+    "URI": "Lumen_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "lm"
+    ]
+  },
+  "lux": {
+    "surfaces": [
+      "lux",
+      "illuminance",
+      "luxes"
+    ],
+    "entity": "illuminance",
+    "URI": "Lux",
+    "dimensions": [],
+    "symbols": [
+      "lx"
+    ]
+  },
+  "phot": {
+    "surfaces": [
+      "phots"
+    ],
+    "entity": "illuminance",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "ph"
+    ]
+  },
+  "cycle per second": {
+    "surfaces": [
+      "cycle per second"
+    ],
+    "entity": "instance frequency",
+    "URI": "Cycle_per_second",
+    "dimensions": [
+      {
+        "base": "turn",
+        "power": 1
+      },
+      {
+        "base": "second",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "cps"
+    ]
+  },
+  "revolutions per minute": {
+    "surfaces": [
+      "revolutions per minute"
+    ],
+    "entity": "instance frequency",
+    "URI": "Revolutions_per_minute",
+    "dimensions": [
+      {
+        "base": "turn",
+        "power": 1
+      },
+      {
+        "base": "minute",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "rpm",
+      "RPM"
+    ]
+  },
+  "generation wireless": {
+    "surfaces": [
+      "G"
+    ],
+    "entity": "frequency",
+    "URI": "Hertz",
+    "dimensions": [],
+    "symbols": [
+      "G"
+    ]
+  },
+  "hertz": {
+    "surfaces": [
+      "hertz",
+      "revolutions per second",
+      "Herz",
+      "frequency",
+      "frequencies"
+    ],
+    "entity": "frequency",
+    "URI": "Hertz",
+    "dimensions": [],
+    "symbols": [
+      "Hz",
+      "HZ",
+      "hz",
+      "\u3390",
+      "rps"
+    ],
+    "prefixes": [
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "Gi",
+      "Ki",
+      "Mi",
+      "Ti"
+    ]
+  },
+  "inverse second": {
+    "surfaces": [
+      "inverse second",
+      "reciprocal second",
+      "per second"
+    ],
+    "entity": "frequency",
+    "URI": "Inverse_second",
+    "dimensions": [
+      {
+        "base": "second",
+        "power": -1
+      }
+    ],
+    "symbols": []
+  },
+  "equivalent": {
+    "surfaces": [
+      "equivalents"
+    ],
+    "entity": "amount of substance",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "eq"
+    ]
+  },
+  "femtomole": {
+    "surfaces": [
+      "femtomoles"
+    ],
+    "entity": "amount of substance",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "fmol"
+    ]
+  },
+  "microequivalent": {
+    "surfaces": [
+      "microequivalents",
+      "10^-6 equivalents",
+      "10-6 equivalents"
+    ],
+    "entity": "amount of substance",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "ueq"
+    ]
+  },
+  "micromole": {
+    "surfaces": [
+      "micromoles",
+      "umols"
+    ],
+    "entity": "amount of substance",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "umol"
+    ]
+  },
+  "millimole": {
+    "surfaces": [
+      "millimoles"
+    ],
+    "entity": "amount of substance",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "mmol"
+    ]
+  },
+  "mole": {
+    "surfaces": [
+      "mole",
+      "moles"
+    ],
+    "entity": "amount of substance",
+    "URI": "Mole_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "mol"
+    ]
+  },
+  "nanomole": {
+    "surfaces": [
+      "nanomoles"
+    ],
+    "entity": "amount of substance",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "nmol"
+    ]
+  },
+  "picomole": {
+    "surfaces": [
+      "picomoles",
+      "pmols"
+    ],
+    "entity": "amount of substance",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "pmol"
+    ]
+  },
+  "ampere-hour": {
+    "surfaces": [
+      "ampere-hour",
+      "ampere hour",
+      "amp-hour"
+    ],
+    "entity": "charge",
+    "URI": "Coulomb",
+    "dimensions": [
+      {
+        "base": "ampere",
+        "power": 1
+      },
+      {
+        "base": "hour",
+        "power": 1
+      }
+    ],
+    "symbols": [
+      "Ah"
+    ]
+  },
+  "coulomb": {
+    "surfaces": [
+      "coulomb",
+      "coulombs"
+    ],
+    "entity": "charge",
+    "URI": "Coulomb",
+    "dimensions": [],
+    "symbols": [
+      "C"
+    ]
+  },
+  "faraday": {
+    "surfaces": [
+      "faraday"
+    ],
+    "entity": "charge",
+    "URI": "Faraday_constant",
+    "dimensions": [],
+    "symbols": []
+  },
+  "microcoulomb": {
+    "surfaces": [
+      "microcoulomb"
+    ],
+    "entity": "charge",
+    "URI": "Coulomb",
+    "dimensions": [],
+    "symbols": [
+      "\u00b5C"
+    ]
+  },
+  "milliampere-hour": {
+    "surfaces": [
+      "milliampere-hour",
+      "milliampere hour",
+      "milliamp-hour"
+    ],
+    "entity": "charge",
+    "URI": "Coulomb",
+    "dimensions": [
+      {
+        "base": "ampere",
+        "power": 1
+      },
+      {
+        "base": "hour",
+        "power": 1
+      }
+    ],
+    "symbols": [
+      "mAh",
+      "mah"
+    ]
+  },
+  "millicoulomb": {
+    "surfaces": [
+      "millicoulomb"
+    ],
+    "entity": "charge",
+    "URI": "Coulomb",
+    "dimensions": [],
+    "symbols": [
+      "mC"
+    ]
+  },
+  "statcoulomb": {
+    "surfaces": [
+      "statcoulomb",
+      "franklin",
+      "electrostatic unit of charge"
+    ],
+    "entity": "charge",
+    "URI": "Statcoulomb",
+    "dimensions": [],
+    "symbols": [
+      "statC",
+      "Fr",
+      "esu"
+    ]
+  },
+  "ampere": {
+    "surfaces": [
+      "ampere",
+      "Amperes"
+    ],
+    "entity": "electric current",
+    "URI": "Ampere",
+    "dimensions": [],
+    "symbols": [
+      "A",
+      "amp"
+    ],
+    "prefixes": [
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "Gi",
+      "Ki",
+      "Mi",
+      "Ti"
+    ]
+  },
+  "biot": {
+    "surfaces": [
+      "Bi",
+      "Biot",
+      "biot",
+      "abamperes",
+      "abampere",
+      "abA"
+    ],
+    "entity": "electric current",
+    "URI": "",
+    "dimensions": [],
+    "symbols": []
+  },
+  "farad": {
+    "surfaces": [
+      "farad",
+      "farads",
+      "electric capacitance"
+    ],
+    "entity": "capacitance",
+    "URI": "Farad",
+    "dimensions": [],
+    "symbols": [
+      "F"
+    ],
+    "prefixes": [
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "Gi",
+      "Ki",
+      "Mi",
+      "Ti"
+    ]
+  },
+  "megavolt": {
+    "surfaces": [
+      "megavolt"
+    ],
+    "entity": "electric potential",
+    "URI": "Volt",
+    "dimensions": [],
+    "symbols": [
+      "MV"
+    ]
+  },
+  "microOhm": {
+    "surfaces": [
+      "microOhm",
+      "microOhms",
+      "\u00b5\u03a9"
+    ],
+    "entity": "electric resistance",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "uOhm"
+    ]
+  },
+  "microvolt": {
+    "surfaces": [
+      "microvolts"
+    ],
+    "entity": "electric potential",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "uV"
+    ]
+  },
+  "millivolt": {
+    "surfaces": [
+      "millivolts"
+    ],
+    "entity": "electric potential",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "mV"
+    ]
+  },
+  "ohm": {
+    "surfaces": [
+      "ohm",
+      "Ohm",
+      "ohms",
+      "Ohms"
+    ],
+    "entity": "electric resistance",
+    "URI": "Ohm",
+    "dimensions": [],
+    "symbols": [
+      "\u2126",
+      "\u03a9",
+      "Ohm",
+      "ohm"
+    ],
+    "prefixes": [
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "Gi",
+      "Ki",
+      "Mi",
+      "Ti"
+    ]
+  },
+  "picoampere": {
+    "surfaces": [
+      "picoamperes"
+    ],
+    "entity": "electric current",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "pA"
+    ]
+  },
+  "siemens": {
+    "surfaces": [
+      "siemens",
+      "mho",
+      "Reciprocal ohm",
+      "\u03a9\u22121",
+      "conductance"
+    ],
+    "entity": "electric conductance",
+    "URI": "Siemens_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "S"
+    ]
+  },
+  "statmho": {
+    "surfaces": [
+      "statmho"
+    ],
+    "entity": "electric conductance",
+    "URI": "Statmho",
+    "dimensions": [],
+    "symbols": []
+  },
+  "statohm": {
+    "surfaces": [
+      "statohm"
+    ],
+    "entity": "electric resistance",
+    "URI": "Statmho",
+    "dimensions": [],
+    "symbols": []
+  },
+  "statvolt": {
+    "surfaces": [
+      "statvolt"
+    ],
+    "entity": "electric potential",
+    "URI": "Statvolt",
+    "dimensions": [],
+    "symbols": [
+      "statV"
+    ]
+  },
+  "volt": {
+    "surfaces": [
+      "volt",
+      "volts"
+    ],
+    "entity": "electric potential",
+    "URI": "Volt",
+    "dimensions": [],
+    "prefixes": [
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "Gi",
+      "Ki",
+      "Mi",
+      "Ti"
+    ],
+    "symbols": [
+      "V"
+    ]
+  },
+  "henry": {
+    "surfaces": [
+      "henry",
+      "henries",
+      "inductance"
+    ],
+    "entity": "inductance",
+    "URI": "Henry_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "H"
+    ]
+  },
+  "ampere-turn": {
+    "surfaces": [
+      "ampere-turn",
+      "ampere turn"
+    ],
+    "entity": "magnetomotive force",
+    "URI": "Ampere-turn",
+    "dimensions": [],
+    "symbols": [
+      "AT",
+      "At"
+    ]
+  },
+  "gauss": {
+    "surfaces": [
+      "gauss",
+      "magnetic fields",
+      "magnetic flux density",
+      "induction",
+      "B"
+    ],
+    "entity": "magnetic field",
+    "URI": "Gauss_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "Gs"
+    ]
+  },
+  "oersted": {
+    "surfaces": [
+      "oersted",
+      "H magnetic B field",
+      "Oersteds"
+    ],
+    "entity": "magnetic field",
+    "URI": "Oersted",
+    "dimensions": [],
+    "symbols": [
+      "Oe"
+    ]
+  },
+  "tesla": {
+    "surfaces": [
+      "tesla",
+      "teslas",
+      "Tesla",
+      "Teslas",
+      "magnetic field"
+    ],
+    "entity": "magnetic field",
+    "URI": "Tesla_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "T"
+    ]
+  },
+  "maxwell": {
+    "surfaces": [
+      "maxwell",
+      "maxwells",
+      "magnetix flux",
+      "Maxwell",
+      "Maxwells"
+    ],
+    "entity": "magnetic flux",
+    "URI": "Maxwell_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "Mx"
+    ]
+  },
+  "microweber": {
+    "surfaces": [
+      "microweber"
+    ],
+    "entity": "magnetic flux",
+    "URI": "Weber_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "\u00b5Wb"
+    ]
+  },
+  "milliweber": {
+    "surfaces": [
+      "milliweber"
+    ],
+    "entity": "magnetic flux",
+    "URI": "Weber_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "mWb"
+    ]
+  },
+  "weber": {
+    "surfaces": [
+      "weber",
+      "magnetic flux",
+      "webers"
+    ],
+    "entity": "magnetic flux",
+    "URI": "Weber_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "Wb"
+    ]
+  },
+  "picotesla": {
+    "surfaces": [
+      "picoteslas"
+    ],
+    "entity": "magnetic flux density",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "pT"
+    ]
+  },
+  "gilbert": {
+    "surfaces": [
+      "Gi",
+      "magnetomotive force",
+      "Gilberts",
+      "Gilbert",
+      "gilbert"
+    ],
+    "entity": "magnetic tension",
+    "URI": "",
+    "dimensions": [],
+    "symbols": []
+  },
+  "becquerel": {
+    "surfaces": [
+      "becquerel",
+      "activity",
+      "radiation",
+      "becquerels"
+    ],
+    "entity": "radioactivity",
+    "URI": "Becquerel",
+    "dimensions": [],
+    "symbols": [
+      "Bq"
+    ]
+  },
+  "curie": {
+    "surfaces": [
+      "curie",
+      "curies"
+    ],
+    "entity": "radioactivity",
+    "URI": "Curie_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "Ci"
+    ]
+  },
+  "gigabecquerel": {
+    "surfaces": [
+      "gigabecquerel"
+    ],
+    "entity": "radioactivity",
+    "URI": "Becquerel",
+    "dimensions": [],
+    "symbols": [
+      "GBq"
+    ]
+  },
+  "kilobecquerel": {
+    "surfaces": [
+      "kilobecquerel"
+    ],
+    "entity": "radioactivity",
+    "URI": "Becquerel",
+    "dimensions": [],
+    "symbols": [
+      "kBq"
+    ]
+  },
+  "megabecquerel": {
+    "surfaces": [
+      "megabecquerel"
+    ],
+    "entity": "radioactivity",
+    "URI": "Becquerel",
+    "dimensions": [],
+    "symbols": [
+      "MBq"
+    ]
+  },
+  "millibecquerel": {
+    "surfaces": [
+      "millibecquerel"
+    ],
+    "entity": "radioactivity",
+    "URI": "Becquerel",
+    "dimensions": [],
+    "symbols": [
+      "mBq"
+    ]
+  },
+  "rutherford": {
+    "surfaces": [
+      "rutherford"
+    ],
+    "entity": "radioactivity",
+    "URI": "Rutherford_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "Rd"
+    ]
+  },
+  "roentgen": {
+    "surfaces": [
+      "roentgen",
+      "r\u00f6ntgen",
+      "Roentgens"
+    ],
+    "entity": "radiation exposure",
+    "URI": "Roentgen_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "R"
+    ]
+  },
+  "gray": {
+    "surfaces": [
+      "gray",
+      "absorbed doses",
+      "ionizing radiation doses",
+      "kerma",
+      "grays"
+    ],
+    "entity": "radiation absorbed dose",
+    "URI": "Gray_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "Gy"
+    ],
+    "prefixes": [
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "Gi",
+      "Ki",
+      "Mi",
+      "Ti"
+    ]
+  },
+  "sievert": {
+    "surfaces": [
+      "sievert",
+      "sieverts",
+      "radiation dose quantities",
+      "equivalent doses",
+      "effective dose",
+      "operational dose",
+      "committed dose"
+    ],
+    "entity": "radiation absorbed dose",
+    "URI": "Sievert",
+    "dimensions": [],
+    "symbols": [
+      "Sv"
+    ]
+  },
+  "megapixel": {
+    "surfaces": [
+      "megapixel"
+    ],
+    "entity": "typographical element",
+    "URI": "Pixel#Megapixel",
+    "dimensions": [],
+    "symbols": [
+      "MP",
+      "mp"
+    ]
+  },
+  "pixel": {
+    "surfaces": [
+      "pixel",
+      "dots",
+      "pel",
+      "picture element"
+    ],
+    "entity": "typographical element",
+    "URI": "Pixel",
+    "dimensions": [],
+    "symbols": [
+      "px"
+    ]
+  },
+  "enzyme unit": {
+    "surfaces": [
+      "micromoles per minute",
+      "umol/min",
+      "umol per minute",
+      "umol min-1",
+      "enzymatic activity",
+      "enzyme activity"
+    ],
+    "entity": "catalytic activity",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "U"
+    ]
+  },
+  "katal": {
+    "surfaces": [
+      "katal",
+      "mol/secs",
+      "moles per second",
+      "mol*sec-1",
+      "mol*s-1",
+      "mol.s-1",
+      "katals",
+      "catalytic activity",
+      "enzymatic",
+      "enzyme units",
+      "activities"
+    ],
+    "entity": "catalytic activity",
+    "URI": "Katal",
+    "dimensions": [],
+    "symbols": [
+      "kat"
+    ]
+  },
+  "microkatal": {
+    "surfaces": [
+      "microkatals",
+      "ukats"
+    ],
+    "entity": "catalytic activity",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "ukat"
+    ]
+  },
+  "nanokatal": {
+    "surfaces": [
+      "nanokatals"
+    ],
+    "entity": "catalytic activity",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "nkat"
+    ]
+  },
+  "picokatal": {
+    "surfaces": [
+      "pkats",
+      "picokatals"
+    ],
+    "entity": "catalytic activity",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "pkat"
+    ]
+  },
+  "gram per cubic centimetre": {
+    "surfaces": [
+      "gram per cubic centimetre",
+      "gram per cubic centimeter"
+    ],
+    "entity": "density",
+    "URI": "Gram_per_cubic_centimetre",
+    "dimensions": [
+      {
+        "base": "gram",
+        "power": 1
+      },
+      {
+        "base": "centimetre",
+        "power": -3
+      }
+    ],
+    "symbols": [
+      "g/cm3"
+    ]
+  },
+  "gram per cubic metre": {
+    "surfaces": [
+      "gram per cubic metre",
+      "gram per cubic meter"
+    ],
+    "entity": "density",
+    "URI": "Gram_per_cubic_metre",
+    "dimensions": [
+      {
+        "base": "gram",
+        "power": 1
+      },
+      {
+        "base": "metre",
+        "power": -3
+      }
+    ],
+    "symbols": [
+      "g/m3"
+    ]
+  },
+  "kilogram per cubic metre": {
+    "surfaces": [
+      "kilogram per cubic metre",
+      "kilogram per cubic meter"
+    ],
+    "entity": "density",
+    "URI": "Kilogram_per_cubic_metre",
+    "dimensions": [
+      {
+        "base": "kilogram",
+        "power": 1
+      },
+      {
+        "base": "metre",
+        "power": -3
+      }
+    ],
+    "symbols": [
+      "kg/m3"
+    ]
+  },
+  "pound per cubic foot": {
+    "surfaces": [
+      "pound per cubic foot"
+    ],
+    "entity": "density",
+    "URI": "Pound_per_cubic_foot",
+    "dimensions": [
+      {
+        "base": "pound-mass",
+        "power": 1
+      },
+      {
+        "base": "foot",
+        "power": -3
+      }
+    ],
+    "symbols": [
+      "lb/ft3"
+    ]
+  },
+  "decitex": {
+    "surfaces": [
+      "decitex"
+    ],
+    "entity": "linear mass density",
+    "URI": "Units_of_textile_measurement",
+    "dimensions": [],
+    "symbols": [
+      "dtex"
+    ]
+  },
+  "denier": {
+    "surfaces": [
+      "denier",
+      "den",
+      "deniers"
+    ],
+    "entity": "linear mass density",
+    "URI": "Units_of_textile_measurement",
+    "dimensions": [],
+    "symbols": []
+  },
+  "tex": {
+    "surfaces": [
+      "tex",
+      "linear mass density",
+      "texes"
+    ],
+    "entity": "linear mass density",
+    "URI": "Units_of_textile_measurement",
+    "dimensions": [],
+    "symbols": []
+  },
+  "jansky": {
+    "surfaces": [
+      "jansky"
+    ],
+    "entity": "flux density",
+    "URI": "Jansky",
+    "dimensions": [],
+    "symbols": [
+      "Jy"
+    ]
+  },
+  "millijansky": {
+    "surfaces": [
+      "millijansky",
+      "milli flux unit",
+      "millijanskys"
+    ],
+    "entity": "flux density",
+    "URI": "Jansky",
+    "dimensions": [],
+    "symbols": [
+      "mJy",
+      "mfu",
+      "m.f.u."
+    ]
+  },
+  "cubic foot per second": {
+    "surfaces": [
+      "cubic foot per second"
+    ],
+    "entity": "volumetric flow",
+    "URI": "Cubic_foot#Cubic_foot_per_minute",
+    "dimensions": [
+      {
+        "base": "foot",
+        "power": 3
+      },
+      {
+        "base": "second",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "CFPM",
+      "CFM"
+    ]
+  },
+  "cubic metre per second": {
+    "surfaces": [
+      "cubic metre per second",
+      "cubic meter per second",
+      "cumec"
+    ],
+    "entity": "volumetric flow",
+    "URI": "Cubic_metre_per_second",
+    "dimensions": [
+      {
+        "base": "metre",
+        "power": 3
+      },
+      {
+        "base": "second",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "m3/s"
+    ]
+  },
+  "standard cubic centimetre per minute": {
+    "surfaces": [
+      "standard cubic centimetre per minute"
+    ],
+    "entity": "volumetric flow",
+    "URI": "SCCM_(flow_unit)",
+    "dimensions": [
+      {
+        "base": "centimetre",
+        "power": 3
+      },
+      {
+        "base": "minute",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "SCCM"
+    ]
+  },
+  "standard cubic feet per minute": {
+    "surfaces": [
+      "standard cubic feet per minute"
+    ],
+    "entity": "volumetric flow",
+    "URI": "Standard_cubic_feet_per_minute",
+    "dimensions": [
+      {
+        "base": "foot",
+        "power": 3
+      },
+      {
+        "base": "minute",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "SCFM"
+    ]
+  },
+  "standard litre per minute": {
+    "surfaces": [
+      "standard litre per minute"
+    ],
+    "entity": "volumetric flow",
+    "URI": "Standard_litre_per_minute",
+    "dimensions": [
+      {
+        "base": "litre",
+        "power": 1
+      },
+      {
+        "base": "minute",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "SLM",
+      "SLPM"
+    ]
+  },
+  "pound per hour": {
+    "surfaces": [
+      "pound per hour"
+    ],
+    "entity": "mass flow",
+    "URI": "Pound_per_hour",
+    "dimensions": [
+      {
+        "base": "pound-mass",
+        "power": 1
+      },
+      {
+        "base": "hour",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "PPH"
+    ]
+  },
+  "ton per day": {
+    "surfaces": [
+      "ton per day"
+    ],
+    "entity": "mass flow",
+    "URI": "Ton",
+    "dimensions": [
+      {
+        "base": "ton",
+        "power": 1
+      },
+      {
+        "base": "day",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "tpd"
+    ]
+  },
+  "baud": {
+    "surfaces": [
+      "baud",
+      "Bd",
+      "bauds"
+    ],
+    "entity": "data transfer rate",
+    "URI": "Baud",
+    "dimensions": [],
+    "symbols": []
+  },
+  "bit per second": {
+    "surfaces": [
+      "bit per second"
+    ],
+    "entity": "data transfer rate",
+    "URI": "Bit_rate",
+    "dimensions": [
+      {
+        "base": "bit",
+        "power": 1
+      },
+      {
+        "base": "second",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "bps"
+    ]
+  },
+  "gigabit per second": {
+    "surfaces": [
+      "gigabit per second"
+    ],
+    "entity": "data transfer rate",
+    "URI": "Bit_rate",
+    "dimensions": [
+      {
+        "base": "gigabit",
+        "power": 1
+      },
+      {
+        "base": "second",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "Gbps"
+    ]
+  },
+  "kilobit per second": {
+    "surfaces": [
+      "kilobit per second"
+    ],
+    "entity": "data transfer rate",
+    "URI": "Bit_rate",
+    "dimensions": [
+      {
+        "base": "kilobit",
+        "power": 1
+      },
+      {
+        "base": "second",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "kbps"
+    ]
+  },
+  "megabit per second": {
+    "surfaces": [
+      "megabit per second"
+    ],
+    "entity": "data transfer rate",
+    "URI": "Bit_rate",
+    "dimensions": [
+      {
+        "base": "megabit",
+        "power": 1
+      },
+      {
+        "base": "second",
+        "power": -1
+      }
+    ],
+    "symbols": [
+      "Mbps"
+    ]
+  },
+  "darcy": {
+    "surfaces": [
+      "darcy",
+      "darcy unit"
+    ],
+    "entity": "permeability",
+    "URI": "Darcy_(unit)",
+    "dimensions": [],
+    "symbols": []
+  },
+  "langley": {
+    "surfaces": [
+      "langley"
+    ],
+    "entity": "irradiance",
+    "URI": "Langley_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "Ly"
+    ]
+  },
+  "parts per thousand": {
+    "surfaces": [
+      "ppth",
+      "10^-3"
+    ],
+    "entity": "fraction",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[ppth]"
+    ]
+  },
+  "kayser": {
+    "surfaces": [
+      "wavenumbers",
+      "kayser",
+      "kaysers",
+      "Kayser",
+      "Kaysers"
+    ],
+    "entity": "lineic number",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "Ky"
+    ]
+  },
+  "mesh": {
+    "surfaces": [
+      "meshes"
+    ],
+    "entity": "lineic number",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[mesh_i]"
+    ]
+  },
+  "lambert": {
+    "surfaces": [
+      "luminance",
+      "lambert",
+      "lamberts",
+      "Lambert",
+      "Lamberts"
+    ],
+    "entity": "brightness",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "Lmb",
+      "la",
+      "Lb"
+    ]
+  },
+  "radiation absorbed dose": {
+    "surfaces": [
+      "doses"
+    ],
+    "entity": "energy dose",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "RAD"
+    ]
+  },
+  "radiation equivalent man": {
+    "surfaces": [
+      "Roentgen Equivalent in Man",
+      "rems",
+      "dose equivalents"
+    ],
+    "entity": "dose equivalent",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "REM"
+    ]
+  },
+  "hand": {
+    "surfaces": [
+      "hands"
+    ],
+    "entity": "height of horses",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[hd_i]"
+    ]
+  },
+  "diopter (lens)": {
+    "surfaces": [
+      "diopters",
+      "diop",
+      "dioptre",
+      "dpt",
+      "refractive power"
+    ],
+    "entity": "refraction of a lens",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[diop]"
+    ]
+  },
+  "percent of slope": {
+    "surfaces": [
+      "% slope",
+      "%slope",
+      "percents slopes"
+    ],
+    "entity": "slope",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "%[slope]"
+    ]
+  },
+  "Hounsfield unit": {
+    "surfaces": [
+      "HU"
+    ],
+    "entity": "x-ray attenuation",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[hnsf'U]"
+    ]
+  },
+  "milliosmole": {
+    "surfaces": [
+      "milliosmoles"
+    ],
+    "entity": "amount of substance (dissolved particles)",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "mosm"
+    ]
+  },
+  "osmole": {
+    "surfaces": [
+      "osmoles",
+      "osmols"
+    ],
+    "entity": "amount of substance (dissolved particles)",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "osm"
+    ]
+  },
+  "pH": {
+    "surfaces": [
+      "pH scale"
+    ],
+    "entity": "acidity",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[pH]"
+    ]
+  },
+  "Svedberg unit": {
+    "surfaces": [
+      "Sv",
+      "10^-13 seconds",
+      "100 fs",
+      "100 femtoseconds"
+    ],
+    "entity": "sedimentation coefficient",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[S]"
+    ]
+  },
+  "arbitary unit": {
+    "surfaces": [
+      "arbitary units",
+      "arb units",
+      "arbU"
+    ],
+    "entity": "arbitrary",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[arb'U]"
+    ]
+  },
+  "GPL unit": {
+    "surfaces": [
+      "GPL Units",
+      "GPL U",
+      "IgG anticardiolipin units",
+      "IgG Phospholipid"
+    ],
+    "entity": "biologic activity of anticardiolipin IgG",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[GPL'U]"
+    ]
+  },
+  "MPL unit": {
+    "surfaces": [
+      "MPL units",
+      "MPL U",
+      "MPL'U",
+      "IgM anticardiolipin units",
+      "IgM Phospholipid Units "
+    ],
+    "entity": "biologic activity of anticardiolipin IgM",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[MPL'U]"
+    ]
+  },
+  "APL unit": {
+    "surfaces": [
+      "APL units",
+      "APL U",
+      "IgA anticardiolipin",
+      "IgA Phospholipid",
+      "biologic activity of"
+    ],
+    "entity": "biologic activity of anticardiolipin IgA",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[APL'U]"
+    ]
+  },
+  "Bethesda unit": {
+    "surfaces": [
+      "BU"
+    ],
+    "entity": "biologic activity of factor VIII inhibitor",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[beth'U]"
+    ]
+  },
+  "anti factor Xa unit": {
+    "surfaces": [],
+    "entity": "biologic activity of factor Xa inhibitor (heparin)",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[anti'Xa'U]"
+    ]
+  },
+  "Todd unit": {
+    "surfaces": [],
+    "entity": "biologic activity antistreptolysin O",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[todd'U]"
+    ]
+  },
+  "Dye unit": {
+    "surfaces": [],
+    "entity": "biologic activity of amylase",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[dye'U]"
+    ]
+  },
+  "Somogyi unit": {
+    "surfaces": [
+      "Somogyi units",
+      "smgy U"
+    ],
+    "entity": "biologic activity of amylase",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[smgy'U]"
+    ]
+  },
+  "Bodansky unit": {
+    "surfaces": [],
+    "entity": "biologic activity of phosphatase",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[bdsk'U]"
+    ]
+  },
+  "King-Armstrong unit": {
+    "surfaces": [
+      "King-Armstrong Units",
+      "King units"
+    ],
+    "entity": "biologic activity of phosphatase",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[ka'U]"
+    ]
+  },
+  "tuberculin unit": {
+    "surfaces": [
+      "TU"
+    ],
+    "entity": "biologic activity of tuberculin",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[tb'U]"
+    ]
+  },
+  "Kunkel unit": {
+    "surfaces": [],
+    "entity": "arbitrary biologic activity",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[knk'U]"
+    ]
+  },
+  "Mac Lagan unit": {
+    "surfaces": [
+      "galactose index",
+      "galactose tolerance test",
+      "thymol turbidity test unit",
+      "mclg U"
+    ],
+    "entity": "arbitrary biologic activity",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[mclg'U]"
+    ]
+  },
+  "focus forming units (cells)": {
+    "surfaces": [
+      "FFU"
+    ],
+    "entity": "amount of an infectious agent",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[FFU]"
+    ]
+  },
+  "plaque forming units": {
+    "surfaces": [
+      "PFU"
+    ],
+    "entity": "amount of an infectious agent",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[PFU]"
+    ]
+  },
+  "colony forming units": {
+    "surfaces": [
+      "CFU"
+    ],
+    "entity": "amount of a proliferating organism",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[CFU]"
+    ]
+  },
+  "index of reactivity (allergen)": {
+    "surfaces": [
+      "IR"
+    ],
+    "entity": "amount of an allergen callibrated through in-vivo testing using the Stallergenes\u00ae method",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[IR]"
+    ]
+  },
+  "bioequivalent allergen unit": {
+    "surfaces": [
+      "BAU",
+      "Bioequivalent Allergy Units",
+      "bioequivalent allergen units"
+    ],
+    "entity": "amount of an allergen callibrated through in-vivo testing based on the ID50EAL method of (intradermal dilution for 50mm sum of erythema diameters",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[BAU]"
+    ]
+  },
+  "allergy unit": {
+    "surfaces": [
+      "allergy units",
+      "allergen units",
+      "AU"
+    ],
+    "entity": "procedure defined amount of an allergen using some reference standard",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[AU]"
+    ]
+  },
+  "protein nitrogen unit (allergen testing)": {
+    "surfaces": [
+      "protein nitrogen units",
+      "PNU"
+    ],
+    "entity": "procedure defined amount of a protein substance",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[PNU]"
+    ]
+  },
+  "limit of flocculation": {
+    "surfaces": [
+      "Lf doses"
+    ],
+    "entity": "procedure defined amount of an antigen substance",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[Lf]"
+    ]
+  },
+  "D-antigen unit (polio)": {
+    "surfaces": [
+      "DAgU"
+    ],
+    "entity": "procedure defined amount of a poliomyelitis d-antigen substance",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[D'ag'U]"
+    ]
+  },
+  "fibrinogen equivalent units": {
+    "surfaces": [
+      "FEU"
+    ],
+    "entity": "amount of fibrinogen broken down into the measured d-dimers",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[FEU]"
+    ]
+  },
+  "ELISA unit": {
+    "surfaces": [
+      "Enzyme-Linked Immunosorbent Assay Units",
+      "ELU",
+      "EL. U"
+    ],
+    "entity": "arbitrary ELISA unit",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[ELU]"
+    ]
+  },
+  "Ehrlich units (urobilinogen)": {
+    "surfaces": [
+      "EU/dL",
+      "mg{urobilinogen}/dL"
+    ],
+    "entity": "Ehrlich unit",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "[EU]"
+    ]
+  },
+  "bel": {
+    "surfaces": [
+      "bels"
+    ],
+    "entity": "level",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "B"
+    ]
+  },
+  "neper": {
+    "surfaces": [
+      "nepers"
+    ],
+    "entity": "level",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "Np"
+    ]
+  },
+  "kaolin clotting time": {
+    "surfaces": [
+      "KCT"
+    ],
+    "entity": "",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "{KCT'U}"
+    ]
+  }
+}

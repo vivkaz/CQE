@@ -1,0 +1,15 @@
+numpy
+requests
+spacy ==3.0.9
+spacy-legacy
+tqdm
+regex
+quantulum3
+openai
+pandas
+emoji==1.7
+more_itertools
+cython
+ccg_nlpy==1.10.0
+fuzzywuzzy==0.18.0
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0-py3-none-any.whl

@@ -1,0 +1,185 @@
+[
+  {
+    "text": "When she was five years old, she learned to ride a bike.",
+    "quantities": [
+      {
+        "value": "5",
+        "normalized_unit": "year of age"
+      }
+    ]
+  },
+  {
+    "text": "This saga is ten years old.",
+    "quantities": [
+      {
+        "value": "10",
+        "normalized_unit": "year of age"
+      }
+    ]
+  },
+  {
+    "text": "I'm only 29 years old!",
+    "quantities": [
+      {
+        "value": "29",
+        "normalized_unit": "year of age"
+      }
+    ]
+  },
+  {
+    "text": "Now, after ninety five years of age, perspectives change.",
+    "quantities": [
+      {
+        "value": "95",
+        "normalized_unit": "year of age"
+      }
+    ]
+  },
+  {
+    "text": "The Great Wall of China is more than 500 years old and extends for more than 5,000 miles.",
+    "quantities": [
+      {
+        "value": "500",
+        "normalized_unit": "year of age"
+      },
+      {
+        "value": "5000",
+        "normalized_unit": "mile"
+      }
+    ]
+  },
+  {
+    "text": "She's 60 years old; she was born in May 8, 1945.",
+    "quantities": [
+      {
+        "value": "60",
+        "normalized_unit": "year of age"
+      }
+    ]
+  },
+  {
+    "text": "25% of cases are not diagnosed until around 3 years of age.",
+    "quantities": [
+      {
+        "value": "3",
+        "normalized_unit": "year of age"
+      },
+      {
+        "value": "25",
+        "normalized_unit": "percentage"
+      }
+    ]
+  },
+  {
+    "text": "When will there be pressure to fulfil a promise that is one year old?",
+    "quantities": [
+      {
+        "value": "1",
+        "normalized_unit": "year of age"
+      }
+    ]
+  },
+  {
+    "text": "It happened when the baby was only ten months old.",
+    "quantities": [
+      {
+        "value": "10",
+        "normalized_unit": "month of age"
+      }
+    ]
+  },
+  {
+    "text": "The committee proposal is 8 months old.",
+    "quantities": [
+      {
+        "value": "8",
+        "normalized_unit": "month of age"
+      }
+    ]
+  },
+  {
+    "text": "Aproximately 50% of cases are diagnosed at around eighteen months of age.",
+    "quantities": [
+      {
+        "value": "18",
+        "normalized_unit": "month of age"
+      },
+      {
+        "value": "50",
+        "normalized_unit": "percentage"
+      }
+
+    ]
+  },
+  {
+    "text": "It is possible, but in 2006 95% of them were younger than three months old.",
+    "quantities": [
+      {
+        "value": "3",
+        "normalized_unit": "month of age"
+      },
+      {
+        "value": "95",
+        "normalized_unit": "percentage"
+      }
+    ]
+  },
+  {
+    "text": "If we go ahead in December, it will be three weeks old.",
+    "quantities": [
+      {
+        "value": "3",
+        "normalized_unit": "week of age"
+      }
+    ]
+  },
+  {
+    "text": "At 6 weeks of age, one can already celebrate Christmas.",
+    "quantities": [
+      {
+        "value": "6",
+        "normalized_unit": "week of age"
+      }
+    ]
+  },
+  {
+    "text": "A 90 day old utilities bill is quite late.",
+    "quantities": [
+      {
+        "value": "90",
+        "normalized_unit": "day of age"
+      }
+    ]
+  },
+  {
+    "text": "He is about 40 - 50 years old.",
+    "quantities": [
+      {
+        "value": "40-50",
+        "normalized_unit": "year of age"
+      }
+    ]
+  },
+  {
+    "text": "The patient is a 87 yo man with history of hypertension, GERD, and chronic phase CML.",
+    "quantities": [
+      {
+        "value": "87",
+        "normalized_unit": "year of age"
+      }
+    ]
+  },
+  {
+    "text": "Yo dude!",
+    "quantities": []
+  },
+  {
+    "text": "The patient is a man of age 87 with history of hypertension, GERD, and chronic phase CML.",
+    "quantities": [
+      {
+        "value": "87",
+        "normalized_unit": "year of age"
+      }
+    ]
+  }
+]

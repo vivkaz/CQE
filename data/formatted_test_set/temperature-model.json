@@ -1,0 +1,314 @@
+[
+  {
+    "text": "the temperature outside is 40 deg celsius",
+    "quantities": [
+      {
+        "value": "40",
+        "normalized_unit": "celsius"
+      }
+    ]
+  },
+  {
+    "text": "its 90 fahrenheit in texas",
+    "quantities": [
+      {
+        "value": "90",
+        "normalized_unit": "fahrenheit"
+      }
+    ]
+  },
+  {
+    "text": "-5 degree fahrenheit",
+    "quantities": [
+      {
+        "value": "-5",
+        "normalized_unit": "fahrenheit"
+      }
+    ]
+  },
+  {
+    "text": "6 deg c",
+    "quantities": [
+      {
+        "value": "6",
+        "normalized_unit": "celsius"
+      }
+    ]
+  },
+  {
+    "text": "98.6 degrees f is normal temperature",
+    "quantities": [
+      {
+        "value": "98.6",
+        "normalized_unit": "fahrenheit"
+      }
+    ]
+  },
+  {
+    "text": "set the temperature to 30 degrees celsius",
+    "quantities": [
+      {
+        "value": "30",
+        "normalized_unit": "celsius"
+      }
+    ]
+  },
+  {
+    "text": "normal temperature is 98.6 degrees fahrenheit",
+    "quantities": [
+      {
+        "value": "98.6",
+        "normalized_unit": "fahrenheit"
+      }
+    ]
+  },
+  {
+    "text": "100 degrees f",
+    "quantities": [
+      {
+        "value": "100",
+        "normalized_unit": "fahrenheit"
+      }
+    ]
+  },
+  {
+    "text": "20 degrees c",
+    "quantities": [
+      {
+        "value": "20",
+        "normalized_unit": "celsius"
+      }
+    ]
+  },
+  {
+    "text": "100.2 degrees farenheit is low",
+    "quantities": [
+      {
+        "value": "100.2",
+        "normalized_unit": "fahrenheit"
+      }
+    ]
+  },
+  {
+    "text": "10.5 celcius",
+    "quantities": [
+      {
+        "value": "10.5",
+        "normalized_unit": "celsius"
+      }
+    ]
+  },
+  {
+    "text": "20 degrees celsius",
+    "quantities": [
+      {
+        "value": "20",
+        "normalized_unit": "celsius"
+      }
+    ]
+  },
+  {
+    "text": "20.3 celsius",
+    "quantities": [
+      {
+        "value": "20.3",
+        "normalized_unit": "celsius"
+      }
+    ]
+  },
+  {
+    "text": "34.5 celcius",
+    "quantities": [
+      {
+        "value": "34.5",
+        "normalized_unit": "celsius"
+      }
+    ]
+  },
+  {
+    "text": "the temperature outside is 98 degrees",
+    "quantities": [
+      {
+        "value": "98",
+        "normalized_unit": "degree"
+      }
+    ]
+  },
+  {
+    "text": "set the thermostat to 85\u00b0",
+    "quantities": [
+      {
+        "value": "85",
+        "normalized_unit": "degree"
+      }
+    ]
+  },
+  {
+    "text": "raise the temperature by 5 degrees",
+    "quantities": [
+      {
+        "value": "5",
+        "normalized_unit": "degree"
+      }
+    ]
+  },
+  {
+    "text": "set the temperature to 70 degrees f",
+    "quantities": [
+      {
+        "value": "70",
+        "normalized_unit": "fahrenheit"
+      }
+    ]
+  },
+  {
+    "text": "raise the temperature by 20 degrees",
+    "quantities": [
+      {
+        "value": "20",
+        "normalized_unit": "degree"
+      }
+    ]
+  },
+  {
+    "text": "set the temperature to 100 degrees",
+    "quantities": [
+      {
+        "value": "100",
+        "normalized_unit": "degree"
+      }
+    ]
+  },
+  {
+    "text": "keep the temperature at 75 degrees f",
+    "quantities": [
+      {
+        "value": "75",
+        "normalized_unit": "fahrenheit"
+      }
+    ]
+  },
+  {
+    "text": "let the temperature be at 40 celsius",
+    "quantities": [
+      {
+        "value": "40",
+        "normalized_unit": "celsius"
+      }
+    ]
+  },
+  {
+    "text": "let the temperature be at 50 deg. ",
+    "quantities": [
+      {
+        "value": "50",
+        "normalized_unit": "degree"
+      }
+    ]
+  },
+  {
+    "text": "convert 10 celsius to fahrenheit",
+    "quantities": [
+      {
+        "value": "10",
+        "normalized_unit": "celsius"
+      }
+    ]
+  },
+  {
+    "text": "34.9 centigrate to farenheit",
+    "quantities": [
+      {
+        "value": "34.9",
+        "normalized_unit": "celsius"
+      }
+    ]
+  },
+  {
+    "text": "convert 200 celsius into fahrenheit",
+    "quantities": [
+      {
+        "value": "200",
+        "normalized_unit": "celsius"
+      }
+    ]
+  },
+  {
+    "text": "fahrenheit to celsius 101 fahrenheit is how much celsius",
+    "quantities": [
+      {
+        "value": "101",
+        "normalized_unit": "fahrenheit"
+      }
+    ]
+  },
+  {
+    "text": "50 degrees celsius to fahrenheit",
+    "quantities": [
+      {
+        "value": "50",
+        "normalized_unit": "celsius"
+      }
+    ]
+  },
+  {
+    "text": "could you convert 51 fahrenheit to degrees celsius",
+    "quantities": [
+      {
+        "value": "51",
+        "normalized_unit": "fahrenheit"
+      }
+    ]
+  },
+  {
+    "text": "convert 106 degree fahrenheit to degrees celsius",
+    "quantities": [
+      {
+        "value": "106",
+        "normalized_unit": "fahrenheit"
+      }
+    ]
+  },
+  {
+    "text": "convert 45 degrees fahrenheit to celsius",
+    "quantities": [
+      {
+        "value": "45",
+        "normalized_unit": "fahrenheit"
+      }
+    ]
+  },
+  {
+    "text": "how to convert - 20 degrees fahrenheit to celsius",
+    "quantities": [
+      {
+        "value": "-20",
+        "normalized_unit": "fahrenheit"
+      }
+    ]
+  },
+  {
+    "text": "Jane Doe, 123 Random Street, Cloud City, PA 23456 F Block",
+    "quantities": []
+  },
+  {
+    "text": "SCP-173C",
+    "quantities": []
+  },
+  {
+    "text": "turn a 45 degrees angle",
+    "quantities": [
+      {
+        "value": "45",
+        "normalized_unit": "degree"
+      }
+    ]
+  },
+  {
+    "text": "Rotate 90\u00b0",
+    "quantities": [{
+      "value": "90",
+      "normalized_unit": "degree"
+    }]
+  }
+]

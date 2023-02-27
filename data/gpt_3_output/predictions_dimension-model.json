@@ -1,0 +1,1333 @@
+[
+  {
+    "text": "You weight 200lbs.",
+    "quantities": [
+      [
+        "=",
+        " 200",
+        " lbs",
+        " pound",
+        " weight"
+      ]
+    ]
+  },
+  {
+    "text": "75ml",
+    "quantities": [
+      [
+        "= ",
+        "75",
+        " ml",
+        " milliliter",
+        " -"
+      ]
+    ]
+  },
+  {
+    "text": "its greatest drawback may be its 3-inch thickness, big enough for one consultant to describe it as clunky.",
+    "quantities": [
+      [
+        "=",
+        " 3",
+        " inch",
+        " inch",
+        " thickness"
+      ]
+    ]
+  },
+  {
+    "text": "a twister roared through an area about ten miles long there, killing at least fourteen people and turning dozens of homes into rubble.",
+    "quantities": [
+      [
+        "~",
+        " 10",
+        " miles",
+        " miles",
+        " area"
+      ],
+      [
+        "=",
+        " 14",
+        " people",
+        " people",
+        " killing"
+      ]
+
+    ]
+  },
+  {
+    "text": "it takes more than 10 1/2 miles of cable and wire to hook it all up, and 23 computers.",
+    "quantities": [
+      [
+        ">",
+        " 10.5",
+        " miles",
+        " mile",
+        " cable and wire"
+      ],
+      [
+        "=",
+        " 23",
+        " computers",
+        " computers",
+        " computers"
+      ]
+    ]
+  },
+  {
+    "text": "the six-mile trip to my airport hotel that had taken 20 minutes earlier in the day took more than three hours.",
+    "quantities": [
+      [
+        "=",
+        " 6",
+        " mile",
+        " mile",
+        " trip"
+      ],
+      [
+        "=",
+        " 20",
+        " minutes",
+        " minutes",
+        " trip"
+      ],
+      [
+        ">",
+        " 3",
+        " hours",
+        " hours",
+        " trip"
+      ]
+    ]
+  },
+  {
+    "text": "industrywide, oil production in this country fell by 500,000 barrels a day to barrels in the first eight months of this year.",
+    "quantities": [
+      [
+        "= ",
+        "500000",
+        " barrels",
+        " barrels",
+        " oil production"
+      ],
+      [
+        "= ",
+        "8",
+        " months",
+        " months",
+        " year"
+      ]
+    ]
+  },
+  {
+    "text": "it' s what 1 ) explains why we are like, well, ourselves rather than bo jackson ; 2 ) cautions that it' s possible to drown in a lake that averages two feet deep ; and 3 ) predicts that 10, 000 monkeys placed before 10, 000 pianos would produce 1, 118 publishable rock' n' roll tunes.",
+    "quantities": [
+      [
+        "=",
+        " 1",
+        " -",
+        " -",
+        " -"
+      ],
+      [
+        "=",
+        " 2",
+        " feet",
+        " feet",
+        " lake"
+      ],
+      [
+        "=",
+        " 10000",
+        " monkeys",
+        " monkeys",
+        " -"
+      ],
+      [
+        "=",
+        " 10000",
+        " pianos",
+        " pianos",
+        " -"
+      ],
+      [
+        "=",
+        " 1118",
+        " tunes",
+        " tunes",
+        " rock 'n' roll"
+      ]
+    ]
+  },
+  {
+    "text": "on may 19, the fda began detaining chinese mushrooms in 68-ounce cans after more than 100 people in mississippi, new york and pennsylvania became ill from eating tainted mushrooms.",
+    "quantities": [
+      [
+        "=",
+        " 68",
+        " ounce",
+        " ounce",
+        " cans"
+      ],
+      [
+        "=",
+        " 100",
+        " people",
+        " people",
+        " mississippi",
+        " new york",
+        " pennsylvania"
+      ]
+    ]
+  },
+  {
+    "text": "mr. hulings gloats that he sold all his stocks a week before the market plummeted 190 points on oct. 13, and he is using the money to help buy a 45-acre horse farm.",
+    "quantities": [
+      [
+        "=",
+        " 190",
+        " points",
+        " points",
+        " market"
+      ],
+      [
+        "=",
+        " 45",
+        " acre",
+        " acre",
+        " horse farm"
+      ]
+    ]
+  },
+  {
+    "text": "then, to make these gardenettes quite literally rooms, ms. bartlett had thrown up windowless walls (brick, lattice, hedge ) eight to 10 feet tall, casting her interiors into day - long stygian shade.",
+    "quantities": [
+      [
+        "=",
+        " 8-10",
+        " feet",
+        " feet",
+        " walls"
+      ]
+    ]
+  },
+  {
+    "text": "` ` management does n' t want surprises,' ' notes jack zaves, who, as fuel - services director at american airlines, buys some 2.4 billion gallons of jet fuel a year.",
+    "quantities": [
+      [
+        "=",
+        "2.4",
+        " billion",
+        " billion",
+        " gallons"
+      ],
+      [
+        "=",
+        "1",
+        " year",
+        " year",
+        " jet fuel"
+      ]
+    ]
+  },
+  {
+    "text": "a 10-gallon water cooler had toppled onto the floor, soaking the red carpeting.",
+    "quantities": [
+      [
+        "=",
+        " 10",
+        " gallon",
+        " gallon",
+        " water cooler"
+      ]
+    ]
+  },
+  {
+    "text": "nearby, six dolphins will frolic in a 1.5 million gallon saltwater aquarium.",
+    "quantities": [
+      [
+        "=",
+        " 1.5",
+        " million",
+        " million",
+        " gallon"
+      ],
+      [
+        "=",
+        " 6",
+        " dolphins",
+        " dolphins",
+        " aquarium"
+      ]
+    ]
+  },
+  {
+    "text": "and this baby is over two pounds.",
+    "quantities": [
+      [
+        ">",
+        " 2",
+        " pounds",
+        " pound",
+        " baby"
+      ]
+    ]
+  },
+  {
+    "text": "``i don't trust people who don't eat,'' said ms. volokh, though she herself stopped eating lunch a few years ago to drop 25 pounds.",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "shell, a subsidiary of royal dutch / shell group, will be allowed to export 0.9 trillion cubic feet, and gulf, a unit of olympia & york developments ltd. will be allowed to export",
+    "quantities": [
+      [
+        "=",
+        " 0.9",
+        " trillion cubic feet",
+        " trillion cubic feet",
+        " shell"
+      ],
+      [
+        "=",
+        " 0.9",
+        " trillion cubic feet",
+        " trillion cubic feet",
+        " gulf"
+      ]
+    ]
+  },
+  {
+    "text": "highlights of the bills, as currently framed, are : - - a restriction on the amount of real estate one family can own, to 660 square meters in the nation' s six largest cities, but more in smaller cities and rural areas.",
+    "quantities": [
+      [
+        "= ",
+        "660",
+        " square meters",
+        " square meters",
+        " real estate"
+      ],
+      [
+        ">",
+        " 660",
+        " square meters",
+        " square meters",
+        " smaller cities and rural areas"
+      ]
+    ]
+  },
+  {
+    "text": "tigrean armies are now 200 miles north of addis ababa, threatening the town of dese, which would cut off mr. mengistu' s capital from the port of assab, through which all fuel and other supplies reach addis ababa.",
+    "quantities": [
+      [
+        "=",
+        " 200",
+        " miles",
+        " miles",
+        " Tigrean armies"
+      ],
+      [
+        "=",
+        " 1",
+        " town",
+        " town",
+        " threatening"
+      ],
+      [
+        "=",
+        " 1",
+        " port",
+        " port",
+        " Assab"
+      ]
+    ]
+  },
+  {
+    "text": "he said that one of the computers took a three-foot trip sliding across the floor.",
+    "quantities": [
+      [
+        "=",
+        " 3",
+        " foot",
+        " feet",
+        " trip"
+      ]
+    ]
+  },
+  {
+    "text": "the core of its holdings is 190,000 square meters of incredibly expensive property in the marunouchi district, the business and financial center of tokyo, often jokingly called ` ` mitsubishi village.' '",
+    "quantities": [
+      [
+        "=",
+        "190000",
+        " square meters",
+        " square meters",
+        " property"
+      ]
+    ]
+  },
+  {
+    "text": "the satellite, built by hughes for the international telecommunications satellite organization, is part of a $ 700 million contract awarded to hughes in 1982 to develop five of the three-ton satellites.",
+    "quantities": [
+      [
+        "=",
+        " 5",
+        " satellites",
+        " satellites",
+        " contract"
+      ],
+      [
+        "=",
+        " 3",
+        " ton",
+        " ton",
+        " satellites"
+      ],
+      [
+        "=",
+        " 700",
+        " million",
+        " million",
+        " contract"
+      ]
+    ]
+  },
+  {
+    "text": "in a 1996 report on biological weapons, the center for strategic and international studies, a public policy research institution in washington, warned that it was easy for would - be terrorists to assemble biological weapons _ using commercial equipment with a capacity of 130 gallons.",
+    "quantities": [
+      [
+        "=",
+        " 130",
+        " gallons",
+        " gallon",
+        " capacity"
+      ]
+    ]
+  },
+  {
+    "text": "the trade group' s compilation of commerce department data showed that august imports, the second largest monthly total of the year, were up 5 % from july' s 1,458,000 tons but below last year' s high of in june 1988.",
+    "quantities": [
+      [
+        "= ",
+        "1",
+        "458000",
+        " tons",
+        " tons",
+        " imports"
+      ],
+      [
+        "= ",
+        "5",
+        " percent",
+        " percentage",
+        " imports"
+      ],
+      [
+        "= ",
+        "1",
+        " June 1988",
+        " June 1988",
+        " year's high"
+      ]
+    ]
+  },
+  {
+    "text": "at no. 1, singh hit a 9 - iron approach shot to within six feet of the cup.",
+    "quantities": [
+      [
+        "=",
+        " 9",
+        " iron",
+        " iron",
+        " approach shot"
+      ],
+      [
+        "=",
+        " 6",
+        " feet",
+        " feet",
+        " cup"
+      ]
+    ]
+  },
+  {
+    "text": "so when next year' s psyllium crop is harvested in march, it may be smaller than the 16,000 metric tons of the past few years - - right at the crest of the psyllium boom.",
+    "quantities": [
+      [
+        "~",
+        " 16000",
+        " metric tons",
+        " metric tons",
+        " psyllium crop"
+      ]
+    ]
+  },
+  {
+    "text": "the 486 is the descendant of a long series of intel chips that began dominating the market ever since ibm picked the 16-bit 8088 chip for its first personal computer.",
+    "quantities": [
+      [
+        "=",
+        " 486",
+        " chips",
+        " chips",
+        " Intel"
+      ],
+      [
+        "=",
+        " 16",
+        " bit",
+        " bit",
+        " 8088 chip"
+      ],
+      [
+        "=",
+        " 1",
+        " personal computer",
+        " personal computer",
+        " IBM"
+      ]
+    ]
+  },
+  {
+    "text": "the ` ` jiotto caspita' ' can run at over 188 miles an hour, a company spokesman said.",
+    "quantities": [
+      [
+        ">",
+        " 188",
+        " miles an hour",
+        " miles / hour",
+        " jiotto caspita"
+      ]
+    ]
+  },
+  {
+    "text": "the navy has set up a helicopter landing zone just a 100 meters from a mobile operating room, just on the outskirts of baghdad.",
+    "quantities": [
+      [
+        "=",
+        " 100",
+        " meters",
+        " meter",
+        " helicopter landing zone"
+      ]
+    ]
+  },
+  {
+    "text": "caltrans plans to add a second deck for buses and car pools above the median of a 2.5-mile stretch of the harbor freeway just south of los angeles, near the memorial coliseum.",
+    "quantities": [
+      [
+        "=",
+        " 2.5",
+        " mile",
+        " mile",
+        " stretch"
+      ],
+      [
+        "=",
+        " 1",
+        " deck",
+        " deck",
+        " freeway"
+      ]
+    ]
+  },
+  {
+    "text": "on my four-mile drive to farm headquarters each morning, i drive by another four empty houses.",
+    "quantities": [
+      [
+        "=",
+        " 4",
+        " mile",
+        " mile",
+        " drive"
+      ],
+      [
+        "=",
+        " 4",
+        " houses",
+        " houses",
+        " drive"
+      ]
+    ]
+  },
+  {
+    "text": "we are insulted, said langa from the greek catholic headquarters, some 325 kilometer northwest of bucharest.",
+    "quantities": [
+      [
+        "= ",
+        "325",
+        " kilometer",
+        " kilometer",
+        " northwest"
+      ]
+    ]
+  },
+  {
+    "text": "rotich is a tiny ( 5 feet",
+    "quantities": [
+      [
+        "= ",
+        "5",
+        " feet",
+        " feet",
+        " tiny"
+      ]
+    ]
+  },
+  {
+    "text": "4 inches) 28 - year - old who did not start running seriously until three years ago and had not competed indoors until this month.",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "raceway park ( minnesota ) in shakopee is a 1/4 mile paved oval.",
+    "quantities": [
+      [
+        "=",
+        " 0.25",
+        " mile",
+        " mile",
+        " oval"
+      ]
+    ]
+  },
+  {
+    "text": "castlecrag mountain is located south of moat lake, 1.6 km west of mount frink along the same ridge line.",
+    "quantities": [
+      [
+        "=",
+        " 1.6",
+        " km",
+        " kilometer",
+        " west"
+      ]
+    ]
+  },
+  {
+    "text": "the javadi hills are located about 17 km from ambur.",
+    "quantities": [
+      [
+        "~",
+        " 17",
+        " km",
+        " kilometers",
+        " javadi hills"
+      ]
+    ]
+  },
+  {
+    "text": "after circling lake michigan near the exposition for two hours, commander hugo eckener landed the 776-foot airship at the nearby curtiss - wright airport in glenview.",
+    "quantities": [
+      [
+        "=",
+        " 2",
+        " hours",
+        " hours",
+        " circling lake michigan"
+      ],
+      [
+        "=",
+        " 776",
+        " foot",
+        " feet",
+        " airship"
+      ]
+    ]
+  },
+  {
+    "text": "the interchange with highway 35 and highway 115 to lindsay and peterborough ( exit 436 ) lies 500 metres east of bennett road.",
+    "quantities": [
+      [
+        "=",
+        " 500",
+        " metres",
+        " metre",
+        " interchange"
+      ],
+      [
+        "=",
+        " 436",
+        " exit",
+        " exit",
+        " interchange"
+      ]
+    ]
+  },
+  {
+    "text": "in 1995 canon introduced the first commercially available slr lens with internal image stabilization, ef 75 -300mm f / 4 - 5.6 is usm.",
+    "quantities": [
+      [
+        "=",
+        " 75-300",
+        " mm",
+        " millimeter",
+        " lens"
+      ],
+      [
+        "=",
+        " 4-5.6",
+        " f/f",
+        " f/f",
+        " lens"
+      ]
+    ]
+  },
+  {
+    "text": "sterling armaments of dagenham, essex produced a conversion kit comprising a new 7.62mm barrel, magazine, extractor and ejector for commercial sale.",
+    "quantities": [
+      [
+        "=",
+        " 7.62",
+        " mm",
+        " millimeter",
+        " barrel"
+      ],
+      [
+        "=",
+        " 1",
+        " magazine",
+        " magazine",
+        " kit"
+      ],
+      [
+        "=",
+        " 1",
+        " extractor",
+        " extractor",
+        " kit"
+      ],
+      [
+        "=",
+        " 1",
+        " ejector",
+        " ejector",
+        " kit"
+      ]
+    ]
+  },
+  {
+    "text": "the project costs $ 46.8 million, and is intended to boost the company' s production capacity by 25 % to 34,500 metric tons of copper cathode a year.",
+    "quantities": [
+      [
+        "=",
+        " 46.8",
+        " million",
+        " million",
+        " dollars"
+      ],
+      [
+        "=",
+        " 25",
+        " percent",
+        " percent",
+        " project"
+      ],
+      [
+        "=",
+        " 34500",
+        " metric tons",
+        " metric tons",
+        " copper cathode"
+      ]
+    ]
+  },
+  {
+    "text": "canadian steel - ingot production totaled 291,890 metric tons in the week ended oct. 7, up 14.8 % from the preceding week' s total of, statistics canada, a federal agency, said.",
+    "quantities": [
+      [
+        "=",
+        " 291",
+        "890",
+        " metric tons",
+        " metric tons",
+        " steel ingot production"
+      ],
+      [
+        "=",
+        " 14.8",
+        " percent",
+        " percentage",
+        " steel ingot production"
+      ]
+    ]
+  },
+  {
+    "text": "florida panthers live in home ranges between 190 km2.",
+    "quantities": [
+      [
+        "=",
+        " 190",
+        " km2",
+        " square kilometers",
+        " home ranges"
+      ]
+    ]
+  },
+  {
+    "text": "a metric ton is equal to 2,204.62 pounds.",
+    "quantities": [
+      [
+        "=",
+        " 1",
+        " metric ton",
+        " metric ton",
+        " -"
+      ],
+      [
+        "= ",
+        "2204.62",
+        " pounds",
+        " pounds",
+        " -"
+      ]
+    ]
+  },
+  {
+    "text": "I'm a man.",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "Send them a quick DM and ask for their email address",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "1m is equal to 10 dm",
+    "quantities": [
+      [
+        "=",
+        " 1",
+        " m",
+        " meter",
+        " equal"
+      ],
+      [
+        "=",
+        " 10",
+        " dm",
+        " decimeter",
+        " equal"
+      ]
+    ]
+  },
+  {
+    "text": "He has a pen that is 10 \" long.",
+    "quantities": [
+      [
+        "=",
+        " 10",
+        " \"",
+        " inch",
+        " length",
+        " pen"
+      ]
+    ]
+  },
+  {
+    "text": "The size of this file is 100 mb",
+    "quantities": [
+      [
+        "= ",
+        "100",
+        " MB",
+        " megabyte",
+        " file"
+      ]
+    ]
+  },
+  {
+    "text": "The size of this file is 100 MB",
+    "quantities": [
+      [
+        "=",
+        " 100",
+        " MB",
+        " megabyte",
+        " file"
+      ]
+    ]
+  },
+  {
+    "text": "I'll give you a surprise at 2:00 pm",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "He said: 2 pm is 2 picometer",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "that one mile can provide.",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "I' m tired",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "I'm 1.8m tall.",
+    "quantities": [
+      [
+        "=",
+        " 1.8",
+        " m",
+        " meter",
+        " tall"
+      ]
+    ]
+  },
+  {
+    "text": "It cost 1.8M dollars.",
+    "quantities": [
+      [
+        "=",
+        " 1.8",
+        " million",
+        " million",
+        " dollars"
+      ]
+    ]
+  },
+  {
+    "text": "1 m 1 m",
+    "quantities": [
+      [
+        "=",
+        " 1",
+        " m",
+        " meter",
+        " 1 m"
+      ]
+    ]
+  },
+  {
+    "text": "1 m x 1 m",
+    "quantities": [
+      [
+        "=",
+        " 1",
+        " m",
+        " meter",
+        " 1 m x 1 m"
+      ]
+    ]
+  },
+  {
+    "text": "The submarine mein weigh 25 lakh tonnes",
+    "quantities": [
+      [
+        "=",
+        " 25",
+        " lakh",
+        " lakh",
+        " tonnes"
+      ]
+    ]
+  },
+  {
+    "text": "The length is 12 m 2 dm more or less",
+    "quantities": [
+      [
+        "~",
+        " 12",
+        " m",
+        " meter",
+        " length"
+      ],
+      [
+        "~",
+        " 2",
+        " dm",
+        " decimeter",
+        " length"
+      ]
+    ]
+  },
+  {
+    "text": "The length is 12 ft 2 in more or less",
+    "quantities": [
+      [
+        "=",
+        " 12",
+        " ft",
+        " feet",
+        " length"
+      ],
+      [
+        "=",
+        " 2",
+        " in",
+        " inches",
+        " length"
+      ]
+    ]
+  },
+  {
+    "text": "3 tablespoons butter, melted, and 1/2 cup olive oil",
+    "quantities": [
+      [
+        "=",
+        " 3",
+        " tablespoons",
+        " tablespoon",
+        " butter"
+      ],
+      [
+        "=",
+        " 0.5",
+        " cup",
+        " cup",
+        " olive oil"
+      ]
+    ]
+  },
+  {
+    "text": "½ teaspoon baking powder",
+    "quantities": [
+      [
+        "=",
+        " 0.5",
+        " teaspoon",
+        " teaspoon",
+        " baking powder"
+      ]
+    ]
+  },
+  {
+    "text": "10 Kilometers per hour could also be informally written as 10kph, 10kmph, or 10km/hr",
+    "quantities": [
+      [
+        "= ",
+        " 10",
+        " kilometers",
+        " kilometers",
+        " kilometers per hour"
+      ],
+      [
+        "=",
+        " 10",
+        " kilometers per hour",
+        " kilometers / hour",
+        " kilometers per hour"
+      ]
+    ]
+  },
+  {
+    "text": "A coin weighing one drachma is known as a stater",
+    "quantities": [
+      [
+        "=",
+        "1",
+        " drachma",
+        " drachma",
+        " coin"
+      ]
+    ]
+  },
+  {
+    "text": "james t. kirk",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "50 meters per millisecond, 50 centimeters/millisecond, and 50 km/ms all use non-standard units.",
+    "quantities": [
+      [
+        "=",
+        " 50",
+        " meters",
+        " meters",
+        " millisecond"
+      ],
+      [
+        "=",
+        " 50",
+        " centimeters",
+        " centimeters",
+        " millisecond"
+      ],
+      [
+        "= ",
+        "50",
+        " km",
+        " kilometers",
+        " millisecond"
+      ]
+    ]
+  },
+  {
+    "text": "The weight is 20 (kg)",
+    "quantities": [
+      [
+        "=",
+        " 20",
+        " kg",
+        " kilogram",
+        " weight"
+      ]
+    ]
+  },
+  {
+    "text": "The weight is 20 [kg]",
+    "quantities": [
+      [
+        "=",
+        "20",
+        " kg",
+        " kilogram",
+        " weight"
+      ]
+    ]
+  },
+  {
+    "text": "The weight is 20 {kg}",
+    "quantities": [
+      [
+        "=",
+        " 20",
+        " kg",
+        " kilogram",
+        " weight"
+      ]
+    ]
+  },
+  {
+    "text": "The weight is 20 <kg>",
+    "quantities": [
+      [
+        "=",
+        " 20",
+        " kg",
+        " kilogram",
+        " weight"
+      ]
+    ]
+  },
+  {
+    "text": "The weight is 150 microgram",
+    "quantities": [
+      [
+        "=",
+        " 150",
+        " microgram",
+        " microgram",
+        " weight"
+      ]
+    ]
+  },
+  {
+    "text": "The weight is 120 μg",
+    "quantities": [
+      [
+        "=",
+        " 120",
+        " μg",
+        " microgram",
+        " weight"
+      ]
+    ]
+  },
+  {
+    "text": "24703L202",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "24703 L-202",
+    "quantities": [
+      [
+        "=",
+        " 24703",
+        " L-202",
+        " L-202",
+        " -"
+      ]
+    ]
+  },
+  {
+    "text": "24703m212",
+    "quantities": []
+  },
+  {
+    "text": "24703 m212",
+    "quantities": [
+      [
+        "=",
+        " 24703",
+        " m",
+        " meter",
+        " m212"
+      ]
+    ]
+  },
+  {
+    "text": "24703m2",
+    "quantities": [
+      [
+        "=",
+        " 24703",
+        " m2",
+        " square meters",
+        " -"
+      ]
+    ]
+  },
+  {
+    "text": "scp-173m",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "scp2-173m",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "scp-173 m",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "scp173m",
+    "quantities": []
+  },
+  {
+    "text": "The recommended symbol in the United States and United Kingdom when communicating medical information is mcg",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "Ten samples from the Camarones river valley had an average of 37.8 microgrammes per gramme",
+    "quantities": [
+      [
+        "= ",
+        "10",
+        " samples",
+        " samples",
+        " Camarones river valley"
+      ],
+      [
+        "=",
+        " 37.8",
+        " microgrammes per gramme",
+        " microgrammes / gramme",
+        " samples"
+      ]
+    ]
+  },
+  {
+    "text": "rotate 90 degrees",
+    "quantities": [
+      [
+        "=",
+        " 90",
+        " degrees",
+        " degrees",
+        " rotate"
+      ]
+    ]
+  },
+  {
+    "text": "turn left 45 degrees",
+    "quantities": [
+      [
+        "=",
+        " 45",
+        " degrees",
+        " degrees",
+        " left"
+      ]
+    ]
+  },
+  {
+    "text": "The angle is 0.8rad",
+    "quantities": [
+      [
+        "= ",
+        " 0.8",
+        " rad",
+        " radian",
+        " angle"
+      ]
+    ]
+  },
+  {
+    "text": "make a half turn",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "rotate 3 turns",
+    "quantities": [
+      [
+        "=",
+        " 3",
+        " turns",
+        " turns",
+        " rotate"
+      ]
+    ]
+  },
+  {
+    "text": "the temperature is 24 degrees",
+    "quantities": [
+      [
+        "=",
+        " 24",
+        " degrees",
+        " degrees",
+        " temperature"
+      ]
+    ]
+  },
+  {
+    "text": "Water boils at 100° Celsius",
+    "quantities": [
+      [
+        "=",
+        " 100",
+        " ° Celsius",
+        " degrees Celsius",
+        " water"
+      ]
+    ]
+  },
+  {
+    "text": "the Max. capacity is 100t and Max. outreach is 48m",
+    "quantities": [
+      [
+        "=",
+        " 100",
+        " t",
+        " tonne",
+        " capacity"
+      ],
+      [
+        "=",
+        " 48",
+        " m",
+        " meter",
+        " outreach"
+      ]
+    ]
+  }
+]
