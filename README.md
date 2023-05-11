@@ -1,9 +1,9 @@
 # CQE
-A Framework for Comprehensive Quantity Extraction. This repository contains code for :
-### CQE: A Framework for Comprehensive Quantity Extraction 
-Implementation of the system described in paper [CQE: A Framework for Comprehensive Quantity Extraction
-]()
+A Framework for Comprehensive Quantity Extraction. This repository contains code for the paper:
 
+[CQE: A Framework for Comprehensive Quantity Extraction
+]()
+ 
 Satya Almasian*, Vivian Kazakova*, Philipp Göldner, Michael Gertz  
 Institute of Computer Science, Heidelberg University  
 (`*` indicates equal contribution)
