@@ -33,7 +33,6 @@ python3 CQE/example.py
 ### File and folder structure 
 Main files for CQE are under CQE package, where `unit_classifer` contains code for unit disambiguation based on BERT classifier trained using spacy-transformers. `units.json` file is used for normalization of units and `unit_models.zip`
 contains the trained models for the disambiguation which will be unziped on the first run of `NumParser`class.
-To replicated the results from the paper and signifcant testing, refer to `evaluation` package. The computed results are also present under `data/evaluation_output`.
 
 | File                                                                                                       | Description                                                                                                                 |
 |------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
