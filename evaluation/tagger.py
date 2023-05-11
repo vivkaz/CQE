@@ -1,5 +1,7 @@
 import abc
 import json
+import re
+from collections import OrderedDict
 from typing import List, Dict
 
 from ccg_nlpy import remote_pipeline
@@ -7,10 +9,9 @@ from quantulum3 import parser as quantparsesr
 from recognizers_number import NumberRecognizer
 from recognizers_number_with_unit import NumberWithUnitRecognizer
 from recognizers_text import Culture
-from collections import OrderedDict
-from NumParser import NumParser
-from classes import Range
-import re
+
+from numparser.NumParser import NumParser
+from numparser.classes import Range
 
 """
 Generate unified outputs for all the models we are evaluating against, to make the evaluation easier. 
@@ -46,7 +47,7 @@ class NumParserTagger():
                 value = (res.value.lower, res.value.upper)
             else:
                 value = res.value.value
-            unit = res.normalized_unit
+            unit = res.unit.norm_unit
 
             change = res.change.change
             referred_concept = res.referred_concepts.get_nouns()
@@ -57,6 +58,7 @@ class NumParserTagger():
                                 "referred_concepts": flat_list})
         return new_results
 
+
 ################################################### GPT3 Tagger ###################################################
 
 @Tagger.register
@@ -64,90 +66,136 @@ class GPT3Tagger():
     def __init__(self, input_file):
         self.parser = NumParser()
         self.name = "GPT3"
-        self.input_file=input_file
+        self.input_file = input_file
         with open(input_file, "r", encoding="utf8") as file:
             self.data = json.load(file)
-        self.dictionary_unit={
-            "celsiu":"celsius",
-            "kilometer":"kilometre",
-            "meter":"metre",
-            "square meter":"square metre",
-            "kilovolt per centimeter":"kilovolt per centimetre",
-            "micrometer":"micrometre",
-            "kilopounds per square inch":"kilopound per square inch",
-            "milliliter":"millilitre",
-            "degrees celsiu":"celsius",
-            "degree celsiu":"celsius",
-            "us dollar":"dollar",
-            "percent":"percentage",
-            "miles per hour":"mile per hour",
-            "metres / second":"metre per second",
-            "parts per billion":"parts-per-billion",
-            "deputie":"deputy",
-            "miles / hour":"mile per hour",
-            "inche":"inch",
-            "feet":"foot",
-            "decimeter":"decimetre",
-            "microgrammes / gramme":"microgram per gram",
-            "square kilometer":"square kilometre",
-            "millimeter":"millimetre",
-            "mah":"milliampere-hour",
-            "ppb":"parts-per-billion",
-            "pound-feet":"pound-foot",
-            "g":"gram",
-            "min":"minute",
-            "gigatonne":"gigaton",
-            "time":"count",
-            "ghz":"gigahertz",
-            "hz":"hertz",
-            "amperes per cm2":"ampere per square centimetre",
-            "degrees fahrenheit":"fahrenheit",
-            "nanometer":"nanometre",
-            "yuan":"chinese yuan",
-            "us$":"dollar",
-            "kilometers / hour":"kilometre per hour",
-            "rad":"radian",
-            "celciu":"celsius",
-            "centigrate":"celsius",
-            "deg":"degree",
-            "usd":"dollar",
-            "btc":"bitcoin",
-            "€":"euro",
-            "元":"chinese yuan",
-            "franc":"swiss franc",
-            "cent-a-share":"cent per share"
+        self.dictionary_unit = {
+            "celsiu": "celsius",
+            "kilometer": "kilometre",
+            "meter": "metre",
+            "square meter": "square metre",
+            "kilovolt per centimeter": "kilovolt per centimetre",
+            "micrometer": "micrometre",
+            "kilopounds per square inch": "kilopound per square inch",
+            "milliliter": "millilitre",
+            "degrees celsiu": "celsius",
+            "degree celsiu": "celsius",
+            "us dollar": "dollar",
+            "percent": "percentage",
+            "miles per hour": "mile per hour",
+            "metres / second": "metre per second",
+            "parts per billion": "parts-per-billion",
+            "deputie": "deputy",
+            "miles / hour": "mile per hour",
+            "inche": "inch",
+            "feet": "foot",
+            "decimeter": "decimetre",
+            "microgrammes / gramme": "microgram per gram",
+            "square kilometer": "square kilometre",
+            "millimeter": "millimetre",
+            "mah": "milliampere-hour",
+            "ppb": "parts-per-billion",
+            "pound-feet": "pound-foot",
+            "g": "gram",
+            "min": "minute",
+            "gigatonne": "gigaton",
+            "time": "count",
+            "ghz": "gigahertz",
+            "hz": "hertz",
+            "amperes per cm2": "ampere per square centimetre",
+            "degrees fahrenheit": "fahrenheit",
+            "nanometer": "nanometre",
+            "yuan": "chinese yuan",
+            "us$": "dollar",
+            "kilometers / hour": "kilometre per hour",
+            "rad": "radian",
+            "celciu": "celsius",
+            "centigrate": "celsius",
+            "deg": "degree",
+            "usd": "dollar",
+            "btc": "bitcoin",
+            "€": "euro",
+            "元": "chinese yuan",
+            "franc": "swiss franc",
+            "cent-a-share": "cent per share",
+            "sq m":"square metre",
+            "degrees Fahrenheit":"Fahrenheit",
+            "parts per million":"part per million",
+            "barrel-a-day":"barrel per day",
+            "points":"point",
+            "miles per gallon":"mile per gallon",
+            "contracts":"contract",
+            "bathrooms":"bathroom",
+            "bedrooms":"bedroom",
+            "megabits per second":"megabit per second",
+            "liter":"litre",
+            "barrels / day":"barrel per day",
+            "lari":"georgian lari",
+            "ரூ":"sri lankan rupee",
+            "lira":"turkish lira",
+            "yen":"japanese yen",
+            "rand":"south african rand",
+            "kuna":"croatian kuna",
+            "touchdown":"touch down",
+            "cents per share":"cent per share",
+            "wins above replacement":"win above replacement",
+            "rebounds per game":"rebound per game",
+            "points per game":"point per game",
+            "us pint":"pint",
+            "us quart":"quart",
+            "us gallon":"gallon",
+            "us fluid ounce":"ounce",
+            "ksi":"kilopound per square inch",
+            "kilovolts per centimeter":"kilovolt per centimetre",
+            "commercial fishermen":"commercial fisherman",
+            "tonne":"metric ton",
+            "kilowatt-hour":"kilowatt hour",
+            "newton meter":"newton metre",
+            "ringgit":"malaysian ringgit",
+            "assists per game":"assist per game",
+            "gigawatt-hour":"gigawatt hour",
+            "milliampere hour":"milliampere-hour"
+
+
         }
 
     def set_dataset_text_recongizer(self):
-        self.dictionary_unit["year"]="year of age"
-        self.dictionary_unit["day"]="day of age"
-        self.dictionary_unit["week"]="week of age"
-        self.dictionary_unit["month"]="month of age"
+        self.dictionary_unit["year"] = "year of age"
+        self.dictionary_unit["day"] = "day of age"
+        self.dictionary_unit["week"] = "week of age"
+        self.dictionary_unit["month"] = "month of age"
 
-    def decode_output(self,list_values):
-        all_values=[]
+    def clean_concepts(self,concepts):
+        new_list=[]
+        for c in concepts:
+            if c not in ["of", "the","a","He","total"]:
+                new_list.append(c)
+        return new_list
+    def decode_output(self, list_values):
+        all_values = []
         for list_val in list_values:
-            if len(list_val)>0:
-                value=list_val[1]
-                change=list_val[0]
-                unit=list_val[3].lower().strip()
+            if len(list_val) > 0:
+                value = list_val[1]
+                change = list_val[0]
+                unit = list_val[3].lower().strip()
                 if unit.endswith("s"):
-                    unit=unit[:-1]
+                    unit = unit[:-1]
                 if unit in self.dictionary_unit.keys():
-                    unit=self.dictionary_unit[unit]
-                concepts=re.split(r'[,\s]+',list_val[4].strip())
-                changes=change.strip()
-                if changes=="+":
-                    changes="up"
+                    unit = self.dictionary_unit[unit]
+                concepts = re.split(r'[,\s]+', list_val[4].strip())
+                concepts=self.clean_concepts(concepts)
+                changes = change.strip()
+                if changes == "+":
+                    changes = "up"
                 all_values.append({"value": value.strip(), "normalized_unit": unit, "change": changes,
-                        "referred_concepts": concepts})
+                                   "referred_concepts": concepts})
         return all_values
 
     def tag(self, text):
         for gpt_line in self.data:
-            if text==gpt_line["text"]:
-                decoded_ouput=self.decode_output(gpt_line["quantities"])
-                return  decoded_ouput
+            if text == gpt_line["text"]:
+                decoded_ouput = self.decode_output(gpt_line["quantities"])
+                return decoded_ouput
 
 
 ################################################### Quantulum Tagger ###################################################
@@ -167,15 +215,23 @@ class QuantulumTagger():
             "tonne": "metric ton",
             "degree angle": "degree",
             "degree celsius": "celsius",
-            "degree fahrenheit": "fahrenheit"
+            "degree fahrenheit": "fahrenheit",
+            "percentage drop":"percentage",
+            "second of arc":"second",
+            "minute of arc":"minute"
+            ,"yard yard":"yard",
+            "cubic centimetre":"millilitre",
+            "degree angle degree fahrenheit":"fahrenheit",
+            "pound sterling year":"pound sterling per year",
+            "per year per newton per day":"year"
 
         }
 
     def set_dataset_text_recongizer(self):
-        self.dictionary_unit["year"]="year of age"
-        self.dictionary_unit["day"]="day of age"
-        self.dictionary_unit["week"]="week of age"
-        self.dictionary_unit["month"]="month of age"
+        self.dictionary_unit["year"] = "year of age"
+        self.dictionary_unit["day"] = "day of age"
+        self.dictionary_unit["week"] = "week of age"
+        self.dictionary_unit["month"] = "month of age"
 
     def tag(self, text: str):
 
@@ -206,8 +262,8 @@ class TextRecognizerTagger():
         percentage_model = percentage_recognizer.get_percentage_model()
         only_value = percentage_recognizer.get_number_model()
         self.parser = OrderedDict({"currency": currency_model, "dimension": dimension_model,
-                       "temperature": temperature_model, "precentage": percentage_model, "age": age_model,
-                       "value": only_value})
+                                   "temperature": temperature_model, "precentage": percentage_model, "age": age_model,
+                                   "value": only_value})
         self.name = "text-recognizer"
 
         self.dictionary_unit = {"liter": "litre",
@@ -227,21 +283,21 @@ class TextRecognizerTagger():
                                 "f": "fahrenheit",
                                 "franc": "swiss franc",
                                 "united states dollar": "dollar"}
-    def set_dataset_text_recongizer(self):
-        self.dictionary_unit["year"]="year of age"
-        self.dictionary_unit["day"]="day of age"
-        self.dictionary_unit["week"]="week of age"
-        self.dictionary_unit["month"]="month of age"
 
+    def set_dataset_text_recongizer(self):
+        self.dictionary_unit["year"] = "year of age"
+        self.dictionary_unit["day"] = "day of age"
+        self.dictionary_unit["week"] = "week of age"
+        self.dictionary_unit["month"] = "month of age"
 
     def tag(self, text: str):
         results = []
-        parsers_to_consdier =  OrderedDict({})
+        parsers_to_consdier = OrderedDict({})
         if self.parser_name is not None:
             parsers_to_consdier[self.parser_name] = self.parser[self.parser_name]
-            for key,value in self.parser:
+            for key, value in self.parser:
                 if key not in parsers_to_consdier:
-                    parsers_to_consdier[key]=value
+                    parsers_to_consdier[key] = value
         else:
             parsers_to_consdier = self.parser
         for name, p in parsers_to_consdier.items():
@@ -326,36 +382,59 @@ class CCG_NILPTagger():
             "mm": "millimetre",
             "miles an hour": "mile per hour",
             "square meter": "square metre",
-            "day old":"day of age",
-            "week of age":"weeks old",
-            "months old":"month of age",
-            "years old":"year of age",
-            "kilometers per hour":"kilometer per hour",
-            "° celsiu":"celsius",
-            "g":"gram",
-            "min":"minute",
-            "gigatonne":"gigaton",
-            "time":"count",
-            "ghz":"gigahertz",
-            "hz":"hertz",
-            "largest citie":"largest city",
-            "year - old":"year of age",
-            "dm":"decimetre",
-            "m":"metre",
-            "kilometer per hour":"kilometre per hour",
-            "kip":"lao kip",
-            "colone":"costa rican colón",
-            "yen":"japanese yen",
-            "losse":"loss",
-            "usd":"dollar",
-            "btc":"bitcoin"
+            "day old": "day of age",
+            "week of age": "weeks old",
+            "months old": "month of age",
+            "years old": "year of age",
+            "kilometers per hour": "kilometer per hour",
+            "° celsiu": "celsius",
+            "g": "gram",
+            "min": "minute",
+            "gigatonne": "gigaton",
+            "time": "count",
+            "ghz": "gigahertz",
+            "hz": "hertz",
+            "largest citie": "largest city",
+            "year - old": "year of age",
+            "dm": "decimetre",
+            "m": "metre",
+            "kilometer per hour": "kilometre per hour",
+            "kip": "lao kip",
+            "colone": "costa rican colón",
+            "losse": "loss",
+            "usd": "dollar",
+            "btc": "bitcoin",
+            "lb-ft":"pound-force",
+            "nm":"newton metre",
+            "year-old site":"year of age",
+            "ev":"exavolt",
+            "commercial fishermen":"commercial fisherman",
+            "μm":"micrometre",
+            "children":"child",
+            "cubic feet":"cubic foot",
+            "companie":"company",
+            "gwh":"gigawatt hour",
+            "ppg":"point per game",
+            "rpg":"rebound per game",
+            "war":"win above replacement",
+            "franc":"swiss franc",
+            "cent-a-share":"cent per share",
+            "model 3 sedan":"model 3 sedans",
+            "launche":"launch",
+            "previous year":"year",
+            "μg":"microgram",
+            "rad":"radian",
+            "european countrie":"european country",
+            "different bosse":"different boss"
+
 
         }
+
     def set_dataset_text_recongizer(self):
-        self.dictionary_unit["year"]="year of age"
-        self.dictionary_unit["day"]="day of age"
-        self.dictionary_unit["week"]="week of age"
-        self.dictionary_unit["month"]="month of age"
+        self.dictionary_unit["year"] = "year of age"
+        self.dictionary_unit["day"] = "day of age"
+        self.dictionary_unit["week"] = "week of age"
+        self.dictionary_unit["month"] = "month of age"
 
     def tag(self, text: str):
         results = []
@@ -389,9 +468,9 @@ class CCG_NILPTagger():
                         unit_norm = self.dictionary_unit[unit_norm]
                 else:
                     unit_norm = '-'
-                changes=splitted_values[0].strip()
-                if changes=="+":
-                    changes="up"
+                changes = splitted_values[0].strip()
+                if changes == "+":
+                    changes = "up"
                 results.append({"value": splitted_values[1].replace(',', '').strip(), "normalized_unit": unit_norm,
                                 "change": changes})
         return results
@@ -409,27 +488,40 @@ def tag_entire_file(file_lines: List[Dict], parser: Tagger):
         result.append({"text": line["text"], "gt": line["quantities"], "tags": output})
     return result
 
+
 def tag_entire_file_as_dictionary(file_lines: List[Dict], parser: Tagger):
     """
     Goes over an entire file from the test set and tags it based on the defined parser
     """
-    result ={}
+    result = {}
     for line in file_lines:
         output = parser.tag(line["text"])
-        result[line["text"]]={ "gt": line["quantities"], "tags": output}
+        result[line["text"]] = {"gt": line["quantities"], "tags": output}
     return result
+
 
 def tag_entire_file_with_index(file_lines: List[Dict], parser: Tagger):
     """
     Goes over an entire file from the test set and tags it based on the defined parser
     """
-    result =[]
-    for index,line in enumerate(file_lines):
+    result = []
+    for index, line in enumerate(file_lines):
         output = parser.tag(line["text"])
-        result.append({ "text": line["text"],"gt": line["quantities"], "tags": output})
+        result.append({"text": line["text"], "gt": line["quantities"], "tags": output})
     return result
+
+
 ################################################### gpt3 decoder ###################################################
-# #
-# parser = NumParserTagger()
-#
-# print(parser.tag("75ml"))
+
+parser = QuantulumTagger()
+
+
+
+
+
+
+
+# tags=parser.tag( "The mass of the sun is approximately 1.99×10−30 kilograms.")
+# for tag in tags:
+#     print(tag)
+

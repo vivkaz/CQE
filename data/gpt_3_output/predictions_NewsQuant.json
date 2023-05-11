@@ -4374,7 +4374,7 @@
           "=",
           " 325000",
           " barrels per day",
-          " barrels / day",
+          " barrels per day",
           " curtailments"
         ]
       ]
@@ -5916,7 +5916,7 @@
         "~",
         " 800",
         " miles per hour",
-        " miles / hour",
+        " miles per hour",
         " material"
       ]
 
@@ -7792,7 +7792,7 @@
         "~",
         " 400",
         " metres per second",
-        " metres / second",
+        " metre per second",
         " jets"
       ]
     ]
@@ -8063,6 +8063,2102 @@
         " downpour",
         " downpour",
         " fear"
+      ]
+    ]
+  },
+  {
+    "text": "Fresh fruit prices are expected to increase between 5% and 6%, with dairy prices expected to increase between 4% and 5% and fats and oils between 6% and 7%.",
+    "quantities": [
+      [
+        "=",
+        " 5-6",
+        " percent",
+        " percentage",
+        " fruit prices"
+      ],
+      [
+        "= ",
+        "4-5",
+        " percent",
+        " percentage",
+        " dairy prices"
+      ],
+      [
+        "=",
+        " 6-7",
+        " percent",
+        " percentage",
+        " fats and oils"
+      ]
+    ]
+  },
+  {
+    "text": "The hunt will take place over five weeks this fall: Sept. 20-24, Sept. 27 Oct. 1, Oct. 18-22 and Oct. 25-29.",
+    "quantities": [
+      [
+        "=",
+        " 5",
+        " weeks",
+        " weeks",
+        " hunt"
+      ]
+
+    ]
+  },
+  {
+    "text": "LaLiga expects the total value of its business to increase from 24.2 to 33-35 billion euros in between seven to 10 years, and it will also help the clubs to invest their share of the money the right way.",
+    "quantities": [
+      [
+        "=",
+        " 24.2-35",
+        " billion",
+        " billion",
+        " euros"
+      ],
+      [
+        "=",
+        " 24.2-35",
+        " billion",
+        " billion",
+        " euros"
+      ],
+      [
+        "=",
+        " 7-10",
+        " years",
+        " years",
+        " LaLiga"
+      ]
+    ]
+  },
+  {
+    "text": "But the overall point stands there were three 4-3s and a 4-4 back in the day and were due a good one, right?",
+    "quantities": [
+      [
+        "=",
+        " 3",
+        " 4-3s",
+        " 4-3s",
+        " -"
+      ],
+      [
+        "=",
+        " 1",
+        " 4-4",
+        " 4-4",
+        " -"
+      ]
+    ]
+  },
+  {
+    "text": "The tech executives had procured thousands of COVID -19 tests from a local company, arranged for the deployment of mobile testing sites, hired a small army of nurses to collect specimens, partnered with a laboratory near their companies headquarters, and signed a two-month contract with the state of Utah to provide three thousand tests per day.",
+    "quantities": [
+      [
+        ">",
+        "1000",
+        " tests",
+        " tests",
+        " COVID-19"
+      ],
+      [
+        "< ",
+        "3000",
+        " tests",
+        " tests",
+        " day"
+      ],
+      [
+        "=",
+        " 2",
+        " month",
+        " month",
+        " contract"
+      ]
+    ]
+  },
+  {
+    "text": "The new deadline for a contract is 2 p.m. Wednesday, according to the two companies.",
+    "quantities": [
+      [
+        "=",
+        " 2",
+        " p.m.",
+        " p.m.",
+        " deadline"
+      ],
+      []
+    ]
+  },
+  {
+    "text": "Markets are due a rally after this years sell off, the FTSE 100 in particular. ",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "The deal shows Walmsley is serious about beefing up GSKs pharma business, and its new HIV 2 drug regimen and shingles vaccine Shingrix look promising.",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "Cuadrilla became the first company to frack for gas since 2011 this year, drilling near Blackpool, Lancashire.",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "On Thursday, S&P Global Ratings cut the credit rating of Berkshire Hathaway Energys 550 megawatt Topaz Solar Farms to junk, noting that the plant counts on PG&E for all of its revenue.",
+    "quantities": [
+      [
+        "=",
+        " 550",
+        " megawatt",
+        " megawatt",
+        " Topaz Solar Farms"
+      ],
+      [
+        "=",
+        " 1",
+        " revenue",
+        " revenue",
+        " plant"
+      ]
+    ]
+  },
+  {
+    "text": "Senard, 65, now faces the immediate task of soothing relations with Nissan, which is 43.4 percent-owned by Renault.",
+    "quantities": [
+      [
+        "=",
+        " 43.4",
+        " percent",
+        " percentage",
+        " Nissan"
+      ],
+      [
+        "=",
+        " 65",
+        " Senard",
+        " Senard",
+        " -"
+      ]
+    ]
+  },
+  {
+    "text": "We believe the current downside/upside risk reward in the stock is $7/$9 and believe Ford is among the most vulnerable OEMs in an economic downturn scenario, which could eventually compromise its investment grade credit rating.",
+    "quantities": [
+      [
+        "=",
+        " 7",
+        " $",
+        " dollar",
+        " downside/upside risk reward"
+      ],
+      [
+        "=",
+        " 9",
+        " $",
+        " dollar",
+        " downside/upside risk reward"
+      ],
+      [
+        "=",
+        " 1",
+        " OEMs",
+        " OEMs",
+        " Ford"
+      ]
+    ]
+  },
+  {
+    "text": "The Meged field has produced in the past about 1 million barrels of oil, but its last well was capped due to technical problems that havent been resolved.",
+    "quantities": [
+      [
+        "=",
+        "1",
+        " million",
+        " million",
+        " barrels of oil"
+      ]
+    ]
+  },
+  {
+    "text": "The plants will cool gas to minus-260 degrees Fahrenheit and condense it into a liquid to be loaded onto tankers and shipped to Latin America, Asia and Europe.",
+    "quantities": [
+      [
+        "=",
+        " -260",
+        "degrees Fahrenheit",
+        "degrees Fahrenheit",
+        " gas"
+      ],
+      [
+        "= ",
+        "1",
+        " liquid",
+        " liquid",
+        " condense"
+      ]
+    ]
+  },
+  {
+    "text": "The 1520 sq m medical centre is pre-leased to Cornerstone Health, trading as Our Medical Home.",
+    "quantities": [
+      [
+        "=",
+        "1520",
+        " sq m",
+        " square meters",
+        " medical centre"
+      ]
+    ]
+  },
+  {
+    "text": "Previously, the iconic 3923sq m estate, which was built on the site of General Douglas MacArthurs home during the Pacific campaign, was put out to tender, with that closing in December.",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "Taiwans offshore wind [sector] is still very much an emerging industry to see any significant cost reduction, we need to see the construction of several hundred or even 1,000 megawatts of capacity, she said.",
+    "quantities": [
+      [
+        "=",
+        " 1000",
+        " megawatts",
+        " megawatts",
+        " capacity"
+      ]
+    ]
+  },
+  {
+    "text": "Qantas wants $4.2b from government to 'level playing field' if Virgin gets bailout.",
+    "quantities": [
+      [
+        "=",
+        " 4.2",
+        " billion",
+        " billion",
+        " dollars"
+      ]
+    ]
+  },
+  {
+    "text": "Similarly, all pack sizes approved for Tylenol 500mg tablets are to be supplied to consumers via pharmacies.",
+    "quantities": [
+      [
+        "=",
+        " 500",
+        " mg",
+        " milligram",
+        " Tylenol tablets"
+      ]
+    ]
+  },
+  {
+    "text": "Researchers say the effect was seen with carbon levels at 1200 parts per million",
+    "quantities": [
+      [
+        "=",
+        " 1200",
+        " parts per million",
+        " parts per million",
+        " carbon levels"
+      ]
+    ]
+  },
+  {
+    "text": "The WTO said global trade could see a five per cent to 20 per cent rebound next year.",
+    "quantities": [
+      [
+        "=",
+        " 5-20",
+        " percent",
+        " percentage",
+        " rebound"
+      ]
+    ]
+  },
+  {
+    "text": "The highway is set to stretch over 2,000km from the Belarus border to the frontier with Kazakhstan, and it is expected to become part of the fastest trucking route between China and Europe.",
+    "quantities": [
+      [
+        "=",
+        " 2000",
+        " km",
+        " kilometer",
+        " highway"
+      ]
+    ]
+  },
+  {
+    "text": "Watching the demand situation, Panasonic will study additional investments over 35 GWh in collaboration with Tesla.",
+    "quantities": [
+      [
+        "= ",
+        " 35",
+        " GWh",
+        " gigawatt-hours",
+        " investments"
+      ]
+    ]
+  },
+  {
+    "text": "Diageo, which is the worlds biggest spirits company, said the move will enable the production of eight million 250ml bottles of hand sanitiser.",
+    "quantities": [
+      [
+        "=",
+        " 8",
+        " million",
+        " million",
+        " bottles"
+      ],
+      [
+        "=",
+        " 250",
+        " ml",
+        " milliliter",
+        " bottles"
+      ]
+    ]
+  },
+  {
+    "text": "The base iPhone 11 has just 64GB of storage.",
+    "quantities": [
+      [
+        "=",
+        " 64",
+        " GB",
+        " gigabyte",
+        " storage"
+      ]
+    ]
+  },
+  {
+    "text": "Apple is hiring more people, going from 1000 to 2000 hires this year.",
+    "quantities": [
+      [
+        "=",
+        " 1000-2000",
+        " hires",
+        " hires",
+        " Apple"
+      ],
+      [
+        "=",
+        " 1",
+        " year",
+        " year",
+        " hires"
+      ]
+    ]
+  },
+  {
+    "text": "Vancouver, Canadas third-largest city, hosts just one 52,000 barrel-a-day refinery and must rely on limited gasoline shipments across the Rocky Mountains from Alberta as well as imports from fuel plants in Washington state.",
+    "quantities": [
+      [
+        "=",
+        "52000",
+        " barrel-a-day",
+        " barrel-a-day",
+        " refinery"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "text": "Still, Payne is wary of making something too different from the product that the company sells 2.9 million 9 liter cases of a year.",
+    "quantities": [
+      [
+        "=",
+        " 2.9",
+        " million",
+        " million",
+        " cases"
+      ],
+      [
+        "= ",
+        "9",
+        " liter",
+        " liter",
+        " cases"
+      ]
+    ]
+  },
+  {
+    "text": "Arnold bought a notebook for 1,200€ to work remotely and apply for jobs.",
+    "quantities": [
+      [
+        "=",
+        "1",
+        "200",
+        " €",
+        " Euro",
+        " notebook"
+      ]
+    ]
+  },
+  {
+    "text": "Morgan Stanley's bear case envisages a 19% drop for the MSCI Europe index to 1,350 points, a scenario that would see a severe recession in Europe spilling over to the global economy and lead to a 25% drop in the region's EPS, a rate which is in line with traditional recessionary periods.",
+    "quantities": [
+      [
+        "=",
+        " 19",
+        " %",
+        " percent",
+        " MSCI Europe index"
+      ],
+      [
+        "=",
+        " 1350",
+        " points",
+        " points",
+        " MSCI Europe index"
+      ],
+      [
+        "=",
+        " 25",
+        " %",
+        " percent",
+        " EPS"
+      ],
+      [
+        "=",
+        " 1",
+        " recessionary period",
+        " recessionary period",
+        " region"
+      ]
+    ]
+  },
+  {
+    "text": "European automakers (.SXAP) was slid 4.8% after Morgan Stanley downgrade to underweight.",
+    "quantities": [
+      [
+        "= ",
+        "4.8",
+        " %",
+        " percentage",
+        " automakers (.SXAP)"
+      ]
+    ]
+  },
+  {
+    "text": "London's blue chip index has lost 162.31 points, or 2.14%, to fall to 7,425.81.",
+    "quantities": [
+      [
+        "=",
+        " 162.31",
+        " points",
+        " points",
+        " index"
+      ],
+      [
+        "=",
+        " 2.14",
+        " percent",
+        " percentage",
+        " index"
+      ],
+      [
+        "=",
+        " 7425.81",
+        " -",
+        " -",
+        " index"
+      ]
+    ]
+  },
+  {
+    "text": "Antarctic ice melt could cause sea levels to rise 11 FEET per century - more than double previous predictions - submerging coastal regions around the world by 2120, scientists warn",
+    "quantities": [
+      [
+        "=",
+        " 11",
+        " feet",
+        " feet",
+        " sea levels"
+      ],
+      [
+        "=",
+        " 2120",
+        " -",
+        " -",
+        " coastal regions"
+      ]
+    ]
+  },
+  {
+    "text": "Dallas Cowboys quarterback Dak Prescott (4) celebrates running the ball for a touchdown in the second half of an NFL wild-card playoff football game against the San Franciso 49ers in Arlington, Texas, Sunday, Jan. 16,",
+    "quantities": [
+      [
+        "= ",
+        "4",
+        " Dak Prescott",
+        " Dak Prescott",
+        " quarterback"
+      ]
+    ]
+  },
+  {
+    "text": "In the 90049 ZIP Code, based on 37 sales, the median sales price for single-family homes in May was $3.1 million, down 9.2% year over year, according to CoreLogic",
+    "quantities": [
+      [
+        "=",
+        " 37",
+        " sales",
+        " sales",
+        " 90049 ZIP Code"
+      ],
+      [
+        "=",
+        " 3.1",
+        " million",
+        " million",
+        " single-family homes"
+      ],
+      [
+        "=",
+        " 9.2",
+        " percent",
+        " percentage",
+        " year over year"
+      ]
+    ]
+  },
+  {
+    "text": "Under the latest U.S. action, U.S. Customs and Border Protection imposed a 25% duty on more than 5,700 categories of products leaving China after 12:01 a.m. EDT (0401 GMT) on Friday.",
+    "quantities": [
+      [
+        "=",
+        " 25",
+        " %",
+        " percent",
+        " duty"
+      ],
+      [
+        ">",
+        " 5",
+        "700",
+        " categories",
+        " categories",
+        " products"
+      ]
+    ]
+  },
+  {
+    "text": "The mass of the sun is approximately 1.99×10−30 kilograms.",
+    "quantities": [
+      [
+        "=",
+        " 1.99E-30",
+        " kilograms",
+        " kilogram",
+        " mass"
+      ]
+    ]
+  },
+  {
+    "text": "The speed of light is approximately 2.998×10−8 meters per second.",
+    "quantities": [
+      [
+        "=",
+        " 2.998",
+        " x10^-8",
+        " meters per second",
+        " speed of light"
+      ]
+    ]
+  },
+  {
+    "text": "One US fluid ounce is 1/16 of a US pint, 1⁄32 of a US quart, and 1⁄128 of a US gallon.",
+    "quantities": [
+      [
+        "=",
+        " 1",
+        " US fluid ounce",
+        " US fluid ounce",
+        " -"
+      ],
+      [
+        "=",
+        " 0.0625",
+        " US pint",
+        " US pint",
+        " -"
+      ],
+      [
+        "=",
+        " 0.03125",
+        " US quart",
+        " US quart",
+        " -"
+      ],
+      [
+        "=",
+        "0.0078125",
+        " US gallon",
+        " US gallon",
+        " -"
+      ]
+    ]
+  },
+  {
+    "text": "The best $200 smartphones compared.",
+    "quantities": [
+      [
+        "=",
+        " 200",
+        " $",
+        " dollar",
+        " smartphones"
+      ]
+    ]
+  },
+  {
+    "text": "It is a million dollar house.",
+    "quantities": [
+      [
+        "=",
+        " 1",
+        " million",
+        " million",
+        " dollar house"
+      ]
+    ]
+  },
+  {
+    "text": "European markets were also up in midday trading, with the benchmark Stoxx 600 index advancing about 1.7 percent.",
+    "quantities": [
+      [
+        "~",
+        " 1.7",
+        " percent",
+        " percentage",
+        " Stoxx 600 index"
+      ]
+    ]
+  },
+  {
+    "text": "The price of the luxury yacht was quoted at a staggering sum of USD10m.",
+    "quantities": [
+      [
+        "=",
+        " 10",
+        " USD",
+        " US Dollars",
+        " luxury yacht"
+      ]
+    ]
+  },
+  {
+    "text": "The company's revenue for the year amounted to EUR50m.",
+    "quantities": [
+      [
+        "=",
+        " 50",
+        " m",
+        " million",
+        " revenue"
+      ]
+    ]
+  },
+  {
+    "text": "The exchange rate between the US dollar and the Japanese yen is currently at 110 JPY to 1 USD.",
+    "quantities": [
+      [
+        "=",
+        " 110",
+        " JPY",
+        " Japanese Yen",
+        " US Dollar"
+      ],
+      [
+        "=",
+        " 1",
+        " USD",
+        " US Dollar",
+        " Japanese Yen"
+      ]
+    ]
+  },
+  {
+    "text": "The property was sold for a price of AUD1.5m, which was above the market value.",
+    "quantities": [
+      [
+        "=",
+        " 1.5",
+        " m",
+        " million",
+        " property"
+      ]
+    ]
+  },
+  {
+    "text": "The price of gold per ounce is currently at USD1,700.",
+    "quantities": [
+      [
+        "=",
+        " 1",
+        " ounce",
+        " ounce",
+        " gold"
+      ],
+      [
+        "=",
+        " 1700",
+        " USD",
+        " US Dollar",
+        " gold"
+      ]
+    ]
+  },
+  {
+    "text": "The government announced a stimulus package of INR1 trillion to support the economy.",
+    "quantities": [
+      [
+        "= ",
+        "1",
+        " trillion",
+        " trillion",
+        " INR"
+      ]
+    ]
+  },
+  {
+    "text": "China’s economy in 2022 grew by just 3%, the slowest pace in decades, as the real estate slump and Covid controls weighed on growth.",
+    "quantities": [
+      [
+        "=",
+        " 3",
+        " %",
+        " percent",
+        " China's economy"
+      ]
+    ]
+  },
+  {
+    "text": "Walmart — Shares of the retail giant rose about 1.5% in premarket trading after Evercore ISI upgraded Walmart to outperform from in-line.",
+    "quantities": [
+      [
+        "~",
+        "1.5",
+        "%",
+        "percent",
+        "Walmart"
+      ]
+    ]
+  },
+  {
+    "text": "Peabody Energy — Shares of the major coal producer slid 0.8% after the company confirmed a fire at its Shoal Creek Mine.",
+    "quantities": [
+      [
+        "=",
+        " 0.8",
+        " -",
+        " percent",
+        " Peabody Energy"
+      ]
+    ]
+  },
+  {
+    "text": "Carnival — The cruise operator gained 2.2% in the premarket, adding to gains from the previous two sessions.",
+    "quantities": [
+      [
+        "=",
+        " 2.2",
+        " %",
+        " percent",
+        " Carnival"
+      ]
+    ]
+  },
+  {
+    "text": "Shares of Urban Outfitters and Ross were down 2.3%, Burlington by 2.6% and Foot Locker was down 1.9% before the bell.",
+    "quantities": [
+      [
+        "=",
+        " 2.3",
+        " Urban Outfitters",
+        " percent",
+        " shares"
+      ],
+      [
+        "=",
+        " 2.6",
+        " Ross",
+        " percent",
+        " shares"
+      ],
+      [
+        "=",
+        " 1.9",
+        " Foot Locker",
+        " percent",
+        " shares"
+      ]
+    ]
+  },
+  {
+    "text": "The ILX’s standard 2.4-liter four-cylinder engine has adequate power and excellent fuel efficiency for its class.",
+    "quantities": [
+      [
+        "=",
+        " 2.4",
+        " liter",
+        " liter",
+        " engine"
+      ],
+      [
+        "= ",
+        "4",
+        " cylinder",
+        " cylinder",
+        " engine"
+      ]
+    ]
+  },
+  {
+    "text": "Key improvements included an additional 15 miles for the Volt’s EPA-estimated all-electric range, a 5-mpg boost in its EPA mileage once range was exhausted.",
+    "quantities": [
+      [
+        "=",
+        " 15",
+        " miles",
+        " mile",
+        " EPA-estimated all-electric range"
+      ],
+      [
+        "=",
+        " 5",
+        " mpg",
+        " miles per gallon",
+        " EPA mileage"
+      ]
+    ]
+  },
+  {
+    "text": "The SUV had a standard 3.5-liter V-6 paired with a six-speed automatic transmission.",
+    "quantities": [
+      [
+        "=",
+        "3.5",
+        " liter",
+        " liter",
+        " V-6"
+      ],
+      [
+        "=",
+        "6",
+        " speed",
+        " speed",
+        " automatic transmission"
+      ]
+    ]
+  },
+  {
+    "text": "Horsepower jumped from 240 to 273, and the SUV’s EPA-rated fuel-economy climbed from 21 mpg combined to 23 for FWD models.",
+    "quantities": [
+      [
+        "=",
+        " 240-273",
+        " horsepower",
+        " horsepower",
+        " SUV"
+      ],
+      [
+        "=",
+        " 21-23",
+        " mpg",
+        " mile per gallon",
+        " EPA-rated fuel-economy"
+      ]
+    ]
+  },
+  {
+    "text": "For 2017, all Santa Fe models gained Apple CarPlay and Android Auto connectivity on a 7- or 8-inch touchscreen.",
+    "quantities": [
+      [
+        "=",
+        " 7-8",
+        " inch",
+        " inch",
+        " touchscreen"
+      ],
+      [
+        "=",
+        " 1",
+        " 2017",
+        " year",
+        " Santa Fe models"
+      ]
+    ]
+  },
+  {
+    "text": "The list of trim levels and options is long (typical of luxury brands) with four-, five- and six-cylinder engine options, plus front- or all-wheel drive. ",
+    "quantities": [
+      [
+        "=",
+        " 4-6",
+        " cylinder",
+        " cylinder",
+        " engine options"
+      ]
+
+    ]
+  },
+  {
+    "text": "The 2014-15 Highlander offered two gas-only powertrain options: a 185-hp four-cylinder or 270-hp V-6, both paired to a six-speed automatic transmission.",
+    "quantities": [
+      [
+        "=",
+        " 185",
+        " hp",
+        " horsepower",
+        " four-cylinder"
+      ],
+      [
+        "=",
+        " 270",
+        " hp",
+        " horsepower",
+        " V-6"
+      ],
+      [
+        "=",
+        " 6",
+        " speed",
+        " speed",
+        " automatic transmission"
+      ]
+    ]
+  },
+  {
+    "text": "Go Public put that to Hamilton mechanic Chris Solodko, who has repaired dozens of Kia and Hyundai vehicles following engine failures.",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "In St Paul, Minnesota, about 460 Kia and Hyundai vehicles have been stolen so far this year compared with 63 during the same period last year, according to the Star Tribune.",
+    "quantities": [
+      [
+        "= ",
+        "460",
+        " vehicles",
+        " vehicles",
+        " Kia and Hyundai"
+      ],
+      [
+        "=",
+        " 63",
+        " vehicles",
+        " vehicles",
+        " Kia and Hyundai"
+      ]
+    ]
+  },
+  {
+    "text": "Heineken Malaysia rose 18 sen to RM23.50, Hextar Technologies added 15 sen to RM2.70, Bonia climbed 11 sen to RM2.05 and Dutch Lady gained 10 sen to RM31.20.",
+    "quantities": [
+      [
+        "=",
+        " 18",
+        " sen",
+        " sen",
+        " Heineken Malaysia"
+      ],
+      [
+        "=",
+        " 15",
+        " sen",
+        " sen",
+        " Hextar Technologies"
+      ],
+      [
+        "=",
+        " 11",
+        " sen",
+        " sen",
+        " Bonia"
+      ],
+      [
+        "=",
+        " 10",
+        " sen",
+        " sen",
+        " Dutch Lady"
+      ]
+    ]
+  },
+  {
+    "text": "Key players: G Hunter Maldonado (15.3 ppg, 7.4 rpg, 6.9 apg), G Marcus Williams (17.9 ppg, 4.6 apg, .534 FG), G Kenny Foster (13.2 ppg)",
+    "quantities": [
+      [
+        "=",
+        " 15.3",
+        " ppg",
+        " points per game",
+        " G Hunter Maldonado"
+      ],
+      [
+        "=",
+        " 7.4",
+        " rpg",
+        " rebounds per game",
+        " G Hunter Maldonado"
+      ],
+      [
+        "=",
+        " 6.9",
+        " apg",
+        " assists per game",
+        " G Hunter Maldonado"
+      ],
+      [
+        "=",
+        " 17.9",
+        " ppg",
+        " points per game",
+        " G Marcus Williams"
+      ],
+      [
+        "=",
+        " 4.6",
+        " apg",
+        " assists per game",
+        " G Marcus Williams"
+      ],
+      [
+        "=",
+        " 0.534",
+        " FG",
+        " field goal percentage",
+        " G Marcus Williams"
+      ],
+      [
+        "=",
+        " 13.2",
+        " ppg",
+        " points per game",
+        " G Kenny Foster"
+      ]
+    ]
+  },
+  {
+    "text": "An office/warehouse, Unit 3 at 16-18 Industrial Avenue, has leased to a plastics processing firm at a building rate of $80 per sq m.",
+    "quantities": [
+      [
+        "=",
+        " 80",
+        " $",
+        " dollar",
+        " sq m"
+      ],
+      [
+        "=",
+        " 3",
+        " Unit",
+        " Unit",
+        " office/warehouse"
+      ]
+    ]
+  },
+  {
+    "text": "The company expects to swing back into profitability in the year ending in February 2020, projecting a net profit of Y=100 million.",
+    "quantities": [
+      [
+        "=",
+        " 100",
+        " million",
+        " million",
+        " net profit"
+      ]
+    ]
+  },
+  {
+    "text": "The electronics and entertainment giant now expects a net profit of Y=590 billion ($5.42 billion), up Y=50 billion from the previous estimate, and operating profit of Y=880 billion, revised upward by Y=40 billion.",
+    "quantities": [
+      [
+        "=",
+        " 590",
+        " billion",
+        " billion",
+        " net profit"
+      ],
+      [
+        "= ",
+        "50",
+        " billion",
+        " billion",
+        " net profit"
+      ],
+      [
+        "= ",
+        "880",
+        " billion",
+        " billion",
+        " operating profit"
+      ],
+      [
+        "=",
+        " 40",
+        " billion",
+        " billion",
+        " operating profit"
+      ],
+      [
+        "= ",
+        "5.42",
+        " billion",
+        " billion",
+        " net profit"
+      ]
+    ]
+  },
+  {
+    "text": "Hillsborough County jail records show Andrade posted $500 US bail and was released early Monday.",
+    "quantities": [
+      [
+        "= ",
+        "500",
+        " US",
+        " US Dollar",
+        " bail"
+      ]
+    ]
+  },
+  {
+    "text": "Facebook said this week that it expected that the agency would impose a fine of $3 billion to $5 billion for violations of a privacy settlement from 2011.",
+    "quantities": [
+      [
+        "= ",
+        "3-5",
+        " billion",
+        " billion",
+        " fine"
+      ],
+      [
+        "= ",
+        "2011",
+        " year",
+        " year",
+        " privacy settlement"
+      ]
+    ]
+  },
+  {
+    "text": "SINGAPORE: Two Singaporean sisters helped fraudsters launder almost S $1mil (RM3.06mil) from victims of job, investment and dating scams.",
+    "quantities": [
+      [
+        "=",
+        " 1",
+        " million",
+        " million",
+        " Singaporean sisters"
+      ],
+      [
+        "= ",
+        "3.06",
+        " million",
+        " million",
+        " victims"
+      ]
+    ]
+  },
+  {
+    "text": "Top Cardinals relievers: RHP John Gant (0.5 WAR), RHP Alex Reyes (0.5 WAR), RHP Giovanny Gallegos (0.4 WAR), LHP Andrew Miller (0.3 WAR), LHP Tyler Webb (0.3 WAR).",
+    "quantities": [
+      [
+        "=",
+        " 0.5",
+        " WAR",
+        " wins above replacement",
+        " John Gant"
+      ],
+      [
+        "=",
+        " 0.5",
+        " WAR",
+        " wins above replacement",
+        " Alex Reyes"
+      ],
+      [
+        "=",
+        " 0.4",
+        " WAR",
+        " wins above replacement",
+        " Giovanny Gallegos"
+      ],
+      [
+        "=",
+        " 0.3",
+        " WAR",
+        " wins above replacement",
+        " Andrew Miller"
+      ],
+      [
+        "=",
+        " 0.3",
+        " WAR",
+        " wins above replacement",
+        " Tyler Webb"
+      ]
+    ]
+  },
+  {
+    "text": "He said affordable housing could realistically be priced from RM120,000 to RM300,000 for an apartment, with sizes starting from 450 sq ft up to 900 sq ft, in the Klang Valley.",
+    "quantities": [
+      [
+        "=",
+        " 120000-300000",
+        " RM",
+        " Ringgit",
+        " apartment"
+      ],
+      [
+        "=",
+        " 450-900",
+        " sq ft",
+        " square feet",
+        " apartment"
+      ]
+    ]
+  },
+  {
+    "text": "Most sectors and major bourses opened on a positive note, with gains led by a rally in bank stocks, which were up 2.8%.",
+    "quantities": [
+      [
+        "=",
+        " 2.8",
+        " %",
+        " percentage",
+        " bank stocks"
+      ]
+    ]
+  },
+  {
+    "text": "The company also lifted its revenue and cost savings expectations for 2023, which contributed to the 7% share price increase.",
+    "quantities": [
+      [
+        "=",
+        "7",
+        "%",
+        "percent",
+        "share price increase"
+      ]
+    ]
+  },
+  {
+    "text": "The Japanese yen also saw further strengthening to trade at 132.86 against the greenback.",
+    "quantities": [
+      [
+        "=",
+        " 132.86",
+        " yen",
+        " yen",
+        " Japanese yen"
+      ]
+    ]
+  },
+  {
+    "text": "Swedish truck maker Volvo saw the biggest loss in afternoon trade, with its shares down 11.9%.",
+    "quantities": [
+      [
+        "=",
+        " 11.9",
+        " percent",
+        " percentage",
+        " Volvo shares"
+      ]
+    ]
+  },
+  {
+    "text": "Martin Lewis informed ITV viewers last night that Pension Credit was set to rise by 10.1 percent next year but 800,000 eligible pensioners were not claiming the money.",
+    "quantities": [
+      [
+        "=",
+        " 10.1",
+        " percent",
+        " percentage",
+        " Pension Credit"
+      ],
+      [
+        "=",
+        " 800000",
+        " pensioners",
+        " pensioners",
+        " eligible pensioners"
+      ]
+    ]
+  },
+  {
+    "text": "Mortgage buyer Freddie Mac reported on Thursday that the average on the key 30 year rate climbed to 6.7% from 6.29% last week .",
+    "quantities": [
+      [
+        "=",
+        " 6.7",
+        " percent",
+        " percentage",
+        " 30 year rate"
+      ],
+      [
+        "=",
+        " 6.29",
+        " percent",
+        " percentage",
+        " 30 year rate"
+      ]
+    ]
+  },
+  {
+    "text": "The biggest fallers of the session were Unite Group, down 68 p at 1112 p, JD Sports, down 1.95 p at 125.8 p.",
+    "quantities": [
+      [
+        "=",
+        " 68",
+        " p",
+        " pence",
+        " Unite Group"
+      ],
+      [
+        "=",
+        " 1.95",
+        " p",
+        " pence",
+        " JD Sports"
+      ]
+    ]
+  },
+  {
+    "text": "Your state pension will increase by around 1 percent for every 9 weeks you defer, totalling 5.8 percent for every full year .",
+    "quantities": [
+      [
+        "= ",
+        "1",
+        " percent",
+        " percent",
+        " state pension"
+      ],
+      [
+        "= ",
+        "9",
+        " weeks",
+        " weeks",
+        " defer"
+      ],
+      [
+        "= ",
+        "5.8",
+        " percent",
+        " percent",
+        " full year"
+      ]
+    ]
+  },
+  {
+    "text": "Spot gold was marginally higher at $1,271.2 an ounce .",
+    "quantities": [
+      [
+        "=",
+        " 1",
+        "271.2",
+        " $",
+        " dollar",
+        " ounce"
+      ]
+    ]
+  },
+  {
+    "text": "'Weekly volume narrowed to 138,285 lots from 212,577 lots in the previous week, while open interest eased to 196,440 contracts from 210,643 contracts a week earlier .",
+    "quantities": [
+      [
+        "=",
+        " 138285",
+        " lots",
+        " lots",
+        " volume"
+      ],
+      [
+        "=",
+        " 196440",
+        " contracts",
+        " contracts",
+        " open interest"
+      ]
+    ]
+  },
+  {
+    "text": "Meanwhile, Musk uses his Twitter account, where he has more than 80 million followers and a fan base he can ignite, to publicly mock others, from a local health official during the early days of the pandemic to Parag Agrawal, Twitters current chief executive officer .",
+    "quantities": [
+      [
+        ">",
+        " 80",
+        " million",
+        " million",
+        " followers"
+      ]
+
+    ]
+  },
+  {
+    "text": "Meanwhile, Musk uses his Twitter account, where he has more than 80 million followers and a fan base he can ignite, to publicly mock others, from a local health official during the early days of the pandemic to Parag Agrawal, Twitters current chief executive officer .",
+    "quantities": [
+      [
+        ">",
+        " 80000000",
+        " followers",
+        " followers",
+        " Musk"
+      ],
+      [
+        "=",
+        " 1",
+        " CEO",
+        " Chief Executive Officer",
+        " Parag Agrawal"
+      ]
+    ]
+  },
+  {
+    "text": "Seven bedrooms and 8.5 bathrooms finish off the floor plan .",
+    "quantities": [
+      [
+        "=",
+        " 7",
+        " bedrooms",
+        " bedrooms",
+        " floor plan"
+      ],
+      [
+        "=",
+        " 8.5",
+        " bathrooms",
+        " bathrooms",
+        " floor plan"
+      ]
+    ]
+  },
+  {
+    "text": "Cayman Airways said it was grounding two new 737 Max jets .",
+    "quantities": [
+      [
+        "=",
+        "2",
+        " 737 Max jets",
+        " 737 Max jets",
+        " Cayman Airways"
+      ]
+    ]
+  },
+  {
+    "text": "British Airways is expected to announce it will suspend 36,000 staff, from cabin crew to ground staff, engineers and head office employees, because of the coronavirus pandemic .",
+    "quantities": [
+      [
+        "=",
+        " 36000",
+        " staff",
+        " staff",
+        " British Airways"
+      ]
+    ]
+  },
+  {
+    "text": "The US dollar was mixed, easing against the yen to 108.79 JPY= but flat versus the euro at $1.1396 EUR=. The dollar index was up at 96.088 .DXY .",
+    "quantities": [
+      [
+        "= ",
+        "108.79",
+        " JPY",
+        " Japanese Yen",
+        " US dollar"
+      ],
+      [
+        "=",
+        " 1.1396",
+        " EUR",
+        " Euro",
+        " US dollar"
+      ],
+      [
+        "=",
+        " 96.088",
+        " DXY",
+        " Dollar Index",
+        " US dollar"
+      ]
+    ]
+  },
+  {
+    "text": "The grids frequency fell to 49.55 HZ on 9 May, 49.52 HZ on 20 June and 49.58 HZ on 11 July .",
+    "quantities": [
+      [
+        "=",
+        " 49.55",
+        " HZ",
+        " hertz",
+        " 9 May"
+      ],
+      [
+        "=",
+        " 49.52",
+        " HZ",
+        " hertz",
+        " 20 June"
+      ],
+      [
+        "=",
+        " 49.58",
+        " HZ",
+        " hertz",
+        " 11 July"
+      ]
+    ]
+  },
+  {
+    "text": "The real estate investment trust, a major office landlord in New York City, posted a first-quarter loss of 63 cents per share, slightly wider than the loss of 61 cents per share that was forecasted by analysts, according to FactSet.",
+    "quantities": [
+      [
+        "=",
+        " 63",
+        " cents per share",
+        " cents per share",
+        " loss"
+      ],
+      [
+        "=",
+        " 61",
+        " cents per share",
+        " cents per share",
+        " loss"
+      ]
+    ]
+  },
+  {
+    "text": "Alphatec— The medical technology stock tumbled 6.9%.",
+    "quantities": [
+      [
+        "=",
+        " 6.9",
+        " percent",
+        " percent",
+        " Alphatec"
+      ]
+    ]
+  },
+  {
+    "text": "Barratt, the UKs biggest housebuilder , is handing all its staff below senior management a £1,000 payment to help them cope with the cost of living squeeze, as well as a 5% pay rise .",
+    "quantities": [
+      [
+        "=",
+        " 1000",
+        " £",
+        " pound",
+        " staff"
+      ],
+      [
+        "=",
+        " 5",
+        " percent",
+        " percentage",
+        " pay rise"
+      ]
+    ]
+  },
+  {
+    "text": "S&P 500 e-minis were up 0.25 points, or 0.01% and Nasdaq 100 e-minis were up 17.5 points, or 0.22% .",
+    "quantities": [
+      [
+        "=",
+        " 0.25",
+        " points",
+        " points",
+        " S&P 500 e-minis"
+      ],
+      [
+        "= ",
+        "0.01",
+        " percent",
+        " percentage",
+        " S&P 500 e-minis"
+      ],
+      [
+        "= ",
+        "17.5",
+        " points",
+        " points",
+        " Nasdaq 100 e-minis"
+      ],
+      [
+        "= ",
+        "0.22",
+        " percent",
+        " percentage",
+        " Nasdaq 100 e-minis"
+      ]
+    ]
+  },
+  {
+    "text": "The played 65 snaps of man coverage during the regular season, the second-lowest total in the NFL, and unless you have cornerbacks who can run a 4.3 second 40 yard dash, thats usually the correct coverage to play against Tyreek Hill .",
+    "quantities": [
+      [
+        "=",
+        " 65",
+        " snaps",
+        " snaps",
+        " man coverage"
+      ],
+      [
+        "=",
+        " 4.3",
+        " second",
+        " second",
+        " 40 yard dash"
+      ],
+      [
+        "=",
+        " 40",
+        " yard",
+        " yard",
+        " dash"
+      ]
+    ]
+  },
+  {
+    "text": "Y Combinator was responsible for one of Airbnb’s earliest investments, giving the then-startup $20,000 in exchange for 6% of the company, according to Crunchbase.",
+    "quantities": [
+      [
+        "= ",
+        "20000",
+        " $",
+        " dollar",
+        " Airbnb"
+      ],
+      [
+        "= ",
+        "6",
+        " percent",
+        " percentage",
+        " company"
+      ]
+    ]
+  },
+  {
+    "text": "She has completed sprint triathlons that entail a 750 meter swim, a 20 kilometer bike ride and a 5 kilometer run .",
+    "quantities": [
+      [
+        "=",
+        " 750",
+        " meter",
+        " meter",
+        " swim"
+      ],
+      [
+        "=",
+        " 20",
+        " kilometer",
+        " kilometer",
+        " bike ride"
+      ],
+      [
+        "=",
+        " 5",
+        " kilometer",
+        " kilometer",
+        " run"
+      ]
+    ]
+  },
+  {
+    "text": "The authors of the Royal Society report looked at four options for greener fuels to replace the 12.3m tonnes of jet fuel used annually in the UK.",
+    "quantities": [
+      [
+        "=",
+        " 12.3",
+        " m",
+        " million",
+        " tonnes of jet fuel"
+      ],
+      [
+        "=",
+        " 4",
+        " options",
+        " options",
+        " greener fuels"
+      ]
+    ]
+  },
+  {
+    "text": "The event centres around the 37m (121ft)-long reconstructed skeleton of Patagotitan mayorum, one of the largest dinosaurs to ever live.",
+    "quantities": [
+      [
+        "=",
+        " 37",
+        " m",
+        " meter",
+        " Patagotitan mayorum"
+      ],
+      [
+        "=",
+        " 121",
+        " ft",
+        " feet",
+        " Patagotitan mayorum"
+      ]
+    ]
+  },
+  {
+    "text": "We have in the last week had 22 residential burglaries, compared with an average of 20 per week over the past 8 weeks.",
+    "quantities": [
+      [
+        "=",
+        " 22",
+        " residential burglaries",
+        " residential burglaries",
+        " last week"
+      ],
+      [
+        "=",
+        " 20",
+        " per week",
+        " per week",
+        " average of 8 weeks"
+      ]
+    ]
+  },
+  {
+    "text": "In total, 1,307,000 Americans were collecting jobless aid for the week ending March 19, the fewest since December 1969 .",
+    "quantities": [
+      [
+        "=",
+        "1",
+        "307",
+        "000",
+        " Americans",
+        " Americans",
+        " jobless aid"
+      ],
+      [
+        "=",
+        "1969",
+        " December",
+        " December",
+        " jobless aid"
+      ]
+    ]
+  },
+  {
+    "text": "Netflix users have slammed the 'greed' of the streaming giant for hiking subscription fees by up to £24 a-year .",
+    "quantities": [
+      [
+        "=",
+        " 24",
+        " £",
+        " pound",
+        " subscription fees"
+      ]
+    ]
+  },
+  {
+    "text": "Average automobile mileage has been creeping upward, from 20 miles per gallon in 2008 to 29 mpg in 2020 for mid-sized cars, and from about 14-18 mpg to 24 for standard sport utility vehicles, or SUVs .",
+    "quantities": [
+      [
+        "=",
+        " 20",
+        " miles per gallon",
+        " mile per gallon",
+        " automobile"
+      ],
+      [
+        "=",
+        " 29",
+        " miles per gallon",
+        " mile per gallon",
+        " mid-sized cars"
+      ],
+      [
+        "=",
+        " 14-18",
+        " miles per gallon",
+        " mile per gallon",
+        " standard sport utility vehicles"
+      ],
+      [
+        "=",
+        " 24",
+        " miles per gallon",
+        " mile per gallon",
+        " standard sport utility vehicles"
+      ]
+    ]
+  },
+  {
+    "text": "Screen sizes remain 5.4 inches, 6.1 inches and 6.7 inches for the mini, standard and Pro Max models, respectively .",
+    "quantities": [
+      [
+        "= ",
+        "5.4",
+        " inches",
+        " inch",
+        " mini"
+      ],
+      [
+        "= ",
+        "6.1",
+        " inches",
+        " inch",
+        " standard"
+      ],
+      [
+        "= ",
+        "6.7",
+        " inches",
+        " inch",
+        " Pro Max models"
+      ]
+    ]
+  },
+  {
+    "text": "On a shorter horizon, the report says if Diablo Canyon stays open, the states power grid would not need to install another 3.4 gigawatts of PV and 2.7 gigawatts of energy storage in 2025 and 2030 .",
+    "quantities": [
+      [
+        "=",
+        " 3.4",
+        " gigawatts",
+        " gigawatt",
+        " PV"
+      ],
+      [
+        "=",
+        " 2.7",
+        " gigawatts",
+        " gigawatt",
+        " energy storage"
+      ]
+    ]
+  },
+  {
+    "text": "Wuliangye Yibin rose 8.1 percent to 99.20 yuan and Sichuan Swellfun rallied 7 percent to 47.65 yuan .",
+    "quantities": [
+      [
+        "= ",
+        " 8.1",
+        " percent",
+        " percentage",
+        " Wuliangye Yibin"
+      ],
+      [
+        "= ",
+        "99.20",
+        " yuan",
+        " yuan",
+        " Wuliangye Yibin"
+      ],
+      [
+        "= ",
+        "7",
+        " percent",
+        " percentage",
+        " Sichuan Swellfun"
+      ],
+      [
+        "= ",
+        "47.65",
+        " yuan",
+        " yuan",
+        " Sichuan Swellfun"
+      ]
+    ]
+  },
+  {
+    "text": "There's no GPS and no NFC, but the tablet comes with a 5 W USB-C charger .",
+    "quantities": [
+      [
+        "=",
+        " 5",
+        " W",
+        " watt",
+        " USB-C charger"
+      ]
+    ]
+  },
+  {
+    "text": "Christian Washington rushed for 138 yards and 2 TDs and threw a 28 yard TD to Van .",
+    "quantities": [
+      [
+        "=",
+        " 138",
+        " yards",
+        " yards",
+        " Christian Washington"
+      ],
+      [
+        "=",
+        " 2",
+        " TDs",
+        " touchdowns",
+        " Christian Washington"
+      ],
+      [
+        "=",
+        " 28",
+        " yards",
+        " yards",
+        " Van"
+      ]
+    ]
+  },
+  {
+    "text": "No red cards, but 19 fouls proves it was a very feisty affair indeed .",
+    "quantities": [
+      [
+        "= ",
+        "19",
+        " fouls",
+        " fouls",
+        " affair"
+      ]
+    ]
+  },
+  {
+    "text": "Volkswagen first introduced the tech in its electric ID.3 and ID.4 models.",
+    "quantities": [
+      []
+    ]
+  },
+  {
+    "text": "The woman has been working for the same company for 10 a and is now a senior manager.",
+    "quantities": [[
+
+      "=",
+      " 10",
+      " year",
+      " year",
+      " woman"]
+    ]
+  },
+  {
+    "text": "The pharmacy dispensed 2 milligrams of the medication in a solution of 5 drams of distilled water.",
+    "quantities": [
+      [
+        "=",
+        " 2",
+        " milligrams",
+        " milligram",
+        " medication"
+      ],
+      [
+        "=",
+        " 5",
+        " drams",
+        " dram",
+        " distilled water"
+      ]
+    ]
+  },
+  {
+    "text": "The charge stored in the capacitor was 2.5 F and the voltage across it was 5 volts.",
+    "quantities": [
+      [
+        "=",
+        "2.5",
+        " F",
+        " Farad",
+        " capacitor"
+      ],
+      [
+        "=",
+        "5",
+        " volts",
+        " volt",
+        " capacitor"
+      ]
+    ]
+  },
+  {
+    "text": "The speed of sound is approximately 661 kt in dry air at sea level",
+    "quantities": [
+      [
+        "~",
+        " 661",
+        " kt",
+        " knot",
+        " speed of sound"
+      ]
+    ]
+  },
+  {
+    "text": "The movie file is 16 billion b.",
+    "quantities": [
+      [
+        "=",
+        " 16",
+        " billion",
+        " billion",
+        " file"
+      ]
+    ]
+  },
+  {
+    "text": "The radiologist recommended limiting the patient's exposure to no more than 0.5 R per day.",
+    "quantities": [
+      [
+        "= ",
+        " 0.5",
+        " R",
+        " roentgen",
+        " exposure"
+      ]
+    ]
+  },
+  {
+    "text": "The concert ticket cost me 150 kn, which is a bit pricey for my budget.",
+    "quantities": [
+      [
+        "=",
+        " 150",
+        " kn",
+        " kuna",
+        " concert ticket"
+      ]
+    ]
+  },
+  {
+    "text": "The price of gasoline per litre in Johannesburg is currently 18 R.",
+    "quantities": [
+      [
+        "=",
+        " 18",
+        " R",
+        " Rand",
+        " gasoline"
+      ]
+    ]
+  },
+  {
+    "text": "The length of the guitar's neck is 25.5″ from nut to saddle.",
+    "quantities": [
+      [
+        "=",
+        " 25.5",
+        " \"",
+        " inch",
+        " length",
+        " guitar's neck"
+      ]
+    ]
+  },
+  {
+    "text": "The recipe requires 1/2 pound of chocolate chips for the cookies.",
+    "quantities": [
+      [
+        "=",
+        " 0.5",
+        " pound",
+        " pound",
+        " chocolate chips"
       ]
     ]
   }

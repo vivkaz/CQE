@@ -9,6 +9,7 @@ from typing import List, Dict
 
 import numpy as np
 import pandas as pd
+from operator import itemgetter
 
 from tagger import NumParserTagger, QuantulumTagger, TextRecognizerTagger, CCG_NILPTagger, tag_entire_file, GPT3Tagger
 
@@ -20,8 +21,8 @@ def decode_dictionary(result, attribute_list, average_ranges=False, gt_concepts=
     '''
 
     # values come in different format, if they are strings, they are coming from groud truth and ranges are sepearted with -
-    # the model outputs are either a single value or range in form of a tuple
-    if isinstance(result["value"], str) and not result["value"].startswith("-") and "-" in result["value"]:
+    # the model outputs are either a single value or range in form of a tuplez
+    if isinstance(result["value"], str) and "E" not in result["value"] and not result["value"].startswith("-") and "-" in result["value"]:
         if average_ranges:
             value = (float(result["value"].split("-")[0]) + float(result["value"].split("-")[1])) / 2
         else:
@@ -75,6 +76,8 @@ def concepts_match(gt_concept, model_concept):
     Do the concepts match, returns partial matches, when we have some of the concepts from the ground truth
     and a compelete match when we have all of the concepts from the ground truth
     '''
+    gt_concept=[g.lower() for g in gt_concept]
+    model_concept=[g.lower() for g in model_concept]
     intersection = list(set(gt_concept) & set(model_concept))
     if len(intersection) > 0:
         partial_match = True
@@ -99,7 +102,7 @@ def get_fscores(true_positive, total_gt, total_model):
 
 
 def calculate_metrics(tagging_results: List[Dict], system_name, attribute_list=["value", "unit"],
-                      debug=False):  # the quantifier can not normalize
+                      debug=True):  # the quantifier can not normalize
     """
     Given a tagged dataset compute the percision, recall and f1 scores.
     """
@@ -123,9 +126,10 @@ def calculate_metrics(tagging_results: List[Dict], system_name, attribute_list=[
         total_gt = total_gt + len(result["gt"])
         total_tags = total_tags + len(result["tags"])
         tags = result["tags"].copy()
+        tags= sorted(tags, key=lambda d: d['normalized_unit'])
+        gt= sorted(result["gt"], key=lambda d: d['normalized_unit'])
         total_gt_values = len(result["gt"])
-        for quantity_gt in result["gt"]:
-
+        for quantity_gt in gt:
             gt_value, gt_unit, gt_change, gt_referred_concepts = decode_dictionary(quantity_gt, attribute_list,
                                                                                    gt_concepts=True,
                                                                                    average_ranges=average_ranges)
@@ -151,6 +155,9 @@ def calculate_metrics(tagging_results: List[Dict], system_name, attribute_list=[
                         if partial_match: correct_concept_partial = correct_concept_partial + 1
                     if model_unit == gt_unit:
                         correct_num_unit = correct_num_unit + 1
+                        tags.remove(quantity_model)
+                        tags= sorted(tags, key=lambda d: d['normalized_unit'])
+                        break;
                     ##### debug
                     elif debug:
                         print("unit: ground truth:{}, model:{}".format(gt_unit, model_unit))
@@ -193,8 +200,8 @@ def evaluate(test_file, gpt_folder, output_folder):
     ####################### go through each parser #######################
     head, tail = os.path.split(test_file)
     gpt_file = os.path.join(gpt_folder, "predictions_" + tail)
-    parser_list = [NumParserTagger(), QuantulumTagger(), TextRecognizerTagger(), CCG_NILPTagger(),
-                   GPT3Tagger(gpt_file)]  # NumParserTagger(),QuantulumTagger()
+    parser_list = [NumParserTagger(), QuantulumTagger(), TextRecognizerTagger(), CCG_NILPTagger(),GPT3Tagger(gpt_file)]
+                   #GPT3Tagger(gpt_file)]  # NumParserTagger(),QuantulumTagger()
     ####################### read the data the data #######################
     with open(test_file, "r", encoding="utf8") as input_file:
         data = json.load(input_file)
@@ -202,9 +209,9 @@ def evaluate(test_file, gpt_folder, output_folder):
     ####################### tag the data #######################
     for parser_ in parser_list:
         print(parser_.name)
-        if tail.replace(".json", "") != "NewsQuant":
+        if tail.replace(".json", "") not in ["NewsQuant"]:
             attribute_list = ["value", "unit"]  # for these datasets we only have unit and value
-            if parser_.name in ["quantulum3", "ccg_nlp", "text-recognizer", "GPT3"]:
+            if parser_.name in ["quantulum3", "ccg_nlp", "text-recognizer", "GPT3"] and  tail.replace(".json", "") == "age-model":
                 parser_.set_dataset_text_recongizer()
         elif parser_.name == "ccg_nlp":
             attribute_list = ["value", "unit", "change"]
@@ -222,10 +229,10 @@ def evaluate(test_file, gpt_folder, output_folder):
 
     df.to_csv(os.path.join(output_folder, tail.replace(".json", ".csv")), sep='\t')
 
-
 if __name__ == '__main__':
     ####################### input parameters #######################
     test_file = "../data/formatted_test_set/NewsQuant.json"  # file to test
     gpt_folder = "../data/gpt_3_output/"
     output_folder = "../data/evaluation_output"
     evaluate(test_file, gpt_folder, output_folder)
+

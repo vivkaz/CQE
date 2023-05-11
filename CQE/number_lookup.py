@@ -67,6 +67,36 @@ maps = {
 
 },
 
+"scientific_notation": {
+    "10²": 100,
+    "10³": 1000,
+    "10⁴": 10000,
+    "10⁵": 100000,
+    "10⁶": 1000000,
+    "10⁷": 10000000,
+    "10⁸": 100000000,
+    "10⁹": 1000000000,
+    "10¹⁰": 10000000000,
+    "10²⁰": 100000000000000000000,
+    "10³⁰": 1000000000000000000000000000000,
+    "10⁴⁰": 10000000000000000000000000000000000000000,
+    "10⁵⁰": 100000000000000000000000000000000000000000000000000,
+    "10−1": 0.1,
+    "10−2": 0.01,
+    "10−3": 0.001,
+    "10−4": 0.0001,
+    "10−5": 0.00001,
+    "10−6": 0.000001,
+    "10−7": 0.0000001,
+    "10−8": 0.00000001,
+    "10−9": 0.000000001,
+    "10−10": 0.0000000001,
+    "10−20": 0.00000000000000000001,
+    "10−30": 0.000000000000000000000000000001,
+    "10−40": 0.0000000000000000000000000000000000000001,
+    "10−50": 0.0000000000000000000000000000000000000000000000000001,
+},
+
 "scales": {
     "dozen": 12,
     "doz": 12,
@@ -77,6 +107,7 @@ maps = {
     "thousand": 1_000,
     "lakh": 100_000,
     "million": 1_000_000,
+    "mil": 1_000_000,
     #"m": 1_000_000, # distinguish between meter and million
     "mln": 1_000_000,
     "crore": 10_000_000,
@@ -129,7 +160,8 @@ maps = {
     "twelfth": 1/12,
     "sixteenth": 1/16,
     "one thirty-second": 1/32,
-    "hundredth": 1/100
+    "hundredth": 1/100,
+    "a hundred twenty-eighth": 1/128
 },
 
 "suffixes": {
@@ -145,6 +177,8 @@ maps = {
     "equals": "=",
     "equal": "=",
     "totalling": "=",
+    "=": "=",
+
     # approx
     "barely": "~",
     "about": "~",
@@ -156,8 +190,12 @@ maps = {
     "nearly": "~",
     "close": "~",
     "circa": "~",
+    "estimate": "~",
+    "some": "~",
     "~": "~",
+    "~ =": "~",
     "~=": "~",
+    "≈": "~",
 
     # greater than
     "more": ">",
@@ -173,6 +211,9 @@ maps = {
     "exceed": ">",
     "higher": ">",
     "high": ">",
+    ">": ">",
+    ">=": ">",
+    "> =": ">=",
 
     # less than
     "less": "<",
@@ -185,30 +226,51 @@ maps = {
     "smaller": "<",
     "small": "<",
     "beneath": "<",
+    "lower": "<",
+    "low": "<",
+    "<": "<",
+    "<=": "<",
+    "< =": "<=",
 
     # down \u2198
-    "fall": "down",
-    "drop": "down",
-    "plummet": "down",
-    "down": "down",
-    "lose": "down",
-    "plunge": "down",
+    "collapse": "down",
     "decline": "down",
     "decrease": "down",
     "descend": "down",
+    "dip": "down",
+    "down": "down",
+    "downward": "down",
+    "drop": "down",
+    "fall": "down",
+    "flop": "down",
+    "lose": "down",
+    "plummet": "down",
+    "plunge": "down",
+    "sag": "down",
+    "shrink": "down",
+    "skid": "down",
     "slide": "down",
+    "slip": "down",
+    "slump": "down",
+    "spil": "down",
+    "stumble": "down",
+    "tumble": "down",
 
     # up \u2197
-    "rise": "up",
-    "gain": "up",
-    "climb": "up",
-    "jump": "up",
-    "increase": "up",
-    "surge": "up",
-    "ascend": "up",
-    "up": "up",
+    "add": "up",
     "advance": "up",
-    "rise under": "up"
+    "ascend": "up",
+    "climb": "up",
+    "gain": "up",
+    "grow": "up",
+    "increase": "up",
+    "jump": "up",
+    "rally": "up",
+    "rise": "up",
+    "rise under": "up",
+    "surge": "up",
+    "up": "up",
+    "upward": "up"
 
     # negation (what was the idea?)
     }
@@ -216,6 +278,7 @@ maps = {
 
 suffixes = {
     "B": "billion",
+    "b": "billion",
     "M": "million",
     #"m": "million",
     "K": "thousand",
@@ -224,8 +287,9 @@ suffixes = {
     "tn": "trillion",
 }
 
-
 prefixes = {
+    "q": "quecto", # 10^-30
+    "r": "ronto", # 10^-27
     "y": "yocto", # 10^-24
     "z": "zepto", # 10^-21
     "a": "atto", # 10^-18
@@ -244,13 +308,30 @@ prefixes = {
     "G": "giga", # 10^9
     "T": "tera", # 10^12
     "P": "peta", # 10^15
-    "E": "exa", # 10^18
+    "E": "exa",  # 10^18
     "Z": "zetta", # 10^21
     "Y": "yotta", # 10^24
-    "Gi": "gibi",
-    "Ki": "kibi",
-    "Mi": "mibi",
-    "Ti": "tibi"
+    "R": "ronna", # 10^27
+    "Q": "quetta", # 10^30
+    "Ki": "kibi", # 2^10
+    "Mi": "mebi", # 2^20
+    "Gi": "gibi", # 2^30
+    "Ti": "tebi", # 2^40
+    "Pi": "pebi", # 2^50
+    "Ei": "exbi", # 2^60
+    "Zi": "zebi", # 2^70
+    "Yi": "yobi"  # 2^80
 }
 
-
+# suffixes_units={"c":"celsius",
+#                 "mm":"millimetre",
+#                 "g":"gram",
+#                 "kg":"kilogram",
+#                 "GB":"gigabyte",
+#                 "KB":"kilobyte",
+#                 "MB":"megabyte",
+#                 "TB":"terabyte",
+#                 "Mp":"megapixel",
+#                 "Mpx":"megapixel",
+#                 "Mpix":"megapixel",
+#                 ""}

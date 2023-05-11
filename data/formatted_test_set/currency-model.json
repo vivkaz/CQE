@@ -168,7 +168,7 @@
       },
       {
         "value": "2",
-        "normalized_unit": "door"
+        "normalized_unit": "door version"
       }
     ]
   },
@@ -240,7 +240,7 @@
     "quantities": [
       {
         "value": "70",
-        "normalized_unit": "dollar"
+        "normalized_unit": "dollar per share"
       }
     ]
   },
@@ -424,7 +424,7 @@
       },
       {
         "value": "20",
-        "normalized_unit": " expensive restaurant"
+        "normalized_unit": "expensive restaurant"
       }
     ]
   },
@@ -495,7 +495,7 @@
       },
       {
         "value": "4",
-        "normalized_unit": "years"
+        "normalized_unit": "year"
       }
     ]
   },
@@ -589,7 +589,7 @@
       },
       {
         "value": "0",
-        "normalized_unit": "coupon"
+        "normalized_unit": "coupon eurobond"
       }
     ]
   },
@@ -832,7 +832,7 @@
       },
       {
         "value": "15",
-        "normalized_unit": "percentage"
+        "normalized_unit": "percentage per year"
       }
     ]
   },
@@ -996,7 +996,7 @@
       },
       {
         "value": "1",
-        "normalized_unit": "coke's largest acquisitions"
+        "normalized_unit": "coke large acquisition"
       }
     ]
   },
@@ -1870,7 +1870,7 @@
       },
       {
         "value": "5",
-        "normalized_unit": "loss"
+        "normalized_unit": "more loss"
       }
     ]
   },

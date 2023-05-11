@@ -46,17 +46,17 @@
     "URI": "Kwanza",
     "dimensions": [],
     "symbols": [
-      "kz",
-      "aoa"
+      "aoa",
+      "kz"
     ],
     "currency_code": "AOA"
   },
   "argentine peso": {
     "surfaces": [
-      "argentine peso",
       "argentina peso",
-      "argentine pesos",
-      "argentina pesos"
+      "argentina pesos",
+      "argentine peso",
+      "argentine pesos"
     ],
     "entity": "currency",
     "URI": "Argentine_peso",
@@ -101,16 +101,16 @@
     "URI": "Australian_dollar",
     "dimensions": [],
     "symbols": [
-      "AUD",
-      "aud",
-      "AUD$",
-      "aud$",
-      "AUD $",
-      "aud $",
-      "A$",
       "A $",
+      "A$",
+      "AU $",
       "AU$",
-      "AU $"
+      "AUD",
+      "AUD $",
+      "AUD$",
+      "aud",
+      "aud $",
+      "aud$"
     ],
     "currency_code": "AUD"
   },
@@ -129,9 +129,9 @@
   "bangladeshi taka": {
     "surfaces": [
       "bangladeshi taka",
+      "bangladeshi takas",
       "taka",
-      "takas",
-      "bangladeshi takas"
+      "takas"
     ],
     "entity": "currency",
     "URI": "Taka",
@@ -144,10 +144,10 @@
   },
   "belarusian ruble": {
     "surfaces": [
-      "belarusian ruble",
       "belarus ruble",
-      "belarusian rouble",
       "belarus rubles",
+      "belarusian rouble",
+      "belarusian ruble",
       "belarusian rubles"
     ],
     "entity": "currency",
@@ -165,9 +165,9 @@
     "URI": "Belgian_franc",
     "dimensions": [],
     "symbols": [
+      "b.fr.",
       "bef",
-      "bi.",
-      "b.fr."
+      "bi."
     ],
     "currency_code": "BEF"
   },
@@ -179,8 +179,8 @@
     "URI": "Ngultrum",
     "dimensions": [],
     "symbols": [
-      "nu.",
-      "btn"
+      "btn",
+      "nu."
     ],
     "currency_code": "BTN"
   },
@@ -193,33 +193,34 @@
     "URI": "Bitcoin",
     "dimensions": [],
     "symbols": [
-      "\u20bf",
-      "btc",
       "BTC",
-      "xbt"
+      "btc",
+      "xbt",
+      "\u20bf"
     ],
     "currency_code": "BTC"
   },
   "bolivian boliviano": {
     "surfaces": [
-      "bolivian boliviano",
       "bolivia boliviano",
       "bolivia bolivianos",
+      "bolivian boliviano",
       "bolivian bolivianos"
     ],
     "entity": "currency",
     "URI": "Boliviano",
     "dimensions": [],
     "symbols": [
-      "bs.",
-      "bob"
+      "bob",
+      "bs."
     ],
     "currency_code": "BOB"
   },
   "bosnia and Herzegovina convertible mark": {
     "surfaces": [
       "Bosnia and Herzegovina convertible mark",
-      "bam"
+      "bam",
+      "bosnia and Herzegovina convertible mark"
     ],
     "entity": "currency",
     "URI": "Bam",
@@ -230,9 +231,9 @@
   "botswana pula": {
     "surfaces": [
       "botswana pula",
+      "botswana pulas",
       "pula",
-      "pulas",
-      "botswana pulas"
+      "pulas"
     ],
     "entity": "currency",
     "URI": "Pula",
@@ -244,46 +245,46 @@
   },
   "brazilian real": {
     "surfaces": [
+      "brazil real",
+      "brazil reals",
       "brazilian real",
       "brazilian reals",
-      "real",
       "reais",
-      "brazil real",
-      "brazil reals"
+      "real"
     ],
     "entity": "currency",
     "URI": "South_African_rand",
     "dimensions": [],
     "symbols": [
-      "R$",
       "BRL",
+      "R$",
       "brl"
     ],
     "currency_code": "BRL"
   },
   "bulgarian lev": {
     "surfaces": [
-      "lev",
-      "bulgarian lev",
       "bulgaria lev",
       "bulgaria levs",
-      "bulgarian levs"
+      "bulgarian lev",
+      "bulgarian levs",
+      "lev"
     ],
     "entity": "currency",
     "URI": "Lev",
     "dimensions": [],
     "symbols": [
-      "bgn",
       "BGN",
+      "bgn",
       "\u043b\u0432"
     ],
     "currency_code": "BGN"
   },
   "cambodian riel": {
     "surfaces": [
-      "cambodian riel",
       "cambodia riel",
       "cambodia riels",
+      "cambodian riel",
       "cambodian riels"
     ],
     "entity": "currency",
@@ -304,14 +305,14 @@
     "URI": "Pound_sterling",
     "dimensions": [],
     "symbols": [
-      "CAD",
-      "cad",
-      "CA $",
-      "ca $",
-      "C$",
-      "c$",
       "C $",
-      "c $"
+      "C$",
+      "CA $",
+      "CAD",
+      "c $",
+      "c$",
+      "ca $",
+      "cad"
     ],
     "currency_code": "CAD"
   },
@@ -335,34 +336,19 @@
     "URI": "Cent_(currency)",
     "dimensions": [],
     "symbols": [
-      "\u00a2",
-      "cts",
       "Ct.",
-      "c"
-    ]
-  },
-  "centavo": {
-    "surfaces": [
-      "centavo"
-    ],
-    "entity": "currency",
-    "URI": "Centavo",
-    "dimensions": [],
-    "symbols": [
-      "\u00a2",
+      "US \u00a2",
+      "c",
       "cts",
-      "ctvs",
-      "cvs",
-      "CT",
-      "c"
+      "\u00a2"
     ]
   },
   "chilean peso": {
     "surfaces": [
-      "chilean peso",
       "chile peso",
-      "chilean pesos",
-      "chile pesos"
+      "chile pesos",
+      "chilean peso",
+      "chilean pesos"
     ],
     "entity": "currency",
     "URI": "Chile_peso",
@@ -375,26 +361,26 @@
   "chinese yuan": {
     "surfaces": [
       "chinese yuan",
-      "yuan",
-      "kuai"
+      "kuai",
+      "yuan"
     ],
     "entity": "currency",
     "URI": "Chinese_yuan",
     "dimensions": [],
     "symbols": [
-      "\u00a5",
-      "\u5143",
       "CNY",
-      "rmb"
+      "rmb",
+      "\u00a5",
+      "\u5143"
     ],
     "currency_code": "CNY"
   },
   "colombian peso": {
     "surfaces": [
-      "colombian peso",
-      "colombian pesos",
       "colombia peso",
-      "colombia pesos"
+      "colombia pesos",
+      "colombian peso",
+      "colombian pesos"
     ],
     "entity": "currency",
     "URI": "Colombian_peso",
@@ -406,14 +392,14 @@
   },
   "costa rican col\u00f3n": {
     "surfaces": [
-      "costa rican col\u00f3n",
-      "costa rican col\u00f3ns",
+      "costa rica colon",
+      "costa rica colons",
       "costa rica col\u00f3n",
       "costa rica col\u00f3ns",
       "costa rican colon",
       "costa rican colons",
-      "costa rica colon",
-      "costa rica colons"
+      "costa rican col\u00f3n",
+      "costa rican col\u00f3ns"
     ],
     "entity": "currency",
     "URI": "CostaRicaCol\u00f3n",
@@ -433,18 +419,18 @@
     "URI": "Kuna",
     "dimensions": [],
     "symbols": [
-      "kn",
+      "HRK",
       "hrk",
-      "HRK"
+      "kn"
     ],
     "currency_code": "HRK"
   },
   "cuban peso": {
     "surfaces": [
-      "cuban peso",
+      "cuba peso",
       "cuba pesos",
-      "cuban pesos",
-      "cuba peso"
+      "cuban peso",
+      "cuban pesos"
     ],
     "entity": "currency",
     "URI": "Cuba_peso",
@@ -454,8 +440,8 @@
   },
   "czech koruna": {
     "surfaces": [
-      "czech koruna",
       "czech crown",
+      "czech koruna",
       "czech korunas"
     ],
     "entity": "currency",
@@ -469,10 +455,10 @@
   },
   "danish krone": {
     "surfaces": [
-      "danish krone",
       "danish crown",
-      "denmark krone",
+      "danish krone",
       "danish krones",
+      "denmark krone",
       "denmark krones"
     ],
     "entity": "currency",
@@ -503,8 +489,8 @@
     "URI": "Nakfa",
     "dimensions": [],
     "symbols": [
-      "nfk",
-      "ern"
+      "ern",
+      "nfk"
     ],
     "currency_code": "ERN"
   },
@@ -522,28 +508,28 @@
   },
   "euro": {
     "surfaces": [
-      "euro",
-      "euros",
       "Euro",
-      "Euros"
+      "Euros",
+      "euro",
+      "euros"
     ],
     "entity": "currency",
     "URI": "Euro",
     "dimensions": [],
     "symbols": [
-      "\u20ac",
       "EUR",
-      "eur"
+      "eur",
+      "\u20ac"
     ],
     "currency_code": "EUR"
   },
   "finnish markka": {
     "surfaces": [
       "finnish markka",
-      "suomen markka",
       "finsk mark",
+      "markka",
       "markkaa",
-      "markka"
+      "suomen markka"
     ],
     "entity": "currency",
     "URI": "Markka",
@@ -583,8 +569,8 @@
   },
   "guatemalan quetzal": {
     "surfaces": [
-      "guatemalan quetzal",
-      "guatemala quetzal"
+      "guatemala quetzal",
+      "guatemalan quetzal"
     ],
     "entity": "currency",
     "URI": "Qutzal",
@@ -620,24 +606,29 @@
   },
   "hong kong dollar": {
     "surfaces": [
-      "hong kong dollar",
-      "hong kong dollars",
-      "hong kong $",
+      "HK dollar",
+      "HK dollars",
+      "Hong Kong $",
+      "Hong Kong dollar",
+      "Hong Kong dollars",
       "hk dollar",
       "hk dollars",
-      "hongkong$",
-      "hongkong $"
+      "hong kong $",
+      "hong kong dollar",
+      "hong kong dollars",
+      "hongkong $",
+      "hongkong$"
     ],
     "entity": "currency",
     "URI": "HK_dollar",
     "dimensions": [],
     "symbols": [
-      "hkd",
-      "HKD",
-      "HK$",
-      "hk$",
       "HK $",
-      "hk $"
+      "HK$",
+      "HKD",
+      "hk $",
+      "hk$",
+      "hkd"
     ],
     "currency_code": "HKD"
   },
@@ -652,8 +643,8 @@
     "URI": "forint",
     "dimensions": [],
     "symbols": [
-      "huf",
-      "Ft"
+      "Ft",
+      "huf"
     ],
     "currency_code": "HUF"
   },
@@ -665,30 +656,30 @@
     "URI": "Indian_rupee",
     "dimensions": [],
     "symbols": [
-      "\u20b9",
-      "INR"
+      "INR",
+      "\u20b9"
     ],
     "currency_code": "INR"
   },
   "indonesian rupiah": {
     "surfaces": [
       "indonesian rupiah",
-      "rupiah",
-      "perak"
+      "perak",
+      "rupiah"
     ],
     "entity": "currency",
     "URI": "Indonesia_rupiah",
     "dimensions": [],
     "symbols": [
-      "rp",
-      "idr"
+      "idr",
+      "rp"
     ],
     "currency_code": "IDR"
   },
   "iranian rial": {
     "surfaces": [
-      "iranian rial",
-      "iran rial"
+      "iran rial",
+      "iranian rial"
     ],
     "entity": "currency",
     "URI": "Lempira",
@@ -700,31 +691,32 @@
   },
   "japanese yen": {
     "surfaces": [
-      "japanese yen",
-      "japanese yens",
+      "YEN",
       "japan yen",
       "japan yens",
+      "japanese yen",
+      "japanese yens",
       "yen",
-      "YEN",
       "yens"
     ],
     "entity": "currency",
     "URI": "Japanese_yen",
     "dimensions": [],
     "symbols": [
-      "\u5186",
-      "\u5713",
-      "\u00a5",
       "JPY",
-      "jpy"
+      "Y",
+      "jpy",
+      "\u00a5",
+      "\u5186",
+      "\u5713"
     ],
     "currency_code": "JPY"
   },
   "kazakhstani tenge": {
     "surfaces": [
-      "kazakhstani tenge",
+      "kazak tenge",
       "kazakh tenge",
-      "kazak tenge"
+      "kazakhstani tenge"
     ],
     "entity": "currency",
     "URI": "Tenge",
@@ -767,8 +759,7 @@
     "dimensions": [],
     "symbols": [
       "lak",
-      "\u20ad",
-      "\u20adn"
+      "\u20ad"
     ],
     "currency_code": "LAK"
   },
@@ -787,10 +778,10 @@
   },
   "lithuanian litas": {
     "surfaces": [
-      "lithuanian litas",
+      "lithuan lit",
       "lithuan litas",
       "lithuanian lit",
-      "lithuan lit"
+      "lithuanian litas"
     ],
     "entity": "currency",
     "URI": "Lit",
@@ -839,25 +830,27 @@
   },
   "malaysian ringgit": {
     "surfaces": [
-      "malaysian ringgit",
-      "malaysia ringgit"
+      "malaysia ringgit",
+      "malaysian ringgit"
     ],
     "entity": "currency",
     "URI": "Ringgit",
     "dimensions": [],
     "symbols": [
-      "rm",
-      "myr"
+      "MYR",
+      "RM",
+      "myr",
+      "rm"
     ],
     "currency_code": "MYR"
   },
   "mexican peso": {
     "surfaces": [
       "mexican peso",
-      "mexico peso",
-      "peso",
       "mexican pesos",
+      "mexico peso",
       "mexico pesos",
+      "peso",
       "pesos"
     ],
     "entity": "currency",
@@ -865,15 +858,15 @@
     "dimensions": [],
     "symbols": [
       "MXN",
-      "mxn",
-      "Mex$"
+      "Mex$",
+      "mxn"
     ],
     "currency_code": "MXN"
   },
   "mill": {
     "surfaces": [
-      "mill",
-      "mil"
+      "mil",
+      "mill"
     ],
     "entity": "currency",
     "URI": "Mill_(currency)",
@@ -896,16 +889,16 @@
   },
   "netherlands guilde": {
     "surfaces": [
-      "netherlands guilde",
-      "netherlands antillean guilde",
+      "dutch guilde",
+      "dutch guilder",
+      "dutch guilders",
+      "florin",
       "guilder",
-      "netherlands guilder",
       "gulden",
       "nederlandse gulden",
-      "florin",
-      "dutch guilder",
-      "dutch guilde",
-      "dutch guilders"
+      "netherlands antillean guilde",
+      "netherlands guilde",
+      "netherlands guilder"
     ],
     "entity": "currency",
     "URI": "Guilde",
@@ -917,21 +910,21 @@
   },
   "new zealand dollar": {
     "surfaces": [
+      "New Zealand dollar",
+      "New Zealand dollars",
       "new zealand dollar",
-      "new zealand dollars",
-      "New Zealand dollar", 
-      "New Zealand dollars"
+      "new zealand dollars"
     ],
     "entity": "currency",
     "URI": "New_Zealand_dollar",
     "dimensions": [],
     "symbols": [
-      "NZD",
-      "nzd",
-      "NZ$",
-      "nz$",
       "NZ $",
-      "nz $"
+      "NZ$",
+      "NZD",
+      "nz $",
+      "nz$",
+      "nzd"
     ],
     "currency_code": "NZD"
   },
@@ -951,11 +944,11 @@
   },
   "norwegian krone": {
     "surfaces": [
-      "norwegian krone",
-      "norwegian crown",
       "norway krone",
-      "norwegian krones",
-      "norway krones"
+      "norway krones",
+      "norwegian crown",
+      "norwegian krone",
+      "norwegian krones"
     ],
     "entity": "currency",
     "URI": "Nok",
@@ -974,28 +967,29 @@
     "URI": "point",
     "dimensions": [],
     "symbols": [
+      "PTS",
       "p"
     ]
   },
   "penny": {
     "surfaces": [
-      "penny",
-      "pence"
+      "pence",
+      "penny"
     ],
     "entity": "currency",
     "URI": "Penny",
     "dimensions": [],
     "symbols": [
-      "p",
-      "d."
+      "d.",
+      "p"
     ]
   },
   "peruvian sol": {
     "surfaces": [
+      "peruvian nuevo sol",
       "peruvian sol",
       "sol",
-      "soles",
-      "peruvian nuevo sol"
+      "soles"
     ],
     "entity": "currency",
     "URI": "Sol",
@@ -1005,11 +999,11 @@
   },
   "polish z\u0142oty": {
     "surfaces": [
-      "polish z\u0142oty",
-      "z\u0142oty",
-      "polish zloty",
       "poland zloty",
-      "poland z\u0142oty"
+      "poland z\u0142oty",
+      "polish zloty",
+      "polish z\u0142oty",
+      "z\u0142oty"
     ],
     "entity": "currency",
     "URI": "Zloty",
@@ -1022,24 +1016,24 @@
   },
   "pound sterling": {
     "surfaces": [
-      "pound sterling",
-      "pound",
-      "pounds",
-      "sterling",
-      "british pound",
-      "pound scot",
+      "av lbs",
       "avoirdupois pounds, international pounds",
-      "av lbs"
+      "british pound",
+      "pound",
+      "pound scot",
+      "pound sterling",
+      "pounds",
+      "sterling"
     ],
     "entity": "currency",
     "URI": "Pound_sterling",
     "dimensions": [],
     "symbols": [
-      "\u00a3",
+      "$ sterling",
       "GBP",
       "gbp",
-      "$ sterling",
-      "[lb_av]"
+      "lb_av",
+      "\u00a3"
     ],
     "currency_code": "GBP"
   },
@@ -1054,34 +1048,34 @@
   },
   "russian ruble": {
     "surfaces": [
-      "russian ruble",
-      "russian rubles",
-      "russian rouble",
+      "rouble",
+      "ruble",
       "russia ruble",
       "russia rubles",
-      "ruble",
-      "rouble"
+      "russian rouble",
+      "russian ruble",
+      "russian rubles"
     ],
     "entity": "currency",
     "URI": "Russian_ruble",
     "dimensions": [],
     "symbols": [
-      "\u20bd",
       "RUB",
-      "rub"
+      "rub",
+      "\u20bd"
     ],
     "currency_code": "RUB"
   },
   "salvadoran col\u00f3n": {
     "surfaces": [
-      "salvadoran col\u00f3n",
-      "salvadoran col\u00f3ns",
+      "salvador colon",
+      "salvador colons",
       "salvador col\u00f3n",
       "salvador col\u00f3ns",
       "salvadoran colon",
       "salvadoran colons",
-      "salvador colon",
-      "salvador colons"
+      "salvadoran col\u00f3n",
+      "salvadoran col\u00f3ns"
     ],
     "entity": "currency",
     "URI": "SalvadorCol\u00f3n",
@@ -1123,13 +1117,28 @@
     "symbols": [],
     "currency_code": "SEN"
   },
+  "singapore dollar": {
+    "surfaces": [
+      "sing",
+      "sing-dollar",
+      "singapore dollar",
+      "singapore dollars"
+    ],
+    "entity": "currency",
+    "URI": "Singapore_dollar",
+    "dimensions": [],
+    "symbols": [
+      "S$"
+    ],
+    "currency_code": "SGD"
+  },
   "south african rand": {
     "surfaces": [
-      "south african rand",
+      "rand",
       "south africa rand",
-      "south african rands",
       "south africa rands",
-      "rand"
+      "south african rand",
+      "south african rands"
     ],
     "entity": "currency",
     "URI": "South_African_rand",
@@ -1143,34 +1152,34 @@
   },
   "south korean won": {
     "surfaces": [
+      "korean republic won",
       "south korean won",
       "south korean wons",
-      "won",
-      "korean republic won"
+      "won"
     ],
     "entity": "currency",
     "URI": "South_Korean_won",
     "dimensions": [],
     "symbols": [
-      "\uc6d0",
-      "\u20a9",
       "KRW",
-      "kwr"
+      "kwr",
+      "\u20a9",
+      "\uc6d0"
     ],
     "currency_code": "KRW"
   },
   "sri lankan rupee": {
     "surfaces": [
-      "sri lankan rupee",
-      "sri lanka rupee"
+      "sri lanka rupee",
+      "sri lankan rupee"
     ],
     "entity": "currency",
     "URI": "Srilanka_rupee",
     "dimensions": [],
     "symbols": [
       "lkr",
-      "\u0dbb\u0dd4",
-      "\u0bb0\u0bc2"
+      "\u0bb0\u0bc2",
+      "\u0dbb\u0dd4"
     ],
     "currency_code": "LKR"
   },
@@ -1189,9 +1198,9 @@
   },
   "swedish krone": {
     "surfaces": [
-      "swedish krone",
+      "swedan krone",
       "swedish crown",
-      "swedan krone"
+      "swedish krone"
     ],
     "entity": "currency",
     "URI": "Sek",
@@ -1203,16 +1212,16 @@
   },
   "swiss franc": {
     "surfaces": [
-      "swiss franc",
-      "franc"
+      "franc",
+      "swiss franc"
     ],
     "entity": "currency",
     "URI": "Swiss_franc",
     "dimensions": [],
     "symbols": [
-      "SFr",
-      "FS",
       "CHF",
+      "FS",
+      "SFr",
       "chf",
       "sfr."
     ],
@@ -1220,25 +1229,25 @@
   },
   "turkish lira": {
     "surfaces": [
-      "turkish lira",
       "turkey lira",
-      "turkish liras",
-      "turkey liras"
+      "turkey liras",
+      "turkish lira",
+      "turkish liras"
     ],
     "entity": "currency",
     "URI": "Try",
     "dimensions": [],
     "symbols": [
-      "try",
-      "tl"
+      "tl",
+      "try"
     ],
     "currency_code": "TRY"
   },
   "ukrainian hryvnia": {
     "surfaces": [
-      "ukrainian hryvnia",
       "hyrvnia",
-      "ukrain hryvnia"
+      "ukrain hryvnia",
+      "ukrainian hryvnia"
     ],
     "entity": "currency",
     "URI": "Hryvnia",
@@ -1262,34 +1271,34 @@
   },
   "dollar": {
     "surfaces": [
-      "united states dollar",
-      "united states dollars",
-      "us dollar",
       "US dollar",
-      "us dollars",
       "US dollars",
       "american dollar",
       "american dollars",
       "dollar",
-      "dollars"
+      "dollars",
+      "united states dollar",
+      "united states dollars",
+      "us dollar",
+      "us dollars"
     ],
     "entity": "currency",
     "URI": "United_States_dollar",
     "dimensions": [],
     "symbols": [
-      "USD",
-      "usd",
-      "US$",
-      "us$",
-      "US $",
-      "us $",
-      "USD$",
-      "usd$",
-      "USD $",
-      "usd $",
+      "$",
       "$ US",
       "$ us",
-      "$"
+      "US $",
+      "US$",
+      "USD",
+      "USD $",
+      "USD$",
+      "us $",
+      "us$",
+      "usd",
+      "usd $",
+      "usd$"
     ],
     "currency_code": "USD"
   },
@@ -1308,11 +1317,11 @@
   "basis point": {
     "surfaces": [
       "basis point",
-      "bip",
       "beep",
-      "permyriad",
+      "bip",
       "per myriad",
-      "per ten thousand"
+      "per ten thousand",
+      "permyriad"
     ],
     "entity": "dimensionless",
     "URI": "Basis_point",
@@ -1323,11 +1332,11 @@
   },
   "count": {
     "surfaces": [
-      "instance",
-      "time",
-      "count",
       "10^3",
-      "thousand"
+      "count",
+      "instance",
+      "thousand",
+      "time"
     ],
     "entity": "dimensionless",
     "URI": "Count_data",
@@ -1345,16 +1354,16 @@
     "URI": "Dozen",
     "dimensions": [],
     "symbols": [
-      "dz",
-      "doz"
+      "doz",
+      "dz"
     ]
   },
   "great gross": {
     "surfaces": [
-      "great gross",
       "cubic gross",
       "dozen gross",
-      "grand gross"
+      "grand gross",
+      "great gross"
     ],
     "entity": "dimensionless",
     "URI": "1728_(number)",
@@ -1380,18 +1389,18 @@
       }
     ],
     "symbols": [
+      "GT",
       "gro",
-      "gt",
-      "GT"
+      "gt"
     ]
   },
   "long hundred": {
     "surfaces": [
-      "long hundred",
+      "centum",
       "great hundred",
-      "twelfty",
+      "long hundred",
       "small gross",
-      "centum"
+      "twelfty"
     ],
     "entity": "dimensionless",
     "URI": "Long_hundred",
@@ -1407,26 +1416,38 @@
     "dimensions": [],
     "symbols": []
   },
+  "parts-per-thousand": {
+    "surfaces": [
+      "10^-3",
+      "parts per thousand",
+      "parts-per-thousand"
+    ],
+    "entity": "fraction",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "ppth"
+    ]
+  },
   "parts-per-billion": {
     "surfaces": [
-      "parts-per-billion",
+      "10^-9",
       "parts per billion",
-      "ppb",
-      "10^-9"
+      "parts-per-billion"
     ],
     "entity": "dimensionless",
     "URI": "Parts-per_notation",
     "dimensions": [],
     "symbols": [
-      "[ppb]"
+      "ppb"
     ]
   },
   "parts-per-million": {
     "surfaces": [
-      "parts-per-million",
+      "10^-6",
       "parts per million",
-      "ppm",
-      "10^-6"
+      "parts-per-million",
+      "ppm"
     ],
     "entity": "dimensionless",
     "URI": "Parts-per_notation",
@@ -1435,27 +1456,26 @@
   },
   "parts-per-trillion": {
     "surfaces": [
-      "parts-per-trillion",
+      "10^-12",
       "parts per trillion",
-      "pptr",
-      "10^-12"
+      "parts-per-trillion"
     ],
     "entity": "dimensionless",
     "URI": "Parts-per_notation",
     "dimensions": [],
     "symbols": [
       "ppt",
-      "[pptr]"
+      "pptr"
     ]
   },
   "per mille": {
     "surfaces": [
-      "per mille",
-      "permill",
-      "permil",
-      "permille",
       "per mil",
-      "per mill"
+      "per mill",
+      "per mille",
+      "permil",
+      "permill",
+      "permille"
     ],
     "entity": "dimensionless",
     "URI": "Per_mille",
@@ -1466,9 +1486,9 @@
   },
   "percentage": {
     "surfaces": [
-      "percentage",
+      "pc",
       "percent",
-      "pc"
+      "percentage"
     ],
     "entity": "dimensionless",
     "URI": "Percentage",
@@ -1481,9 +1501,9 @@
   },
   "set": {
     "surfaces": [
-      "set",
       "pack",
-      "piece"
+      "piece",
+      "set"
     ],
     "entity": "dimensionless",
     "URI": "Set_(mathematics)",
@@ -1492,10 +1512,10 @@
   },
   "turn": {
     "surfaces": [
-      "turn",
-      "revolution",
+      "circle",
       "cycle",
-      "circle"
+      "revolution",
+      "turn"
     ],
     "entity": "dimensionless",
     "URI": "Turn_(geometry)",
@@ -1519,10 +1539,10 @@
     "URI": "Astronomical_unit",
     "dimensions": [],
     "symbols": [
-      "au",
       "AU",
-      "ua",
-      "UA"
+      "UA",
+      "au",
+      "ua"
     ]
   },
   "barn": {
@@ -1547,20 +1567,8 @@
       "\u00b5",
       "m",
       "c",
-      "d",
-      "h",
       "k",
-      "M",
-      "G",
-      "T",
-      "P",
-      "E",
-      "Z",
-      "Y",
-      "Gi",
-      "Ki",
-      "Mi",
-      "Ti"
+      "M"
     ]
   },
   "base pair": {
@@ -1576,29 +1584,16 @@
   },
   "centimetre": {
     "surfaces": [
-      "centimetre",
       "centimeter",
-      "centimetres",
-      "centimeters"
+      "centimeters",
+      "centimetre",
+      "centimetres"
     ],
     "entity": "length",
     "URI": "Centimetre",
     "dimensions": [],
     "symbols": [
       "cm"
-    ]
-  },
-  "cicero": {
-    "surfaces": [
-      "Didot's pica",
-      "ciceros",
-      "picas"
-    ],
-    "entity": "length",
-    "URI": "",
-    "dimensions": [],
-    "symbols": [
-      "[cicero]"
     ]
   },
   "cubit": {
@@ -1612,24 +1607,24 @@
   },
   "decametre": {
     "surfaces": [
-      "decametre",
       "decameter",
-      "dekametre",
-      "dekameter"
+      "decametre",
+      "dekameter",
+      "dekametre"
     ],
     "entity": "length",
     "URI": "Decametre",
     "dimensions": [],
     "symbols": [
-      "dam",
       "Dm",
+      "dam",
       "dkm"
     ]
   },
   "decimetre": {
     "surfaces": [
-      "decimetre",
-      "decimeter"
+      "decimeter",
+      "decimetre"
     ],
     "entity": "length",
     "URI": "Decimetre",
@@ -1649,32 +1644,32 @@
   },
   "fathom": {
     "surfaces": [
-      "fathom",
-      "international fathoms",
+      "British fathoms",
       "US fathoms",
+      "br fth",
+      "fathom",
       "fathom USA",
       "fth us",
-      "British fathoms",
+      "imp fth",
       "imperial fathoms",
-      "br fth",
-      "imp fth"
+      "international fathoms"
     ],
     "entity": "length",
     "URI": "Fathom",
     "dimensions": [],
     "symbols": [
       "fath",
-      "[fth_i]",
-      "[fth_us]",
-      "[fth_br]"
+      "fth_br",
+      "fth_i",
+      "fth_us"
     ]
   },
   "femtometre": {
     "surfaces": [
-      "femtometres",
-      "femtometers",
       "femtometer",
-      "femtometre"
+      "femtometers",
+      "femtometre",
+      "femtometres"
     ],
     "entity": "length",
     "URI": "",
@@ -1685,47 +1680,50 @@
   },
   "foot": {
     "surfaces": [
-      "foot",
-      "ft",
-      "fts",
-      "international foot",
-      "feet",
-      "international feet",
-      "height",
-      "US foot",
-      "foot US",
-      "us ft",
-      "ft us",
-      "visual distance",
       "British Foot",
+      "FEET",
       "Imperial Foot",
+      "US foot",
+      "br fts",
+      "feet",
+      "foot",
+      "foot US",
+      "foot-long",
+      "ft",
+      "ft us",
+      "ft-long",
+      "fts",
+      "height",
       "imp fts",
-      "br fts"
+      "international feet",
+      "international foot",
+      "us ft",
+      "visual distance"
     ],
     "entity": "length",
     "URI": "Foot_(unit)",
     "dimensions": [],
     "symbols": [
       "'",
-      "\u2032",
-      "[ft_i]",
-      "[bf_i]",
-      "[ft_us]",
-      "[ft_br]"
+      "bf_i",
+      "ft_br",
+      "ft_i",
+      "ft_us",
+      "\u2032"
     ]
   },
   "furlong": {
     "surfaces": [
-      "furlong",
       "US furlongs",
-      "fur us"
+      "fur us",
+      "furlong"
     ],
     "entity": "length",
     "URI": "Furlong",
     "dimensions": [],
     "symbols": [
       "fur",
-      "[fur_us]"
+      "fur_us"
     ]
   },
   "giga base pair": {
@@ -1741,23 +1739,24 @@
   },
   "Gunter's chain - US": {
     "surfaces": [
-      "surveyor's chain",
-      "Surveyor's chain USA",
+      "Gunter's Chain USA",
+      "Gunter's chain - US",
       "Gunter\u2019s measurement",
-      "surveyor\u2019s measurement",
-      "Gunter's Chain USA"
+      "Surveyor's chain USA",
+      "surveyor's chain",
+      "surveyor\u2019s measurement"
     ],
     "entity": "length",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[ch_us]"
+      "ch_us"
     ]
   },
   "hectometre": {
     "surfaces": [
-      "hectometre",
-      "hectometer"
+      "hectometer",
+      "hectometre"
     ],
     "entity": "length",
     "URI": "Hectometre",
@@ -1768,30 +1767,30 @@
   },
   "inch": {
     "surfaces": [
-      "inch",
-      "inches",
-      "in",
-      "international inch",
-      "body height",
       "US inches",
-      "in us",
-      "us in",
-      "inch US",
-      "imperial inches",
-      "imp in",
+      "body height",
       "br in",
-      "british inches"
+      "british inches",
+      "imp in",
+      "imperial inches",
+      "in",
+      "in us",
+      "inch",
+      "inch US",
+      "inches",
+      "international inch",
+      "us in"
     ],
     "entity": "length",
     "URI": "Inch",
     "dimensions": [],
     "symbols": [
       "\"",
-      "\u2033",
+      "in_br",
+      "in_i",
+      "in_us",
       "\u201d",
-      "[in_i]",
-      "[in_us]",
-      "[in_br]"
+      "\u2033"
     ]
   },
   "inverse femtobarn": {
@@ -1825,14 +1824,14 @@
   },
   "kilometre": {
     "surfaces": [
-      "kilometers",
-      "kilometer",
-      "kilometres",
-      "kilometre",
-      "Kilometres",
-      "Kilometre",
+      "Kilometer",
       "Kilometers",
-      "Kilometer"
+      "Kilometre",
+      "Kilometres",
+      "kilometer",
+      "kilometers",
+      "kilometre",
+      "kilometres"
     ],
     "entity": "length",
     "URI": "",
@@ -1850,18 +1849,19 @@
     "URI": "League_(unit)",
     "dimensions": [],
     "symbols": [
+      "Lg",
       "lea",
-      "st lea",
       "n lea",
       "n league",
+      "st lea",
       "st league"
     ]
   },
   "light-year": {
     "surfaces": [
-      "light-year",
       "light year",
-      "light years"
+      "light years",
+      "light-year"
     ],
     "entity": "length",
     "URI": "Light-year",
@@ -1873,47 +1873,51 @@
   "ligne": {
     "surfaces": [
       "Paris lines",
+      "ligne",
       "lignes"
     ],
     "entity": "length",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[ligne]"
+      "ligne"
     ]
   },
   "line": {
     "surfaces": [
       "British lines",
-      "br L"
+      "br L",
+      "line"
     ],
     "entity": "length",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[lne]"
+      "lne"
     ]
   },
   "link for Gunter's chain - US": {
     "surfaces": [
-      "Links for Gunter's Chain USA"
+      "Links for Gunter's Chain USA",
+      "link for Gunter's chain - US"
     ],
     "entity": "length",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[lk_us]"
+      "lk_us"
     ]
   },
   "link for Ramden's chain - US": {
     "surfaces": [
+      "link for Ramden's chain - US",
       "links for Ramsden's chain"
     ],
     "entity": "length",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[rlk_us]"
+      "rlk_us"
     ]
   },
   "mega base pair": {
@@ -1929,12 +1933,12 @@
   },
   "metre": {
     "surfaces": [
-      "metre",
       "meter",
-      "meters",
-      "metres",
       "meter-long",
-      "metre-long"
+      "meters",
+      "metre",
+      "metre-long",
+      "metres"
     ],
     "entity": "length",
     "URI": "Metre",
@@ -1943,6 +1947,8 @@
       "m"
     ],
     "prefixes": [
+      "q",
+      "r",
       "y",
       "z",
       "a",
@@ -1963,16 +1969,14 @@
       "E",
       "Z",
       "Y",
-      "Gi",
-      "Ki",
-      "Mi",
-      "Ti"
+      "R",
+      "Q"
     ]
   },
   "micrometre": {
     "surfaces": [
-      "micrometre",
       "micrometer",
+      "micrometre",
       "micron"
     ],
     "entity": "length",
@@ -1984,60 +1988,63 @@
   },
   "mil - US": {
     "surfaces": [
-      "thou, thousandth",
-      "mils"
+      "mil - US",
+      "mils",
+      "thou, thousandth"
     ],
     "entity": "length",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[mil_us]"
+      "mil_us"
     ]
   },
   "mile": {
     "surfaces": [
-      "mile",
-      "statute mile",
+      "Admiralty miles",
+      "British miles",
+      "British nautical miles",
+      "English statute miles",
+      "Imperial nautical miles",
+      "U.S. Survey Miles",
+      "US mi",
+      "US statute miles",
+      "imp mi, br mi",
+      "imp nm",
+      "imperial miles",
       "international miles",
-      "mi I",
-      "nautical mile",
-      "nautical miles",
       "international nautical mile",
       "international nautical miles",
+      "mi I",
+      "mile",
+      "miles",
+      "miles-",
       "n.m.",
-      "nmi",
-      "U.S. Survey Miles",
-      "US statute miles",
-      "survey mi",
-      "US mi",
-      "imperial miles",
-      "British miles",
-      "English statute miles",
-      "imp mi, br mi",
-      "British nautical miles",
-      "Imperial nautical miles",
-      "Admiralty miles",
       "n.m. br",
-      "imp nm"
+      "nautical mile",
+      "nautical miles",
+      "nmi",
+      "statute mile",
+      "survey mi"
     ],
     "entity": "length",
     "URI": "Mile",
     "dimensions": [],
     "symbols": [
       "mi",
-      "[mi_i]",
-      "[nmi_i]",
-      "[mi_us]",
-      "[mi_br]",
-      "[nmi_br]"
+      "mi_br",
+      "mi_i",
+      "mi_us",
+      "nmi_br",
+      "nmi_i"
     ]
   },
   "nanometre": {
     "surfaces": [
-      "nanometers",
-      "nanometres",
       "nanometer",
-      "nanometre"
+      "nanometers",
+      "nanometre",
+      "nanometres"
     ],
     "entity": "length",
     "URI": "",
@@ -2060,43 +2067,41 @@
   "pace - British": {
     "surfaces": [
       "British paces",
-      "br pc"
+      "br pc",
+      "pace - British"
     ],
     "entity": "length",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[pc_br]"
+      "pc_br"
     ]
-  },
-  "parsec": {
-    "surfaces": [
-      "parsec",
-      "parsecs",
-      "pc"
-    ],
-    "entity": "length",
-    "URI": "Parsec",
-    "dimensions": [],
-    "symbols": []
   },
   "pica (typography)": {
     "surfaces": [
-      "picas"
+      "Didot's pica",
+      "cicero",
+      "ciceros",
+      "pica (typography)",
+      "picas",
+      "printer's pica",
+      "printer's point"
     ],
     "entity": "length",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[pca]"
+      "pca",
+      "pca pr",
+      "pnt pr"
     ]
   },
   "picometre": {
     "surfaces": [
-      "picometers",
-      "picometres",
       "picometer",
-      "picometre"
+      "picometers",
+      "picometre",
+      "picometres"
     ],
     "entity": "length",
     "URI": "",
@@ -2109,53 +2114,32 @@
     "surfaces": [
       "DTP points",
       "desktop publishing point",
-      "pt",
-      "pnt"
+      "point (typography)",
+      "pt"
     ],
     "entity": "length",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[pnt]"
+      "pnt"
     ]
   },
   "pouce": {
     "surfaces": [
+      "French royal inches",
       "historical French inches",
-      "French royal inches"
+      "pouce"
     ],
     "entity": "length",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[pouce]"
-    ]
-  },
-  "Printer's pica  (typography)": {
-    "surfaces": [
-      "pca pr",
-      "Printer's picas"
-    ],
-    "entity": "length",
-    "URI": "",
-    "dimensions": [],
-    "symbols": [
-      "[pca_pr]"
-    ]
-  },
-  "Printer's point (typography)": {
-    "surfaces": [
-      "pnt pr"
-    ],
-    "entity": "length",
-    "URI": "",
-    "dimensions": [],
-    "symbols": [
-      "[pnt_pr]"
+      "pouce"
     ]
   },
   "Ramden's chain - US": {
     "surfaces": [
+      "Ramden's chain - US",
       "Ramsden's chain",
       "engineer's chains"
     ],
@@ -2163,26 +2147,27 @@
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[rch_us]"
+      "rch_us"
     ]
   },
   "rod": {
     "surfaces": [
-      "US rod",
-      "US rods",
-      "rd US",
-      "US rd",
       "Britisch rod",
       "British rods",
+      "US rd",
+      "US rod",
+      "US rods",
       "br rd",
-      "rd"
+      "rd",
+      "rd US",
+      "rod"
     ],
     "entity": "length",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[rd_us]",
-      "[rd_br]"
+      "rd_br",
+      "rd_us"
     ]
   },
   "span": {
@@ -2205,52 +2190,50 @@
   },
   "yard": {
     "surfaces": [
-      "yard",
-      "international yards",
-      "yds",
-      "US yards",
-      "us yds",
+      "Br yds",
       "British yards",
-      "Br yds"
+      "US yards",
+      "international yards",
+      "us yds",
+      "yard",
+      "yds"
     ],
     "entity": "length",
     "URI": "Yard",
     "dimensions": [],
     "symbols": [
       "yd",
-      "[yd_i]",
-      "[yd_us]",
-      "[yd_br]"
+      "yd_br",
+      "yd_i",
+      "yd_us"
     ]
   },
   "\u00e5ngstr\u00f6m": {
     "surfaces": [
       "Angstrom",
-      "\u00e5ngstr\u00f6m",
-      "\u00e5ngstrom",
-      "angstr\u00f6m",
-      "angstrom",
-      "\u00c5",
       "Angstroms",
       "Ao",
-      "\u00c5ngstr\u00f6ms"
+      "angstrom",
+      "angstr\u00f6m",
+      "\u00c5",
+      "\u00c5ngstr\u00f6ms",
+      "\u00e5ngstrom",
+      "\u00e5ngstr\u00f6m"
     ],
     "entity": "length",
     "URI": "\u00c5ngstr\u00f6m",
     "dimensions": [],
-    "symbols": [
-      "\u00c5"
-    ]
+    "symbols": []
   },
   "atomic mass unit": {
     "surfaces": [
-      "atomic mass unit",
-      "unified atomic mass unit",
-      "dalton",
-      "unified atomic mass units",
-      "amu",
+      "Da",
       "Dalton",
-      "Da"
+      "amu",
+      "atomic mass unit",
+      "dalton",
+      "unified atomic mass unit",
+      "unified atomic mass units"
     ],
     "entity": "mass",
     "URI": "Atomic_mass_unit",
@@ -2261,15 +2244,15 @@
   },
   "bushel": {
     "surfaces": [
-      "bushel",
-      "US bushels",
+      "British bushels",
       "US bsh",
       "US bu",
-      "British bushels",
-      "imperial",
+      "US bushels",
       "br bsh",
       "br bu",
-      "imp"
+      "bushel",
+      "imp",
+      "imperial"
     ],
     "entity": "mass",
     "URI": "Bushel",
@@ -2277,19 +2260,19 @@
     "symbols": [
       "bsh",
       "bu",
-      "[bu_us]",
-      "[bu_br]"
+      "bu_br",
+      "bu_us"
     ]
   },
   "carat": {
     "surfaces": [
+      "car AU",
+      "car au",
+      "car m",
       "carat",
       "carats",
       "ct",
-      "car m",
-      "karats",
-      "car au",
-      "car AU"
+      "karats"
     ],
     "entity": "mass",
     "URI": "Carat_(mass)",
@@ -2298,6 +2281,7 @@
   },
   "centigram": {
     "surfaces": [
+      "centigram",
       "centigrams",
       "cg",
       "cgm"
@@ -2309,10 +2293,11 @@
   },
   "decigram": {
     "surfaces": [
-      "decigrams",
-      "dgm",
       "0.1 grams",
-      "1/10 gm"
+      "1/10 gm",
+      "decigram",
+      "decigrams",
+      "dgm"
     ],
     "entity": "mass",
     "URI": "",
@@ -2323,31 +2308,31 @@
   },
   "dram": {
     "surfaces": [
-      "dram",
-      "drachma",
-      "US fluid drams",
-      "fdr us",
       "British fluid drams",
-      "fdr br",
       "Dram",
-      "drams avoirdupois",
-      "avoidupois dram",
-      "international dram",
-      "\u0292",
-      "drachm",
+      "US fluid drams",
       "apothecaries drams",
+      "avoidupois dram",
       "dr ap",
-      "dram ap"
+      "drachm",
+      "drachma",
+      "dram",
+      "dram ap",
+      "drams avoirdupois",
+      "fdr br",
+      "fdr us",
+      "international dram",
+      "\u0292"
     ],
     "entity": "mass",
     "URI": "Dram",
     "dimensions": [],
     "symbols": [
       "dr",
-      "[fdr_us]",
-      "[fdr_br]",
-      "[dr_av]",
-      "[dr_ap]"
+      "dr_ap",
+      "dr_av",
+      "fdr_br",
+      "fdr_us"
     ]
   },
   "earth mass": {
@@ -2363,6 +2348,7 @@
   },
   "electron mass": {
     "surfaces": [
+      "electron mass",
       "electron rest mass",
       "me"
     ],
@@ -2370,14 +2356,15 @@
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[m_e]"
+      "m_e"
     ]
   },
   "femtogram": {
     "surfaces": [
+      "femtogram",
+      "femtograms",
       "fg",
-      "fgm",
-      "femtograms"
+      "fgm"
     ],
     "entity": "mass",
     "URI": "",
@@ -2386,22 +2373,22 @@
   },
   "grain": {
     "surfaces": [
-      "gr",
+      "grain",
       "grains"
     ],
     "entity": "mass",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[gr]"
+      "gr"
     ]
   },
   "gram": {
     "surfaces": [
+      "gm",
       "gram",
       "gramme",
-      "grams",
-      "gm"
+      "grams"
     ],
     "entity": "mass",
     "URI": "Gram",
@@ -2410,6 +2397,8 @@
       "g"
     ],
     "prefixes": [
+      "q",
+      "r",
       "y",
       "z",
       "a",
@@ -2430,17 +2419,15 @@
       "E",
       "Z",
       "Y",
-      "Gi",
-      "Ki",
-      "Mi",
-      "Ti"
+      "R",
+      "Q"
     ]
   },
   "kilogram": {
     "surfaces": [
+      "kilo",
       "kilogram",
       "kilogramme",
-      "kilo",
       "kilograms"
     ],
     "entity": "mass",
@@ -2452,29 +2439,29 @@
   },
   "long ton": {
     "surfaces": [
-      "long ton",
-      "imperial ton",
-      "weight ton",
-      "british long ton",
-      "imperial tons",
-      "weight tons",
       "British long tons",
-      "long ton avoirdupois"
+      "british long ton",
+      "imperial ton",
+      "imperial tons",
+      "long ton",
+      "long ton avoirdupois",
+      "weight ton",
+      "weight tons"
     ],
     "entity": "mass",
     "URI": "Long_ton",
     "dimensions": [],
     "symbols": [
       "LT",
-      "[lton_av]"
+      "lton_av"
     ]
   },
   "metric ton": {
     "surfaces": [
-      "tonne",
+      "megagrams",
       "metric ton",
-      "tonnes",
-      "megagrams"
+      "tonne",
+      "tonnes"
     ],
     "entity": "mass",
     "URI": "Tonne",
@@ -2485,16 +2472,16 @@
   },
   "microgram": {
     "surfaces": [
-      "microgram",
-      "micrograms",
-      "microgramme",
-      "microgrammes",
+      "10-6 grams",
+      "10^-6 grams",
+      "mcg",
       "micro gram",
       "micro grams",
-      "mcg",
-      "ug",
-      "10^-6 grams",
-      "10-6 grams"
+      "microgram",
+      "microgramme",
+      "microgrammes",
+      "micrograms",
+      "ug"
     ],
     "entity": "mass",
     "URI": "Microgram",
@@ -2518,6 +2505,7 @@
   },
   "nanogram": {
     "surfaces": [
+      "nanogram",
       "nanograms"
     ],
     "entity": "mass",
@@ -2529,62 +2517,64 @@
   },
   "ounce": {
     "surfaces": [
-      "ounce",
-      "ounces",
-      "international ounces",
-      "avoirdupois ounces",
-      "av ozs",
-      "US fluid ounces",
-      "fl ozs",
+      "British fluid ounces",
       "FO",
+      "Imperial fluid ounces",
+      "US fluid ounces",
+      "ap ozs",
+      "apothecary ounces",
+      "av ozs",
+      "avoirdupois ounces",
+      "br fl ozs",
+      "br fozs",
+      "fl ozs",
+      "fl ozs m",
       "fl. oz.",
       "foz us",
-      "metric fluid ounces",
       "fozs m",
-      "fl ozs m",
-      "British fluid ounces",
-      "Imperial fluid ounces",
-      "br fozs",
       "imp fozs",
-      "br fl ozs",
-      "troy ounces",
-      "tr ozs",
-      "apothecary ounces",
-      "oz ap",
-      "ap ozs",
-      "ozs ap",
+      "international ounces",
+      "m ozs",
+      "metric fluid ounces",
       "metric ounces",
-      "m ozs"
+      "ounce",
+      "ounces",
+      "oz ap",
+      "ozs ap",
+      "tr ozs",
+      "troy ounces"
     ],
     "entity": "mass",
     "URI": "Ounce",
     "dimensions": [],
     "symbols": [
+      "foz_br",
+      "foz_m",
+      "foz_us",
       "oz",
-      "\u2125",
-      "[oz_av]",
-      "[foz_us]",
-      "[foz_m]",
-      "[foz_br]",
-      "[oz_tr]",
-      "[oz_ap]",
-      "[oz_m]"
+      "oz_ap",
+      "oz_av",
+      "oz_m",
+      "oz_tr",
+      "\u2125"
     ]
   },
   "pennyweight - troy": {
     "surfaces": [
+      "denarius weights",
       "dwt",
-      "denarius weights"
+      "pennyweight - troy"
     ],
     "entity": "mass",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[pwt_tr]"
+      "pwt_tr"
     ]
   },
   "picogram": {
     "surfaces": [
+      "picogram",
       "picograms"
     ],
     "entity": "mass",
@@ -2596,37 +2586,39 @@
   },
   "pound - apothecary": {
     "surfaces": [
-      "apothecary pounds",
-      "apothecaries pounds",
       "ap lb",
-      "lb ap",
       "ap lbs",
-      "lbs ap"
+      "apothecaries pounds",
+      "apothecary pounds",
+      "lb ap",
+      "lbs ap",
+      "pound - apothecary"
     ],
     "entity": "mass",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[lb_ap]"
+      "lb_ap"
     ]
   },
   "pound - troy": {
     "surfaces": [
-      "troy pounds",
-      "tr lbs"
+      "pound - troy",
+      "tr lbs",
+      "troy pounds"
     ],
     "entity": "mass",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[lb_tr]"
+      "lb_tr"
     ]
   },
   "pound-mass": {
     "surfaces": [
       "pound",
-      "pounds",
-      "pound-mass"
+      "pound-mass",
+      "pounds"
     ],
     "entity": "mass",
     "URI": "Pound_(mass)",
@@ -2639,14 +2631,15 @@
   },
   "proton mass": {
     "surfaces": [
+      "masses",
       "mp",
-      "masses"
+      "proton mass"
     ],
     "entity": "mass",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[m_p]"
+      "m_p"
     ]
   },
   "quarter": {
@@ -2673,29 +2666,30 @@
   },
   "scruple": {
     "surfaces": [
-      "scruples",
-      "sc ap"
+      "sc ap",
+      "scruple",
+      "scruples"
     ],
     "entity": "mass",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[sc_ap]"
+      "sc_ap"
     ]
   },
   "short ton": {
     "surfaces": [
-      "short ton",
-      "us short ton",
       "US tons",
-      "avoirdupois tons"
+      "avoirdupois tons",
+      "short ton",
+      "us short ton"
     ],
     "entity": "mass",
     "URI": "Short_ton",
     "dimensions": [],
     "symbols": [
       "ST",
-      "[ston_av]"
+      "ston_av"
     ]
   },
   "solar mass": {
@@ -2712,13 +2706,14 @@
   "stone - British": {
     "surfaces": [
       "British stones",
-      "avoirdupois"
+      "avoirdupois",
+      "stone - British"
     ],
     "entity": "mass",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[stone_av]"
+      "stone_av"
     ]
   },
   "ton": {
@@ -2754,6 +2749,22 @@
       "ac*ft"
     ]
   },
+  "barrel per day": {
+    "surfaces": [
+      "BOPD",
+      "BPD",
+      "b/d",
+      "barrel per day",
+      "barrels per day",
+      "bbl/d",
+      "bd",
+      "bpd"
+    ],
+    "entity": "volume",
+    "URI": "Barrel_per_day(unit)",
+    "dimensions": [],
+    "symbols": []
+  },
   "barrel": {
     "surfaces": [
       "barrel",
@@ -2766,8 +2777,18 @@
     "symbols": [
       "bbl",
       "bbl dry",
-      "[bbl_us]"
+      "bbl_us"
     ]
+  },
+  "barrel of oil": {
+    "surfaces": [
+      "barrel of oil",
+      "barrels of oil"
+    ],
+    "entity": "volume",
+    "URI": "Barrel_of_oil(unit)",
+    "dimensions": [],
+    "symbols": []
   },
   "centilitre": {
     "surfaces": [
@@ -2778,39 +2799,39 @@
     "URI": "Centilitre",
     "dimensions": [],
     "symbols": [
-      "cl",
-      "cL"
+      "cL",
+      "cl"
     ]
   },
   "cord": {
     "surfaces": [
-      "crd I",
-      "international cords",
-      "crd",
       "US cord",
       "US cords",
+      "cord",
+      "crd",
+      "crd I",
       "crd us",
+      "international cords",
       "us crd"
     ],
     "entity": "volume",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[cr_i]",
-      "cr"
+      "cr",
+      "cr_i"
     ]
   },
   "cubic foot": {
     "surfaces": [
-      "cubic foot",
       "cu foot",
-      "ft3",
-      "ft^3",
-      "ft*3",
       "cu. ft",
-      "cubic feet",
       "cubed",
-      "[ft_i]3"
+      "cubic feet",
+      "cubic foot",
+      "ft*3",
+      "ft3",
+      "ft^3"
     ],
     "entity": "volume",
     "URI": "Cubic_foot",
@@ -2821,24 +2842,24 @@
       }
     ],
     "symbols": [
-      "cu ft",
-      "[cft_i]"
+      "cft_i",
+      "cu ft"
     ]
   },
   "cubic inch": {
     "surfaces": [
-      "cubic inch",
+      "cin",
+      "cu in",
       "cu inch",
+      "cu. in",
+      "cubic inch",
+      "cubic inches",
+      "in*3",
       "in3",
       "in^3",
-      "in*3",
-      "inches^3",
-      "inches*3",
-      "cu. in",
-      "cu in",
-      "cubic inches",
       "inches cubed",
-      "cin"
+      "inches*3",
+      "inches^3"
     ],
     "entity": "volume",
     "URI": "Cubic_inch",
@@ -2852,8 +2873,8 @@
   },
   "cubic kilometre": {
     "surfaces": [
-      "cubic kilometre",
-      "cubic kilometer"
+      "cubic kilometer",
+      "cubic kilometre"
     ],
     "entity": "volume",
     "URI": "Cubic_metre",
@@ -2869,12 +2890,15 @@
   },
   "cubic metre": {
     "surfaces": [
-      "cubic metre",
-      "cubic metres",
       "cubic meter",
       "cubic meters",
+      "cubic metre",
+      "cubic metres",
       "kiloliter",
-      "kilolitre"
+      "kilolitre",
+      "meters cubed",
+      "stere",
+      "st\u00e8re"
     ],
     "entity": "volume",
     "URI": "Cubic_metre",
@@ -2888,14 +2912,15 @@
       "cu m",
       "kL",
       "m3",
+      "m^3",
       "m\u00b3",
-      "m^3"
+      "st"
     ]
   },
   "cubic mile": {
     "surfaces": [
-      "cubic mile",
-      "cu mile"
+      "cu mile",
+      "cubic mile"
     ],
     "entity": "volume",
     "URI": "Cubic_mile",
@@ -2911,8 +2936,8 @@
   },
   "cubic millimetre": {
     "surfaces": [
-      "cubic millimetre",
       "cubic millimeter",
+      "cubic millimetre",
       "microliter",
       "microlitre"
     ],
@@ -2925,23 +2950,24 @@
       }
     ],
     "symbols": [
-      "\u00b5l",
-      "\u00b5L"
+      "mm3",
+      "\u00b5L",
+      "\u00b5l"
     ]
   },
   "cubic yard": {
     "surfaces": [
-      "cubic yard",
+      "CYs",
       "cu yard",
+      "cu yards",
+      "cubic yard",
       "cubic yards",
       "cubic yds",
-      "cu yards",
-      "CYs",
       "yards^3",
-      "yd^3",
-      "yds^3",
       "yd3",
-      "yds3"
+      "yd^3",
+      "yds3",
+      "yds^3"
     ],
     "entity": "volume",
     "URI": "Cubic_yard",
@@ -2953,42 +2979,42 @@
     ],
     "symbols": [
       "cu yd",
-      "[cyd_i]"
+      "cyd_i"
     ]
   },
   "cup": {
     "surfaces": [
       "cup",
-      "cup us",
-      "us cups",
       "cup m",
-      "metric cups"
+      "cup us",
+      "metric cups",
+      "us cups"
     ],
     "entity": "volume",
     "URI": "Cup_(unit)",
     "dimensions": [],
     "symbols": [
-      "[cup_us]",
-      "[cup_m]"
+      "cup_m",
+      "cup_us"
     ]
   },
   "decilitre": {
     "surfaces": [
-      "decilitre",
-      "deciliter"
+      "deciliter",
+      "decilitre"
     ],
     "entity": "volume",
     "URI": "Decilitre",
     "dimensions": [],
     "symbols": [
-      "dl",
-      "dL"
+      "dL",
+      "dl"
     ]
   },
   "dessertspoon": {
     "surfaces": [
-      "dessertspoon",
-      "dessert spoon"
+      "dessert spoon",
+      "dessertspoon"
     ],
     "entity": "volume",
     "URI": "Dessert_spoon",
@@ -3001,20 +3027,21 @@
     "surfaces": [
       "drop",
       "drop dosing units",
-      "metric drops",
-      "gtt"
+      "gtt",
+      "metric drops"
     ],
     "entity": "volume",
     "URI": "Drop_(unit)",
     "dimensions": [],
     "symbols": [
-      "[drp]"
+      "drp"
     ]
   },
   "femtoliter": {
     "surfaces": [
-      "femtolitres",
-      "femtoliters"
+      "femtoliter",
+      "femtoliters",
+      "femtolitres"
     ],
     "entity": "volume",
     "URI": "",
@@ -3032,61 +3059,62 @@
     "dimensions": [],
     "symbols": [
       "fl oz",
-      "oz fl",
+      "fl. oz",
       "floz",
-      "ozfl",
-      "fl. oz"
+      "oz fl",
+      "ozfl"
     ]
   },
   "gallon": {
     "surfaces": [
-      "gallon",
-      "US gallons",
-      "US liquid gallon",
-      "gal us",
-      "Queen Anne's wine gallon",
+      "British gallons",
       "Corn Gallon British",
       "Dry Gallon US",
       "Gallons Historical",
       "Grain Gallon British",
+      "Queen Anne's wine gallon",
+      "US gallons",
+      "US liquid gallon",
       "Winchester Corn Gallon",
-      "historical winchester gallons",
-      "wi gal",
-      "imperial gallons, UK gallons",
-      "British gallons",
       "br gal",
-      "imp gal"
+      "gal us",
+      "gallon",
+      "historical winchester gallons",
+      "imp gal",
+      "imperial gallons, UK gallons",
+      "wi gal"
     ],
     "entity": "volume",
     "URI": "Gallon",
     "dimensions": [],
     "symbols": [
       "gal",
-      "[gal_us]",
-      "[gal_wi]",
-      "[gal_br]"
+      "gal_br",
+      "gal_us",
+      "gal_wi"
     ]
   },
   "hectolitre": {
     "surfaces": [
-      "hectorlitre",
-      "hectorliter"
+      "hectolitre",
+      "hectorliter",
+      "hectorlitre"
     ],
     "entity": "volume",
     "URI": "Hectolitre",
     "dimensions": [],
     "symbols": [
-      "hl",
-      "hL"
+      "hL",
+      "hl"
     ]
   },
   "litre": {
     "surfaces": [
-      "cubic decimetre",
       "cubic decimeter",
-      "litre",
+      "cubic decimetre",
       "liter",
-      "liters"
+      "liters",
+      "litre"
     ],
     "entity": "volume",
     "URI": "Litre",
@@ -3097,20 +3125,21 @@
       }
     ],
     "symbols": [
-      "l",
       "L",
+      "dm3",
+      "l",
       "ltr",
       "\u2113"
     ]
   },
   "millilitre": {
     "surfaces": [
-      "cubic centimetre",
-      "cubic centimetres",
       "cubic centimeter",
       "cubic centimeters",
-      "millilitre",
-      "milliliter"
+      "cubic centimetre",
+      "cubic centimetres",
+      "milliliter",
+      "millilitre"
     ],
     "entity": "volume",
     "URI": "Cubic_centimetre",
@@ -3123,6 +3152,7 @@
     "symbols": [
       "cc",
       "ccm",
+      "cm3",
       "mL",
       "ml",
       "mls"
@@ -3130,6 +3160,7 @@
   },
   "nanoliter": {
     "surfaces": [
+      "nanoliter",
       "nanoliters",
       "nanolitres"
     ],
@@ -3142,25 +3173,26 @@
   },
   "peck": {
     "surfaces": [
-      "peck",
+      "British pecks",
       "US pecks",
       "US pk",
-      "imperial pecks",
-      "British pecks",
       "br pk",
-      "imp pk"
+      "imp pk",
+      "imperial pecks",
+      "peck"
     ],
     "entity": "volume",
     "URI": "Peck",
     "dimensions": [],
     "symbols": [
       "pk",
-      "[pk_us]",
-      "[pk_br]"
+      "pk_br",
+      "pk_us"
     ]
   },
   "picoliter": {
     "surfaces": [
+      "picoliter",
       "picoliters",
       "picolitres"
     ],
@@ -3173,207 +3205,191 @@
   },
   "pint": {
     "surfaces": [
-      "pint",
+      "British pints",
+      "US dry pint",
+      "US pints",
+      "br pt",
       "dry pint",
+      "dry pint US",
+      "dry pints",
+      "dry pt",
+      "fluid pint",
+      "imp pt",
+      "imperial pints",
       "liquid pint",
+      "pint",
+      "pint US",
       "pint dry",
       "pint liquid",
-      "fluid pint",
-      "US pints",
-      "pint US",
-      "pt us",
-      "us pt",
-      "dry pints",
-      "dry pint US",
-      "US dry pint",
-      "dry pt",
-      "dpt",
-      "dpt us",
-      "British pints",
-      "imperial pints",
       "pt br",
-      "br pt",
-      "imp pt",
-      "pt imp"
+      "pt imp",
+      "pt us",
+      "us pt"
     ],
     "entity": "volume",
     "URI": "Pint",
     "dimensions": [],
     "symbols": [
-      "pt",
-      "pt liq",
-      "pt dry",
+      "dpt_us",
       "fl pt",
-      "[pt_us]",
-      "[dpt_us]",
-      "[pt_br]"
+      "pt",
+      "pt dry",
+      "pt liq",
+      "pt_br",
+      "pt_us"
     ]
   },
   "quart": {
     "surfaces": [
-      "quart",
-      "dry quart",
-      "liquid quart",
-      "quart dry",
-      "quart liquid",
-      "US quarts",
-      "us qts",
-      "dry quarts",
-      "dry quart US",
+      "British quarts",
       "US dry quart",
-      "dry qt",
-      "us dry qt",
+      "US quarts",
+      "br qts",
       "dqt",
       "dqt us",
-      "British quarts",
+      "dry qt",
+      "dry quart",
+      "dry quart US",
+      "dry quarts",
       "imperial quarts",
-      "br qts"
+      "liquid quart",
+      "quart",
+      "quart dry",
+      "quart liquid",
+      "us dry qt",
+      "us qts"
     ],
     "entity": "volume",
     "URI": "Quart",
     "dimensions": [],
     "symbols": [
-      "qt",
-      "qt liq",
-      "qt dry",
+      "dqt_us",
       "fl qt",
-      "[qt_us]",
-      "[dqt_us]",
-      "[qt_br]"
-    ]
-  },
-  "stere": {
-    "surfaces": [
-      "stere",
-      "st\u00e8re",
-      "cubic meter",
-      "m3",
-      "m\u00b3",
-      "m^3",
-      "meters cubed"
-    ],
-    "entity": "volume",
-    "URI": "Stere",
-    "dimensions": [],
-    "symbols": [
-      "st"
+      "qt",
+      "qt dry",
+      "qt liq",
+      "qt_br",
+      "qt_us"
     ]
   },
   "tablespoon": {
     "surfaces": [
-      "tablespoon",
-      "table spoon",
-      "tablespoonful",
       "Tbs",
-      "tbs us",
       "US tablespoons",
       "metric tablespoons",
-      "tbs m"
+      "table spoon",
+      "tablespoon",
+      "tablespoonful",
+      "tbs m",
+      "tbs us"
     ],
     "entity": "volume",
     "URI": "Tablespoon",
     "dimensions": [],
     "symbols": [
-      "tbsp",
-      "tbsp.",
-      "tbl",
-      "tbl.",
-      "tbs",
-      "tbs.",
       "T.",
       "Tb.",
+      "tbl",
+      "tbl.",
       "tbls.",
-      "[tbs_us]",
-      "[tbs_m]"
+      "tbs",
+      "tbs.",
+      "tbs_m",
+      "tbs_us",
+      "tbsp",
+      "tbsp."
     ]
   },
   "teaspoon": {
     "surfaces": [
-      "teaspoon",
-      "tea spoon",
-      "teaspoonful",
       "US teaspoons",
-      "metric teaspoons"
+      "metric teaspoons",
+      "tea spoon",
+      "teaspoon",
+      "teaspoonful"
     ],
     "entity": "volume",
     "URI": "Teaspoon",
     "dimensions": [],
     "symbols": [
-      "tsp",
-      "tsp.",
       "t.",
       "ts.",
+      "tsp",
+      "tsp.",
+      "tsp_m",
+      "tsp_us",
       "tspn",
-      "tspn.",
-      "[tsp_us]",
-      "[tsp_m]"
+      "tspn."
     ]
   },
   "board-foot": {
     "surfaces": [
-      "board-foot",
-      "board foot"
+      "board foot",
+      "board-foot"
     ],
     "entity": "volume (lumber)",
     "URI": "Board_foot",
     "dimensions": [],
     "symbols": [
-      "FBM",
       "BDFT",
-      "BF"
+      "BF",
+      "FBM"
     ]
   },
   "gill": {
     "surfaces": [
+      "British gills",
       "US gills",
       "gil us",
-      "imperial gills",
-      "British gills",
-      "imp gill, br gill"
+      "gill",
+      "imp gill, br gill",
+      "imperial gills"
     ],
     "entity": "fluid volume",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[gil_us]",
-      "[gil_br]"
+      "gil_br",
+      "gil_us"
     ]
   },
   "minim": {
     "surfaces": [
-      "min US",
       "US min",
-      "\u264f US",
-      "min br",
       "br min",
+      "min US",
+      "min br",
+      "minim",
+      "\u264f US",
       "\u264f br"
     ],
     "entity": "fluid volume",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[min_us]",
-      "[min_br]"
+      "min_br",
+      "min_us"
     ]
   },
   "peripheral vascular resistance unit": {
     "surfaces": [
-      "peripheral vascular resistance units",
       "peripheral resistance unit",
       "peripheral resistance units",
-      "PRU"
+      "peripheral vascular resistance unit",
+      "peripheral vascular resistance units"
     ],
     "entity": "fluid resistance",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[PRU]"
+      "PRU"
     ]
   },
   "Wood unit": {
     "surfaces": [
-      "hybrid reference units",
       "HRU",
+      "Wood unit",
+      "hybrid reference units",
       "mmHg.min/L",
       "vascular resistance"
     ],
@@ -3381,66 +3397,70 @@
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[wood'U]"
+      "wood'U"
     ]
   },
   "celsius": {
     "surfaces": [
-      "degree celsius",
-      "degree celcius",
-      "degree Celsius",
-      "degree Celcius",
-      "degrees celsius",
-      "degrees celcius",
-      "degrees Celsius",
-      "degrees Celcius",
-      "degree centigrade",
-      "degree centigrate",
-      "degree Centigrade",
-      "degree Centigrate",
-      "degrees centigrade",
-      "degrees centigrate",
-      "degrees Centigrade",
-      "degrees Centigrate",
-      "degree c",
-      "degrees c",
-      "degree C",
-      "degrees C",
-      "degree-c",
-      "degrees-c",
-      "degree-C",
-      "degrees-C",
-      "deg celsius",
-      "degs celsius",
-      "deg celcius",
-      "degs celcius",
-      "Celsius",
       "Celcius",
-      "celsius",
-      "celcius",
-      "centigrade",
-      "centigrate",
+      "Celsius",
       "Centigrade",
       "Centigrate",
+      "celcius",
+      "celsius",
+      "centigrade",
+      "centigrate",
+      "deg C",
+      "deg c",
+      "deg celcius",
+      "deg celsius",
       "degC",
       "degc",
-      "deg C",
-      "deg c"
+      "degree C",
+      "degree Celcius",
+      "degree Celsius",
+      "degree Centigrade",
+      "degree Centigrate",
+      "degree c",
+      "degree celcius",
+      "degree celsius",
+      "degree centigrade",
+      "degree centigrate",
+      "degree-C",
+      "degree-c",
+      "degrees C",
+      "degrees Celcius",
+      "degrees Celsius",
+      "degrees Centigrade",
+      "degrees Centigrate",
+      "degrees c",
+      "degrees celcius",
+      "degrees celsius",
+      "degrees centigrade",
+      "degrees centigrate",
+      "degrees-C",
+      "degrees-c",
+      "degs celcius",
+      "degs celsius"
     ],
     "entity": "temperature",
     "URI": "Celsius",
     "dimensions": [],
     "symbols": [
       "C",
+      "Cel",
       "c",
+      "\u00b0 C",
+      "\u00b0 Celsius",
       "\u00b0C",
-      "Cel"
+      "\u00b0Celsius",
+      "\u00b0c"
     ]
   },
   "degree rankine": {
     "surfaces": [
-      "degree rankine",
       "Rankine",
+      "degree rankine",
       "rankine"
     ],
     "entity": "temperature",
@@ -3453,69 +3473,94 @@
   },
   "fahrenheit": {
     "surfaces": [
-      "degree fahrenheit",
-      "degree farenheit",
-      "degrees fahrenheit",
-      "degrees farenheit",
-      "degree Fahrenheit",
-      "degree Farenheit",
-      "degrees Fahrenheit",
-      "degrees Farenheit",
       "Fahrenheit",
       "Farenheit",
-      "fahrenheit",
-      "farenheit",
+      "deg F",
+      "deg f",
       "deg fahrenheit",
       "deg farenheit",
+      "degf",
+      "degree F",
+      "degree Fahrenheit",
+      "degree Farenheit",
+      "degree f",
+      "degree fahrenheit",
+      "degree farenheit",
+      "degree-F",
+      "degree-f",
+      "degrees F",
+      "degrees Fahrenheit",
+      "degrees Farenheit",
+      "degrees f",
+      "degrees fahrenheit",
+      "degrees farenheit",
+      "degrees-F",
+      "degrees-f",
       "degs fahrenheit",
       "degs farenheit",
-      "degree-f",
-      "degree-F",
-      "degree F",
-      "degree f",
-      "degrees-f",
-      "degrees-F",
-      "degrees F",
-      "degrees f",
-      "degF",
-      "degf",
-      "deg F",
-      "deg f"
+      "fahrenheit",
+      "farenheit"
     ],
     "entity": "temperature",
     "URI": "Fahrenheit",
     "dimensions": [],
     "symbols": [
       "F",
+      "degF",
       "f",
-      "\u00b0F",
-      "[degF]"
+      "\u00b0F"
     ]
   },
   "kelvin": {
     "surfaces": [
-      "kelvin",
-      "Kelvin"
+      "Kelvin",
+      "kelvin"
     ],
     "entity": "temperature",
     "URI": "Kelvin",
     "dimensions": [],
     "symbols": [
       "K",
-      "\u00b0K",
-      "k"
+      "k",
+      "\u00b0K"
+    ],
+    "prefixes": [
+      "q",
+      "r",
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "R",
+      "Q"
     ]
   },
   "acre": {
     "surfaces": [
-      "acre",
+      "Acre USA",
+      "Acre USA Survey",
       "Imperial acres",
       "a",
       "ac",
-      "ar",
       "acr",
-      "Acre USA Survey",
-      "Acre USA",
+      "acre",
+      "ar",
       "survey acres"
     ],
     "entity": "area",
@@ -3528,6 +3573,7 @@
       "100 m2",
       "100 m^2",
       "100 square meter",
+      "are",
       "meters squared"
     ],
     "entity": "area",
@@ -3548,21 +3594,21 @@
     "dimensions": [],
     "symbols": [
       "cmil",
-      "[cml_i]"
+      "cml_i"
     ]
   },
   "hectare": {
     "surfaces": [
       "hectare",
       "hectares",
-      "square hectometre",
-      "square hectometres",
+      "sq hectometer",
+      "sq hectometers",
       "sq hectometre",
       "sq hectometres",
       "square hectometer",
       "square hectometers",
-      "sq hectometer",
-      "sq hectometers"
+      "square hectometre",
+      "square hectometres"
     ],
     "entity": "area",
     "URI": "Hectare",
@@ -3573,23 +3619,23 @@
       }
     ],
     "symbols": [
-      "sq hm",
       "ha",
       "hm2",
       "hm^2",
-      "hm\u00b2"
+      "hm\u00b2",
+      "sq hm"
     ]
   },
   "square centimetre": {
     "surfaces": [
-      "square centimetre",
+      "sq centimeter",
+      "sq centimeters",
       "sq centimetre",
-      "square centimetres",
       "sq centimetres",
       "square centimeter",
-      "sq centimeter",
       "square centimeters",
-      "sq centimeters"
+      "square centimetre",
+      "square centimetres"
     ],
     "entity": "area",
     "URI": "Square_centimetre",
@@ -3600,22 +3646,22 @@
       }
     ],
     "symbols": [
-      "sq cm",
-      "cm2"
+      "cm2",
+      "sq cm"
     ]
   },
   "square foot": {
     "surfaces": [
-      "square foot",
-      "sq foot",
-      "sq feet",
-      "square feet",
-      "sqft",
       "feet2",
+      "ft squared",
       "ft2",
       "ft^2",
-      "ft squared",
-      "sq ft"
+      "sq feet",
+      "sq foot",
+      "sq ft",
+      "sqft",
+      "square feet",
+      "square foot"
     ],
     "entity": "area",
     "URI": "Square_foot",
@@ -3626,15 +3672,15 @@
       }
     ],
     "symbols": [
-      "[sft_i]"
+      "sft_i"
     ]
   },
   "square inch": {
     "surfaces": [
-      "square inch",
+      "inches squared",
       "sq inch",
-      "square inches",
-      "inches squared"
+      "square inch",
+      "square inches"
     ],
     "entity": "area",
     "URI": "Square_inch",
@@ -3645,22 +3691,22 @@
       }
     ],
     "symbols": [
-      "sq in",
       "in2",
       "in^2",
-      "[sin_i]"
+      "sin_i",
+      "sq in"
     ]
   },
   "square kilometre": {
     "surfaces": [
-      "square kilometre",
-      "square kilometres",
+      "sq kilometer",
+      "sq kilometers",
       "sq kilometre",
       "sq kilometres",
       "square kilometer",
       "square kilometers",
-      "sq kilometer",
-      "sq kilometers"
+      "square kilometre",
+      "square kilometres"
     ],
     "entity": "area",
     "URI": "Square_kilometre",
@@ -3671,22 +3717,22 @@
       }
     ],
     "symbols": [
-      "sq km",
       "km2",
       "km^2",
-      "km\u00b2"
+      "km\u00b2",
+      "sq km"
     ]
   },
   "square metre": {
     "surfaces": [
-      "square metre",
+      "sq meter",
+      "sq meters",
       "sq metre",
-      "square metres",
       "sq metres",
       "square meter",
-      "sq meter",
       "square meters",
-      "sq meters"
+      "square metre",
+      "square metres"
     ],
     "entity": "area",
     "URI": "Square_metre",
@@ -3697,19 +3743,20 @@
       }
     ],
     "symbols": [
-      "sq m",
-      "sqm",
       "m2",
       "m^2",
-      "m\u00b2"
+      "m\u00b2",
+      "sq m",
+      "sqm"
     ]
   },
   "square mile": {
     "surfaces": [
-      "square mile",
       "sq mi",
       "sq mile",
+      "sq miles",
       "sqmiles",
+      "square mile",
       "square miles"
     ],
     "entity": "area",
@@ -3728,14 +3775,14 @@
   },
   "square millimetre": {
     "surfaces": [
-      "square millimetre",
+      "sq millimeter",
+      "sq millimeters",
       "sq millimetre",
-      "square millimetres",
       "sq millimetres",
       "square millimeter",
-      "sq millimeter",
       "square millimeters",
-      "sq millimeters"
+      "square millimetre",
+      "square millimetres"
     ],
     "entity": "area",
     "URI": "Square_millimetre",
@@ -3746,37 +3793,37 @@
       }
     ],
     "symbols": [
-      "sq mm",
-      "mm2"
+      "mm2",
+      "sq mm"
     ]
   },
   "square rod": {
     "surfaces": [
-      "square rod",
       "rod2",
       "rod^2",
+      "rods squared",
       "sq. rod",
-      "rods squared"
+      "square rod"
     ],
     "entity": "area",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[srd_us]"
+      "srd_us"
     ]
   },
   "square yard": {
     "surfaces": [
-      "square yard",
       "gaj",
-      "sq yd",
       "sq yard",
       "sq yards",
-      "square yards",
-      "yd2",
-      "yd^2",
+      "sq yd",
       "sq. yds",
-      "yards squared"
+      "square yard",
+      "square yards",
+      "yards squared",
+      "yd2",
+      "yd^2"
     ],
     "entity": "area",
     "URI": "Square_yard",
@@ -3787,20 +3834,20 @@
       }
     ],
     "symbols": [
-      "yd\u00b2",
-      "[syd_i]"
+      "syd_i",
+      "yd\u00b2"
     ]
   },
   "township": {
     "surfaces": [
-      "twp",
+      "township",
       "townships"
     ],
     "entity": "area",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[twp]"
+      "twp"
     ]
   },
   "bar": {
@@ -3843,13 +3890,13 @@
   },
   "barye": {
     "surfaces": [
-      "barye",
       "barad",
+      "barie",
       "barrie",
       "bary",
       "baryd",
-      "baryed",
-      "barie"
+      "barye",
+      "baryed"
     ],
     "entity": "pressure",
     "URI": "Barye",
@@ -3860,29 +3907,28 @@
   },
   "centimeter of mercury": {
     "surfaces": [
+      "centimeter of mercury",
       "centimeters of mercury",
-      "cmHg",
       "cm Hg"
     ],
     "entity": "pressure",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "cm[Hg]"
+      "cmHg"
     ]
   },
   "centimeter of water": {
     "surfaces": [
       "centimeter of water",
       "centimetre of water",
-      "cm H2O",
-      "cmH2O"
+      "cm H2O"
     ],
     "entity": "pressure",
     "URI": "Centimetre_of_water",
     "dimensions": [],
     "symbols": [
-      "cm[H2O]"
+      "cmH2O"
     ]
   },
   "gigapascal": {
@@ -3909,15 +3955,15 @@
   },
   "inch of mercury": {
     "surfaces": [
-      "inch of mercury",
-      "inch mercury"
+      "inch mercury",
+      "inch of mercury"
     ],
     "entity": "pressure",
     "URI": "Inch_of_mercury",
     "dimensions": [],
     "symbols": [
-      "inHg",
-      "\"Hg"
+      "\"Hg",
+      "inHg"
     ]
   },
   "inch of water": {
@@ -3929,8 +3975,8 @@
     "URI": "Inch_of_water",
     "dimensions": [],
     "symbols": [
-      "inH2O",
-      "inAq"
+      "inAq",
+      "inH2O"
     ]
   },
   "kilopascal": {
@@ -3949,8 +3995,8 @@
   "kilopound per square inch": {
     "surfaces": [
       "kilopound per square inch",
-      "kilopounds per square inch",
-      "kilopound-force per square inch"
+      "kilopound-force per square inch",
+      "kilopounds per square inch"
     ],
     "entity": "pressure",
     "URI": "Kilopounds_per_square_inch",
@@ -3981,32 +4027,33 @@
   },
   "meter of mercury column": {
     "surfaces": [
-      "mHg",
       "m Hg",
+      "meter of mercury column",
       "meters of mercury column"
     ],
     "entity": "pressure",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "m[Hg]"
+      "mHg"
     ]
   },
   "meter of water column": {
     "surfaces": [
-      "mH2O",
       "m H2O",
+      "meter of water column",
       "meters of water column"
     ],
     "entity": "pressure",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "m[H2O]"
+      "mH2O"
     ]
   },
   "millibar": {
     "surfaces": [
+      "millibar",
       "millibars"
     ],
     "entity": "pressure",
@@ -4018,14 +4065,14 @@
   },
   "millimeter of mercury": {
     "surfaces": [
-      "millimetre of mercury",
-      "millimetre mercury",
-      "millimeter of mercury",
       "millimeter mercury",
-      "mmHg",
-      "mm Hg",
+      "millimeter of mercury",
       "millimeters of mercury",
-      "millimetres"
+      "millimetre mercury",
+      "millimetre of mercury",
+      "millimetres",
+      "mm Hg",
+      "mmHg"
     ],
     "entity": "pressure",
     "URI": "Millimeter_of_mercury",
@@ -4055,15 +4102,41 @@
     "symbols": [
       "Pa",
       "\u33a9"
+    ],
+    "prefixes": [
+      "q",
+      "r",
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "R",
+      "Q"
     ]
   },
   "pound per square inch": {
     "surfaces": [
+      "lb per in2",
+      "lb/in2",
       "pound per square inch",
       "pound-force per square inch",
-      "psi",
-      "lb/in2",
-      "lb per in2"
+      "psi"
     ],
     "entity": "pressure",
     "URI": "Pounds_per_square_inch",
@@ -4081,10 +4154,10 @@
   },
   "standard atmosphere": {
     "surfaces": [
-      "standard atmosphere",
+      "atmos",
       "atmosphere",
       "reference pressure",
-      "atmos",
+      "standard atmosphere",
       "std atmosphere"
     ],
     "entity": "pressure",
@@ -4096,13 +4169,13 @@
   },
   "technical atmosphere": {
     "surfaces": [
-      "technical atmosphere",
       "at",
+      "atmospheres",
+      "atms",
+      "kgf/cm2",
       "tech atm",
       "tech atmosphere",
-      "kgf/cm2",
-      "atms",
-      "atmospheres"
+      "technical atmosphere"
     ],
     "entity": "pressure",
     "URI": "Technical_atmosphere",
@@ -4125,99 +4198,98 @@
   },
   "british thermal unit": {
     "surfaces": [
-      "british thermal unit",
-      "btu",
-      "BTU",
-      "Btu",
+      "",
       "B.T.U. ",
-      "B.Th.U.",
-      "BThU",
-      "British thermal units",
-      "BTU 39F",
-      "BTU 39 F",
       "B.T.U. 39 F",
+      "B.T.U. 59 F",
+      "B.T.U. 60 F",
+      "B.T.U. IT",
+      "B.T.U. Th",
+      "B.T.U. mean",
+      "B.Th.U.",
       "B.Th.U. 39 F",
-      "BThU 39 F",
+      "B.Th.U. 59 F",
+      "B.Th.U. 60 F",
+      "B.Th.U. IT",
+      "B.Th.U. Th",
+      "B.Th.U. mean",
+      "BTU",
+      "BTU 39 F",
+      "BTU 39F",
       "BTU 59 F",
       "BTU 59F",
-      "B.T.U. 59 F",
-      "B.Th.U. 59 F",
-      "BThU 59F",
       "BTU 60 F",
       "BTU 60F",
-      "B.T.U. 60 F",
-      "B.Th.U. 60 F",
-      "BThU 60 F",
-      "British thermal units 60 F",
-      "BTU mean",
-      "B.T.U. mean",
-      "B.Th.U. mean",
-      "BThU mean",
-      "British thermal units mean",
-      "",
       "BTU IT",
-      "B.T.U. IT",
-      "B.Th.U. IT",
-      "BThU IT",
-      "British thermal units IT",
       "BTU Th",
-      "B.T.U. Th",
-      "B.Th.U. Th",
+      "BTU mean",
+      "BThU",
+      "BThU 39 F",
+      "BThU 59F",
+      "BThU 60 F",
+      "BThU IT",
       "BThU Th",
+      "BThU mean",
+      "British thermal units",
+      "British thermal units 60 F",
+      "British thermal units IT",
+      "British thermal units mean",
+      "british thermal unit",
+      "btu",
       "thermochemical British thermal units"
     ],
     "entity": "energy",
     "URI": "British_thermal_unit",
     "dimensions": [],
     "symbols": [
-      "[Btu]",
-      "[Btu_39]",
-      "[Btu_59]",
-      "[Btu_60]",
-      "[Btu_m]",
-      "[Btu_IT]",
-      "[Btu_th]"
+      "Btu",
+      "Btu_39",
+      "Btu_59",
+      "Btu_60",
+      "Btu_IT",
+      "Btu_m",
+      "Btu_th"
     ]
   },
   "calorie": {
     "surfaces": [
+      "IT cals",
+      "cal 20 C",
       "calorie",
-      "small calorie",
+      "calorie 15 C",
+      "calorie 20 C",
+      "calories IT",
+      "calories at 15 C",
+      "calories at 20 C",
+      "cals 15 C",
       "gram calorie",
       "gram calories",
-      "small calories",
-      "calorie 15 C",
-      "cals 15 C",
-      "calories at 15 C",
-      "calorie 20 C",
-      "cal 20 C",
-      "calories at 20 C",
-      "mean cals",
-      "mean calories",
-      "calories IT",
-      "IT cals",
       "international steam table calories",
-      "thermochemical calories",
-      "th cals"
+      "mean calories",
+      "mean cals",
+      "small calorie",
+      "small calories",
+      "th cals",
+      "thermochemical calories"
     ],
     "entity": "energy",
     "URI": "Calorie",
     "dimensions": [],
     "symbols": [
       "cal",
-      "cal_[15]",
-      "cal_[20]",
-      "cal_m",
+      "cal_15",
+      "cal_20",
       "cal_IT",
+      "cal_m",
       "cal_th"
     ]
   },
   "electronvolt": {
     "surfaces": [
-      "electron volt",
-      "electronvolt",
-      "electron-volt",
       "Electron Volts",
+      "electron volt",
+      "electron-volt",
+      "electronvolt",
       "electronvolts"
     ],
     "entity": "energy",
@@ -4229,12 +4301,12 @@
   },
   "erg": {
     "surfaces": [
-      "erg",
-      "10^-7 Joules, 10-7 Joules",
+      "1 dyne cm",
+      "1 g.cm2/s2",
       "100 nJ",
       "100 nanoJoules",
-      "1 dyne cm",
-      "1 g.cm2/s2"
+      "10^-7 Joules, 10-7 Joules",
+      "erg"
     ],
     "entity": "energy",
     "URI": "Erg",
@@ -4243,17 +4315,17 @@
   },
   "gigaelectronvolt": {
     "surfaces": [
+      "bevatron",
       "gigaelectron volt",
-      "gigaelectronvolt",
       "gigaelectron-volt",
-      "bevatron"
+      "gigaelectronvolt"
     ],
     "entity": "energy",
     "URI": "Electronvolt",
     "dimensions": [],
     "symbols": [
-      "GeV",
-      "BeV"
+      "BeV",
+      "GeV"
     ]
   },
   "gigajoule": {
@@ -4283,8 +4355,8 @@
   "gigawatt hour": {
     "surfaces": [
       "gigawatt hour",
-      "gigawatthour",
-      "gigawatt-hour"
+      "gigawatt-hour",
+      "gigawatthour"
     ],
     "entity": "energy",
     "URI": "Gigawatt_hour",
@@ -4330,8 +4402,8 @@
   "horsepower-hour": {
     "surfaces": [
       "horsepower hour",
-      "horsepowerhour",
-      "horsepower-hour"
+      "horsepower-hour",
+      "horsepowerhour"
     ],
     "entity": "energy",
     "URI": "Horsepower-hour",
@@ -4359,30 +4431,56 @@
     "dimensions": [],
     "symbols": [
       "J"
+    ],
+    "prefixes": [
+      "q",
+      "r",
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "R",
+      "Q"
     ]
   },
   "kilocalorie": {
     "surfaces": [
+      "kcals",
       "kilocalorie",
-      "large calorie",
       "kilogram calorie",
       "kilogram calories",
-      "large calories",
-      "kcals"
+      "large calorie",
+      "large calories"
     ],
     "entity": "energy",
     "URI": "Calorie",
     "dimensions": [],
     "symbols": [
-      "kcal",
-      "Cal"
+      "Cal",
+      "kcal"
     ]
   },
   "kiloelectronvolt": {
     "surfaces": [
       "kiloelectron volt",
-      "kiloelectronvolt",
-      "kiloelectron-volt"
+      "kiloelectron-volt",
+      "kiloelectronvolt"
     ],
     "entity": "energy",
     "URI": "Electronvolt",
@@ -4418,8 +4516,8 @@
   "kilowatt hour": {
     "surfaces": [
       "kilowatt hour",
-      "kilowatthour",
-      "kilowatt-hour"
+      "kilowatt-hour",
+      "kilowatthour"
     ],
     "entity": "energy",
     "URI": "Kilowatt_hour",
@@ -4448,15 +4546,15 @@
     "symbols": [
       "MBTU",
       "MMBtu",
-      "mmBtu",
-      "mmBTU"
+      "mmBTU",
+      "mmBtu"
     ]
   },
   "megaelectronvolt": {
     "surfaces": [
       "megaelectron volt",
-      "megaelectronvolt",
-      "megaelectron-volt"
+      "megaelectron-volt",
+      "megaelectronvolt"
     ],
     "entity": "energy",
     "URI": "Electronvolt",
@@ -4492,8 +4590,8 @@
   "megawatt hour": {
     "surfaces": [
       "megawatt hour",
-      "megawatthour",
-      "megawatt-hour"
+      "megawatt-hour",
+      "megawatthour"
     ],
     "entity": "energy",
     "URI": "Megawatt_hour",
@@ -4515,8 +4613,8 @@
   "millielectronvolt": {
     "surfaces": [
       "millielectron volt",
-      "millielectronvolt",
-      "millielectron-volt"
+      "millielectron-volt",
+      "millielectronvolt"
     ],
     "entity": "energy",
     "URI": "Electronvolt",
@@ -4550,14 +4648,14 @@
   "nutrition label Calories": {
     "surfaces": [
       "food calories",
-      "Cal",
-      "kcal"
+      "kcal",
+      "nutrition label Calories"
     ],
     "entity": "energy",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[Cal]"
+      "Cal"
     ]
   },
   "quad": {
@@ -4573,8 +4671,8 @@
   "teraelectronvolt": {
     "surfaces": [
       "teraelectron volt",
-      "teraelectronvolt",
-      "teraelectron-volt"
+      "teraelectron-volt",
+      "teraelectronvolt"
     ],
     "entity": "energy",
     "URI": "Electronvolt",
@@ -4586,8 +4684,8 @@
   "terawatt hour": {
     "surfaces": [
       "terawatt hour",
-      "terawatthour",
-      "terawatt-hour"
+      "terawatt-hour",
+      "terawatthour"
     ],
     "entity": "energy",
     "URI": "Terawatt_hour",
@@ -4653,28 +4751,28 @@
   },
   "horsepower": {
     "surfaces": [
-      "horsepower",
-      "pferdestarke",
-      "uk horsepower",
-      "british horsepower",
       "boiler horsepower",
-      "metric horsepower",
+      "british horsepower",
+      "horsepower",
       "hydraulic horsepower",
-      "imperial horsepowers"
+      "imperial horsepowers",
+      "metric horsepower",
+      "pferdestarke",
+      "uk horsepower"
     ],
     "entity": "power",
     "URI": "Horsepower",
     "dimensions": [],
     "symbols": [
-      "hp",
+      "HP",
       "PS",
-      "[HP]"
+      "hp"
     ]
   },
   "ton of refrigeration": {
     "surfaces": [
-      "ton of refrigeration",
-      "refrigeration ton"
+      "refrigeration ton",
+      "ton of refrigeration"
     ],
     "entity": "power",
     "URI": "Ton_of_refrigeration",
@@ -4685,8 +4783,8 @@
   },
   "volt-ampere": {
     "surfaces": [
-      "volt-ampere",
       "volt ampere",
+      "volt-ampere",
       "voltampere"
     ],
     "entity": "power",
@@ -4713,7 +4811,12 @@
     "entity": "power",
     "URI": "Watt",
     "dimensions": [],
+    "symbols": [
+      "W"
+    ],
     "prefixes": [
+      "q",
+      "r",
       "y",
       "z",
       "a",
@@ -4734,13 +4837,8 @@
       "E",
       "Z",
       "Y",
-      "Gi",
-      "Ki",
-      "Mi",
-      "Ti"
-    ],
-    "symbols": [
-      "W"
+      "R",
+      "Q"
     ]
   },
   "dyne": {
@@ -4757,20 +4855,20 @@
   },
   "foot pound-force": {
     "surfaces": [
+      "foot pound",
       "foot pound-force",
-      "foot-pound-force",
       "foot-pound",
-      "foot pound"
+      "foot-pound-force"
     ],
     "entity": "force",
     "URI": "Pound_(force)",
     "dimensions": [],
     "symbols": [
-      "lb-ft",
-      "ftlbf",
-      "ftlb-f",
+      "ft-lb",
       "ft-lbf",
-      "ft-lb"
+      "ftlb-f",
+      "ftlbf",
+      "lb-ft"
     ]
   },
   "giganewton": {
@@ -4786,12 +4884,12 @@
   },
   "gram-force": {
     "surfaces": [
-      "gram-force",
-      "gram force",
-      "gramforce",
-      "pond",
       "force gram",
-      "gram forces"
+      "gram force",
+      "gram forces",
+      "gram-force",
+      "gramforce",
+      "pond"
     ],
     "entity": "force",
     "URI": "Kilogram-force",
@@ -4813,11 +4911,11 @@
   },
   "kilogram-force": {
     "surfaces": [
-      "kilogram-force",
+      "force kilogram",
       "kilogram force",
+      "kilogram-force",
       "kilogramforce",
-      "kilopond",
-      "force kilogram"
+      "kilopond"
     ],
     "entity": "force",
     "URI": "Kilogram-force",
@@ -4841,16 +4939,16 @@
   "kip": {
     "surfaces": [
       "kip",
-      "kip-force",
       "kip force",
+      "kip-force",
       "kipforce"
     ],
     "entity": "force",
     "URI": "Kip_(unit)",
     "dimensions": [],
     "symbols": [
-      "klb",
       "kipf",
+      "klb",
       "klbf"
     ]
   },
@@ -4889,11 +4987,11 @@
   },
   "milligram-force": {
     "surfaces": [
-      "milligram-force",
+      "force milligram",
       "milligram force",
+      "milligram-force",
       "milligramforce",
-      "millipond",
-      "force milligram"
+      "millipond"
     ],
     "entity": "force",
     "URI": "Kilogram-force",
@@ -4904,24 +5002,50 @@
   },
   "newton": {
     "surfaces": [
-      "newton",
-      "newtons",
       "Newton",
-      "Newtons"
+      "Newtons",
+      "newton",
+      "newtons"
     ],
     "entity": "force",
     "URI": "Newton_(unit)",
     "dimensions": [],
     "symbols": [
       "N"
+    ],
+    "prefixes": [
+      "q",
+      "r",
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "R",
+      "Q"
     ]
   },
   "ounce-force": {
     "surfaces": [
-      "ounce-force",
+      "force ounce",
       "ounce force",
-      "ounceforce",
-      "force ounce"
+      "ounce-force",
+      "ounceforce"
     ],
     "entity": "force",
     "URI": "Pound_(force)",
@@ -4932,20 +5056,20 @@
   },
   "pound-force": {
     "surfaces": [
-      "pound-force",
-      "pound force",
-      "poundforce",
+      "US lbf",
+      "US pound forces",
       "force pound",
       "lbfs",
-      "US lbf",
-      "US pound forces"
+      "pound force",
+      "pound-force",
+      "poundforce"
     ],
     "entity": "force",
     "URI": "Pound_(force)",
     "dimensions": [],
     "symbols": [
       "lbf",
-      "[lbf_av]"
+      "lbf_av"
     ]
   },
   "poundal": {
@@ -4961,13 +5085,13 @@
   },
   "ton-force": {
     "surfaces": [
-      "ton-force",
-      "ton force",
-      "tonforce",
       "force ton",
       "force tonne",
-      "tonne-force",
+      "ton force",
+      "ton-force",
+      "tonforce",
       "tonne force",
+      "tonne-force",
       "tonneforce"
     ],
     "entity": "force",
@@ -4986,17 +5110,17 @@
     "URI": "Century",
     "dimensions": [],
     "symbols": [
-      "c.",
-      "C."
+      "C.",
+      "c."
     ]
   },
   "day": {
     "surfaces": [
+      "24 hours",
+      "24 hrs",
       "day",
       "days",
-      "dy",
-      "24 hours",
-      "24 hrs"
+      "dy"
     ],
     "entity": "time",
     "URI": "Day",
@@ -5042,6 +5166,7 @@
   },
   "kilosecond": {
     "surfaces": [
+      "kilosecond",
       "kiloseconds",
       "ksec"
     ],
@@ -5063,6 +5188,7 @@
   },
   "megasecond": {
     "surfaces": [
+      "megasecond",
       "megaseconds"
     ],
     "entity": "time",
@@ -5074,17 +5200,17 @@
   },
   "microsecond": {
     "surfaces": [
-      "\u00b5s",
       "microsecond",
-      "microseconds"
+      "microseconds",
+      "\u00b5s"
     ],
     "entity": "time",
     "URI": "Microsecond",
     "dimensions": [],
     "symbols": [
+      "us",
       "\u03bcs",
-      "\u03bcsec",
-      "us"
+      "\u03bcsec"
     ]
   },
   "millennium": {
@@ -5118,34 +5244,34 @@
     "URI": "Minute",
     "dimensions": [],
     "symbols": [
-      "min",
       "'",
+      "min",
       "\u2032"
     ]
   },
   "month": {
     "surfaces": [
-      "month",
-      "months",
       "Moon",
-      "synodic month",
       "lunar month",
-      "mo-s",
-      "mo s",
-      "moons",
-      "mo-julian",
+      "mo",
       "mo Julian",
-      "month-gregorian",
+      "mo s",
       "mo-gregorian",
-      "mo"
+      "mo-julian",
+      "mo-s",
+      "month",
+      "month-gregorian",
+      "months",
+      "moons",
+      "synodic month"
     ],
     "entity": "time",
     "URI": "Month",
     "dimensions": [],
     "symbols": [
-      "mo_s",
+      "mo_g",
       "mo_j",
-      "mo_g"
+      "mo_s"
     ]
   },
   "nanosecond": {
@@ -5163,6 +5289,7 @@
   },
   "picosecond": {
     "surfaces": [
+      "picosecond",
       "picoseconds",
       "psec"
     ],
@@ -5182,10 +5309,36 @@
     "URI": "Second",
     "dimensions": [],
     "symbols": [
+      "\"",
       "s",
       "sec",
-      "\"",
       "\u2033"
+    ],
+    "prefixes": [
+      "q",
+      "r",
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "R",
+      "Q"
     ]
   },
   "shake": {
@@ -5212,64 +5365,42 @@
   },
   "year": {
     "surfaces": [
-      "year",
-      "annum",
-      "years",
-      "a",
-      "yr",
-      "yrs",
-      "solar years",
-      "a tropical",
-      "mean Julian yr",
+      "a gregorian",
       "a julian",
+      "a tropical",
+      "annum",
       "mean Gregorian yr",
-      "a gregorian"
+      "mean Julian yr",
+      "solar years",
+      "year",
+      "years",
+      "yrs"
     ],
     "entity": "time",
     "URI": "Year",
     "dimensions": [],
     "symbols": [
       "a",
-      "y",
-      "a_t",
+      "a_g",
       "a_j",
-      "a_g"
+      "a_t",
+      "y",
+      "yr"
     ],
     "prefixes": [
-      "y",
-      "z",
-      "a",
-      "f",
-      "p",
-      "n",
-      "\u03bc",
-      "\u00b5",
-      "m",
-      "c",
-      "d",
-      "h",
       "k",
       "M",
-      "G",
-      "T",
-      "P",
-      "E",
-      "Z",
-      "Y",
-      "Gi",
-      "Ki",
-      "Mi",
-      "Ti"
+      "G"
     ]
   },
   "day of age": {
     "surfaces": [
+      "-day-old",
       "day of age",
+      "day old",
       "days of age",
       "days old",
-      "days-old",
-      "day old",
-      "-day-old"
+      "days-old"
     ],
     "entity": "age",
     "URI": "Age",
@@ -5278,11 +5409,12 @@
   },
   "month of age": {
     "surfaces": [
-      "months old",
+      "-month-old",
+      "month of age",
       "month old",
-      "months-old",
       "month-old",
-      "-month-old"
+      "months old",
+      "months-old"
     ],
     "entity": "age",
     "URI": "Age",
@@ -5293,13 +5425,13 @@
   },
   "week of age": {
     "surfaces": [
+      "-week-old",
+      "-weeks-old",
       "week of age",
+      "week old",
       "weeks of age",
       "weeks old",
-      "weeks-old",
-      "week old",
-      "-week-old",
-      "-weeks-old"
+      "weeks-old"
     ],
     "entity": "age",
     "URI": "Age",
@@ -5308,15 +5440,16 @@
   },
   "year of age": {
     "surfaces": [
-      "year-old",
-      "year old",
-      "years old",
-      "years-old",
       "-year-old",
       "-years-old",
-      "years of age",
+      "age",
+      "old",
       "year of age",
-      "old"
+      "year old",
+      "year-old",
+      "years of age",
+      "years old",
+      "years-old"
     ],
     "entity": "age",
     "URI": "Age",
@@ -5368,8 +5501,8 @@
   },
   "kilometre per hour": {
     "surfaces": [
-      "kilometre per hour",
       "kilometer per hour",
+      "kilometre per hour",
       "km per h"
     ],
     "entity": "speed",
@@ -5385,17 +5518,17 @@
       }
     ],
     "symbols": [
-      "kph",
       "km / h",
       "km/h",
       "km/hr",
-      "kmph"
+      "kmph",
+      "kph"
     ]
   },
   "kilometre per millisecond": {
     "surfaces": [
-      "kilometre per millisecond",
-      "kilometer per millisecond"
+      "kilometer per millisecond",
+      "kilometre per millisecond"
     ],
     "entity": "speed",
     "URI": "Kilometre_per_millisecond",
@@ -5415,8 +5548,8 @@
   },
   "kilometre per second": {
     "surfaces": [
-      "kilometre per second",
-      "kilometer per second"
+      "kilometer per second",
+      "kilometre per second"
     ],
     "entity": "speed",
     "URI": "Metre_per_second",
@@ -5436,10 +5569,10 @@
   },
   "knot": {
     "surfaces": [
-      "knot",
-      "international knots",
       "British knots",
-      "kn br"
+      "international knots",
+      "kn br",
+      "knot"
     ],
     "entity": "speed",
     "URI": "Knot_(unit)",
@@ -5451,8 +5584,8 @@
   },
   "metre per hour": {
     "surfaces": [
-      "metre per hour",
-      "meter per hour"
+      "meter per hour",
+      "metre per hour"
     ],
     "entity": "speed",
     "URI": "Metre_per_hour",
@@ -5472,8 +5605,8 @@
   },
   "metre per millisecond": {
     "surfaces": [
-      "metre per millisecond",
-      "meter per millisecond"
+      "meter per millisecond",
+      "metre per millisecond"
     ],
     "entity": "speed",
     "URI": "Metre_per_millisecond",
@@ -5493,8 +5626,8 @@
   },
   "metre per second": {
     "surfaces": [
-      "metre per second",
-      "meter per second"
+      "meter per second",
+      "metre per second"
     ],
     "entity": "speed",
     "URI": "Metre_per_second",
@@ -5509,16 +5642,16 @@
       }
     ],
     "symbols": [
-      "mps",
-      "m/s"
+      "m/s",
+      "mps"
     ]
   },
   "mile per hour": {
     "surfaces": [
-      "mile per hour",
-      "miles per hour",
       "mile an hour",
-      "miles an hour"
+      "mile per hour",
+      "miles an hour",
+      "miles per hour"
     ],
     "entity": "speed",
     "URI": "Miles_per_hour",
@@ -5534,9 +5667,9 @@
     ],
     "symbols": [
       "MPH",
-      "mph",
+      "mi/h",
       "mi/hr",
-      "mi/h"
+      "mph"
     ]
   },
   "mile per gallon": {
@@ -5563,55 +5696,33 @@
   },
   "speed of light": {
     "surfaces": [
-      "speed of light",
-      "lightspeed"
+      "lightspeed",
+      "speed of light"
     ],
     "entity": "speed",
     "URI": "Speed_of_light",
     "dimensions": [],
-    "symbols": [
-      "c"
-    ]
+    "symbols": []
   },
   "degree": {
     "surfaces": [
-      "degree",
-      "degrees",
-      "degree of arc",
-      "arc degree",
-      "arcdegree",
+      "angle",
       "angular degree",
-      "degree angle",
+      "arc degree",
+      "arcdeg",
+      "arcdegree",
       "deg",
       "deg.",
-      "arcdeg",
-      "\u00b0",
-      "angle"
+      "degree",
+      "degree angle",
+      "degree of arc",
+      "degrees",
+      "\u00b0"
     ],
     "entity": "angle",
     "URI": "Degree_(angle)",
     "dimensions": [],
-    "symbols": [
-      "\u00b0"
-    ]
-  },
-  "minute of arc": {
-    "surfaces": [
-      "minute of arc",
-      "arcminute",
-      "minute arc",
-      "angular minute",
-      "arc minute"
-    ],
-    "entity": "angle",
-    "URI": "Minute_and_second_of_arc",
-    "dimensions": [],
-    "symbols": [
-      "\u2032",
-      "MOA",
-      "arcmin",
-      "amin"
-    ]
+    "symbols": []
   },
   "radian": {
     "surfaces": [
@@ -5626,50 +5737,43 @@
       "\u33ad"
     ]
   },
-  "second of arc": {
-    "surfaces": [
-      "second of arc",
-      "arcsecond",
-      "second arc",
-      "angular second",
-      "arc second"
-    ],
-    "entity": "angle",
-    "URI": "Minute_and_second_of_arc",
-    "dimensions": [],
-    "symbols": [
-      "\"",
-      "\u2033",
-      "SOA",
-      "arcsec",
-      "asec"
-    ]
-  },
   "steradian": {
     "surfaces": [
-      "steradian",
-      "square radian",
       "rad2",
-      "rad^2"
+      "rad^2",
+      "square radian",
+      "steradian"
     ],
     "entity": "angle",
     "URI": "Steradian",
     "dimensions": [],
     "symbols": [
       "sr"
+    ],
+    "prefixes": [
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d"
     ]
   },
   "gon": {
     "surfaces": [
+      "gon",
       "gon (grade)",
       "gons"
     ],
     "entity": "plane angle",
     "URI": "",
     "dimensions": [],
-    "symbols": [
-      "gon"
-    ]
+    "symbols": []
   },
   "bit": {
     "surfaces": [
@@ -5680,21 +5784,10 @@
     "URI": "Bit",
     "dimensions": [],
     "symbols": [
-      "b"
+      "b",
+      "bit"
     ],
     "prefixes": [
-      "y",
-      "z",
-      "a",
-      "f",
-      "p",
-      "n",
-      "\u03bc",
-      "\u00b5",
-      "m",
-      "c",
-      "d",
-      "h",
       "k",
       "M",
       "G",
@@ -5703,18 +5796,24 @@
       "E",
       "Z",
       "Y",
-      "Gi",
+      "R",
+      "Q",
       "Ki",
       "Mi",
-      "Ti"
+      "Gi",
+      "Ti",
+      "Pi",
+      "Ei",
+      "Zi",
+      "Yi"
     ]
   },
   "byte": {
     "surfaces": [
-      "byte",
-      "bytes",
       "Byte",
-      "Bytes"
+      "Bytes",
+      "byte",
+      "bytes"
     ],
     "entity": "data storage",
     "URI": "Byte",
@@ -5724,18 +5823,6 @@
       "By"
     ],
     "prefixes": [
-      "y",
-      "z",
-      "a",
-      "f",
-      "p",
-      "n",
-      "\u03bc",
-      "\u00b5",
-      "m",
-      "c",
-      "d",
-      "h",
       "k",
       "M",
       "G",
@@ -5744,10 +5831,16 @@
       "E",
       "Z",
       "Y",
-      "Gi",
+      "R",
+      "Q",
       "Ki",
       "Mi",
-      "Ti"
+      "Gi",
+      "Ti",
+      "Pi",
+      "Ei",
+      "Zi",
+      "Yi"
     ]
   },
   "exabit": {
@@ -5826,18 +5919,18 @@
     "URI": "Gigabit",
     "dimensions": [],
     "symbols": [
-      "gb",
-      "gbit",
       "Gb",
-      "Gbit"
+      "Gbit",
+      "gb",
+      "gbit"
     ]
   },
   "gigabyte": {
     "surfaces": [
-      "gigabyte",
-      "gigabytes",
       "giga byte",
-      "giga bytes"
+      "giga bytes",
+      "gigabyte",
+      "gigabytes"
     ],
     "entity": "data storage",
     "URI": "Gigabyte",
@@ -5867,8 +5960,7 @@
     "URI": "Kibibyte",
     "dimensions": [],
     "symbols": [
-      "KiB",
-      "KB"
+      "KiB"
     ]
   },
   "kilobit": {
@@ -5880,24 +5972,24 @@
     "URI": "Kilobit",
     "dimensions": [],
     "symbols": [
-      "kb",
       "Kb",
+      "kb",
       "kbit"
     ]
   },
   "kilobyte": {
     "surfaces": [
-      "kilobyte",
-      "kilobytes",
       "kilo byte",
-      "kilo bytes"
+      "kilo bytes",
+      "kilobyte",
+      "kilobytes"
     ],
     "entity": "data storage",
     "URI": "Kilobyte",
     "dimensions": [],
     "symbols": [
-      "kB",
       "KB",
+      "kB",
       "kbyte"
     ]
   },
@@ -5921,18 +6013,18 @@
     "URI": "Megabit",
     "dimensions": [],
     "symbols": [
-      "mb",
-      "mbit",
       "Mb",
-      "Mbit"
+      "Mbit",
+      "mb",
+      "mbit"
     ]
   },
   "megabyte": {
     "surfaces": [
-      "megabyte",
-      "megabytes",
       "mega byte",
-      "mega bytes"
+      "mega bytes",
+      "megabyte",
+      "megabytes"
     ],
     "entity": "data storage",
     "URI": "Megabyte",
@@ -5957,15 +6049,15 @@
   },
   "nibble": {
     "surfaces": [
+      "half-byte",
       "nibble",
       "nybble",
       "nyble",
-      "half-byte",
-      "tetrad",
-      "tetrade",
-      "semi-octet",
       "quadbit",
-      "quartet"
+      "quartet",
+      "semi-octet",
+      "tetrad",
+      "tetrade"
     ],
     "entity": "data storage",
     "URI": "Nibble",
@@ -6003,18 +6095,18 @@
     "URI": "Petabit",
     "dimensions": [],
     "symbols": [
-      "pb",
-      "pbit",
       "Pb",
-      "Pbit"
+      "Pbit",
+      "pb",
+      "pbit"
     ]
   },
   "petabyte": {
     "surfaces": [
-      "petabyte",
-      "petabytes",
       "peta byte",
-      "peta bytes"
+      "peta bytes",
+      "petabyte",
+      "petabytes"
     ],
     "entity": "data storage",
     "URI": "Petabyte",
@@ -6027,9 +6119,9 @@
   },
   "quantum bit": {
     "surfaces": [
+      "qbit",
       "quantum bit",
-      "qubit",
-      "qbit"
+      "qubit"
     ],
     "entity": "data storage",
     "URI": "Qubit",
@@ -6067,18 +6159,18 @@
     "URI": "Terabit",
     "dimensions": [],
     "symbols": [
-      "tb",
-      "tbit",
       "Tb",
-      "Tbit"
+      "Tbit",
+      "tb",
+      "tbit"
     ]
   },
   "terabyte": {
     "surfaces": [
-      "terabyte",
-      "terabytes",
       "tera byte",
-      "tera bytes"
+      "tera bytes",
+      "terabyte",
+      "terabytes"
     ],
     "entity": "data storage",
     "URI": "Terabyte",
@@ -6197,19 +6289,19 @@
       }
     ],
     "symbols": [
-      "ft/s2",
-      "ft/sec2",
+      "ft s\u22122",
       "ft/s/s",
+      "ft/s2",
       "ft/sec/sec",
-      "ft s\u22122"
+      "ft/sec2"
     ]
   },
   "gal": {
     "surfaces": [
+      "Gals",
       "gal",
       "galileo",
-      "galileos",
-      "Gals"
+      "galileos"
     ],
     "entity": "acceleration",
     "URI": "Gal_(unit)",
@@ -6220,10 +6312,10 @@
   },
   "metre per square second": {
     "surfaces": [
-      "metre per second squared",
       "meter per second squared",
-      "metre per square second",
-      "meter per square second"
+      "meter per square second",
+      "metre per second squared",
+      "metre per square second"
     ],
     "entity": "acceleration",
     "URI": "Metre_per_second_squared",
@@ -6244,8 +6336,8 @@
   },
   "newton metre": {
     "surfaces": [
-      "newton metre",
       "newton meter",
+      "newton metre",
       "newton-meter",
       "newton-metre"
     ],
@@ -6267,12 +6359,12 @@
   },
   "pound-foot": {
     "surfaces": [
-      "pound-foot",
+      "pound feet",
+      "pound feet of torque",
       "pound foot",
       "pound-feet",
-      "pound feet",
       "pound-feet of torque",
-      "pound feet of torque"
+      "pound-foot"
     ],
     "entity": "torque",
     "URI": "Pound_(force)",
@@ -6284,8 +6376,8 @@
   "centipoise": {
     "surfaces": [
       "centipoise",
-      "cps",
-      "centiposes"
+      "centiposes",
+      "cps"
     ],
     "entity": "dynamic viscosity",
     "URI": "Poise_(unit)",
@@ -6296,8 +6388,8 @@
   },
   "poise": {
     "surfaces": [
-      "poise",
       "dynamic viscosity",
+      "poise",
       "poises"
     ],
     "entity": "dynamic viscosity",
@@ -6309,9 +6401,9 @@
   },
   "stokes": {
     "surfaces": [
-      "stokes",
+      "kinematic viscosity",
       "stoke",
-      "kinematic viscosity"
+      "stokes"
     ],
     "entity": "kinematic viscosity",
     "URI": "Viscosity",
@@ -6334,8 +6426,8 @@
   },
   "rhe": {
     "surfaces": [
-      "rhe",
-      "reciprocal poise"
+      "reciprocal poise",
+      "rhe"
     ],
     "entity": "fluidity",
     "URI": "Viscosity#Fluidity",
@@ -6356,8 +6448,8 @@
   },
   "candela per square metre": {
     "surfaces": [
-      "candela per square metre",
       "candela per square meter",
+      "candela per square metre",
       "nit"
     ],
     "entity": "luminance",
@@ -6391,21 +6483,47 @@
   "candela": {
     "surfaces": [
       "candela",
-      "candle",
-      "candelas"
+      "candelas",
+      "candle"
     ],
     "entity": "luminous intensity",
     "URI": "Candela",
     "dimensions": [],
     "symbols": [
       "cd"
+    ],
+    "prefixes": [
+      "q",
+      "r",
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "R",
+      "Q"
     ]
   },
   "lumen": {
     "surfaces": [
       "lumen",
-      "luminous flux",
-      "lumens"
+      "lumens",
+      "luminous flux"
     ],
     "entity": "luminous flux",
     "URI": "Lumen_(unit)",
@@ -6416,8 +6534,8 @@
   },
   "lux": {
     "surfaces": [
-      "lux",
       "illuminance",
+      "lux",
       "luxes"
     ],
     "entity": "illuminance",
@@ -6429,6 +6547,7 @@
   },
   "phot": {
     "surfaces": [
+      "phot",
       "phots"
     ],
     "entity": "illuminance",
@@ -6475,40 +6594,41 @@
       }
     ],
     "symbols": [
-      "rpm",
-      "RPM"
+      "RPM",
+      "rpm"
     ]
   },
   "generation wireless": {
     "surfaces": [
-      "G"
+      "G",
+      "generation wireless"
     ],
     "entity": "frequency",
     "URI": "Hertz",
     "dimensions": [],
-    "symbols": [
-      "G"
-    ]
+    "symbols": []
   },
   "hertz": {
     "surfaces": [
-      "hertz",
-      "revolutions per second",
       "Herz",
+      "frequencies",
       "frequency",
-      "frequencies"
+      "hertz",
+      "revolutions per second"
     ],
     "entity": "frequency",
     "URI": "Hertz",
     "dimensions": [],
     "symbols": [
-      "Hz",
       "HZ",
+      "Hz",
       "hz",
-      "\u3390",
-      "rps"
+      "rps",
+      "\u3390"
     ],
     "prefixes": [
+      "q",
+      "r",
       "y",
       "z",
       "a",
@@ -6529,17 +6649,15 @@
       "E",
       "Z",
       "Y",
-      "Gi",
-      "Ki",
-      "Mi",
-      "Ti"
+      "R",
+      "Q"
     ]
   },
   "inverse second": {
     "surfaces": [
       "inverse second",
-      "reciprocal second",
-      "per second"
+      "per second",
+      "reciprocal second"
     ],
     "entity": "frequency",
     "URI": "Inverse_second",
@@ -6553,6 +6671,7 @@
   },
   "equivalent": {
     "surfaces": [
+      "equivalent",
       "equivalents"
     ],
     "entity": "amount of substance",
@@ -6564,6 +6683,7 @@
   },
   "femtomole": {
     "surfaces": [
+      "femtomole",
       "femtomoles"
     ],
     "entity": "amount of substance",
@@ -6575,9 +6695,10 @@
   },
   "microequivalent": {
     "surfaces": [
-      "microequivalents",
+      "10-6 equivalents",
       "10^-6 equivalents",
-      "10-6 equivalents"
+      "microequivalent",
+      "microequivalents"
     ],
     "entity": "amount of substance",
     "URI": "",
@@ -6588,6 +6709,7 @@
   },
   "micromole": {
     "surfaces": [
+      "micromole",
       "micromoles",
       "umols"
     ],
@@ -6600,6 +6722,7 @@
   },
   "millimole": {
     "surfaces": [
+      "millimole",
       "millimoles"
     ],
     "entity": "amount of substance",
@@ -6619,10 +6742,37 @@
     "dimensions": [],
     "symbols": [
       "mol"
+    ],
+    "prefixes": [
+      "q",
+      "r",
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "R",
+      "Q"
     ]
   },
   "nanomole": {
     "surfaces": [
+      "nanomole",
       "nanomoles"
     ],
     "entity": "amount of substance",
@@ -6634,6 +6784,7 @@
   },
   "picomole": {
     "surfaces": [
+      "picomole",
       "picomoles",
       "pmols"
     ],
@@ -6646,9 +6797,9 @@
   },
   "ampere-hour": {
     "surfaces": [
-      "ampere-hour",
+      "amp-hour",
       "ampere hour",
-      "amp-hour"
+      "ampere-hour"
     ],
     "entity": "charge",
     "URI": "Coulomb",
@@ -6700,9 +6851,9 @@
   },
   "milliampere-hour": {
     "surfaces": [
-      "milliampere-hour",
+      "milliamp-hour",
       "milliampere hour",
-      "milliamp-hour"
+      "milliampere-hour"
     ],
     "entity": "charge",
     "URI": "Coulomb",
@@ -6734,23 +6885,23 @@
   },
   "statcoulomb": {
     "surfaces": [
-      "statcoulomb",
+      "electrostatic unit of charge",
       "franklin",
-      "electrostatic unit of charge"
+      "statcoulomb"
     ],
     "entity": "charge",
     "URI": "Statcoulomb",
     "dimensions": [],
     "symbols": [
-      "statC",
       "Fr",
-      "esu"
+      "esu",
+      "statC"
     ]
   },
   "ampere": {
     "surfaces": [
-      "ampere",
-      "Amperes"
+      "Amperes",
+      "ampere"
     ],
     "entity": "electric current",
     "URI": "Ampere",
@@ -6760,6 +6911,8 @@
       "amp"
     ],
     "prefixes": [
+      "q",
+      "r",
       "y",
       "z",
       "a",
@@ -6780,20 +6933,18 @@
       "E",
       "Z",
       "Y",
-      "Gi",
-      "Ki",
-      "Mi",
-      "Ti"
+      "R",
+      "Q"
     ]
   },
   "biot": {
     "surfaces": [
       "Bi",
       "Biot",
-      "biot",
-      "abamperes",
+      "abA",
       "abampere",
-      "abA"
+      "abamperes",
+      "biot"
     ],
     "entity": "electric current",
     "URI": "",
@@ -6802,9 +6953,9 @@
   },
   "farad": {
     "surfaces": [
+      "electric capacitance",
       "farad",
-      "farads",
-      "electric capacitance"
+      "farads"
     ],
     "entity": "capacitance",
     "URI": "Farad",
@@ -6813,6 +6964,8 @@
       "F"
     ],
     "prefixes": [
+      "q",
+      "r",
       "y",
       "z",
       "a",
@@ -6833,10 +6986,8 @@
       "E",
       "Z",
       "Y",
-      "Gi",
-      "Ki",
-      "Mi",
-      "Ti"
+      "R",
+      "Q"
     ]
   },
   "megavolt": {
@@ -6865,6 +7016,7 @@
   },
   "microvolt": {
     "surfaces": [
+      "microvolt",
       "microvolts"
     ],
     "entity": "electric potential",
@@ -6876,6 +7028,7 @@
   },
   "millivolt": {
     "surfaces": [
+      "millivolt",
       "millivolts"
     ],
     "entity": "electric potential",
@@ -6887,19 +7040,71 @@
   },
   "ohm": {
     "surfaces": [
+      "Ohms",
       "ohm",
-      "Ohm",
-      "ohms",
-      "Ohms"
+      "ohms"
     ],
     "entity": "electric resistance",
     "URI": "Ohm",
     "dimensions": [],
     "symbols": [
-      "\u2126",
-      "\u03a9",
       "Ohm",
-      "ohm"
+      "ohm",
+      "\u03a9",
+      "\u2126"
+    ],
+    "prefixes": [
+      "q",
+      "r",
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "R",
+      "Q"
+    ]
+  },
+  "picoampere": {
+    "surfaces": [
+      "picoampere",
+      "picoamperes"
+    ],
+    "entity": "electric current",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "pA"
+    ]
+  },
+  "siemens": {
+    "surfaces": [
+      "Reciprocal ohm",
+      "conductance",
+      "mho",
+      "siemens",
+      "\u03a9\u22121"
+    ],
+    "entity": "electric conductance",
+    "URI": "Siemens_(unit)",
+    "dimensions": [],
+    "symbols": [
+      "S"
     ],
     "prefixes": [
       "y",
@@ -6921,37 +7126,7 @@
       "P",
       "E",
       "Z",
-      "Y",
-      "Gi",
-      "Ki",
-      "Mi",
-      "Ti"
-    ]
-  },
-  "picoampere": {
-    "surfaces": [
-      "picoamperes"
-    ],
-    "entity": "electric current",
-    "URI": "",
-    "dimensions": [],
-    "symbols": [
-      "pA"
-    ]
-  },
-  "siemens": {
-    "surfaces": [
-      "siemens",
-      "mho",
-      "Reciprocal ohm",
-      "\u03a9\u22121",
-      "conductance"
-    ],
-    "entity": "electric conductance",
-    "URI": "Siemens_(unit)",
-    "dimensions": [],
-    "symbols": [
-      "S"
+      "Y"
     ]
   },
   "statmho": {
@@ -6991,7 +7166,12 @@
     "entity": "electric potential",
     "URI": "Volt",
     "dimensions": [],
+    "symbols": [
+      "V"
+    ],
     "prefixes": [
+      "q",
+      "r",
       "y",
       "z",
       "a",
@@ -7012,19 +7192,14 @@
       "E",
       "Z",
       "Y",
-      "Gi",
-      "Ki",
-      "Mi",
-      "Ti"
-    ],
-    "symbols": [
-      "V"
+      "R",
+      "Q"
     ]
   },
   "henry": {
     "surfaces": [
-      "henry",
       "henries",
+      "henry",
       "inductance"
     ],
     "entity": "inductance",
@@ -7032,12 +7207,34 @@
     "dimensions": [],
     "symbols": [
       "H"
+    ],
+    "prefixes": [
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y"
     ]
   },
   "ampere-turn": {
     "surfaces": [
-      "ampere-turn",
-      "ampere turn"
+      "ampere turn",
+      "ampere-turn"
     ],
     "entity": "magnetomotive force",
     "URI": "Ampere-turn",
@@ -7049,11 +7246,11 @@
   },
   "gauss": {
     "surfaces": [
+      "B",
       "gauss",
-      "magnetic fields",
-      "magnetic flux density",
       "induction",
-      "B"
+      "magnetic fields",
+      "magnetic flux density"
     ],
     "entity": "magnetic field",
     "URI": "Gauss_(unit)",
@@ -7064,9 +7261,9 @@
   },
   "oersted": {
     "surfaces": [
-      "oersted",
       "H magnetic B field",
-      "Oersteds"
+      "Oersteds",
+      "oersted"
     ],
     "entity": "magnetic field",
     "URI": "Oersted",
@@ -7077,11 +7274,11 @@
   },
   "tesla": {
     "surfaces": [
-      "tesla",
-      "teslas",
       "Tesla",
       "Teslas",
-      "magnetic field"
+      "magnetic field",
+      "tesla",
+      "teslas"
     ],
     "entity": "magnetic field",
     "URI": "Tesla_(unit)",
@@ -7092,11 +7289,11 @@
   },
   "maxwell": {
     "surfaces": [
-      "maxwell",
-      "maxwells",
-      "magnetix flux",
       "Maxwell",
-      "Maxwells"
+      "Maxwells",
+      "magnetix flux",
+      "maxwell",
+      "maxwells"
     ],
     "entity": "magnetic flux",
     "URI": "Maxwell_(unit)",
@@ -7129,8 +7326,8 @@
   },
   "weber": {
     "surfaces": [
-      "weber",
       "magnetic flux",
+      "weber",
       "webers"
     ],
     "entity": "magnetic flux",
@@ -7138,10 +7335,37 @@
     "dimensions": [],
     "symbols": [
       "Wb"
+    ],
+    "prefixes": [
+      "q",
+      "r",
+      "y",
+      "z",
+      "a",
+      "f",
+      "p",
+      "n",
+      "\u03bc",
+      "\u00b5",
+      "m",
+      "c",
+      "d",
+      "h",
+      "k",
+      "M",
+      "G",
+      "T",
+      "P",
+      "E",
+      "Z",
+      "Y",
+      "R",
+      "Q"
     ]
   },
   "picotesla": {
     "surfaces": [
+      "picotesla",
       "picoteslas"
     ],
     "entity": "magnetic flux density",
@@ -7154,10 +7378,10 @@
   "gilbert": {
     "surfaces": [
       "Gi",
-      "magnetomotive force",
-      "Gilberts",
       "Gilbert",
-      "gilbert"
+      "Gilberts",
+      "gilbert",
+      "magnetomotive force"
     ],
     "entity": "magnetic tension",
     "URI": "",
@@ -7166,10 +7390,10 @@
   },
   "becquerel": {
     "surfaces": [
-      "becquerel",
       "activity",
-      "radiation",
-      "becquerels"
+      "becquerel",
+      "becquerels",
+      "radiation"
     ],
     "entity": "radioactivity",
     "URI": "Becquerel",
@@ -7247,9 +7471,9 @@
   },
   "roentgen": {
     "surfaces": [
+      "Roentgens",
       "roentgen",
-      "r\u00f6ntgen",
-      "Roentgens"
+      "r\u00f6ntgen"
     ],
     "entity": "radiation exposure",
     "URI": "Roentgen_(unit)",
@@ -7260,11 +7484,11 @@
   },
   "gray": {
     "surfaces": [
-      "gray",
       "absorbed doses",
+      "gray",
+      "grays",
       "ionizing radiation doses",
-      "kerma",
-      "grays"
+      "kerma"
     ],
     "entity": "radiation absorbed dose",
     "URI": "Gray_(unit)",
@@ -7292,22 +7516,18 @@
       "P",
       "E",
       "Z",
-      "Y",
-      "Gi",
-      "Ki",
-      "Mi",
-      "Ti"
+      "Y"
     ]
   },
   "sievert": {
     "surfaces": [
-      "sievert",
-      "sieverts",
-      "radiation dose quantities",
-      "equivalent doses",
+      "committed dose",
       "effective dose",
+      "equivalent doses",
       "operational dose",
-      "committed dose"
+      "radiation dose quantities",
+      "sievert",
+      "sieverts"
     ],
     "entity": "radiation absorbed dose",
     "URI": "Sievert",
@@ -7330,26 +7550,32 @@
   },
   "pixel": {
     "surfaces": [
-      "pixel",
       "dots",
       "pel",
-      "picture element"
+      "picture element",
+      "pixel"
     ],
     "entity": "typographical element",
     "URI": "Pixel",
     "dimensions": [],
     "symbols": [
+      "P",
+      "pix",
       "px"
+    ],
+    "prefixes": [
+      "M"
     ]
   },
   "enzyme unit": {
     "surfaces": [
-      "micromoles per minute",
-      "umol/min",
-      "umol per minute",
-      "umol min-1",
       "enzymatic activity",
-      "enzyme activity"
+      "enzyme activity",
+      "enzyme unit",
+      "micromoles per minute",
+      "umol min-1",
+      "umol per minute",
+      "umol/min"
     ],
     "entity": "catalytic activity",
     "URI": "",
@@ -7360,17 +7586,17 @@
   },
   "katal": {
     "surfaces": [
-      "katal",
-      "mol/secs",
-      "moles per second",
-      "mol*sec-1",
-      "mol*s-1",
-      "mol.s-1",
-      "katals",
+      "activities",
       "catalytic activity",
       "enzymatic",
       "enzyme units",
-      "activities"
+      "katal",
+      "katals",
+      "mol*s-1",
+      "mol*sec-1",
+      "mol.s-1",
+      "mol/secs",
+      "moles per second"
     ],
     "entity": "catalytic activity",
     "URI": "Katal",
@@ -7381,6 +7607,7 @@
   },
   "microkatal": {
     "surfaces": [
+      "microkatal",
       "microkatals",
       "ukats"
     ],
@@ -7393,6 +7620,7 @@
   },
   "nanokatal": {
     "surfaces": [
+      "nanokatal",
       "nanokatals"
     ],
     "entity": "catalytic activity",
@@ -7404,8 +7632,9 @@
   },
   "picokatal": {
     "surfaces": [
-      "pkats",
-      "picokatals"
+      "picokatal",
+      "picokatals",
+      "pkats"
     ],
     "entity": "catalytic activity",
     "URI": "",
@@ -7416,8 +7645,8 @@
   },
   "gram per cubic centimetre": {
     "surfaces": [
-      "gram per cubic centimetre",
-      "gram per cubic centimeter"
+      "gram per cubic centimeter",
+      "gram per cubic centimetre"
     ],
     "entity": "density",
     "URI": "Gram_per_cubic_centimetre",
@@ -7437,8 +7666,8 @@
   },
   "gram per cubic metre": {
     "surfaces": [
-      "gram per cubic metre",
-      "gram per cubic meter"
+      "gram per cubic meter",
+      "gram per cubic metre"
     ],
     "entity": "density",
     "URI": "Gram_per_cubic_metre",
@@ -7458,8 +7687,8 @@
   },
   "kilogram per cubic metre": {
     "surfaces": [
-      "kilogram per cubic metre",
-      "kilogram per cubic meter"
+      "kilogram per cubic meter",
+      "kilogram per cubic metre"
     ],
     "entity": "density",
     "URI": "Kilogram_per_cubic_metre",
@@ -7510,8 +7739,8 @@
   },
   "denier": {
     "surfaces": [
-      "denier",
       "den",
+      "denier",
       "deniers"
     ],
     "entity": "linear mass density",
@@ -7521,8 +7750,8 @@
   },
   "tex": {
     "surfaces": [
-      "tex",
       "linear mass density",
+      "tex",
       "texes"
     ],
     "entity": "linear mass density",
@@ -7543,17 +7772,17 @@
   },
   "millijansky": {
     "surfaces": [
-      "millijansky",
       "milli flux unit",
+      "millijansky",
       "millijanskys"
     ],
     "entity": "flux density",
     "URI": "Jansky",
     "dimensions": [],
     "symbols": [
+      "m.f.u.",
       "mJy",
-      "mfu",
-      "m.f.u."
+      "mfu"
     ]
   },
   "cubic foot per second": {
@@ -7573,14 +7802,14 @@
       }
     ],
     "symbols": [
-      "CFPM",
-      "CFM"
+      "CFM",
+      "CFPM"
     ]
   },
   "cubic metre per second": {
     "surfaces": [
-      "cubic metre per second",
       "cubic meter per second",
+      "cubic metre per second",
       "cumec"
     ],
     "entity": "volumetric flow",
@@ -7702,8 +7931,8 @@
   },
   "baud": {
     "surfaces": [
-      "baud",
       "Bd",
+      "baud",
       "bauds"
     ],
     "entity": "data transfer rate",
@@ -7812,25 +8041,13 @@
       "Ly"
     ]
   },
-  "parts per thousand": {
-    "surfaces": [
-      "ppth",
-      "10^-3"
-    ],
-    "entity": "fraction",
-    "URI": "",
-    "dimensions": [],
-    "symbols": [
-      "[ppth]"
-    ]
-  },
   "kayser": {
     "surfaces": [
-      "wavenumbers",
+      "Kayser",
+      "Kaysers",
       "kayser",
       "kaysers",
-      "Kayser",
-      "Kaysers"
+      "wavenumbers"
     ],
     "entity": "lineic number",
     "URI": "",
@@ -7841,35 +8058,37 @@
   },
   "mesh": {
     "surfaces": [
+      "mesh",
       "meshes"
     ],
     "entity": "lineic number",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[mesh_i]"
+      "mesh_i"
     ]
   },
   "lambert": {
     "surfaces": [
-      "luminance",
+      "Lambert",
+      "Lamberts",
       "lambert",
       "lamberts",
-      "Lambert",
-      "Lamberts"
+      "luminance"
     ],
     "entity": "brightness",
     "URI": "",
     "dimensions": [],
     "symbols": [
+      "Lb",
       "Lmb",
-      "la",
-      "Lb"
+      "la"
     ]
   },
   "radiation absorbed dose": {
     "surfaces": [
-      "doses"
+      "doses",
+      "radiation absorbed dose"
     ],
     "entity": "energy dose",
     "URI": "",
@@ -7881,8 +8100,9 @@
   "radiation equivalent man": {
     "surfaces": [
       "Roentgen Equivalent in Man",
-      "rems",
-      "dose equivalents"
+      "dose equivalents",
+      "radiation equivalent man",
+      "rems"
     ],
     "entity": "dose equivalent",
     "URI": "",
@@ -7893,19 +8113,20 @@
   },
   "hand": {
     "surfaces": [
+      "hand",
       "hands"
     ],
     "entity": "height of horses",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[hd_i]"
+      "hd_i"
     ]
   },
   "diopter (lens)": {
     "surfaces": [
+      "diopter (lens)",
       "diopters",
-      "diop",
       "dioptre",
       "dpt",
       "refractive power"
@@ -7914,35 +8135,37 @@
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[diop]"
+      "diop"
     ]
   },
   "percent of slope": {
     "surfaces": [
       "% slope",
-      "%slope",
+      "percent of slope",
       "percents slopes"
     ],
     "entity": "slope",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "%[slope]"
+      "%slope"
     ]
   },
   "Hounsfield unit": {
     "surfaces": [
-      "HU"
+      "HU",
+      "Hounsfield unit"
     ],
     "entity": "x-ray attenuation",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[hnsf'U]"
+      "hnsf'U"
     ]
   },
   "milliosmole": {
     "surfaces": [
+      "milliosmole",
       "milliosmoles"
     ],
     "entity": "amount of substance (dissolved particles)",
@@ -7954,6 +8177,8 @@
   },
   "osmole": {
     "surfaces": [
+      "osmol",
+      "osmole",
       "osmoles",
       "osmols"
     ],
@@ -7966,126 +8191,135 @@
   },
   "pH": {
     "surfaces": [
+      "pH",
       "pH scale"
     ],
     "entity": "acidity",
     "URI": "",
     "dimensions": [],
-    "symbols": [
-      "[pH]"
-    ]
+    "symbols": []
   },
   "Svedberg unit": {
     "surfaces": [
-      "Sv",
-      "10^-13 seconds",
+      "100 femtoseconds",
       "100 fs",
-      "100 femtoseconds"
+      "10^-13 seconds",
+      "Sv",
+      "Svedberg unit"
     ],
     "entity": "sedimentation coefficient",
     "URI": "",
     "dimensions": [],
-    "symbols": [
-      "[S]"
-    ]
+    "symbols": []
   },
   "arbitary unit": {
     "surfaces": [
-      "arbitary units",
       "arb units",
-      "arbU"
+      "arbU",
+      "arbitary unit",
+      "arbitary units"
     ],
     "entity": "arbitrary",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[arb'U]"
+      "arb'U"
     ]
   },
   "GPL unit": {
     "surfaces": [
-      "GPL Units",
       "GPL U",
-      "IgG anticardiolipin units",
-      "IgG Phospholipid"
+      "GPL Units",
+      "GPL unit",
+      "IgG Phospholipid",
+      "IgG anticardiolipin units"
     ],
     "entity": "biologic activity of anticardiolipin IgG",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[GPL'U]"
+      "GPL'U"
     ]
   },
   "MPL unit": {
     "surfaces": [
-      "MPL units",
-      "MPL U",
-      "MPL'U",
+      "IgM Phospholipid Units ",
       "IgM anticardiolipin units",
-      "IgM Phospholipid Units "
+      "MPL U",
+      "MPL unit",
+      "MPL units"
     ],
     "entity": "biologic activity of anticardiolipin IgM",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[MPL'U]"
+      "MPL'U"
     ]
   },
   "APL unit": {
     "surfaces": [
-      "APL units",
       "APL U",
-      "IgA anticardiolipin",
+      "APL unit",
+      "APL units",
       "IgA Phospholipid",
+      "IgA anticardiolipin",
       "biologic activity of"
     ],
     "entity": "biologic activity of anticardiolipin IgA",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[APL'U]"
+      "APL'U"
     ]
   },
   "Bethesda unit": {
     "surfaces": [
-      "BU"
+      "BU",
+      "Bethesda unit"
     ],
     "entity": "biologic activity of factor VIII inhibitor",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[beth'U]"
+      "beth'U"
     ]
   },
   "anti factor Xa unit": {
-    "surfaces": [],
+    "surfaces": [
+      "anti factor Xa unit"
+    ],
     "entity": "biologic activity of factor Xa inhibitor (heparin)",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[anti'Xa'U]"
+      "anti'Xa'U"
     ]
   },
   "Todd unit": {
-    "surfaces": [],
+    "surfaces": [
+      "Todd unit"
+    ],
     "entity": "biologic activity antistreptolysin O",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[todd'U]"
+      "todd'U"
     ]
   },
   "Dye unit": {
-    "surfaces": [],
+    "surfaces": [
+      "Dye unit"
+    ],
     "entity": "biologic activity of amylase",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[dye'U]"
+      "dye'U"
     ]
   },
   "Somogyi unit": {
     "surfaces": [
+      "Somogyi unit",
       "Somogyi units",
       "smgy U"
     ],
@@ -8093,206 +8327,217 @@
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[smgy'U]"
+      "smgy'U"
     ]
   },
   "Bodansky unit": {
-    "surfaces": [],
-    "entity": "biologic activity of phosphatase",
-    "URI": "",
-    "dimensions": [],
-    "symbols": [
-      "[bdsk'U]"
-    ]
-  },
-  "King-Armstrong unit": {
     "surfaces": [
-      "King-Armstrong Units",
-      "King units"
+      "Bodansky unit"
     ],
     "entity": "biologic activity of phosphatase",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[ka'U]"
+      "bdsk'U"
+    ]
+  },
+  "King-Armstrong unit": {
+    "surfaces": [
+      "King units",
+      "King-Armstrong Units",
+      "King-Armstrong unit"
+    ],
+    "entity": "biologic activity of phosphatase",
+    "URI": "",
+    "dimensions": [],
+    "symbols": [
+      "ka'U"
     ]
   },
   "tuberculin unit": {
     "surfaces": [
-      "TU"
+      "TU",
+      "tuberculin unit"
     ],
     "entity": "biologic activity of tuberculin",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[tb'U]"
+      "tb'U"
     ]
   },
   "Kunkel unit": {
-    "surfaces": [],
+    "surfaces": [
+      "Kunkel unit"
+    ],
     "entity": "arbitrary biologic activity",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[knk'U]"
+      "knk'U"
     ]
   },
   "Mac Lagan unit": {
     "surfaces": [
+      "Mac Lagan unit",
       "galactose index",
       "galactose tolerance test",
-      "thymol turbidity test unit",
-      "mclg U"
+      "mclg U",
+      "thymol turbidity test unit"
     ],
     "entity": "arbitrary biologic activity",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[mclg'U]"
+      "mclg'U"
     ]
   },
   "focus forming units (cells)": {
     "surfaces": [
-      "FFU"
+      "focus forming units (cells)"
     ],
     "entity": "amount of an infectious agent",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[FFU]"
+      "FFU"
     ]
   },
   "plaque forming units": {
     "surfaces": [
-      "PFU"
+      "plaque forming units"
     ],
     "entity": "amount of an infectious agent",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[PFU]"
+      "PFU"
     ]
   },
   "colony forming units": {
     "surfaces": [
-      "CFU"
+      "colony forming units"
     ],
     "entity": "amount of a proliferating organism",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[CFU]"
+      "CFU"
     ]
   },
   "index of reactivity (allergen)": {
     "surfaces": [
-      "IR"
+      "index of reactivity (allergen)"
     ],
     "entity": "amount of an allergen callibrated through in-vivo testing using the Stallergenes\u00ae method",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[IR]"
+      "IR"
     ]
   },
   "bioequivalent allergen unit": {
     "surfaces": [
-      "BAU",
       "Bioequivalent Allergy Units",
+      "bioequivalent allergen unit",
       "bioequivalent allergen units"
     ],
     "entity": "amount of an allergen callibrated through in-vivo testing based on the ID50EAL method of (intradermal dilution for 50mm sum of erythema diameters",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[BAU]"
+      "BAU"
     ]
   },
   "allergy unit": {
     "surfaces": [
-      "allergy units",
       "allergen units",
-      "AU"
+      "allergy unit",
+      "allergy units"
     ],
     "entity": "procedure defined amount of an allergen using some reference standard",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[AU]"
+      "AU"
     ]
   },
   "protein nitrogen unit (allergen testing)": {
     "surfaces": [
-      "protein nitrogen units",
-      "PNU"
+      "protein nitrogen unit (allergen testing)",
+      "protein nitrogen units"
     ],
     "entity": "procedure defined amount of a protein substance",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[PNU]"
+      "PNU"
     ]
   },
   "limit of flocculation": {
     "surfaces": [
-      "Lf doses"
+      "Lf doses",
+      "limit of flocculation"
     ],
     "entity": "procedure defined amount of an antigen substance",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[Lf]"
+      "Lf"
     ]
   },
   "D-antigen unit (polio)": {
     "surfaces": [
+      "D-antigen unit (polio)",
       "DAgU"
     ],
     "entity": "procedure defined amount of a poliomyelitis d-antigen substance",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[D'ag'U]"
+      "D'ag'U"
     ]
   },
   "fibrinogen equivalent units": {
     "surfaces": [
-      "FEU"
+      "fibrinogen equivalent units"
     ],
     "entity": "amount of fibrinogen broken down into the measured d-dimers",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[FEU]"
+      "FEU"
     ]
   },
   "ELISA unit": {
     "surfaces": [
-      "Enzyme-Linked Immunosorbent Assay Units",
-      "ELU",
-      "EL. U"
+      "EL. U",
+      "ELISA unit",
+      "Enzyme-Linked Immunosorbent Assay Units"
     ],
     "entity": "arbitrary ELISA unit",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[ELU]"
+      "ELU"
     ]
   },
   "Ehrlich units (urobilinogen)": {
     "surfaces": [
       "EU/dL",
+      "Ehrlich units (urobilinogen)",
       "mg{urobilinogen}/dL"
     ],
     "entity": "Ehrlich unit",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "[EU]"
+      "EU"
     ]
   },
   "bel": {
     "surfaces": [
+      "bel",
       "bels"
     ],
     "entity": "level",
@@ -8304,6 +8549,7 @@
   },
   "neper": {
     "surfaces": [
+      "neper",
       "nepers"
     ],
     "entity": "level",
@@ -8315,13 +8561,362 @@
   },
   "kaolin clotting time": {
     "surfaces": [
-      "KCT"
+      "kaolin clotting time"
     ],
     "entity": "",
     "URI": "",
     "dimensions": [],
     "symbols": [
-      "{KCT'U}"
+      "KCT",
+      "KCT'U"
+    ]
+  },
+  "on-base percentage": {
+    "surfaces": [
+      "on-base percentage"
+    ],
+    "entity": "dimensionless",
+    "URI": "Baseball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "OBP"
+    ]
+  },
+  "on-base plus slugging": {
+    "surfaces": [
+      "on-base plus slugging"
+    ],
+    "entity": "dimensionless",
+    "URI": "Baseball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "OPS"
+    ]
+  },
+  "slugging percentage": {
+    "surfaces": [
+      "slugging percentage"
+    ],
+    "entity": "dimensionless",
+    "URI": "Baseball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "SLG"
+    ]
+  },
+  "rebound per game": {
+    "surfaces": [
+      "rebound per game",
+      "rebounds per game"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "RPG",
+      "rpg"
+    ]
+  },
+  "assist per game": {
+    "surfaces": [
+      "assist per game",
+      "assists per game"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "APG",
+      "apg"
+    ]
+  },
+  "point per game": {
+    "surfaces": [
+      "point per game",
+      "points per game"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "PPG",
+      "ppg"
+    ]
+  },
+  "assist": {
+    "surfaces": [
+      "assist",
+      "assists"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "AST"
+    ]
+  },
+  "assist percentage": {
+    "surfaces": [
+      "assist percentage"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "AST%"
+    ]
+  },
+  "defensive rebound": {
+    "surfaces": [
+      "defensive rebound",
+      "defensive rebounds"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "DRB"
+    ]
+  },
+  "defensive rebound percentage": {
+    "surfaces": [
+      "defensive rebound percentage"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "DRB%"
+    ]
+  },
+  "defensive win share": {
+    "surfaces": [
+      "defensive win share",
+      "defensive win shares"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "DWS"
+    ]
+  },
+  "offensive rebound": {
+    "surfaces": [
+      "offensive rebound",
+      "offensive rebounds"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "ORB"
+    ]
+  },
+  "offensive rebound percentage": {
+    "surfaces": [
+      "offensive rebound percentage"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "ORB%"
+    ]
+  },
+  "offensive win share": {
+    "surfaces": [
+      "offensive win share",
+      "offensive win shares"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "OWS"
+    ]
+  },
+  "field goal": {
+    "surfaces": [
+      "field goal",
+      "field goals"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "FG"
+    ]
+  },
+  "field goal percentage": {
+    "surfaces": [
+      "field goal percentage"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "FG%"
+    ]
+  },
+  "field goal attempts": {
+    "surfaces": [
+      "field goal attempts"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "FGA"
+    ]
+  },
+  "free throw": {
+    "surfaces": [
+      "free throw",
+      "free throws"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "FT"
+    ]
+  },
+  "free throw percentage": {
+    "surfaces": [
+      "free throw percentage"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "FT%"
+    ]
+  },
+  "free throw attempts": {
+    "surfaces": [
+      "free throw attempts"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "FTA"
+    ]
+  },
+  "steal": {
+    "surfaces": [
+      "steal",
+      "steals"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "STL"
+    ]
+  },
+  "steal percentage": {
+    "surfaces": [
+      "steal percentage"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "STL%"
+    ]
+  },
+  "total rebound": {
+    "surfaces": [
+      "total rebound",
+      "total rebounds"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "TRB"
+    ]
+  },
+  "total rebound percentage": {
+    "surfaces": [
+      "total rebound percentage"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "TRB%"
+    ]
+  },
+  "true shooting percentage": {
+    "surfaces": [
+      "true shooting percentage"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "TS%"
+    ]
+  },
+  "true shooting attempts": {
+    "surfaces": [
+      "true shooting attempts"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "TSA"
+    ]
+  },
+  "win above replacement": {
+    "surfaces": [
+      "win above replacement",
+      "wins above replacement"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "WAR"
+    ]
+  },
+  "win probability added": {
+    "surfaces": [
+      "win probability added"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "WPA"
+    ]
+  },
+  "fly-ball percentage": {
+    "surfaces": [
+      "fly-ball percentage",
+      "fly-ball rate"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "FB%"
+    ]
+  },
+  "pop-up percentage": {
+    "surfaces": [
+      "pop-up percentage",
+      "pop-up rate"
+    ],
+    "entity": "",
+    "URI": "Basketball_statistic",
+    "dimensions": [],
+    "symbols": [
+      "PO%"
     ]
   }
 }

@@ -151,7 +151,7 @@
     "quantities": [
       {
         "value": "2400000000",
-        "normalized_unit": "gallon a year"
+        "normalized_unit": "gallon per year"
       }
     ]
   },
@@ -213,7 +213,7 @@
       },
       {
         "value": "6",
-        "normalized_unit": "largest city"
+        "normalized_unit": "large city"
       }
 
     ]
@@ -474,7 +474,7 @@
     "quantities": [
       {
         "value": "34500",
-        "normalized_unit": "metric ton"
+        "normalized_unit": "metric ton per year"
       },
       {
         "value": "25",
