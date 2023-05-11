@@ -5,23 +5,14 @@ spacy-legacy
 torch==2.0.0
 tqdm
 regex
-quantulum3
-openai
 pandas
 emoji==1.7
 more_itertools
-cython
-ccg_nlpy==1.10.0
 fuzzywuzzy==0.18.0
 en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0-py3-none-any.whl
 en_core_web_trf @https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.0.0/en_core_web_trf-3.0.0-py3-none-any.whl
 spacy-transformers==1.0.4
 ordered-set
 inflect==5.4.0
-ccg_nlpy
-recognizers-text
-recognizers-text-suite
-scikit-learn==1.0.0
-stemming==1.0.1
 protobuf==3.20.1
 python-Levenshtein

@@ -9,16 +9,14 @@ Institute of Computer Science, Heidelberg University
 (`*` indicates equal contribution)
 
 ### Prerequisites
-Make sure you have Python 3.9 and spaCy 3.0.9 installed. You may also need to install some python packages. Run
+you can also install the package using on the root directory of the package.
 ```
-pip install -r requirements.txt
+pip install .
 ```
-If you do not want to evaluate the system you can remove `recognizers-text, 
-recognizers-text-suite, cython ,ccg_nlpy, quantulum3,scikit-learn` from the requirements for a more lightweight installation. 
 ### Usage
 Create a `NumParser` and parse some text or sentence.
 ```python
-import NumParser
+from CQE.NumParser import NumParser
 
 parser = NumParser()
 text = "The sp 500 was down 2.1% and nasdaq fell 2.5%."
@@ -29,13 +27,9 @@ print(result)
 ```
 See the example in [CQE/example.py](example.py) as well. Run
 ```python
-python3 example.py
+python3 CQE/example.py
 ```
-you can also install the package using on the root directory of the package. 
-```
-python setup.py install
 
-```
 ### File and folder structure 
 Main files for CQE are under CQE package, where `unit_classifer` contains code for unit disambiguation based on BERT classifier trained using spacy-transformers. `units.json` file is used for normalization of units and `unit_models.zip`
 contains the trained models for the disambiguation which will be unziped on the first run of `NumParser`class.
@@ -53,30 +47,10 @@ To replicated the results from the paper and signifcant testing, refer to `evalu
 | [CQE/unit_classifer/unit_disambiguator.py](CQE/unit_classifer/unit_disambiguator.py)                       | Class for unit disambiguator based on the bert based classifiers.                                                           |
 | [CQE/unit_classifer/train_classifier_bert.py](CQE/unit_classifer/train_classifier_bert.py)                 | Script for generating spacy based training data and training commands to create classifiers for disambiguation.             |
 | [CQE/unit_classifer/sample_usage.py](CQE/unit_classifer/sample_usage.py)                                   | Usage example for disambiguation class.                                                                                     |
-| [evaluation/gpt-3/gpt3-tag.py](evaluation/gpt-3/gpt3-tag.py)                                               | Uses open ai API to tag the test set.                                                                                       |
-| [evaluation/tagger.py](evaluation/tagger.py)                                                               | Creates a unified representation for different models, by adding normalization and text cleaning to prepare for evaluation. |
-| [evaluation/evaluate_models.py](evaluation/evaluate_models.py)                                             | Evaluation script for CQE and other baselines                                                                               |
-| [evaluation/significance_test.py](evaluation/significance_test.py)                                         | Computing P values based on the F1 scores for different systems.                                                            |
-| [evaluation/permutation_significance_test.py](evaluation/permutation_significance_test.py)                 | Code for permutation based significance testing for the specific output of CQE                                              |                       |
-| [evaluation/significance_testing_for_arrary_input.py](evaluation/significance_testing_for_arrary_input.py) | Code for permutation based significance testing for normal  array input, used for the classification of unit disambiguator  |                                        |
-| [evaluation/test_unit_classifier.py](evaluation/test_unit_classifier.py)                                   | Evaluation code for unit disambiguator                                                                                      |                                        |
 
-
-### Data
-The evaluation data can be found in `/data/formatted_test_set` and consists of 5 evaluation sets. 
-
-| Dataset                                         | #Sentences | #Quantities | Source                                                                                                                                                      |
-|-------------------------------------------------|------------|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------
-| [NewsQuant.json](data/NewsQuant.json)           | 590        | 906         | tagged by the authors                                                                                                                                       |
-| [age-model.json](data/age-model.json)           | 19         | 22          | [Microsoft.Recognizers.Text Test Cases Specs](https://github.com/microsoft/Recognizers-Text/blob/master/Specs/NumberWithUnit/English/AgeModel.json)         |
-| [currency-model.json](data/currency-model.json) | 180        | 255         | [Microsoft.Recognizers.Text Test Cases Specs](https://github.com/microsoft/Recognizers-Text/blob/master/Specs/NumberWithUnit/English/CurrencyModel.json)    |
-| [dimension-model.json](data/dimension-model.json) | 93         | 121         | [Microsoft.Recognizers.Text Test Cases Specs](https://github.com/microsoft/Recognizers-Text/blob/master/Specs/NumberWithUnit/English/DimensionModel.json)   |
-| [temperature-model.json](data/recognizers-text/temperature-model.json) | 36         | 34          | [Microsoft.Recognizers.Text Test Cases Specs](https://github.com/microsoft/Recognizers-Text/blob/master/Specs/NumberWithUnit/English/TemperatureModel.json) |
-
-The predictions from GPT-3 for the test datasets above can be found in  `/data/gpt_3_ouput`.
-
-To train and test the unit classifier we generated data using ChatGPT, for the prompts used refer to the paper.
-The generated sentences and their classes are under `/data/units/train` (1,827 samples) and `/data/units/test` (180 samples).
+### Evaluation
+For replicating the results on the paper and comparing against other system, make sure CQE is installed and use
+the [CQE_Evaluation](https://github.com/satya77/CQE_Evaluation) repo.
 
 
 ### Units
