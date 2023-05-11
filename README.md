@@ -25,6 +25,42 @@ print(result)
 
 >>> [(=,2.1,[%],percentage,[sp, 500]), (=,2.5,[%],percentage,[nasdaq])]
 ```
+Use the overload option for additional functionality. The NumParser will compute the span indices of the Quantity, the normalized input sentence, the long and the simplified scientific notation of the Value, whether the unit is scientific or noun based and the unit surface forms.
+```python
+parser = NumParser(overload=True)
+text = "The sp 500 was down 2.1% and nasdaq fell 2.5%."
+result = parser.parse(text)
+
+for res in result:
+	print(f"""
+	Quantity: {res}
+	=====
+	indices                         =   {res.indices}
+	normalized text                 =   {res.normalized_text}
+	scientific notation             =   {res.value.scientific_notation}
+	simplified scientific notation  =   {res.value.simplified_scientific_notation}
+	scientific unit                 =   {res.unit.scientific}
+	unit surfaces forms             =   {res.unit.unit_surfaces_forms}""")
+
+>>> Quantity: (down,2.1,[%],percentage,{0: [sp, 500]})
+	=====
+	indices                         =   [5, 6]
+	normalized text                 =   The sp 500 was down 2.1 percentage and nasdaq fell 2.5 percentage .
+	scientific notation             =   2.100000e+00
+	simplified scientific notation  =   2.1e+00
+	scientific unit                 =   True
+	unit surfaces forms             =   ['percentage', 'percent', 'pc', '%', 'pct', 'pct.']
+
+
+	Quantity: (down,2.5,[%],percentage,{0: [nasdaq]})
+	=====
+	indices                         =   [10, 11]
+	normalized text                 =   The sp 500 was down 2.1 percentage and nasdaq fell 2.5 percentage .
+	scientific notation             =   2.500000e+00
+	simplified scientific notation  =   2.5e+00
+	scientific unit                 =   True
+	unit surfaces forms             =   ['percentage', 'percent', 'pc', '%', 'pct', 'pct.']
+```
 See the example in [CQE/example.py](example.py) as well. Run
 ```python
 python3 CQE/example.py
@@ -47,9 +83,10 @@ contains the trained models for the disambiguation which will be unziped on the 
 | [CQE/unit_classifer/train_classifier_bert.py](CQE/unit_classifer/train_classifier_bert.py)                 | Script for generating spacy based training data and training commands to create classifiers for disambiguation.             |
 | [CQE/unit_classifer/sample_usage.py](CQE/unit_classifer/sample_usage.py)                                   | Usage example for disambiguation class.                                                                                     |
 
-### Evaluation
+### Evaluation and Data 
 For replicating the results on the paper and comparing against other system, make sure CQE is installed and use
 the [CQE_Evaluation](https://github.com/satya77/CQE_Evaluation) repo.
+The evaluation script and data used for evaluation and training unit disambiguators are in this repository.
 
 
 ### Units
@@ -75,7 +112,7 @@ Example:
 }
 ```
 ### Rules
-There are 50 rules for [DependencyMatcher](https://spacy.io/usage/rule-based-matching#dependencymatcher) defined in the [rules.py](rules.py). We use the spaCy-model [en core web sm](https://spacy.io/models/en) to create a [Doc object](https://spacy.io/api/doc) with [linguistic annotations](https://spacy.io/usage/linguistic-featuress). The key point is that the rules are not simple pattern matching based on the single words in the sentence, but on those annotations and exploit the structure of the sentence.
+There are more than 50 rules for [DependencyMatcher](https://spacy.io/usage/rule-based-matching#dependencymatcher) defined in the [rules.py](rules.py). We use the spaCy-model [en core web sm](https://spacy.io/models/en) to create a [Doc object](https://spacy.io/api/doc) with [linguistic annotations](https://spacy.io/usage/linguistic-featuress). The key point is that the rules are not simple pattern matching based on the single words in the sentence, but on those annotations and exploit the structure of the sentence.
 
 Existing rules can be changed and new ones can be added by editing the file. Pay attention to the DependencyMatcher syntax.
 
