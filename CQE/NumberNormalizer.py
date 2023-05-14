@@ -10,8 +10,8 @@ from ordered_set import OrderedSet
 from spacy.lang.lex_attrs import is_digit, like_num
 from spacy.tokens import Token
 
-from CQE.number_lookup import maps, prefixes
-from CQE.unit_classifier.unit_disambiguator import unit_disambiguator
+from numparser.number_lookup import maps, prefixes
+from numparser.unit_classifier.unit_disambiguator import unit_disambiguator
 
 locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 
@@ -19,13 +19,11 @@ from pathlib import Path
 def get_project_root() -> Path:
     return Path(__file__).parent
 
-#### load the spacy transformer models
 root_path=str(get_project_root())
 if not os.path.exists(os.path.join(root_path+"/unit_models")):
     import zipfile
     with zipfile.ZipFile(os.path.join(root_path+"/unit_models.zip"), 'r') as zip_ref:
         zip_ref.extractall(os.path.join(root_path))
-
 disambiguator = unit_disambiguator()
 
 AMBIGUOUS_FORMS = ["c", "¥", "kn", "p", "R", "b", "'", "′", '"', '″', "C", "F", "kt", "B", "P", "dram", "pound", "pounds", "a"]
@@ -187,7 +185,6 @@ def check_ambiguous_unit(text, norm_unit, unit):
     if unit=="pounds": # for pounds and pound, use the surface form "pound" in both cases to do disambiguation
         unit="pound"
     if norm_unit in AMBIGUOUS_UNITS and unit in AMBIGUOUS_FORMS:
-
         return disambiguator.disambiguate(text, unit)
     return norm_unit
 
@@ -314,7 +311,7 @@ def normalize_unit_token(tokens: List[Token], text, recursive=False): # return n
                 index_loop = index_new
                 key_token = key
     if key_token:
-        return key_token, index_loop, in_unit_list, [key_token], False
+        return key_token, index_loop, in_unit_list, [key_token], bool(len(tokens)!=index_loop+1)
 
     # check if some of the tokens is present as a key in the unit.json file
     norm_units = [token.lemma_.upper() if token.text.isupper() else token.lemma_ for token in tokens if token.lemma_ in units_dict.keys()]
@@ -322,7 +319,7 @@ def normalize_unit_token(tokens: List[Token], text, recursive=False): # return n
     if not norm_units:
         in_unit_list = False
 
-    if not norm_units and any(token.pos_ in ["NOUN", "PROPN"] for token in tokens): # skip e.g. "cheaper"
+    if not norm_units and any(token.pos_ in ["NOUN", "PROPN"] or token._.unit for token in tokens): # skip e.g. "cheaper", extract parts per million
         if not recursive:
             norm_units = [token.lemma_.upper() if token.text.isupper() else token.lemma_ for token in tokens if token.pos_ in ["NOUN", "PROPN", "ADJ"]]
             if norm_units: # e.g. 'students' -> 'student'
@@ -331,7 +328,7 @@ def normalize_unit_token(tokens: List[Token], text, recursive=False): # return n
                 else:
                     index = -1 # whole list is unit
         else: # e.g. $ 70 - a - share price
-            norm_units = [token.lemma_.upper() if token.text.isupper() else token.lemma_ for token in tokens if token.pos_ in ["NOUN", "PROPN"]]
+            norm_units = [token.lemma_.upper() if token.text.isupper() else token.lemma_ for token in tokens if token.pos_ in ["NOUN", "PROPN"] or token._.unit]
             if norm_units:
                 norm_units = [norm_units[0]]
                 index = 0

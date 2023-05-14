@@ -15,10 +15,10 @@ from spacy.util import compile_infix_regex
 
 from fuzzywuzzy import fuzz
 
-from CQE import NumberNormalizer
-from CQE.rules import rules
-from CQE.number_lookup import maps, suffixes
-from CQE.classes import Change, Value, Range, Unit, Quantity
+from numparser import NumberNormalizer
+from numparser.rules import rules
+from numparser.number_lookup import maps, suffixes
+from numparser.classes import Change, Value, Range, Unit, Quantity
 from pathlib import Path
 
 def get_project_root() -> Path:
@@ -93,7 +93,7 @@ def num_quantmod(matcher, doc, i, matches):
     for token in tokens[1:]:
         if doc[token].dep_ in ["quantmod", "nummod"] and doc[token].pos_ in ["NUM"]:
             doc[token]._.set("number", True)
-        elif doc[token].lemma_ in (maps["scales"].keys() | maps["fractions"].keys()):
+        elif doc[token].lemma_ in (maps["scales"].keys() | maps["fractions"].keys() | maps["string_num_map"].keys()):
             doc[token]._.set("number", True)
         else:
             doc[token]._.set("bound", True)
@@ -151,6 +151,8 @@ def unit_fraction(matcher, doc, i, matches):
             doc[token]._.set("fraction", True)
         if doc[token].text in maps["bounds"] and number_index != -1 and number_index > token:
             doc[token]._.set("bound", True)
+        else:
+            doc[token]._.set("bound", False)
 
 # noinspection PyProtectedMember
 @remove_match
@@ -207,16 +209,25 @@ def between_range_callback(matcher, doc, i, matches): # add for quantities like 
         if bound_index_r-bound_index_l < 5:
             for j, num_index in enumerate(sorted(range_l_r)):
                 if j == 0 and bound_index_l < num_index < bound_index_r:
+                    #print(j, doc[num_index])
                     if not doc[num_index]._.range_r and not doc[num_index]._.range_l: # check if already set
                         doc[num_index]._.set("range_l", True)
+                        #print("L", doc[num_index])
                     elif j < len(range_l_r) and doc[num_index]._.range_l: # left already set
                         continue
                     else:
                         matches[i][1].remove(num_index)
                         break
                 elif bound_index_r < num_index and not doc[num_index]._.range_l: # e.g. from 12.3 inches to between 12.7 and 13 # j == 1?
+                    #print(j,doc[num_index])
                     doc[num_index]._.set("range_r", True)
-
+                    #print("R", doc[num_index])
+                #else:
+                #    print("no", j, doc[num_index], bound_index_l, num_index, bound_index_r)
+        #else:
+        #    matches.remove(matches[i])
+    #else:
+    #    matches.remove(matches[i])
 
 
 # noinspection PyProtectedMember
@@ -283,7 +294,6 @@ class NumParser:
         #self.nlp.add_pipe("sentencizer")
         self._modify_defaults_stopwords()
         prefixes = list(self.nlp.Defaults.prefixes)
-
 
         prefixes.append("~")
         prefixes.append(">")
@@ -358,7 +368,9 @@ class NumParser:
         # other (unknown)
         self.matcher.add("NOUN_NUM_RIGHT_NOUN", [rules["noun_num_right_noun"]], on_match=default_callback)
         self.matcher.add("NUM_NUM_ADP_RIGHT_NOUN", [rules["num_num_adp_right_noun"]], on_match=default_callback)
-
+        #self.matcher.add("NUM_TO_NUM_NUM", [rules["num_to_num_num"], rules["num_to_num_num_dig"]], on_match=default_callback) #
+        #self.matcher.add("NUM_RIGHT_NOUN", [rules["num_right_noun"]], on_match=default_callback) #
+        
         self.matcher.add("LONELY_NUM", [rules["lonely_num"]], on_match=lonely_num)
 
 
@@ -431,6 +443,7 @@ class NumParser:
             return result"""
 
         # single sentence as input
+        original_text = text
         text = self._preprocess_text(text)
         #print(text)
         doc = self.nlp(text)
@@ -448,13 +461,19 @@ class NumParser:
         if self.overload:
             normalized_text = self._normalize_text(normalized_tuples, doc)
             for quantity in normalized_tuples:
-                quantity.set_normalized_text(normalized_text)
+                quantity.set_original_text(original_text)
                 quantity.set_preprocessed_text(text)
+                quantity.set_normalized_text(normalized_text)
 
         return sorted(normalized_tuples, key=lambda t: t.value.span[0].i)
         
     def _print_tokens(self, doc):
-
+        #print([(token.text, token.dep_, token.pos_, list(token.children)) for token in doc if token.dep_=="ROOT"])
+        #print([(token.text, token.dep_, token.pos_, list(token.children)) for token in doc if token.dep_ in ["nsubj", "nsubjpass"]])
+        #print([(token.text, token.dep_, token.pos_, list(token.children)) for token in doc if token.pos_ == "PROPN"])
+        #print([spacy.explain(token.tag_) for token in doc])
+        #print([(token.text, list(token.subtree)) for token in doc])
+        #print([(token.text, list(token.ancestors)) for token in doc])
         print([(token.text, token.dep_, token.pos_, list(token.children), token.i) for token in doc])
 
     def _print_temp_results(self, boundaries, candidates, tuples, nouns):
@@ -983,7 +1002,14 @@ class NumParser:
                 for token in q_list:
                     token._.set("consider", True)
 
-            if len(q_list) == 3 and all(is_digit(q.text) for q in q_list) or len([q for q in q_list if is_digit(q.text) or q.text.replace(".", "").replace(",","").isdigit() or q.text in maps["string_num_map"] or q.text in maps["fractions"]])==3: # e.g. [160, 180, 200] or [3, 4, 5]
+            possible_compound_value = False
+
+            if len([q for q in q_list if q.text in (maps["scales"].keys() | maps["string_num_map"].keys())]) >= 3:
+                possible_compound = [q for q in q_list if q.text in (maps["scales"].keys() | maps["string_num_map"].keys())]
+                if sorted([token.i for token in possible_compound]) == list(range(min(token.i for token in possible_compound), max(token.i for token in possible_compound)+1)):
+                    possible_compound_value = True # e.g. twenty-eight thousand six hundred forty-two
+                
+            if not possible_compound_value and (len(q_list) == 3 and all(is_digit(q.text) for q in q_list) or len([q for q in q_list if is_digit(q.text) or q.text.replace(".", "").replace(",","").isdigit() or q.text in (maps["fractions"].keys() | maps["string_num_map"].keys())])==3): # e.g. [160, 180, 200] or [3, 4, 5]
                 range_l = [q for q in q_list if q._.range_l]
                 range_r = [q for q in q_list if q._.range_r]
                 if range_l and range_r:
@@ -1163,21 +1189,24 @@ class NumParser:
 
             if flag:
                 related_nouns = self._extend_nouns(related_nouns)
-                return related_nouns
+                #return related_nouns # commented out because we continue looking for a second related quantifier
 
             distances = [(tuple[1][0].i - token.i) for token in doc if token.text in ["of"]] # e.g. 'an increase of 5 percent'
             if distances:
+                flag = False
                 j = min(abs(dist) for dist in distances) if {1,2,3} & set(distances) else 0
                 if j and doc[tuple[1][0].i-j-1].pos_ in ["NOUN", "PROPN"] and doc[tuple[1][0].i-j-1].text not in self.nlp.Defaults.stop_words and list(doc[tuple[1][0].i-j-1].subtree):
                     related_nouns.append([])
+                    flag = True
                     for child in doc[tuple[1][0].i-j-1].subtree:
                         if child.i <= tuple[1][0].i:
                             if child._.ignore: # e.g. DATE
                                 related_nouns = []
+                                flag = False
                                 break
                                 #return [] # e.g. ... growth rate since the mid 1970s of 1.7 per cent
                             related_nouns[-1].append(child)
-                if related_nouns:
+                if related_nouns and flag:
                     related_nouns[-1].append(tuple[1][0].i-j-1)
                     related_nouns[-1][:-1] = sorted(related_nouns[-1][:-1], key=lambda t: t.i)
                     flag = True
@@ -1482,8 +1511,10 @@ class NumParser:
                 elif any(token._.one_of_noun for token in tuple[2]): # consider subtree
                     k = [token._.one_of_noun for token in tuple[2]].index(True)
                     unit = Unit(tuple[2], norm_unit, doc[list(tuple[2][k].subtree)[0].i:list(tuple[2][k].subtree)[-1].i+1], in_unit_list, keys, self.overload)
+                elif index not in [None, -1] and len(tuple[2]) > 1:
+                    unit = Unit(tuple[2], norm_unit, [tuple[2][index]] if index==0 or not slice_unit else tuple[2][:index+1], in_unit_list, keys, self.overload)
                 else:
-                    unit = Unit(tuple[2], norm_unit, tuple[2][:index+1] if index not in [None, -1] else tuple[2], in_unit_list, keys, self.overload)
+                    unit = Unit(tuple[2], norm_unit, tuple[2], in_unit_list, keys, self.overload)
 
                 if tuple[2] != unit.unit:
                     tuple = (tuple[0], tuple[1], unit.unit, tuple[3]) # [of, of, dollars] vs. [of, dollars]
@@ -1527,8 +1558,7 @@ class NumParser:
                             referred_noun.append(quantifier[:-1])
 
 
-
-                if not ref_noun_flag:# or ref_noun_flag:
+                if not ref_noun_flag:
                     # follow dependency tree approach
                     # check whether there is VERB in the ancestors of the number
                     # then check if there is nsubj or nsubjpass in the children of the first found VERB
@@ -1729,7 +1759,10 @@ class NumParser:
 
         replacements = {}
         for key in to_be_replaced:
-            replacements[text[key[0]:key[-1]]] = to_be_replaced[key]
+            if key[0] in [k[1] for k in to_be_replaced.keys()]: # e.g. 2.1%
+                replacements[text[key[0]:key[-1]]] = " "+to_be_replaced[key] # always have a space between value and unit
+            else:
+                replacements[text[key[0]:key[-1]]] = to_be_replaced[key]
         replacements = dict((re.escape(k), v) for k, v in replacements.items())
 
         if replacements:
