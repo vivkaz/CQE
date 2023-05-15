@@ -1300,6 +1300,37 @@ rules = {
         }
     ],
 
+    "compound_num": [ # five hundred
+        {
+            "RIGHT_ID": "num",
+            "RIGHT_ATTRS": {"POS": {"IN": ["NUM"]}, "IS_DIGIT": False}
+        },
+        {
+            "LEFT_ID": "num",
+            "REL_OP": ">",
+            "RIGHT_ID": "num2",
+            "RIGHT_ATTRS": {"POS": {"IN": ["NUM"], "DEP": {"IN": ["nummod", "compound", "quantmod"]}}, "IS_DIGIT": False}
+        },
+    ],
+    "compound_num_2": [ # [thousand, million, three] from "three million five hundred thousand"
+        {
+            "RIGHT_ID": "num",
+            "RIGHT_ATTRS": {"POS": {"IN": ["NUM"]}, "IS_DIGIT": False}
+        },
+        {
+            "LEFT_ID": "num",
+            "REL_OP": ">",
+            "RIGHT_ID": "num2",
+            "RIGHT_ATTRS": {"POS": {"IN": ["NUM"], "DEP": {"IN": ["nummod", "compound", "quantmod"]}}, "IS_DIGIT": False}
+        },
+        {
+            "LEFT_ID": "num2",
+            "REL_OP": ">",
+            "RIGHT_ID": "num3",
+            "RIGHT_ATTRS": {"POS": {"IN": ["NUM"], "DEP": {"IN": ["nummod", "compound", "quantmod"]}}, "IS_DIGIT": False}
+        },
+    ],
+
     "one_of": [ # one of the computers, one of the proudest moments in his life
         {
             "RIGHT_ID": "num",

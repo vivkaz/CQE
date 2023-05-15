@@ -273,6 +273,14 @@ def one_of_callback(matcher, doc, i, matches):
                 doc[token]._.set("one_of_noun", True)
 
 # noinspection PyProtectedMember
+@remove_match
+def compound_num(matcher, doc, i, matches):
+    match_id, tokens = matches[i]
+    for token in tokens:
+        doc[token]._.set("number", True)
+
+
+# noinspection PyProtectedMember
 def phone_number(matcher, doc, i, matches):
     match_id, start, end = matches[i]
     span = doc[start:end]
@@ -337,6 +345,7 @@ class NumParser:
         self.matcher.add("FRAC", [rules["frac"], rules["frac_2"]], on_match=frac_callback)
         #self.matcher.add("FRAC_2", [rules["frac_2"]], on_match=frac_callback)
 
+        self.matcher.add("COMPOUND_NUM", [rules["compound_num"], rules["compound_num_2"]], on_match=compound_num)
         self.matcher.add("NUM_NUM", [rules["num_num"]], on_match=default_callback)
         self.matcher.add("NUM_SYMBOL", [rules["num_symbol"]], on_match=default_callback)
         self.matcher.add("SYMBOL_NUM", [rules["symbol_num"]], on_match=default_callback)
@@ -459,13 +468,13 @@ class NumParser:
         normalized_tuples = self._normalize_tuples(three_tuples, referred_nouns, text, doc)
         
         if self.overload:
+            Quantity.original_text = original_text
             normalized_text = self._normalize_text(normalized_tuples, doc)
             for quantity in normalized_tuples:
-                quantity.set_original_text(original_text)
                 quantity.set_preprocessed_text(text)
                 quantity.set_normalized_text(normalized_text)
 
-        return sorted(normalized_tuples, key=lambda t: t.value.span[0].i)
+        return normalized_tuples
         
     def _print_tokens(self, doc):
         #print([(token.text, token.dep_, token.pos_, list(token.children)) for token in doc if token.dep_=="ROOT"])
@@ -830,6 +839,15 @@ class NumParser:
             
             # retokenize the fractions from number_lookup.py
             for k, v in maps["fractions"].items(): # e.g. half, third
+                expression = rf"\b{k}\b"
+                for match in re.finditer(expression, doc.text, re.IGNORECASE):
+                    start, end = match.span()
+                    span = doc.char_span(start, end)
+                    if span:
+                        retokenizer.merge(span, attrs={"POS": "NUM"})
+
+            # retokenize the number strings from number_lookup.py
+            for k, v in maps["string_num_map"].items(): # e.g. twenty-six
                 expression = rf"\b{k}\b"
                 for match in re.finditer(expression, doc.text, re.IGNORECASE):
                     start, end = match.span()
@@ -1720,7 +1738,7 @@ class NumParser:
 
         #print(result, "\n________________________")
 
-        return result
+        return sorted(result, key=lambda t: t.value.span[0].i)
 
 
     def postprocess_referred_noun(self, ref_noun_flag, referred_noun, unit, index, slice_unit, tuple):
@@ -1750,10 +1768,13 @@ class NumParser:
         to_be_replaced = {}
 
         for quantity in tuples:
-            for i,idx_tuple in enumerate(quantity.value_char_indices):
+            char_indices = quantity.get_char_indices()
+            value_char_indices = char_indices["value"]
+            unit_char_indices = char_indices["unit"]
+            for i,idx_tuple in enumerate(value_char_indices):
                 to_be_replaced[idx_tuple] = quantity.value.get_str_value(i)
-            if quantity.unit_char_indices:
-                for idx_tuple in quantity.unit_char_indices:
+            if unit_char_indices:
+                for idx_tuple in unit_char_indices:
                     to_be_replaced[idx_tuple] = quantity.unit.norm_unit
         to_be_replaced = dict(sorted(to_be_replaced.items()))
 

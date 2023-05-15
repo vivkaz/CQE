@@ -5,6 +5,7 @@ from pathlib import Path
 from decimal import Decimal
 from typing import Iterable
 from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
 
 def get_project_root() -> Path:
     return Path(__file__).parent
@@ -158,16 +159,19 @@ class Concept:
 
 
 class Quantity:
+    original_text = None # class variable
+
     def __init__(self, value, change=Change(), unit=Unit(), referred_concepts=None, in_bracket=False):
         self.change = change
         self.value = value
         self.unit = unit
         self.referred_concepts = [] if not referred_concepts else referred_concepts
-        self.value_char_indices = value.char_indices # characters indices based on the preprocessed sentence
-        self.unit_char_indices = unit.char_indices # characters indices based on the preprocessed sentence
-        self.original_text = None # default
-        self.preprocessed_text = None # default
-        self.normalized_text = None # default
+        self.__value_char_indices = value.char_indices # characters indices based on the preprocessed sentence
+        self.__unit_char_indices = unit.char_indices # characters indices based on the preprocessed sentence
+        self.__original_value_char_indices = None # characters indices based on the original sentence
+        self.__original_unit_char_indices = None # characters indices based on the original sentence
+        self.__preprocessed_text = None # default
+        self.__normalized_text = None # default
         self.in_bracket = in_bracket
 
     def __repr__(self):
@@ -177,13 +181,19 @@ class Quantity:
         return f"({str(self.change)},{str(self.value)},{str(self.unit.unit)},{str(self.unit.norm_unit)},{str(self.referred_concepts)})"
     
     def set_original_text(self, text):
-        self.original_text = text
+        Quantity.original_text = text
 
     def set_preprocessed_text(self, text):
-        self.preprocessed_text = text
+        self.__preprocessed_text = text
 
     def set_normalized_text(self, text):
-        self.normalized_text = text
+        self.__normalized_text = text
+
+    def get_preprocessed_text(self):
+        return self.__preprocessed_text
+    
+    def get_normalized_text(self):
+        return self.__normalized_text
 
     def transform_concept_to_dict(self):
         """create a Concept instance"""
@@ -193,83 +203,75 @@ class Quantity:
         """return list or dict of the surface forms for the Unit"""
         return self.unit.unit_surfaces_forms
     
-    def compute_original_char_indices(self, quant_idx):
+    def get_char_indices(self):
+        """return dictionary of the Value and Unit indices in the preprocessed sentence"""
+        return { "value": self.__value_char_indices, "unit": self.__unit_char_indices }
+    
+    def compute_original_char_indices(self):
         """return characters indices based on the the original sentence"""
 
         def find_most_similar_substring(target_substring, text):
-            """finds the most similar substring to the target substring in the given text"""
-            max_similarity = 0
-            most_similar_substring = ""
+            """find the most similar substring to the given target within the text"""
 
-            for i in range(len(text) - len(target_substring) + 1):
-                substring = text[i:i + len(target_substring)]
-                similarity_score = fuzz.ratio(target_substring, substring)
+            def n_grams(tokens, n):
+                """generate n-grams from a list of tokens"""
+                n_grams = []
+                for j in range(1,n+1):
+                    n_grams.extend(["".join(tokens[i:i+j]) for i in range(len(tokens)-j+1)])
+                return n_grams
 
-                if similarity_score > max_similarity:
-                    max_similarity = similarity_score
-                    most_similar_substring = substring
-
-            return most_similar_substring
-        def check_nearby_spans(span1, span2, max_distance):
-            """check whether substring spans are near each other in a given string by comparing the distance between their spans"""
-            return abs(span1[1] - span2[0]) <= max_distance
-
+            return process.extractOne(target_substring, n_grams(text, len(text)), scorer=fuzz.ratio)
 
         # value indices
         original_value_indices = []
-        value_indices = self.value_char_indices
-        target = self.preprocessed_text[sorted(value_indices)[0][0]:sorted(value_indices)[-1][1]]
+        value_indices = self.__value_char_indices
+        target = self.__preprocessed_text[sorted(value_indices)[0][0]:sorted(value_indices)[-1][1]]
         
         # find matches of the target substring in the original text
-        matches = sorted(re.finditer(re.escape(target), self.original_text), key=lambda m: m.start(), reverse=True)
+        matches = list(re.finditer(re.escape(target), self.original_text))
 
         if not matches:
             # if no direct matches, find the most similar substring and find matches
-            most_similar = find_most_similar_substring(target, self.original_text).lstrip()
+            most_similar = find_most_similar_substring(target, self.original_text)[0]
             matches = re.finditer(re.escape(most_similar), self.original_text)
-            #sorted(re.finditer(re.escape(most_similar), self.original_text), key=lambda m: m.start(), reverse=True)
 
-        if len(matches) > 1:
-            minimum = 100
-            index = len(matches)-1
-            # iterate through the matches, considering the index of the quantity
-            for i, match in enumerate(matches):
-                if quant_idx + i < minimum: # TODO condition!!!
-                    minimum = quant_idx + i
-                    index = i
-            original_value_indices.append((matches[index].start(), matches[index].end()))
-        else: # only one match
-            original_value_indices.append((matches[0].start(), matches[0].end()))
-
+        # iterate through the matches and mark already observed ones
+        for match in matches:
+            original_value_indices.append((match.start(), match.end()))
+            mark = "@"*len(match.group())
+            self.set_original_text(re.sub(f"\b{re.escape(match.group())}\b", mark, self.original_text, count=1))
+            break
 
         # unit indices
         original_unit_indices = []
-        unit_indices = self.unit_char_indices if self.unit_char_indices else []
+        unit_indices = self.__unit_char_indices if self.__unit_char_indices else []
         target = ""
 
         # iterate through each span in the sorted list of spans
         for tuple_idx in sorted(unit_indices):
-            target = self.preprocessed_text[tuple_idx[0]:tuple_idx[1]]
+            target = self.__preprocessed_text[tuple_idx[0]:tuple_idx[1]]
             
             # find matches of the target substring in the original text
-            matches = re.finditer(re.escape(target), self.original_text)
-            
+            matches = list(re.finditer(re.escape(target), self.original_text))
+
             if not matches:
                 # if no direct matches, find the most similar substring and find matches
-                most_similar = find_most_similar_substring(target, self.original_text).lstrip()
+                most_similar = find_most_similar_substring(target, self.original_text)[0]
                 matches = re.finditer(re.escape(most_similar), self.original_text)
-            
+
+            # iterate through the matches and mark already observed ones
             for match in matches:
-                # check if the match is near the value within a distance of 5
-                if check_nearby_spans((match.start(),match.end()), original_value_indices[0], 5):
-                    original_unit_indices.append((match.start(), match.end()))
+                original_unit_indices.append((match.start(), match.end()))
+                mark = "@"*len(match.group())
+                self.set_original_text(re.sub(f"\b{re.escape(match.group())}\b", mark, self.original_text, count=1))
+                break
 
         return original_value_indices, original_unit_indices
 
 
-    def get_original_char_indices(self, quant_idx):
+    def get_original_char_indices(self):
         """return dictionary of the Value and Unit indices in the original sentence"""
-        value_indices, unit_indices = self.compute_original_char_indices(quant_idx)
-        if value_indices and unit_indices:
-            return { "value": value_indices, "unit": unit_indices }
-        return { "value": value_indices } if value_indices else {}
+        if self.__original_value_char_indices is None and self.__original_unit_char_indices is None:
+            self.__original_value_char_indices, self.__original_unit_char_indices = self.compute_original_char_indices()
+
+        return { "value": self.__original_value_char_indices, "unit": self.__original_unit_char_indices }
