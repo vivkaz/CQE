@@ -46,7 +46,7 @@ text = "The sp 500 was down 2.1% and nasdaq fell 2.5%."
 result = parser.parse(text)
 
 for res in result:
-	print(f"""
+    print(f"""
 	Quantity: {res}
 	=====
 	indices                         =   {res.get_char_indices()}
@@ -58,25 +58,25 @@ for res in result:
 	unit surfaces forms             =   {res.unit.unit_surfaces_forms}""")
 
 >>> Quantity: (down,2.1,[%],percentage,{0: [sp, 500]})
-	=====
-	indices                         =   [5, 6]
-	normalized text                 =   The sp 500 was down 2.1 percentage and nasdaq fell 2.5 percentage .
-    pre processed text              =   The sp 500 was down 2.1% and nasdaq fell 2.5% .
-	scientific notation             =   2.100000e+00
-	simplified scientific notation  =   2.1e+00
-	scientific unit                 =   True
-	unit surfaces forms             =   ['percentage', 'percent', 'pc', '%', 'pct', 'pct.']
+=====
+indices                         =   [5, 6]
+normalized text                 =   The sp 500 was down 2.1 percentage and nasdaq fell 2.5 percentage .
+pre processed text              =   The sp 500 was down 2.1% and nasdaq fell 2.5% .
+scientific notation             =   2.100000e+00
+simplified scientific notation  =   2.1e+00
+scientific unit                 =   True
+unit surfaces forms             =   ['percentage', 'percent', 'pc', '%', 'pct', 'pct.']
 
 
-	Quantity: (down,2.5,[%],percentage,{0: [nasdaq]})
-	=====
-	indices                         =   [10, 11]
-	normalized text                 =   The sp 500 was down 2.1 percentage and nasdaq fell 2.5 percentage .
-    pre processed text              =   The sp 500 was down 2.1% and nasdaq fell 2.5% .
-	scientific notation             =   2.500000e+00
-	simplified scientific notation  =   2.5e+00
-	scientific unit                 =   True
-	unit surfaces forms             =   ['percentage', 'percent', 'pc', '%', 'pct', 'pct.']
+Quantity: (down,2.5,[%],percentage,{0: [nasdaq]})
+=====
+indices                         =   [10, 11]
+normalized text                 =   The sp 500 was down 2.1 percentage and nasdaq fell 2.5 percentage .
+pre processed text              =   The sp 500 was down 2.1% and nasdaq fell 2.5% .
+scientific notation             =   2.500000e+00
+simplified scientific notation  =   2.5e+00
+scientific unit                 =   True
+unit surfaces forms             =   ['percentage', 'percent', 'pc', '%', 'pct', 'pct.']
 ```
 ## Overview
 
@@ -215,44 +215,44 @@ Existing rules can be modified or new ones can be added by editing the file. How
 Example:
 ```json
 "num_symbol" : [
-	{
-		"RIGHT_ID": "number",
-		"RIGHT_ATTRS": {"POS": "NUM"}
-	},
-	{
-		"LEFT_ID": "number",
-		"REL_OP": ">",
-		"RIGHT_ID": "symbol",
-		"RIGHT_ATTRS": {"DEP": {"IN": ["quantmod", "nmod"]}, "POS": "SYM", "ORTH": {"NOT_IN": ["#"]}}
-	},
+{
+"RIGHT_ID": "number",
+"RIGHT_ATTRS": {"POS": "NUM"}
+},
+{
+"LEFT_ID": "number",
+"REL_OP": ">",
+"RIGHT_ID": "symbol",
+"RIGHT_ATTRS": {"DEP": {"IN": ["quantmod", "nmod"]}, "POS": "SYM", "ORTH": {"NOT_IN": ["#"]}}
+},
 ],
 
 ...
 
 "noun_num" : [
-	{
-		"RIGHT_ID": "noun",
-		"RIGHT_ATTRS": {"POS": {"IN": ["PROPN", "NOUN", "INTJ"]}, "ORTH": {"NOT_IN": ["#", "ers"]}}
-	},
-	{
-		"LEFT_ID": "noun",
-		"REL_OP": ">",
-		"RIGHT_ID": "number",
-		"RIGHT_ATTRS": {"DEP": {"IN": ["quantmod", "nmod", "nummod", "compound", "amod", "nsubj"]}, "POS": "NUM"}
-	},
+{
+"RIGHT_ID": "noun",
+"RIGHT_ATTRS": {"POS": {"IN": ["PROPN", "NOUN", "INTJ"]}, "ORTH": {"NOT_IN": ["#", "ers"]}}
+},
+{
+"LEFT_ID": "noun",
+"REL_OP": ">",
+"RIGHT_ID": "number",
+"RIGHT_ATTRS": {"DEP": {"IN": ["quantmod", "nmod", "nummod", "compound", "amod", "nsubj"]}, "POS": "NUM"}
+},
 ],
 
 ...
 
 "phone_number_pattern_1" : [
-	{"ORTH": "("},
-	{"SHAPE": "d"},
-	{"ORTH": ")"},
-	{"SHAPE": "dd"},
-	{"ORTH": "-", "OP": "?"},
-	{"SHAPE": "ddd"},
-	{"ORTH": "-", "OP": "?"},
-	{"SHAPE": "dddd"}
+{"ORTH": "("},
+{"SHAPE": "d"},
+{"ORTH": ")"},
+{"SHAPE": "dd"},
+{"ORTH": "-", "OP": "?"},
+{"SHAPE": "ddd"},
+{"ORTH": "-", "OP": "?"},
+{"SHAPE": "dddd"}
 ],
 ```
 ```
