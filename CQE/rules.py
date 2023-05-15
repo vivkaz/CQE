@@ -62,7 +62,7 @@ rules = {
             "RIGHT_ATTRS": {"DEP": {"IN": ["punct", "attr"]}, "POS": {"IN": ["PUNCT", "X", "SYM"]}, "ORTH": {"IN": ["~","=","<",">", "≈"]}}
         }
     ],
-    
+
     "noun_num_right_noun" : [
         {
             "RIGHT_ID": "noun",
@@ -186,7 +186,7 @@ rules = {
     ],
 
     "num_direct_propn" : [ # 2.4 Ghz, 30 Mbps, 60 GB, 450 Nm, 0.1 m2, 50 mL
-    # 575 Willbraham, 8 AB8, 30 TFSI
+        # 575 Willbraham, 8 AB8, 30 TFSI
         {
             "RIGHT_ID": "num",
             "RIGHT_ATTRS": {"DEP": {"IN": ["quantmod", "nmod", "nummod"]}, "POS": "NUM"}
@@ -226,7 +226,7 @@ rules = {
     ],
 
     "noun_adj_num" : [ # double 120 decibels, 600 people worldwide, 6kW electric motor, million Australian dollars, 14 first-team players
-    # billion hostile takeover, million year-old bedrock
+        # billion hostile takeover, million year-old bedrock
         {
             "RIGHT_ID": "noun",
             "RIGHT_ATTRS": {"POS": {"IN": ["PROPN", "NOUN"]}}
@@ -256,7 +256,7 @@ rules = {
             "REL_OP": ">",
             "RIGHT_ID": "number",
             "RIGHT_ATTRS": {"DEP": {"IN": ["quantmod", "amod", "compound", "nummod", "nmod", "advmod", "npadvmod"]}, "POS": "NUM"}
-            
+
         },
     ],
 
@@ -292,8 +292,8 @@ rules = {
     ],
 
     "num_quantmod" : [ # around/about 600, just/only 799, over/under thousand, more than four times*, up to 400*
-    # also between 62 (between $62 and $68)
-    # * as many as 14 (14,as;14,many;14,as -> as separate matches)
+        # also between 62 (between $62 and $68)
+        # * as many as 14 (14,as;14,many;14,as -> as separate matches)
         {
             "RIGHT_ID": "number",
             "RIGHT_ATTRS": {"POS": "NUM"}
@@ -340,8 +340,8 @@ rules = {
     ],
 
     "quantmod_direct_num" : [ # averaging 15.9, rose/fell 0.6%, lost/gained 286 gigatonnes
-    # close one, was five, totalling twenty, plummeted 190, climbed 0.1%
-    # down 0.03%
+        # close one, was five, totalling twenty, plummeted 190, climbed 0.1%
+        # down 0.03%
         {
             "RIGHT_ID": "num",
             "RIGHT_ATTRS": {"POS": {"IN": ["NUM"]}}
@@ -433,7 +433,7 @@ rules = {
 
     # If it behaves like a number, its probably a number
     "noun_noun" : [ # tens of thousands, 75 kwW system, 68 league games, 50 mph winds
-    # but also state and local tax credits, iPhone Mini deal, most cloud-to-ground
+        # but also state and local tax credits, iPhone Mini deal, most cloud-to-ground
         {
             "RIGHT_ID": "noun",
             "RIGHT_ATTRS": {"POS": {"IN": ["PROPN", "NOUN"]}}
@@ -472,7 +472,7 @@ rules = {
     ],
 
     "num_num" : [ # 7.2 billion, 13.6 million, 1 trillion
-    # 1.0 l, 2.7 m, 7 s
+        # 1.0 l, 2.7 m, 7 s
         {
             "RIGHT_ID": "number",
             "RIGHT_ATTRS": {"POS": "NUM", "_": {"like_scale": True}}
@@ -553,7 +553,7 @@ rules = {
             "RIGHT_ATTRS": {"POS": "NUM", "IS_DIGIT": True}
         },
     ],
-    
+
     "num_to_num_4" : [ # 90 billion to 100 billion
         {
             "RIGHT_ID": "number", # billion
@@ -603,7 +603,7 @@ rules = {
             "RIGHT_ATTRS": {"POS": {"IN": ["NUM"]}}
         }
     ],
- 
+
     "num_to_num_dig" : [ # 5-10
         {
             "RIGHT_ID": "number",
@@ -993,7 +993,7 @@ rules = {
             "REL_OP": ">",
             "RIGHT_ID": "number",
             "RIGHT_ATTRS": {"POS": {"IN": ["NUM"]}}
-        }, 
+        },
         {
             "LEFT_ID": "number",
             "REL_OP": ">",
@@ -1009,7 +1009,7 @@ rules = {
     ],
 
     "adp_num_cconj_num_2" : [ # from 5.7% to 3.4%, from 2 dollar to 3 dollar
-    # from (up to) 252 miles to 287 miles-
+        # from (up to) 252 miles to 287 miles-
         {
             "RIGHT_ID": "adp",
             "RIGHT_ATTRS": {"ORTH": {"IN": ["from"]}}
