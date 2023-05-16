@@ -26,6 +26,11 @@ you can also install the package using on the root directory of the package.
 ```
 pip install .
 ```
+or simply via pip:
+```
+pip install CQE
+```
+
 ### Usage
 Create a `NumParser` and parse some text or sentence.
 ```python
