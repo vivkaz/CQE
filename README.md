@@ -1,13 +1,26 @@
 # CQE
+##Evaultion and data in [CQE_Evaluation](https://github.com/satya77/CQE_Evaluation).
+
 A Framework for Comprehensive Quantity Extraction. This repository contains code for the paper:
 
 [CQE: A Framework for Comprehensive Quantity Extraction
-]()
+](https://arxiv.org/pdf/2305.08853v1.pdf)
 
 Satya Almasian*, Vivian Kazakova*, Philipp Göldner, Michael Gertz  
 Institute of Computer Science, Heidelberg University  
 (`*` indicates equal contribution)
 
+If you found this useful, consider citing us: 
+```
+@misc{almasian2023cqe,
+      title={CQE: A Comprehensive Quantity Extractor}, 
+      author={Satya Almasian and Vivian Kazakova and Philip Göldner and Michael Gertz},
+      year={2023},
+      eprint={2305.08853},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
 ### Prerequisites
 you can also install the package using on the root directory of the package.
 ```
@@ -68,6 +81,10 @@ See the example in [CQE/example.py](example.py) as well. Run
 ```python
 python3 CQE/example.py
 ```
+### Evaluation and Data
+For replicating the results on the paper and comparing against other system, make sure CQE is installed and use
+the [CQE_Evaluation](https://github.com/satya77/CQE_Evaluation) repo.
+The evaluation script and data used for evaluation and training unit disambiguators are in this repository.
 
 ### File and folder structure
 Main files for CQE are under CQE package, where `unit_classifer` contains code for unit disambiguation based on BERT classifier trained using spacy-transformers. `units.json` file is used for normalization of units and `unit_models.zip`
@@ -86,10 +103,6 @@ contains the trained models for the disambiguation which will be unziped on the 
 | [CQE/unit_classifer/train_classifier_bert.py](CQE/unit_classifer/train_classifier_bert.py)                 | Script for generating spacy based training data and training commands to create classifiers for disambiguation.             |
 | [CQE/unit_classifer/sample_usage.py](CQE/unit_classifer/sample_usage.py)                                   | Usage example for disambiguation class.                                                                                     |
 
-### Evaluation and Data
-For replicating the results on the paper and comparing against other system, make sure CQE is installed and use
-the [CQE_Evaluation](https://github.com/satya77/CQE_Evaluation) repo.
-The evaluation script and data used for evaluation and training unit disambiguators are in this repository.
 
 
 ### Units
