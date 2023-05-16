@@ -77,16 +77,20 @@ def normalize_number(text: List):
     text = preprocess_number(text)
 
     if "×" in text[0]: # scientific notation e.g. 5.067×10−4
-        number_1 = text[0][:text[0].index("×")]
-        if text[0][text[0].index("×")+1:]in maps["scientific_notation"]:
+        number_1 = locale.atof(text[0][:text[0].index("×")])
+        if text[0][text[0].index("×")+1:] in maps["scientific_notation"]:
             number_2 = maps["scientific_notation"][text[0][text[0].index("×")+1:]]
         elif "e−" in text[0][text[0].index("×")+1:]: # 6.022×e-20
             number_2 = 10**locale.atof("-"+text[0][text[0].index("×")+3:])
         elif "e" in text[0][text[0].index("×")+1:]:  # 6.022×e+20
             number_2 = 10**locale.atof(text[0][text[0].index("×")+2:])
-        else:
-            number_2 = 1
-        return locale.atof(number_1)*number_2
+        elif "^−" in text[0][text[0].index("×")+1:]:  # 1.06×10^−10
+            number_2 = 10**locale.atof("-"+text[0][text[0].index("−")+1:])
+        elif "^" in text[0]: # 1.06×10^10
+            number_2 = 10**locale.atof(text[0][text[0].index("^")+1:])
+        else: # 1.06×10
+            number_2 = locale.atof(text[0][text[0].index("×")+1:])
+        return number_1*number_2
 
     if len(text) == 1 and is_num(text[0]):
         return locale.atof(text[0])
