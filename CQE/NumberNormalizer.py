@@ -10,8 +10,8 @@ from ordered_set import OrderedSet
 from spacy.lang.lex_attrs import is_digit, like_num
 from spacy.tokens import Token
 
-from numparser.number_lookup import maps, prefixes
-from numparser.unit_classifier.unit_disambiguator import unit_disambiguator
+from .number_lookup import maps, prefixes
+from .unit_classifier.unit_disambiguator import unit_disambiguator
 
 locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 

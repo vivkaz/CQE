@@ -1,18 +1,18 @@
-from NumParser import NumParser
+from CQE import CQE
 
 '''
 Note: Use the first return statement in the __repr__ function of the Quantity class in classes.py
 '''
 
 if __name__ == '__main__':
-    parser = NumParser()
+    parser = CQE.NumParser()
 
     text = "The sp 500 was down 2.1% and nasdaq fell 2.5%."
     print(text)
     result = parser.parse(text)
     print(result)
 
-    parser2 = NumParser(overload=True)
+    parser2 = CQE.NumParser(overload=True)
     text = "The sp 500 was down 2.1% and nasdaq fell 2.5%."
     result = parser2.parse(text)
     for res in result:

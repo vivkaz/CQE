@@ -15,10 +15,10 @@ from spacy.util import compile_infix_regex
 
 from fuzzywuzzy import fuzz
 
-from numparser import NumberNormalizer
-from numparser.rules import rules
-from numparser.number_lookup import maps, suffixes
-from numparser.classes import Change, Value, Range, Unit, Quantity
+from . import NumberNormalizer
+from .rules import rules
+from .number_lookup import maps, suffixes
+from .classes import Change, Value, Range, Unit, Quantity
 from pathlib import Path
 
 def get_project_root() -> Path:
