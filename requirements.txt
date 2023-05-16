@@ -1,11 +1,8 @@
-numpy
 requests
 spacy==3.0.9
 spacy-legacy
 torch==2.0.0
-tqdm
 regex
-pandas
 emoji==1.7
 more_itertools
 fuzzywuzzy==0.18.0
@@ -16,3 +13,4 @@ ordered-set
 inflect==5.4.0
 protobuf==3.20.1
 python-Levenshtein
+ordered-set
