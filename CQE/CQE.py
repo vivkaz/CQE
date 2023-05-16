@@ -603,7 +603,7 @@ class NumParser:
         text = re.sub(r"\b([a-z])\.(?!$)", r"\1", text) # e.g. m.p.h -> mph
 
         #text = re.sub(r"(?<![A-Z\d,.])([\d,.]+)([a-zA-Z]{1,3})", r"\1 \2", text) # 1.2mm -> 1.2 mm
-        amount_unit = re.findall(r'(?<![A-Z\d,.])[0-9,.]*[0-9]+(?!E\+|E\−|E\d+)[a-zA-Z]{1,3}[.,]{0,1}', text)
+        amount_unit = re.findall(r'(?<![A-Z\d,.])[0-9,.]*[0-9]+(?!E\+|E\−|E\d+|e\+|e\−|e\d+)[a-zA-Z]{1,3}[.,]{0,1}', text)
         for v in amount_unit:
             index_first_alpha = v.find(next(filter(str.isalpha, v)))
             digit_part = []
@@ -664,7 +664,7 @@ class NumParser:
 
         text = re.sub(r"([a-z]+)(-)(a)(-)([a-z]+)", r"\1 \3 \5", text) # 12-cent-a-share -> 12-cent a share
 
-        text = re.sub(r"(?<!\d)\+(?!\s?\d{2}\s?[(]?\d{4}[)]?\s?\d{4,7}\b)", r"up ", text) # +0.2% -> up 0.2%
+        text = re.sub(r"(?<![\d|a-zA-Z])\+(?!\s?\d{2}\s?[(]?\d{4}[)]?\s?\d{4,7}\b)", r"up ", text) # +0.2% -> up 0.2%
         text = re.sub(r"minus-([\d,.,,]+)", r"-\1", text) # minus-130 -> -130
         text = re.sub(r"[\s]-([\d,.,,]+)", r" minus \1", text) # -5 -> minus 5
         text = re.sub(r"^-([\d,.,,]+)", r"minus \1", text) # when at the beginning of the line
@@ -855,6 +855,16 @@ class NumParser:
                     span = doc.char_span(start, end)
                     if span:
                         retokenizer.merge(span, attrs={"POS": "NUM"})
+
+            expression = r"[0-9,.]*[0-9]+×10\^[-|−]?\d+" # 1.38×10^10
+            for match in re.finditer(expression, doc.text):
+                start, end = match.span()
+                span = doc.char_span(start, end)
+                if span:
+                    try:
+                        retokenizer.merge(span, attrs={"POS": "NUM"})
+                    except ValueError:
+                        logging.warning('\033[93m' + f"Can't merge non-disjoint spans. '{span}' is already part of tokens to merge." + '\033[0m')
 
             expression = r"\b\d{1}[/|⁄]+\d+\b" # 1/16 of a US pint, 1⁄32 of a US quart, and 1⁄128 of a US gallon
             for match in re.finditer(expression, doc.text):
