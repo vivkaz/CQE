@@ -1,5 +1,7 @@
 import json
 import spacy
+from spacy_download import load_spacy
+
 #before running :
 # python -m spacy download en_core_web_trf
 #following https://towardsdatascience.com/building-sentiment-classifier-using-spacy-3-0-transformers-c744bfc767b
@@ -60,7 +62,7 @@ def training_set_per_unit(units,training_data_path):
 def document(data,target_names_dict):
     #Creating empty list called "text"
     text = []
-    nlp=spacy.load("en_core_web_trf")
+    nlp=load_spacy("en_core_web_trf")
     for doc, label in nlp.pipe(data, as_tuples = True):
         for name,i in target_names_dict.items():
             if name==label:

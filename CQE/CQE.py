@@ -12,6 +12,7 @@ from spacy.lang.lex_attrs import like_num as sp_like_num
 from spacy.lang.char_classes import ALPHA, ALPHA_LOWER, ALPHA_UPPER, HYPHENS
 from spacy.lang.char_classes import CONCAT_QUOTES, LIST_ELLIPSES, LIST_ICONS
 from spacy.util import compile_infix_regex
+from spacy_download import load_spacy
 
 from fuzzywuzzy import fuzz
 
@@ -297,7 +298,7 @@ def zip_code(matcher, doc, i, matches):
 
 class NumParser:
     def __init__(self, overload=False, spacy_model: str = "en_core_web_sm"):
-        self.nlp = spacy.load(spacy_model)
+        self.nlp = load_spacy(spacy_model)
         self.overload = overload
         #self.nlp.add_pipe("sentencizer")
         self._modify_defaults_stopwords()
