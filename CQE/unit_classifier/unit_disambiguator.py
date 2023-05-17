@@ -24,7 +24,9 @@ class unit_disambiguator():
             elif key=="′":
                 file_name = os.path.join(path, "unit_models/train_ascii'.spacy/model-best")
             elif key=="″":
-                file_name = os.path.join(path, "unit_models/train_ascii\".spacy/model-best")
+                file_name = os.path.join(path, "unit_models/train_ascii_doublequote.spacy/model-best")
+            elif key=="\"":
+                file_name = os.path.join(path, "unit_models/train_doublequote.spacy/model-best")
             else:
                 file_name = os.path.join(path, "unit_models/train_" + key + ".spacy/model-best")
             self.models[key] = spacy.load(file_name)

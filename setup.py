@@ -5,7 +5,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name='CQE',
-    version='1.0.5',
+    version='1.0.6',
     packages=['CQE','CQE.unit_classifier'],
     package_data={'': ['unit.json'],'': ['unit_models.zip']},# both has to be empty
     url='https://github.com/vivkaz/CQE',
