@@ -77,9 +77,9 @@ simplified scientific notation  =   2.5e+00
 scientific unit                 =   True
 unit surfaces forms             =   ['percentage', 'percent', 'pc', '%', 'pct', 'pct.']
 ```
-See the example in [CQE/example.py](example.py) as well. Run
+See the example in [example.py](example.py) as well. Run
 ```python
-python3 CQE/example.py
+python3 example.py
 ```
 ### Evaluation and Data
 For replicating the results on the paper and comparing against other system, make sure CQE is installed and use
@@ -93,21 +93,21 @@ contains the trained models for the disambiguation which will be unziped on the 
 | File                                                                                                       | Description                                                                                                                 |
 |------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
 | [CQE/NumberNormalizer.py](CQE/NumberNormalizer.py)                                                         | Bound, Number and Unit Normalization script                                                                                 |
-| [CQE/NumberParser.py](CQE/NumberParser.py)                                                                 | Quantity Extraction script                                                                                                  |
+| [CQE/CQE.py](CQE/CQE.py)                                                                 | Quantity Extraction script                                                                                                  |
 | [CQE/rules.py](CQE/rules.py)                                                                               | Rules for [DependencyMatcher](https://spacy.io/usage/rule-based-matching#dependencymatcher)                                 |
 | [CQE/unit.json](CQE/unit.json)                                                                             | 531 units used for the Unit Normalization                                                                                   |
 | [CQE/classes.py](CQE/classes.py)                                                                           | Definition of the Bound, Range, Number, Unit, Noun and Quanitity classes                                                    |
 | [CQE/number_lookup.py](CQE/number_lookup.py)                                                               | Number-word to number mappings                                                                                              |
 | [CQE/example.py](example.py)                                                                               | Usage example                                                                                                               |
-| [CQE/unit_classifer/unit_disambiguator.py](CQE/unit_classifer/unit_disambiguator.py)                       | Class for unit disambiguator based on the bert based classifiers.                                                           |
-| [CQE/unit_classifer/train_classifier_bert.py](CQE/unit_classifer/train_classifier_bert.py)                 | Script for generating spacy based training data and training commands to create classifiers for disambiguation.             |
-| [CQE/unit_classifer/sample_usage.py](CQE/unit_classifer/sample_usage.py)                                   | Usage example for disambiguation class.                                                                                     |
+| [CQE/unit_classifier/unit_disambiguator.py](CQE/unit_classifier/unit_disambiguator.py)                       | Class for unit disambiguator based on the bert based classifiers.                                                           |
+| [CQE/unit_classifier/train_classifier_bert.py](CQE/unit_classifier/train_classifier_bert.py)                 | Script for generating spacy based training data and training commands to create classifiers for disambiguation.             |
+| [CQE/unit_classifier/sample_usage.py](CQE/unit_classifier/sample_usage.py)                                   | Usage example for disambiguation class.                                                                                     |
 
 
 
 ### Units
-The units used for normalization of the unit of an extracted quantity are stored in the [unit.json](data/unit.json) . Each of the 531 units has surfaces, symbols, prefixes, entity, URI, dimensions and currency_code. For composing the file, the list of units from [quantulum3](https://github.com/nielstron/quantulum3/blob/dev/quantulum3/units.json), the list of units from [Wikipedia](https://en.wikipedia.org/wiki/Template:Convert/list_of_units), the surfaces from [Microsoft.Recognizers.Text](https://github.com/microsoft/Recognizers-Text/blob/master/Patterns/English/English-NumbersWithUnit.yaml) ,the [UCUM](https://github.com/lhncbc/ucum-lhc/blob/master/data/ucumDefs.json) units and surfaces and
-wikipedia page of [units] (https://en.wikipedia.org/wiki/Template:Convert/list_of_units)
+The units used for normalization of the unit of an extracted quantity are stored in the [unit.json](CQE/unit.json) . Each of the 531 units has surfaces, symbols, prefixes, entity, URI, dimensions and currency_code. For composing the file, the list of units from [quantulum3](https://github.com/nielstron/quantulum3/blob/dev/quantulum3/units.json), the list of units from [Wikipedia](https://en.wikipedia.org/wiki/Template:Convert/list_of_units), the surfaces from [Microsoft.Recognizers.Text](https://github.com/microsoft/Recognizers-Text/blob/master/Patterns/English/English-NumbersWithUnit.yaml) ,the [UCUM](https://github.com/lhncbc/ucum-lhc/blob/master/data/ucumDefs.json) units and surfaces and
+wikipedia page of [units](https://en.wikipedia.org/wiki/Template:Convert/list_of_units)
 were used.
 
 Example:
@@ -128,7 +128,7 @@ Example:
 }
 ```
 ### Rules
-There are more than 50 rules for [DependencyMatcher](https://spacy.io/usage/rule-based-matching#dependencymatcher) defined in the [rules.py](rules.py). We use the spaCy-model [en core web sm](https://spacy.io/models/en) to create a [Doc object](https://spacy.io/api/doc) with [linguistic annotations](https://spacy.io/usage/linguistic-featuress). The key point is that the rules are not simple pattern matching based on the single words in the sentence, but on those annotations and exploit the structure of the sentence.
+There are more than 50 rules for [DependencyMatcher](https://spacy.io/usage/rule-based-matching#dependencymatcher) defined in the [rules.py](CQE/rules.py). We use the spaCy-model [en core web sm](https://spacy.io/models/en) to create a [Doc object](https://spacy.io/api/doc) with [linguistic annotations](https://spacy.io/usage/linguistic-featuress). The key point is that the rules are not simple pattern matching based on the single words in the sentence, but on those annotations and exploit the structure of the sentence.
 
 Existing rules can be changed and new ones can be added by editing the file. Pay attention to the DependencyMatcher syntax.
 
