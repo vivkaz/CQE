@@ -12,27 +12,30 @@ from spacy.tokens import Token
 
 from .number_lookup import maps, prefixes
 from .unit_classifier.unit_disambiguator import unit_disambiguator
-
+from pathlib import Path
 locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 
-from pathlib import Path
 def get_project_root() -> Path:
     return Path(__file__).parent
 
-root_path=str(get_project_root())
+root_path = str(get_project_root())
 if not os.path.exists(os.path.join(root_path+"/unit_models")):
     import zipfile
     with zipfile.ZipFile(os.path.join(root_path+"/unit_models.zip"), 'r') as zip_ref:
         zip_ref.extractall(os.path.join(root_path))
+
 disambiguator = unit_disambiguator()
 
-AMBIGUOUS_FORMS = ["c", "¥", "kn", "p", "R", "b", "'", "′", '"', '″', "C", "F", "kt", "B", "P", "dram", "pound", "pounds", "a"]
-AMBIGUOUS_UNITS = ["celsius", "pound sterling", "japanese yen", "pixel", "poise", "barn", "bel", "dram", "minute", "south african rand",
-                   "bit", "cent", "knot", "penny", "chinese yuan", "croatian kuna", "inch", "kilobyte", "acre", "second", "armenian dram",
-                   "year", "kiloton", "kibibyte", "coulomb", "farad", "roentgen", "byte", "fahrenheit", "foot", "pound-mass", "point"]
+AMBIGUOUS_FORMS = ["c", "¥", "kn", "p", "R", "b", "'", "′", '"', '″', "C", "F",
+                   "kt", "B", "P", "dram", "drams", "pound", "pounds", "a"]
 
-def get_project_root() -> Path:
-    return Path(__file__).parent
+AMBIGUOUS_UNITS = ["celsius", "pound sterling", "japanese yen", "pixel", "poise",
+                   "barn", "bel", "dram", "minute", "south african rand", "bit",
+                   "cent", "knot", "penny", "chinese yuan", "croatian kuna", "inch",
+                   "kilobyte", "acre", "second", "armenian dram", "year", "kiloton",
+                   "kibibyte", "coulomb", "farad", "roentgen", "byte", "fahrenheit",
+                   "foot", "pound-mass", "point"]
+
 
 class NormalizeException(Exception):
     pass
@@ -60,7 +63,7 @@ def preprocess_number(text: List):
         res.append(str(maps["fractions"].get(text[0], text[0])))
         res.extend(text[1:])
 
-    elif text[0] in maps["fractions"].keys(): # e.g. half turn (the fractions from number_lookup.py)
+    elif text[0] in maps["fractions"]: # e.g. half turn (the fractions from number_lookup.py)
         res.append("".join(str(maps["fractions"][text[0]])))
 
     elif re.findall(r"([0-9,.]*[0-9]+)×?([e|E])([+|−]?)(\d*)\b", text[0]): # e.g. 6.022E20, 6.022E+20, 6.022E−20 etc.
@@ -76,29 +79,33 @@ def preprocess_number(text: List):
 def normalize_number(text: List):
     text = preprocess_number(text)
 
+    x_sym = ""
     if "×" in text[0]: # scientific notation e.g. 5.067×10−4
-        number_1 = locale.atof(text[0][:text[0].index("×")])
-        if text[0][text[0].index("×")+1:] in maps["scientific_notation"]:
-            number_2 = maps["scientific_notation"][text[0][text[0].index("×")+1:]]
-        elif "e−" in text[0][text[0].index("×")+1:]: # 6.022×e-20
-            number_2 = 10**locale.atof("-"+text[0][text[0].index("×")+3:])
-        elif "e" in text[0][text[0].index("×")+1:]:  # 6.022×e+20
-            number_2 = 10**locale.atof(text[0][text[0].index("×")+2:])
-        elif "^−" in text[0][text[0].index("×")+1:]:  # 1.06×10^−10
-            number_2 = 10**locale.atof("-"+text[0][text[0].index("−")+1:])
-        elif "^" in text[0]: # 1.06×10^10
+        x_sym = "×"
+    elif "x" in text[0] and not (text[0] in maps["string_num_map"] or text[0][0].lower() + text[0][1:] in maps["string_num_map"]):
+        x_sym = "x"
+    if x_sym:
+        number_1 = locale.atof(text[0][:text[0].index(x_sym)])
+        if text[0][text[0].index(x_sym)+1:] in maps["scientific_notation"]:
+            number_2 = maps["scientific_notation"][text[0][text[0].index(x_sym)+1:]]
+        elif "e−" in text[0][text[0].index(x_sym)+1:]: # 6.022×e−20
+            number_2 = 10**locale.atof("-"+text[0][text[0].index(x_sym)+3:])
+        elif "e" in text[0][text[0].index(x_sym)+1:]:  # 6.022×e+20, 6.022×e-20
+            number_2 = 10**locale.atof(text[0][text[0].index(x_sym)+2:])
+        elif "^−" in text[0][text[0].index(x_sym)+1:]:  # 1.06×10^−10
+            number_2 = 10**locale.atof("-"+text[0][text[0].index("^")+2:])
+        elif "^" in text[0]: # 1.06×10^10, 1.06×10^-10
             number_2 = 10**locale.atof(text[0][text[0].index("^")+1:])
         else: # 1.06×10
-            number_2 = locale.atof(text[0][text[0].index("×")+1:])
+            number_2 = locale.atof(text[0][text[0].index(x_sym)+1:])
         return number_1*number_2
 
     if len(text) == 1 and is_num(text[0]):
         return locale.atof(text[0])
 
     if len(text) == 1 and not is_digit(text[0]):
-        if text[0] in maps["string_num_map"]:
-            # return maps["string_num_map"][text[0]]
-            return locale.atof(str(maps["string_num_map"][text[0]]))
+        if text[0] in maps["string_num_map"] or text[0][0].lower() + text[0][1:] in maps["string_num_map"]: # sixty as well as Sixty
+            return locale.atof(str(maps["string_num_map"][text[0].lower()]))
         if any(char in ('⁄', '/') for char in text[0]): # 1/16 of a US pint, 1⁄32 of a US quart, and 1⁄128 of a US gallon
             if '⁄' in text[0]:
                 return int(text[0][:text[0].index("⁄")])/int(text[0][text[0].index("⁄")+1:])
@@ -116,6 +123,9 @@ def normalize_number(text: List):
 
     if len(text) == 2 and like_num(text[0]) and like_num(text[1]): # e.g. [66.5, 107] from '66.5 x 107 mm'
         return [locale.atof(text[0]), locale.atof(text[1])]
+
+    if len(text) == 4 and like_num(text[0]) and  like_num(text[2]) and text[1] in maps["scales"] and text[3] in maps["scales"]:
+        return [locale.atof(text[0])*maps["scales"][text[1]],locale.atof(text[2])*maps["scales"][text[3]]]
 
     current = 0.0
     result = 0.0
@@ -145,8 +155,8 @@ def normalize_number(text: List):
 
 def normalize_number_token(tokens: List[Token]):
     lemmatized_text = [token.lemma_ for token in tokens]
-    if any(token._.one_of_number and token in maps["string_num_map"] for token in tokens):
-        lemmatized_text = [tokens[0].lemma_]
+    # if any(token._.one_of_number and token in maps["string_num_map"] for token in tokens):
+    #     lemmatized_text = [tokens[0].lemma_]
     try:
         normalized = normalize_number(lemmatized_text)
         return normalized
@@ -156,8 +166,7 @@ def normalize_number_token(tokens: List[Token]):
 
 
 def normalize_bound_token(tokens: List[Token]):
-    # if not specified assume equality
-    bound = "="
+    bound = "=" # if not specified assume equality
     if len(tokens) > 1 and " ".join(token.lemma_.lower() for token in tokens) in maps["bounds"]:
         bound = maps["bounds"][" ".join(token.lemma_ for token in tokens)] # e.g. "up to"
     else:
@@ -167,36 +176,41 @@ def normalize_bound_token(tokens: List[Token]):
     return bound
 
 def match_text_to_unit(unit_text, units_dict):
-    if any(unit_text==key for key in units_dict):
-        return unit_text, [unit_text]
-    
+    if any(unit_text == key for key in units_dict):
+        return unit_text, [unit_text], None
+
     for key in units_dict.keys():
         if units_dict[key].get("surfaces") is not None and unit_text in units_dict[key].get("surfaces"):
-            return key, [key]
+            return key, [key], None
         if units_dict[key].get("symbols") is not None and unit_text in units_dict[key].get("symbols"):
-            return key, [key]
+            return key, [key], None
         if units_dict[key].get("prefixes") is not None:
-            for symbol in units_dict[key].get("symbols"):
+            for symbol in units_dict[key].get("symbols")+units_dict[key].get("surfaces"):
                 if unit_text in [(prefix+symbol) for prefix in units_dict[key].get("prefixes")]:
-                    index_prefix = [(unit_text in (prefix+symbol) ) for prefix in units_dict[key].get("prefixes")].index(True)
-                    return prefixes[units_dict[key].get("prefixes")[index_prefix]]+key, [key]
+                    index_prefix = [(unit_text in (prefix+symbol)) for prefix in units_dict[key].get("prefixes")].index(True)
+                    return prefixes[units_dict[key].get("prefixes")[index_prefix]]+key, [key], [prefixes[units_dict[key].get("prefixes")[index_prefix]], units_dict[key].get("prefixes")[index_prefix]]
+                if unit_text in [(prefix+symbol) for prefix in prefixes.values()]:
+                    index_prefix = [(unit_text in (prefix+symbol)) for prefix in prefixes.values()].index(True)
+                    return prefixes[units_dict[key].get("prefixes")[index_prefix]]+key, [key], [prefixes[units_dict[key].get("prefixes")[index_prefix]], units_dict[key].get("prefixes")[index_prefix]]
 
-    return unit_text, []
+    return unit_text, [], None
 
 
 def check_ambiguous_unit(text, norm_unit, unit):
     """"use BERT classifier to diambiguate unit if it is ambiguous"""
     if unit=="pounds": # for pounds and pound, use the surface form "pound" in both cases to do disambiguation
         unit="pound"
+    if unit=="drams": # for drams and dram, use the surface form "dram" in both cases to do disambiguation
+        unit="dram"
     if norm_unit in AMBIGUOUS_UNITS and unit in AMBIGUOUS_FORMS:
         return disambiguator.disambiguate(text, unit)
     return norm_unit
 
 
 def normalize_unit_token(tokens: List[Token], text, recursive=False): # return normalized unit + index of the token + whether in the unit.json (i.e scientific) + list of keys
-    if not tokens or (len(tokens)==1 and tokens[0].text=="of"): # unit-less quantity
+    if not tokens or (len(tokens) == 1 and tokens[0].text == "of"): # unit-less quantity
         return "-", None, False, [], False
-    
+
     if len(set(token.text for token in tokens)) != 1 and len(tokens) > 1:
         tokens = [token for i,token in enumerate(tokens) if token.text != tokens[(i+1)%len(tokens)].text]
 
@@ -214,17 +228,17 @@ def normalize_unit_token(tokens: List[Token], text, recursive=False): # return n
     with open(file_name, "r", encoding="utf8") as f:
         units_dict = json.load(f)
 
-    if len(tokens) > 1: # first look if the tokens as whole are present in the units_dict
+    if len(tokens) > 1: # first look if the tokens as whole are present in the units dict
         index = -1 # whole list is unit
         token_text = " ".join(list(OrderedSet(token.lemma_.upper() if token.text.isupper() else token.lemma_ for token in tokens))) # if not token.is_punct)))
     else:
         index = 0 # single token
-        token_text = tokens[0].text # use text because of e.g. 'A/cm2 (a/cm2)
+        token_text = tokens[0].text # use text because of e.g. 'A/cm2' vs. 'a/cm2'
 
     if "/" in token_text: # e.g. 'kV/cm'
         connector = token_text.index("/")
-        first_unit, first_key = match_text_to_unit(token_text[:connector], units_dict)
-        second_unit, second_key = match_text_to_unit(token_text[connector+1:], units_dict)
+        first_unit, first_key, _ = match_text_to_unit(token_text[:connector], units_dict)
+        second_unit, second_key, _ = match_text_to_unit(token_text[connector+1:], units_dict)
 
         return first_unit+" per "+second_unit, index, in_unit_list, [first_key,second_key], False
 
@@ -246,7 +260,7 @@ def normalize_unit_token(tokens: List[Token], text, recursive=False): # return n
         _, index_slice, _, _, slice_unit = normalize_unit_token(tokens[i+1:], text, True)
         token_text[j+1:] = [normalize_unit_token(tokens[i+1:], text, True)[0]]
         second_key = normalize_unit_token(tokens[i+1:], text, True)[-2]
-        
+
         if slice_unit:
             return " ".join(token_text), index_slice+j+1, in_unit_list, [first_key,second_key], True
         if index_slice is not None:
@@ -315,7 +329,7 @@ def normalize_unit_token(tokens: List[Token], text, recursive=False): # return n
                 index_loop = index_new
                 key_token = key
     if key_token:
-        return key_token, index_loop, in_unit_list, [key_token], bool(len(tokens)!=index_loop+1)
+        return check_ambiguous_unit(text, key_token, tokens[index_loop].text), index_loop, in_unit_list, [key_token], bool(len(tokens)!=index_loop+1)
 
     # check if some of the tokens is present as a key in the unit.json file
     norm_units = [token.lemma_.upper() if token.text.isupper() else token.lemma_ for token in tokens if token.lemma_ in units_dict.keys()]
@@ -339,3 +353,51 @@ def normalize_unit_token(tokens: List[Token], text, recursive=False): # return n
                 return " ".join(norm_units) if norm_units else "-", index, in_unit_list, [], False
 
     return " ".join(norm_units) if norm_units else "-", index, in_unit_list, [], False
+
+
+def find_prefix_and_unit(unit):
+    path = get_project_root()
+    file_name = os.path.join(path, "unit.json")
+    with open(file_name, "r", encoding="utf8") as f:
+        units_dict = json.load(f)
+
+    if any(unit==key for key in units_dict):
+        return [unit], None, None
+
+    for key in units_dict:
+        if units_dict[key].get("surfaces") is not None and unit in units_dict[key].get("surfaces"):
+            return [key], None, None
+        if units_dict[key].get("symbols") is not None and unit in units_dict[key].get("symbols"):
+            return [key], None, None
+
+    for key in units_dict.keys():
+        if units_dict[key].get("symbols") is not None:
+            if unit in units_dict[key].get("symbols"):
+                return [key], None, None
+
+            if units_dict[key].get("prefixes") is not None:
+                for symbol in units_dict[key].get("symbols")+units_dict[key].get("surfaces"):
+
+                    if unit in [(prefix+symbol) for prefix in units_dict[key].get("prefixes")]:
+                        index_prefix = [(unit in (prefix+symbol)) for prefix in units_dict[key].get("prefixes")].index(True)
+                        return [key], units_dict[key].get("prefixes")[index_prefix], prefixes[units_dict[key].get("prefixes")[index_prefix]]
+
+                    if unit in [(prefix+symbol) for prefix in prefixes.values()]:
+                        index_prefix = [(unit in (prefix+symbol)) for prefix in prefixes.values()].index(True)
+                        return [key], [k for k, v in prefixes.items() if v == list(prefixes.values())[index_prefix]][0], list(prefixes.values())[index_prefix]
+
+    if "/" in unit: # e.g. 'kV/cm'
+        connector = unit.index("/")
+        _, first_key, first_key_prefixes = match_text_to_unit(unit[:connector], units_dict)
+        _, second_key, second_key_prefixes = match_text_to_unit(unit[connector+1:], units_dict)
+
+        if first_key_prefixes or second_key_prefixes:
+            if first_key:
+                keys = first_key+second_key if second_key else first_key+[unit[connector+1:]]
+                return keys, first_key_prefixes, second_key_prefixes
+            keys = [unit[:connector]]+second_key if second_key else [unit[:connector]]+[unit[connector+1:]]
+            return keys, first_key_prefixes, second_key_prefixes
+        keys = first_key if first_key else [unit[:connector]] + second_key if second_key else [unit[connector+1:]]
+        return keys, None, None
+
+    return None, None, None

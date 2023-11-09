@@ -14,3 +14,4 @@ inflect==5.4.0
 protobuf==3.20.1
 python-Levenshtein
 ordered-set
+numpy

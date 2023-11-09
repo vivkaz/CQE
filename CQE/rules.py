@@ -132,8 +132,7 @@ rules = {
         },
     ],
 
-
-    "num_symbol" : [ # $62, $ billion, US$ million
+    "num_symbol" : [ # $62, $ billion, US$ million, 100元
         {
             "RIGHT_ID": "number",
             "RIGHT_ATTRS": {"POS": "NUM"}
@@ -142,7 +141,7 @@ rules = {
             "LEFT_ID": "number",
             "REL_OP": ">",
             "RIGHT_ID": "symbol",
-            "RIGHT_ATTRS": {"DEP": {"IN": ["quantmod", "nmod"]}, "POS": "SYM", "ORTH": {"NOT_IN": ["#"]}}
+            "RIGHT_ATTRS": {"DEP": {"IN": ["quantmod", "nmod", "appos"]}, "POS": {"IN": ["SYM", "DET"]}, "ORTH": {"NOT_IN": ["#"]}}
         },
     ],
 
@@ -159,10 +158,10 @@ rules = {
         },
     ],
 
-    "noun_num" : [ # 0.4 percent, 127 gigatonnes, 2.1%, six years, million contract (from $48.2 million army contract)
+    "noun_num" : [ # 0.4 percent, 127 gigatonnes, 2.1%, six years, 2.7m, million contract (from $48.2 million army contract)
         {
             "RIGHT_ID": "noun",
-            "RIGHT_ATTRS": {"POS": {"IN": ["PROPN", "NOUN", "INTJ", "ADJ"]}, "ORTH": {"NOT_IN": ["#", "ers"]}}
+            "RIGHT_ATTRS": {"POS": {"IN": ["PROPN", "NOUN", "INTJ", "ADJ", "ADV"]}, "ORTH": {"NOT_IN": ["#", "ers"]}}
         },
         {
             "LEFT_ID": "noun",
@@ -278,6 +277,7 @@ rules = {
             "RIGHT_ATTRS": {"DEP": {"IN": ["quantmod", "nmod", "nummod", "compound"]}, "POS": "NUM"}
         }
     ],
+
     "num_direct_noun" : [ # 87 yo, 50 year-old, 50 mph, 8.5 kW, 0.6 percent/%, one league
         {
             "RIGHT_ID": "num",
@@ -292,7 +292,6 @@ rules = {
     ],
 
     "num_quantmod" : [ # around/about 600, just/only 799, over/under thousand, more than four times*, up to 400*
-        # also between 62 (between $62 and $68)
         # * as many as 14 (14,as;14,many;14,as -> as separate matches)
         {
             "RIGHT_ID": "number",
@@ -303,7 +302,8 @@ rules = {
             "REL_OP": ">",
             "RIGHT_ID": "quant",
             "RIGHT_ATTRS": {"DEP": {"IN": ["quantmod", "amod", "compound", "nummod", "nmod", "advmod", "npadvmod"]},
-                            "POS": {"IN": ["ADJ", "SCONJ", "ADV", "PART", "ADP", "DET"]}}
+                            "POS": {"IN": ["ADJ", "SCONJ", "ADV", "PART", "ADP", "DET"]},
+                            "ORTH": {"NOT_IN": ["between", "from"]}}
         },
     ],
 
@@ -353,6 +353,7 @@ rules = {
             "RIGHT_ATTRS": {"DEP": {"IN": ["advcl", "advmod", "amod", "conj", "acl", "prep", "prt", "ROOT", "pcomp", "ccomp", "xcomp"]}, "POS": {"IN": ["VERB", "ADV", "ADP"]}}
         },
     ],
+
     "num_quantmod_chain" : [ # just under 296, at least 74
         {
             "RIGHT_ID": "number",
@@ -507,7 +508,7 @@ rules = {
     "num_to_num_2" : [ # $920 to $1730 a week
         {
             "RIGHT_ID": "number",
-            "RIGHT_ATTRS": {"POS": "NUM", "IS_DIGIT": True}
+            "RIGHT_ATTRS": {"POS": "NUM", "_": {"like_numeric_value": True}}
         },
         {
             "LEFT_ID": "number",
@@ -526,7 +527,7 @@ rules = {
     "num_to_num_3" : [ # 32 million to 33 million, 15 billion to 16 billion euros
         {
             "RIGHT_ID": "number", # 32
-            "RIGHT_ATTRS": {"POS": "NUM", "IS_DIGIT": True}
+            "RIGHT_ATTRS": {"POS": "NUM", "_": {"like_numeric_value": True}}
         },
         {
             "LEFT_ID": "number",
@@ -550,7 +551,7 @@ rules = {
             "LEFT_ID": "number3",
             "REL_OP": ">",
             "RIGHT_ID": "number4", # 33
-            "RIGHT_ATTRS": {"POS": "NUM", "IS_DIGIT": True}
+            "RIGHT_ATTRS": {"POS": "NUM", "_": {"like_numeric_value": True}}
         },
     ],
 
@@ -563,13 +564,13 @@ rules = {
             "LEFT_ID": "number",
             "REL_OP": ">",
             "RIGHT_ID": "number2", # 90
-            "RIGHT_ATTRS": {"POS": "NUM", "IS_DIGIT": True}
+            "RIGHT_ATTRS": {"POS": "NUM", "_": {"like_numeric_value": True}}
         },
         {
             "LEFT_ID": "number",
             "REL_OP": ">",
             "RIGHT_ID": "number3", # 100
-            "RIGHT_ATTRS": {"POS": "NUM", "IS_DIGIT": True}
+            "RIGHT_ATTRS": {"POS": "NUM", "_": {"like_numeric_value": True}}
         },
         {
             "LEFT_ID": "number",
@@ -607,7 +608,7 @@ rules = {
     "num_to_num_dig" : [ # 5-10
         {
             "RIGHT_ID": "number",
-            "RIGHT_ATTRS": {"POS": "NUM", "IS_DIGIT": True}
+            "RIGHT_ATTRS": {"POS": "NUM", "_": {"like_numeric_value": True}}
         },
         {
             "LEFT_ID": "number",
@@ -619,7 +620,7 @@ rules = {
             "LEFT_ID": "part",
             "REL_OP": ".",
             "RIGHT_ID": "number2",
-            "RIGHT_ATTRS": {"POS": {"IN": ["NUM"]}, "IS_DIGIT": True}
+            "RIGHT_ATTRS": {"POS": {"IN": ["NUM"]}, "_": {"like_numeric_value": True}}
         },
 
     ],
@@ -653,7 +654,7 @@ rules = {
     "num_to_num_num_dig" : [ # comment out
         {
             "RIGHT_ID": "number",
-            "RIGHT_ATTRS": {"POS": "NUM", "IS_DIGIT": True}
+            "RIGHT_ATTRS": {"POS": "NUM", "_": {"like_numeric_value": True}}
         },
         {
             "LEFT_ID": "number",
@@ -665,7 +666,7 @@ rules = {
             "LEFT_ID": "number",
             "REL_OP": ">",
             "RIGHT_ID": "number2",
-            "RIGHT_ATTRS": {"DEP": {"IN": ["quantmod"]}, "POS": {"IN": ["NUM"]}, "IS_DIGIT": True}
+            "RIGHT_ATTRS": {"DEP": {"IN": ["quantmod"]}, "POS": {"IN": ["NUM"]}, "_": {"like_numeric_value": True}}
         },
         {
             "LEFT_ID": "number",
@@ -831,6 +832,7 @@ rules = {
             "RIGHT_ATTRS": {"POS": {"IN": ["ADJ"]}}
         },
     ],
+
     "unit_frac_4" : [ # parts per million, tests per day, miles per hour
         {
             "RIGHT_ID": "noun", # parts
@@ -958,7 +960,7 @@ rules = {
 
     ],
 
-    "noun_quant_noun_noun" : [ # 256gb screeen size, 50 foot building lots, ... billion dalkon shield claimants, ... million world bank loan 
+    "noun_quant_noun_noun" : [ # 256gb screeen size, 50 foot building lots, ... billion dalkon shield claimants, ... million world bank loan
         {
             "RIGHT_ID": "noun",
             "RIGHT_ATTRS": {"POS": {"IN": ["PROPN", "NOUN"]}}
@@ -1027,8 +1029,8 @@ rules = {
             "RIGHT_ATTRS": {"POS": {"IN": ["NUM"]}}
         },
         {
-            "LEFT_ID": "adp",
-            "REL_OP": ">",
+            "LEFT_ID": "noun",
+            "REL_OP": ".",
             "RIGHT_ID": "adp2",
             "RIGHT_ATTRS": {"ORTH": {"IN": ["to"]}}
         },
@@ -1036,7 +1038,7 @@ rules = {
             "LEFT_ID": "adp2",
             "REL_OP": ">",
             "RIGHT_ID": "noun2",
-            "RIGHT_ATTRS": {"DEP": {"IN": ["pobj"]}}
+            "RIGHT_ATTRS": {"DEP": {"IN": ["pobj"]}, "POS": {"IN": ["NOUN", "SYM"]}}
         },
         {
             "LEFT_ID": "noun2",
@@ -1123,13 +1125,13 @@ rules = {
     "adp_num_cconj_num_with_unit" : [ # between $62 and $68 per share, between 4 and 5
         {
             "RIGHT_ID": "number",
-            "RIGHT_ATTRS": {"POS": {"IN": ["NUM"]}, "ORTH": {"NOT_IN": [ "thousand", "million", "billion", "trillion"]}, "LIKE_NUM": True}
+            "RIGHT_ATTRS": {"POS": {"IN": ["NUM"]}, "ORTH": {"NOT_IN": [ "thousand", "million", "billion", "trillion"]}, "_": {"like_number": True}}
         },
         {
             "LEFT_ID": "number",
             "REL_OP": ">",
             "RIGHT_ID": "number2",
-            "RIGHT_ATTRS": {"POS": {"IN": ["NUM"]}, "LIKE_NUM": True}
+            "RIGHT_ATTRS": {"POS": {"IN": ["NUM"]}, "_": {"like_number": True}}
         },
         {
             "LEFT_ID": "number",
@@ -1173,7 +1175,13 @@ rules = {
             "REL_OP": ">",
             "RIGHT_ID": "noun2", # HZ
             "RIGHT_ATTRS": {"POS": {"IN": ["PROPN", "NOUN", "SYM"]}}
-        }
+        },
+        {
+            "LEFT_ID": "noun2",
+            "REL_OP": ">",
+            "RIGHT_ID": "number2", # 20,000
+            "RIGHT_ATTRS": {"DEP": {"IN": ["quantmod", "nmod", "nummod", "compound", "amod", "nsubj"]}, "POS": "NUM"}
+        },
     ],
 
     "adp_num_cconj_num_with_unit_3" : [ # from 2,415 to 2,315, from 160 to 200
@@ -1232,7 +1240,7 @@ rules = {
         }
     ],
 
-    "adp_num_cconj_num_with_unit_5" : [ #between US$ 160 million and US$ 171 million, between 160 million and 171
+    "adp_num_cconj_num_with_unit_5" : [ # between US$ 160 million and US$ 171 million, between 160 million and 171
         {
             "RIGHT_ID": "number", # million
             "RIGHT_ATTRS": {"POS": {"IN": ["NUM"]}, "_": {"like_scale": True}}
@@ -1241,7 +1249,7 @@ rules = {
             "LEFT_ID": "number",
             "REL_OP": ">",
             "RIGHT_ID": "number2", # 160
-            "RIGHT_ATTRS": {"POS": "NUM", "IS_DIGIT": True}
+            "RIGHT_ATTRS": {"POS": "NUM", "_": {"like_numeric_value": True}}
         },
         {
             "LEFT_ID": "number",
@@ -1250,14 +1258,14 @@ rules = {
             "RIGHT_ATTRS": {"ORTH": {"IN": ["between"]}}
         },
         {
-            "LEFT_ID": "number",
-            "REL_OP": ">",
+            "LEFT_ID": "number2",
+            "REL_OP": "$++",
             "RIGHT_ID": "adp2",
             "RIGHT_ATTRS": {"ORTH": {"IN": ["and"]}}
         },
         {
-            "LEFT_ID": "number",
-            "REL_OP": ">",
+            "LEFT_ID": "adp2",
+            "REL_OP": "$++",
             "RIGHT_ID": "number3", # million
             "RIGHT_ATTRS": {"POS": "NUM", "_": {"like_scale": True}}
         },
@@ -1265,7 +1273,7 @@ rules = {
             "LEFT_ID": "number3",
             "REL_OP": ">",
             "RIGHT_ID": "number4", # 171
-            "RIGHT_ATTRS": {"POS": "NUM", "IS_DIGIT": True}
+            "RIGHT_ATTRS": {"POS": "NUM", "_": {"like_numeric_value": True}}
         },
     ],
 
@@ -1300,6 +1308,43 @@ rules = {
         }
     ],
 
+    "adp_num_cconj_num_with_unit_7" : [ # between $100 million and $500 million
+        {
+            "RIGHT_ID": "number", # million
+            "RIGHT_ATTRS": {"POS": {"IN": ["NUM"]}, "_": {"like_scale": True}}
+        },
+        {
+            "LEFT_ID": "number",
+            "REL_OP": ">",
+            "RIGHT_ID": "number2", # 160
+            "RIGHT_ATTRS": {"POS": "NUM",  "_": {"like_scale": False}}
+        },
+        {
+            "LEFT_ID": "number",
+            "REL_OP": "<",
+            "RIGHT_ID": "adp",
+            "RIGHT_ATTRS": {"ORTH": {"IN": ["between"]}}
+        },
+        {
+            "LEFT_ID": "number",
+            "REL_OP": ">",
+            "RIGHT_ID": "adp2",
+            "RIGHT_ATTRS": {"ORTH": {"IN": ["and"]}}
+        },
+        {
+            "LEFT_ID": "number",
+            "REL_OP": ">",
+            "RIGHT_ID": "number3", # million
+            "RIGHT_ATTRS": {"POS": "NUM", "_": {"like_scale": True}}
+        },
+        {
+            "LEFT_ID": "number3",
+            "REL_OP": ">",
+            "RIGHT_ID": "number4", # 171
+            "RIGHT_ATTRS": {"POS": "NUM",  "_": {"like_scale": False}}
+        },
+    ],
+
     "compound_num": [ # five hundred
         {
             "RIGHT_ID": "num",
@@ -1312,6 +1357,7 @@ rules = {
             "RIGHT_ATTRS": {"POS": {"IN": ["NUM"], "DEP": {"IN": ["nummod", "compound", "quantmod"]}}, "IS_DIGIT": False}
         },
     ],
+
     "compound_num_2": [ # [thousand, million, three] from "three million five hundred thousand"
         {
             "RIGHT_ID": "num",
@@ -1321,13 +1367,50 @@ rules = {
             "LEFT_ID": "num",
             "REL_OP": ">",
             "RIGHT_ID": "num2",
-            "RIGHT_ATTRS": {"POS": {"IN": ["NUM"], "DEP": {"IN": ["nummod", "compound", "quantmod"]}}, "IS_DIGIT": False}
+            "RIGHT_ATTRS": {"POS": {"IN": ["NUM"]}, "DEP": {"IN": ["nummod", "compound", "quantmod"]}, "IS_DIGIT": False}
         },
         {
             "LEFT_ID": "num2",
             "REL_OP": ">",
             "RIGHT_ID": "num3",
-            "RIGHT_ATTRS": {"POS": {"IN": ["NUM"], "DEP": {"IN": ["nummod", "compound", "quantmod"]}}, "IS_DIGIT": False}
+            "RIGHT_ATTRS": {"POS": {"IN": ["NUM"]}, "DEP": {"IN": ["nummod", "compound", "quantmod"]}, "IS_DIGIT": False}
+        },
+    ],
+
+    "complex_num_expression": [
+        {
+            "RIGHT_ID": "number",
+            "RIGHT_ATTRS": {"DEP": {"IN": ["quantmod", "nmod", "nummod", "compound", "amod", "nsubj"]}, "POS": "NUM"}
+        },
+        {
+            "LEFT_ID": "number",
+            "REL_OP": "<",
+            "RIGHT_ID": "noun",
+            "RIGHT_ATTRS": {"POS": {"IN": ["PROPN", "NOUN"]}, "LEMMA": {"IN": ["hour", "minute", "second", "millisecond", "dollar", "euro", "cent", "inch", "foot", "millimeter", "millimetre", "centimeter", \
+                                                                               "centimetre", "decimeter", "decimetre", "mile", "yard", "kilometer", "kilometre", "meter", "metre", "pound", \
+                                                                               "ounce", "kilogram", "gram", "liter", "litre", "milliliter", "millilitre", \
+                                                                               "day", "week", "month", "year"]}}
+        },
+        {
+            "LEFT_ID": "noun",
+            "REL_OP": ".",
+            "RIGHT_ID": "and",
+            "RIGHT_ATTRS": {"POS": {"IN": ["CCONJ", "PUNCT"]}, "ORTH": {"IN": ["and", ","]}}
+        },
+        {
+            "LEFT_ID": "and",
+            "REL_OP": ".",
+            "RIGHT_ID": "number2",
+            "RIGHT_ATTRS": {"DEP": {"IN": ["quantmod", "nmod", "nummod", "compound", "amod", "nsubj"]}, "POS": "NUM"}
+        },
+        {
+            "LEFT_ID": "number2",
+            "REL_OP": "<",
+            "RIGHT_ID": "noun2",
+            "RIGHT_ATTRS": {"POS": {"IN": ["PROPN", "NOUN"]}, "LEMMA": {"IN": ["hour", "minute", "second", "millisecond", "dollar", "euro", "cent", "inch", "foot", "millimeter", "millimetre", "centimeter", \
+                                                                               "centimetre", "decimeter", "decimetre", "mile", "yard", "kilometer", "kilometre", "meter", "metre", "pound", \
+                                                                               "ounce", "kilogram", "gram", "liter", "litre", "milliliter", "millilitre", \
+                                                                               "day", "week", "month", "year"]}}
         },
     ],
 
@@ -1402,17 +1485,5 @@ rules = {
         {"ORTH": "ZIP"}
     ],
 
-    #
-    #     "noun_quant_punkt" : [#~10tw/h
-    #         {
-    #             "RIGHT_ID": "adp",
-    #             "RIGHT_ATTRS": {"POS":"ADP"},
-    #         },
-    #
-    #         {
-    #             "RIGHT_ID": "noun",
-    #             "RIGHT_ATTRS": {"DEP": "pobj"},
-    #             "LEFT_ID": "adp",
-    #             "REL_OP": ";*"}
-    # ]
+
 }

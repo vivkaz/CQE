@@ -5,6 +5,8 @@ import argparse
 import logging
 import spacy
 import os
+import numpy
+import copy
 from spacy.matcher import DependencyMatcher, Matcher
 from spacy.tokens import Token
 from spacy.lang.lex_attrs import is_digit
@@ -18,9 +20,10 @@ from fuzzywuzzy import fuzz
 
 from . import NumberNormalizer
 from .rules import rules
-from .number_lookup import maps, suffixes
-from .classes import Change, Value, Range, Unit, Quantity
 from pathlib import Path
+from .number_lookup import maps, suffixes,circled_digits
+from .classes import Change, Value, Range, Unit, Quantity
+from .unit_conversion import unit_conversion
 
 def get_project_root() -> Path:
     return Path(__file__).parent
@@ -50,14 +53,30 @@ MONEY_SYMBOL = {"¥", "$", "₿", "¢", "₡", "₫", "₾", "₵", "₹", "円"
 def lk_num(text):
     if sp_like_num(text):
         return True
-    if text in maps["scales"]:
-        return True
-    return False
+    return lk_scale(text)
 
 def lk_scale(text):
     if text in maps["scales"]:
         return True
     return False
+
+def is_float(string):
+    try:
+        float(string)
+        return float(string) not in [float('inf'), float('-inf')] and float(string) == float(string) # NaN
+    except ValueError:
+        return False
+
+def lk_digit(text):
+    if text[0] == '-': # negative number
+        text = text[1:]
+    if text.isnumeric():
+        return True
+    if is_float(text):
+        return True
+    if text.replace(",","").isnumeric(): # e.g. 117,000
+        return True
+    return is_float(text.replace(",","")) # e.g. 64,863.10
 
 def clean_up(unit, value, nouns):
     for noun in nouns.copy():
@@ -77,6 +96,25 @@ def remove_match(func):
             if any(doc[token_id]._.ignore for token_id in match[1]):
                 if j not in remove_ids:
                     remove_ids.append(j)
+            if any(doc[token_id]._.consider_date for token_id in match[1]) and not all(doc[token_id]._.consider_date for token_id in match[1]):
+                if j not in remove_ids:
+                    remove_ids.append(j)
+            if any(doc[token_id].text in [",", "or"] for token_id in range(min(match[1]), max(match[1])+1)) and match[0] != 18149999624860298012: # Group Unite, down; $29 million or 33 cents per share
+                if j not in remove_ids:
+                    remove_ids.append(j)
+            if match[0] == 18149999624860298012: # COMPLEX_EXPR
+                index = [doc[token].text for token in sorted(match[1])].index("and") if any(doc[token].text == "and" for token in sorted(match[1])) else [doc[token].text for token in sorted(match[1])].index(",")
+                if doc[sorted(match[1])[index-1]].lemma_ == doc[sorted(match[1])[-1]].lemma_: # 6.1 inches and 6.7 inches
+                    if j not in remove_ids:
+                        remove_ids.append(j)
+                nouns = ["pound-mass" if doc[t].lemma_ == "pound" else doc[t].lemma_ for t in sorted(match[1]) if doc[t].pos_ in ["PROPN", "NOUN"]]
+                if nouns[0] in unit_conversion and (not nouns[1] in unit_conversion[nouns[0]] or (nouns[1] in unit_conversion[nouns[0]] and unit_conversion[nouns[0]][nouns[1]] < 1)): # seven days and 400 miles; 4 months and 3 years; 10 cents, $1
+                    if j not in remove_ids:
+                        remove_ids.append(j)
+                numbers = [doc[t].lemma_ for t in sorted(match[1]) if doc[t].pos_ in ["NUM"]]
+                if not all(lk_digit(num) for num in numbers) or not all(num in maps["string_num_map"] for num in numbers): # one-on-one 3 minutes and 47 seconds
+                    if j not in remove_ids:
+                        remove_ids.append(j)
         for j in sorted(remove_ids, reverse=True):
             matches.pop(j)
             if j < i:
@@ -118,7 +156,7 @@ def default_callback(matcher, doc, i, matches):
     for token in tokens:
         if doc[token].lemma_ in maps["scales"]:
             doc[token]._.set("scale", True)
-        if doc[token].lemma_ in (maps["scales"].keys() | maps["fractions"].keys() | maps["string_num_map"].keys()):
+        if doc[token].lemma_ in (maps["scales"].keys() | maps["fractions"].keys() | maps["string_num_map"].keys()) or lk_digit(doc[token].lemma_):
             doc[token]._.set("number", True)
             number_index = token
         if doc[token].lemma_ in maps["fractions"]:
@@ -186,9 +224,6 @@ def range_callback(matcher, doc, i, matches):
             if consider_sport_unit is True: # extract <number>-<number> quantities, keep them only if they have proper unit
                 doc[tokens[0]]._.set("consider", True)
                 doc[tokens[2]]._.set("consider", True)
-    #else:
-        #print(tokens)
-        #matches.remove(matches[i])
 
 # noinspection PyProtectedMember
 @remove_match
@@ -207,29 +242,18 @@ def between_range_callback(matcher, doc, i, matches): # add for quantities like 
                 bound_indices.append(token)
         bound_index_l = min(bound_indices)
         bound_index_r = max(bound_indices)
-        if bound_index_r-bound_index_l < 5:
+        if bound_index_r-bound_index_l <= 5:
             for j, num_index in enumerate(sorted(range_l_r)):
                 if j == 0 and bound_index_l < num_index < bound_index_r:
-                    #print(j, doc[num_index])
                     if not doc[num_index]._.range_r and not doc[num_index]._.range_l: # check if already set
                         doc[num_index]._.set("range_l", True)
-                        #print("L", doc[num_index])
                     elif j < len(range_l_r) and doc[num_index]._.range_l: # left already set
                         continue
                     else:
                         matches[i][1].remove(num_index)
                         break
                 elif bound_index_r < num_index and not doc[num_index]._.range_l: # e.g. from 12.3 inches to between 12.7 and 13 # j == 1?
-                    #print(j,doc[num_index])
                     doc[num_index]._.set("range_r", True)
-                    #print("R", doc[num_index])
-                #else:
-                #    print("no", j, doc[num_index], bound_index_l, num_index, bound_index_r)
-        #else:
-        #    matches.remove(matches[i])
-    #else:
-    #    matches.remove(matches[i])
-
 
 # noinspection PyProtectedMember
 @remove_match
@@ -269,7 +293,6 @@ def one_of_callback(matcher, doc, i, matches):
             if any(token.pos_=="NUM" and is_digit(token.text) for token in list(doc[token].children)): # one of those 40 percent
                 for token in tokens[:j]:
                     doc[token]._.set("ignore", True)
-                #matches.remove(matches[i])
             else:
                 doc[token]._.set("one_of_noun", True)
 
@@ -280,6 +303,16 @@ def compound_num(matcher, doc, i, matches):
     for token in tokens:
         doc[token]._.set("number", True)
 
+@remove_match
+def complex_expr_callback(matcher, doc, i, matches):
+    match_id, tokens = matches[i]
+    if not (any(doc[t]._.range_l for t in tokens) and any(doc[t]._.range_r for t in tokens)): # 5 hours and 30 minutes
+        index = [doc[token].text for token in sorted(tokens)].index("and") if any(doc[t].text == "and" for t in tokens) else [doc[token].text for token in sorted(tokens)].index(",")
+        for token in sorted(tokens)[:index]: # 50 hours
+            if not doc[token]._.second_compl_num:
+                doc[token]._.set("first_compl_num", True)
+        for token in sorted(tokens)[index+1:]: # 30 minutes
+            doc[token]._.set("second_compl_num", True)
 
 # noinspection PyProtectedMember
 def phone_number(matcher, doc, i, matches):
@@ -295,12 +328,15 @@ def zip_code(matcher, doc, i, matches):
     if span:
         for token in span:
             token._.set("ignore", True)
-
-class NumParser:
-    def __init__(self, overload=False, spacy_model: str = "en_core_web_sm"):
+path = get_project_root()
+file_name = os.path.join(path, "unit.json")
+with open(file_name, "r", encoding="utf8") as file:
+    units_dict = json.load(file)
+class CQE:
+    def __init__(self, overload=False, ignore_for=False, spacy_model: str = "en_core_web_sm"):
         self.nlp = load_spacy(spacy_model)
         self.overload = overload
-        #self.nlp.add_pipe("sentencizer")
+        self.ignore_some_rules = ignore_for # of, for, off after the quantity
         self._modify_defaults_stopwords()
         prefixes = list(self.nlp.Defaults.prefixes)
 
@@ -310,7 +346,7 @@ class NumParser:
         prefix_regex = spacy.util.compile_prefix_regex(prefixes)
         self.nlp.tokenizer.prefix_search = prefix_regex.search
 
-    # Modify tokenizer infix patterns
+        # Modify tokenizer infix patterns
 
         infixes = (
                 LIST_ELLIPSES
@@ -336,15 +372,13 @@ class NumParser:
         self.matcher.add("NUM_TO_NUM", [rules["num_to_num"], rules["num_to_num_2"], rules["num_to_num_3"], rules["num_to_num_4"], rules["num_to_num_5"], rules["num_to_num_dig"]], on_match=range_callback)
         self.matcher.add("ADP_NUM_CCONJ_NUM", [rules["adp_num_cconj_num"], rules["adp_num_cconj_num_2"], rules["adp_num_cconj_num_3"]], on_match=between_range_callback)
         #self.matcher.add("ADP_NUM_CCONJ_NUM_WITH_SCALE", [rules["adp_num_cconj_num_with_scale"]], on_match=between_range_callback) #
-        self.matcher.add("ADP_NUM_CCONJ_NUM_WITH_UNIT", [rules["adp_num_cconj_num_with_unit"], rules["adp_num_cconj_num_with_unit_2"], rules["adp_num_cconj_num_with_unit_3"], rules["adp_num_cconj_num_with_unit_4"], rules["adp_num_cconj_num_with_unit_5"], rules["adp_num_cconj_num_with_unit_6"]], on_match=between_range_callback)
-        
+        self.matcher.add("ADP_NUM_CCONJ_NUM_WITH_UNIT", [rules["adp_num_cconj_num_with_unit"], rules["adp_num_cconj_num_with_unit_2"], rules["adp_num_cconj_num_with_unit_3"], rules["adp_num_cconj_num_with_unit_4"], rules["adp_num_cconj_num_with_unit_5"], rules["adp_num_cconj_num_with_unit_6"], rules["adp_num_cconj_num_with_unit_7"]], on_match=between_range_callback)
         # other ranges
         self.matcher.add("RANGE_SINGLE", [rules["range_single"]], on_match=broad_range_single)
         self.matcher.add("RANGE_DOUBLE", [rules["range_double"]], on_match=broad_range_double)
 
         # fractions
         self.matcher.add("FRAC", [rules["frac"], rules["frac_2"]], on_match=frac_callback)
-        #self.matcher.add("FRAC_2", [rules["frac_2"]], on_match=frac_callback)
 
         self.matcher.add("COMPOUND_NUM", [rules["compound_num"], rules["compound_num_2"]], on_match=compound_num)
         self.matcher.add("NUM_NUM", [rules["num_num"]], on_match=default_callback)
@@ -352,10 +386,11 @@ class NumParser:
         self.matcher.add("SYMBOL_NUM", [rules["symbol_num"]], on_match=default_callback)
 
         # rules including check for filtering out (e.g. iphone 11, FTSE 100 etc.)
+        self.matcher.add("COMPLEX_EXPR", [rules["complex_num_expression"]], on_match=complex_expr_callback)
         self.matcher.add("NOUN_NUM", [rules["noun_num"]], on_match=default_callback)
         self.matcher.add("NUM_QUANTMOD", [rules["num_quantmod"], rules["num_quantmod_chain"]], on_match=num_quantmod)
         self.matcher.add("NUM_DIRECT_PROPN", [rules["num_direct_propn"]], on_match=default_callback)
-        
+
         # known rules
         self.matcher.add("MINUS_NUM", [rules["minus_num"], rules["minus_num_2"]], on_match=num_quantmod)
         self.matcher.add("QUANTMOD_DIRECT_NUM", [rules["quantmod_direct_num"]], on_match=num_quantmod)
@@ -373,21 +408,20 @@ class NumParser:
         self.matcher.add("NUM_NOUN", [rules["num_noun"]], on_match=default_callback)
         self.matcher.add("DIM2", [rules["dimensions_2"]], on_match=default_callback)
         self.matcher.add("NOUN_QUANT_NOUN_NOUN", [rules["noun_quant_noun_noun"]], on_match=default_callback)
-        self.matcher.add("ONE_OF", [rules["one_of"]], on_match=one_of_callback)
 
         # other (unknown)
         self.matcher.add("NOUN_NUM_RIGHT_NOUN", [rules["noun_num_right_noun"]], on_match=default_callback)
         self.matcher.add("NUM_NUM_ADP_RIGHT_NOUN", [rules["num_num_adp_right_noun"]], on_match=default_callback)
-        #self.matcher.add("NUM_TO_NUM_NUM", [rules["num_to_num_num"], rules["num_to_num_num_dig"]], on_match=default_callback) #
-        #self.matcher.add("NUM_RIGHT_NOUN", [rules["num_right_noun"]], on_match=default_callback) #
-        
-        self.matcher.add("LONELY_NUM", [rules["lonely_num"]], on_match=lonely_num)
+        self.matcher.add("NUM_TO_NUM_NUM", [rules["num_to_num_num"], rules["num_to_num_num_dig"]], on_match=default_callback) #
+        self.matcher.add("NUM_RIGHT_NOUN", [rules["num_right_noun"]], on_match=default_callback) #
 
+        self.matcher.add("LONELY_NUM", [rules["lonely_num"]], on_match=lonely_num)
+        self.matcher.add("ONE_OF", [rules["one_of"]], on_match=one_of_callback)
 
         self.pattern_matcher = Matcher(self.nlp.vocab) # match sequences of tokens, based on pattern rules
         self.pattern_matcher.add("PHONE_NUMBER",
-                    [rules["phone_number_pattern_1"], rules["phone_number_pattern_2"], rules["phone_number_pattern_3"], rules["phone_number_pattern_4"], rules["phone_number_pattern_5"]],
-                    on_match=phone_number)
+                                 [rules["phone_number_pattern_1"], rules["phone_number_pattern_2"], rules["phone_number_pattern_3"], rules["phone_number_pattern_4"], rules["phone_number_pattern_5"]],
+                                 on_match=phone_number)
         self.pattern_matcher.add("ZIP_CODE", [rules["zip_number_pattern"]], on_match=zip_code)
 
         if not Token.has_extension("bound"):
@@ -406,6 +440,8 @@ class NumParser:
             Token.set_extension("broad_range", default=None)
         if not Token.has_extension("consider"):
             Token.set_extension("consider", default=None)
+        if not Token.has_extension("consider_date"):
+            Token.set_extension("consider_date", default=None)
         if not Token.has_extension("ignore"):
             Token.set_extension("ignore", default=None)
         if not Token.has_extension("ignore_noun"):
@@ -426,23 +462,99 @@ class NumParser:
             Token.set_extension("denominator", default=None)
         if not Token.has_extension("like_number"):
             Token.set_extension("like_number", getter=lambda token: lk_num(token.lemma_))
+        if not Token.has_extension("like_numeric_value"):
+            Token.set_extension("like_numeric_value", getter=lambda token: lk_digit(token.lemma_))
         if not Token.has_extension("fraction"):
             Token.set_extension("fraction", getter=lambda token: token.lemma_ in maps["fractions"]) #.keys())
         if not Token.has_extension("quantity_part"):
             Token.set_extension("quantity_part", default=None)
+        if not Token.has_extension("first_compl_num"):
+            Token.set_extension("first_compl_num", default=None)
+        if not Token.has_extension("second_compl_num"):
+            Token.set_extension("second_compl_num", default=None)
 
     @staticmethod
-    def unit_surface_form(normalized_unit):
-        """given a normalized form of a unit gives back all the surface forms"""
-        path = get_project_root()
-        file_name = os.path.join(path, "unit.json")
-        with open(file_name, "r", encoding="utf8") as f:
-            units_dict = json.load(f)
+    def get_unit_hierarchy():
+        """returns unit hierarchy based on the entity attribute"""
+
+
+        unit_hierarchy = {}
+        for entry in units_dict:
+            if units_dict[entry]["entity"] not in unit_hierarchy:
+                unit_hierarchy[units_dict[entry]["entity"]] = {}
+            unit_hierarchy[units_dict[entry]["entity"]][entry] = {"surfaces": units_dict[entry]["surfaces"], "symbols": units_dict[entry]["symbols"]}
+        return unit_hierarchy
+
+    @staticmethod
+    def get_all_units():
+        """returns a list of all normalized forms of the units we have"""
+
+        return list(units_dict.keys())
+
+    @staticmethod
+    def get_all_unit_surface_forms():
+        """returns a dictionary with all units, their surface forms and symbols"""
+
+        return { key: { "surfaces": units_dict[key].get("surfaces"), "symbols": units_dict[key].get("symbols") } for key in units_dict.keys() }
+
+    @staticmethod
+    def get_specific_unit_surface_forms(normalized_unit):
+        """given a normalized form of a unit, returns all the surface forms and symbols"""
+
         splitted_normalized_unit = normalized_unit.split()
+
         if "per" in splitted_normalized_unit: # e.g. 'dollar per square foot', 'cent per share per year'
-            keys = list(filter(lambda a: a != "per", splitted_normalized_unit))
-            return { key: units_dict[key].get("surfaces")+units_dict[key].get("symbols") if key in units_dict else [] for key in keys }
-        return { normalized_unit: units_dict[normalized_unit].get("surfaces")+units_dict[normalized_unit].get("symbols") } if normalized_unit in units_dict else {}
+            keys = normalized_unit.split(" per ")
+            return { normalized_unit: { "surfaces": [' per '.join(element) for element in itertools.product(*[units_dict[key].get("surfaces") if key in units_dict else [key] for key in keys])], \
+                                        "symbols": [' per '.join(element) for element in itertools.product(*[units_dict[key].get("symbols") if key in units_dict else [key] for key in keys])]
+                                        }
+                     } | { key: { "surfaces": units_dict[key].get("surfaces"), "symbols": units_dict[key].get("symbols") } if key in units_dict else {} for key in keys }
+
+        if "a" in splitted_normalized_unit: # e.g. 'dollar a month'
+            keys = normalized_unit.split(" a ")
+            return { normalized_unit: { "surfaces": [' a '.join(element) for element in itertools.product(*[units_dict[key].get("surfaces") if key in units_dict else [key] for key in keys])], \
+                                        "symbols": [' a '.join(element) for element in itertools.product(*[units_dict[key].get("symbols") if key in units_dict else [key] for key in keys])]
+                                        }
+                     } | { key: { "surfaces": units_dict[key].get("surfaces"), "symbols": units_dict[key].get("symbols") } if key in units_dict else {} for key in keys }
+
+        key_unit_list, prefix_symbol, prefix_text = NumberNormalizer.find_prefix_and_unit(normalized_unit)
+        if key_unit_list:
+            if len(key_unit_list) == 2: # e.g. km/h
+                if prefix_symbol or prefix_text:
+                    first_key_prefixes = prefix_symbol
+                    second_key_prefixes = prefix_text
+                    if first_key_prefixes and second_key_prefixes:
+                        return { normalized_unit: { "surfaces": [' per '.join(element) for element in itertools.product(*[[first_key_prefixes[0]+surface if key_unit_list[0] in units_dict else [first_key_prefixes[0]+key_unit_list[0]] for surface in units_dict[key_unit_list[0]].get("surfaces")], [second_key_prefixes[0]+surface if key_unit_list[1] in units_dict else [second_key_prefixes[0]+key_unit_list[1]] for surface in units_dict[key_unit_list[1]].get("surfaces")]])], \
+                                                    "symbols": [' per '.join(element) for element in itertools.product(*[[first_key_prefixes[1]+symbol if key_unit_list[0] in units_dict else [first_key_prefixes[1]+key_unit_list[0]] for symbol in units_dict[key_unit_list[0]].get("symbols")], [second_key_prefixes[1]+symbol if key_unit_list[1] in units_dict else [second_key_prefixes[1]+key_unit_list[1]] for symbol in units_dict[key_unit_list[1]].get("symbols")]])]
+                                                    }
+                                 } | { first_key_prefixes[0]+key_unit_list[0]: { "surfaces": [ first_key_prefixes[0]+surface if key_unit_list[0] in units_dict else [] for surface in units_dict[key_unit_list[0]].get("surfaces") ] } | { "symbols": [ first_key_prefixes[1]+symbol if key_unit_list[0] in units_dict else [] for symbol in units_dict[key_unit_list[0]].get("symbols") ] }, \
+                                       second_key_prefixes[0]+key_unit_list[1]: { "surfaces": [ second_key_prefixes[0]+surface if key_unit_list[1] in units_dict else [] for surface in units_dict[key_unit_list[1]].get("surfaces") ] } | { "symbols": [ second_key_prefixes[1]+symbol if key_unit_list[1] in units_dict else [] for symbol in units_dict[key_unit_list[1]].get("symbols") ] }
+                                       }
+                    if first_key_prefixes:
+                        return { normalized_unit: { "surfaces": [' per '.join(element) for element in itertools.product(*[[first_key_prefixes[0]+surface if key_unit_list[0] in units_dict else [first_key_prefixes[0]+key_unit_list[0]] for surface in units_dict[key_unit_list[0]].get("surfaces")], units_dict[key_unit_list[1]].get("surfaces") if key_unit_list[1] in units_dict else [key_unit_list[1]]])], \
+                                                    "symbols": [' per '.join(element) for element in itertools.product(*[[first_key_prefixes[1]+symbol if key_unit_list[0] in units_dict else [first_key_prefixes[1]+key_unit_list[0]] for symbol in units_dict[key_unit_list[0]].get("symbols")], units_dict[key_unit_list[1]].get("symbols") if key_unit_list[1] in units_dict else [key_unit_list[1]]])]
+                                                    }
+                                 } | { first_key_prefixes[0]+key_unit_list[0]: { "surfaces": [ first_key_prefixes[0]+surface if key_unit_list[0] in units_dict else [] for surface in units_dict[key_unit_list[0]].get("surfaces") ] } | { "symbols": [ first_key_prefixes[1]+symbol if key_unit_list[0] in units_dict else [] for symbol in units_dict[key_unit_list[0]].get("symbols") ] }, \
+                                       key_unit_list[1]: { "surfaces": units_dict[key_unit_list[1]].get("surfaces"), "symbols": units_dict[key_unit_list[1]].get("symbols") if key_unit_list[1] in units_dict else {} }
+                                       }
+                    if second_key_prefixes:
+                        return { normalized_unit: { "surfaces": [' per '.join(element) for element in itertools.product(*[[second_key_prefixes[0]+surface if key_unit_list[1] in units_dict else [second_key_prefixes[0]+key_unit_list[1]] for surface in units_dict[key_unit_list[1]].get("surfaces") ], units_dict[key_unit_list[0]].get("surfaces") if key_unit_list[0] in units_dict else [key_unit_list[0]]])], \
+                                                    "symbols": [' per '.join(element) for element in itertools.product(*[[second_key_prefixes[1]+symbol if key_unit_list[1] in units_dict else [second_key_prefixes[1]+key_unit_list[1]] for symbol in units_dict[key_unit_list[1]].get("symbols")], units_dict[key_unit_list[0]].get("symbols") if key_unit_list[0] in units_dict else [key_unit_list[0]]])]
+                                                    }
+                                 } | { key_unit_list[0]: { "surfaces": units_dict[key_unit_list[0]].get("surfaces"), "symbols": units_dict[key_unit_list[0]].get("symbols") if key_unit_list[0] in units_dict else {} }, \
+                                       second_key_prefixes[0]+key_unit_list[1]: { "surfaces": [ second_key_prefixes[0]+surface if key_unit_list[1] in units_dict else [] for surface in units_dict[key_unit_list[1]].get("surfaces") ] } | { "symbols": [ second_key_prefixes[1]+symbol if key_unit_list[1] in units_dict else [] for symbol in units_dict[key_unit_list[1]].get("symbols") ] }
+                                       }
+
+                return { normalized_unit: { "surfaces": [' per '.join(element) for element in itertools.product(*[units_dict[key].get("surfaces") if key in units_dict else [key] for key in key_unit_list])], \
+                                            "symbols": [' per '.join(element) for element in itertools.product(*[units_dict[key].get("symbols") if key in units_dict else [key] for key in key_unit_list])]
+                                            }
+                         } | { key: { "surfaces": units_dict[key].get("surfaces"), "symbols": units_dict[key].get("symbols") } if key in units_dict else {} for key in key_unit_list }
+
+            if prefix_symbol and prefix_text: # e.g. millimeter
+                return { prefix_text+key: { "surfaces": [ prefix_text+surface for surface in units_dict[key].get("surfaces") ], "symbols": [ prefix_symbol+symbol for symbol in units_dict[key].get("symbols") ] } if key in units_dict else {} for key in key_unit_list}
+            return { key: { "surfaces": units_dict[key].get("surfaces"), "symbols": units_dict[key].get("symbols") } if key in units_dict else {} for key in key_unit_list}
+
+        return {}
 
     def parse(self, text):
         # multiple sentences as input
@@ -454,29 +566,41 @@ class NumParser:
 
         # single sentence as input
         original_text = text
-        text = self._preprocess_text(text)
-        #print(text)
+        text,old_to_new_suffixes = self._preprocess_text(text)
         doc = self.nlp(text)
         doc = self._preprocess_doc(doc)
-        #self._print_tokens(doc)
         candidates = self._extract_candidates(doc)
         sent_boundaries = self._sentence_boundaries(doc)
-        three_tuples = self._match_tuples(candidates, text, doc, sent_boundaries)
+        three_tuples = self._match_tuples(candidates, doc, sent_boundaries)
         referred_nouns = self._extract_global_referred_nouns(doc)
         self._postprocess_nouns(three_tuples, referred_nouns)
-        #self._print_sentences(doc, sent_boundaries)
-        #self._print_temp_results(sent_boundaries, candidates, three_tuples, referred_nouns)
         normalized_tuples = self._normalize_tuples(three_tuples, referred_nouns, text, doc)
-        
+
         if self.overload:
             Quantity.original_text = original_text
             normalized_text = self._normalize_text(normalized_tuples, doc)
+            normalized_text_values_only = self._normalize_text_values_only(normalized_tuples, doc)
+            normalized_text_units_only = self._normalize_text_units_only(normalized_tuples, doc)
+            quantity=None
             for quantity in normalized_tuples:
                 quantity.set_preprocessed_text(text)
                 quantity.set_normalized_text(normalized_text)
+                quantity.set_normalized_text_values_only(normalized_text_values_only)
+                quantity.set_normalized_text_units_only(normalized_text_units_only,old_to_new_suffixes)
+                quantity.update_indices(old_to_new_suffixes)
+
+            if quantity:
+                normalized_scientific_text_values_only,scientific_notations= self._normalize_text_scientific_notation_values_only(normalized_tuples, quantity.get_preprocessed_text())
+                normalized_scientific_text = self._normalize_text_scientific_notation(normalized_tuples, normalized_scientific_text_values_only)
+
+                if scientific_notations is not None: # digits, not written words
+                    quantity.set_scientific_notations(scientific_notations)
+                for quantity in normalized_tuples:
+                    quantity.set_normalized_scientific_text(normalized_scientific_text)
+                    quantity.set_normalized_scientific_text_with_values_only(normalized_scientific_text_values_only)
 
         return normalized_tuples
-        
+
     def _print_tokens(self, doc):
         #print([(token.text, token.dep_, token.pos_, list(token.children)) for token in doc if token.dep_=="ROOT"])
         #print([(token.text, token.dep_, token.pos_, list(token.children)) for token in doc if token.dep_ in ["nsubj", "nsubjpass"]])
@@ -503,8 +627,7 @@ class NumParser:
                 stopwords_to_be_removed.append(stopword)
         self.nlp.Defaults.stop_words -= set(stopwords_to_be_removed) # remove
         self.nlp.Defaults.stop_words -= {"top","us","up","amount","never"} # additional that should not be considered stop words
-        self.nlp.Defaults.stop_words |= {"total","instead","maybe", "≈", "minus"} # add
-
+        self.nlp.Defaults.stop_words |= {"total","instead","maybe", "≈", "minus", "s"} # add
 
     def _remove_stopwords_from_noun(self, nouns): # remove stop words like "a, of" etc. from referred_noun
         def accept_token(token): # accept until punct (assumption: new subsentence, exception e.g. Australias S&P/ASX 200), Relative or demonstrative pronoun
@@ -542,7 +665,7 @@ class NumParser:
                             boundaries[-1][-1]=tok.i
                         else:
                             boundaries.append([0, tok.i]) # when no boundaries yet, add first boundary
-                    
+
                     elif last != tok.i:
                         if tok.i - last >= 3:
                             if (boundaries and boundaries[-1][-1]-boundaries[-1][0]<=3):
@@ -558,7 +681,7 @@ class NumParser:
                     elif boundaries:
                         boundaries[-1][-1]=tok.i
                     last = tok.i + 1
-            
+
             # should be removed, since temp fixes!
             if boundaries and boundaries[0][0] != 0:
                 boundaries[0][0] = 0 # fix the first boundary
@@ -576,8 +699,17 @@ class NumParser:
         doc = self._tag_ignore(doc)
         return doc
 
-
     def _preprocess_text(self, text: str):
+
+        for k, v in circled_digits.items():
+            text = re.sub(rf"{k}", f"{v}", text) # remove circled numbers
+
+        for k, v in maps["vulgar_fractions"].items():
+            text = re.sub(rf"(\d+)\s?{k}", rf"\1.{str(v).split('.')[1]}", text) # 7½ -> 7.5
+            text = re.sub(rf"{k}", rf"{v}", text) # ½ -> 0.5
+
+        text = re.sub(r"(https|http)?:\/\/(\w|\.|\/|\?|\=|\&|\%)*\b", "", text) # remove urls
+
         # put a space between number and unit so spacy detects them as separate tokens
         text = re.sub(r"(\w)(\([a-zA-Z]+)", r"\1 \2", text)
         text = re.sub(r"(^\w+)\s?(—)\s?", r"\1 ", text) # Walmart — Shares of the retail giant
@@ -602,8 +734,8 @@ class NumParser:
 
         text = re.sub(r"\b([a-z])\.(?!$)", r"\1", text) # e.g. m.p.h -> mph
 
-        #text = re.sub(r"(?<![A-Z\d,.])([\d,.]+)([a-zA-Z]{1,3})", r"\1 \2", text) # 1.2mm -> 1.2 mm
-        amount_unit = re.findall(r'(?<![A-Z\d,.])[0-9,.]*[0-9]+(?!E\+|E\−|E\d+|e\+|e\−|e\d+)[a-zA-Z]{1,3}[.,]{0,1}', text)
+        text = text.replace("™","")
+        amount_unit = re.findall(r'(?<![A-Z\d,.])[0-9,.]*[0-9]+(?!E\+|E\−|E\d+|e\+|e\−|e-|e\d+|x|×)[a-zA-Z]{1,3}[.,]{0,1}', text)
         for v in amount_unit:
             index_first_alpha = v.find(next(filter(str.isalpha, v)))
             digit_part = []
@@ -615,29 +747,33 @@ class NumParser:
             if "." in char_part: # and len(text) != text.index(char_part)+len(char_part): # . separates two sentences
                 char_part = char_part[:char_part.index(".")]+" "+char_part[char_part.index("."):] # e.g. m.-> m . (e.g. from 140m.)
             text = text.replace(v, digit_part+" "+char_part) # e.g. 2m -> 2 m
-        
+
         text = re.sub(r"(inr|jpy|cad|sen|usd|aud|eur|rmb|gbp)\s?([0-9,.]*[0-9]+)\s?(m(?![a-z\d]))[., \n]?", r"\1 \2 M", text, flags=re.IGNORECASE) # e.g. USD 10m. -> USD 10 M.
         text = re.sub(r"\bPS([0-9,.]*[0-9]+)", r"£\1", text) # e.g. PS2.7 -> £2.7
         text = re.sub(r"([$|€|£]\s?[0-9,.]*[0-9]+\s?)(m(?![a-z\d]))([., \n]?)", r"\1M\3", text) # e.g. $5.4m. -> $5.4M.
         text = re.sub(r"\b(RM)\s{0,1}([0-9,.]*[0-9]+)(million|mil|m|M)+\b", r"\2 M \1", text) # RM3.16mil -> 3.16 mil RM
         text = re.sub(r"\b(RM)\s{0,1}([0-9,.]*[0-9]+)(k|K|bn|b|B|tn)+\b", r"\2 \3 \1", text) # RM31.20k -> 31.20 k RM
-        text = re.sub(r"\b(RM)([0-9,.]*[0-9]+)\b", r"\2 \1", text) # RM23.50 -> RM 23.50
+        text = re.sub(r"\b(RM)([0-9,.]*[0-9]+)\b", r"\1 \2", text) # RM23.50 -> RM 23.50
 
         amount_dash_unit=re.findall(r'[0-9\.]+-[a-zA-z]+', text)
         for v in amount_dash_unit:
             text = text.replace(v, v.replace("-"," ")) # 100-km -> 100 km
-
+        old_to_new_suffixes={}
         for k, v in suffixes.items():
+            pattern = re.compile(rf"(?<![A-Z\d,.])([\d,.]+)\s?{k}([\s\n.,()]+|$)")
+            for suf_text in re.findall(pattern, text):
+                old_suffix_text=suf_text[0]+k+suf_text[1]
+                new_text=suf_text[0]+" "+v+suf_text[1]
+                old_to_new_suffixes[new_text]=old_suffix_text
             text = re.sub(rf"(?<![A-Z\d,.])([\d,.]+)\s?{k}([\s\n.,()]+|$)", rf"\1 {v}\2", text) # 3K -> 3 thousand
             text = re.sub(rf"([\d,.]+)\s?{v}([-])", rf"\1 {v} ", text) # 400 million-year-old -> 400 million year-old
 
         text = re.sub(r"([\d+,.]+)\s*(sq)\s(m)\b", r"\1\2\3", text) # 200sq m -> 200 sqm
         text = re.sub(r"([\d+,.]+)\s*(sqm)\b", r"\1 m2", text) # sqm -> m2
 
-        text = re.sub(r"([\d]+)\s+(\d)/(\d)[\s+|\.]", lambda x: str(int(x.group(1)) + int(x.group(2))/int(x.group(3))), text) # 10 1/2 miles -> 10.5 miles
-        text = re.sub(r"\b(\d)/(\d)[\s+|\.]", lambda x: str(int(x.group(1))/int(x.group(2))), text) # 1/2 -> 0.5
+        text = re.sub(r"([\d]+)\s+(\d)/(\d)[\s+|\.]", lambda x: str(int(x.group(1)) + int(x.group(2))/int(x.group(3))) if not all(c in ["0",".",","] for c in x.group(3)) else x.group(0), text) # 10 1/2 miles -> 10.5 miles
+        text = re.sub(r"\b(\d+[\.|,]?\d*)\/(\d+[\.|,]?[\d,]*)(?![\.]?\d)", lambda x: str(float(x.group(1).replace(",", ""))/float(x.group(2).replace(",", ""))) if not all(c in ["0",".",","] for c in x.group(2)) else x.group(0), text) # 1/2 -> 0.5, 8/0 -> 8/0, 1/10,000 -> 1/10,000
 
-        #text = re.sub(r"\bdegF\b", "degf", text) # degF -> degree-F
         text = re.sub(r"([\d+,.]+)\s+deg\b", r"\1 degree", text) # 50 deg -> 50 degree
         text = re.sub(r"(degree|degrees)\s+([f\s+|f\.|F\s+|F\.])\b", "degf", text) # 25 degree f -> 25 degf
         text = re.sub(r"\s+(to)(-)([\d,.,,]+)", r"\1 \3", text) # e.g. 1.5 to-2 degree range -> 1.5 to 2 degree range
@@ -656,15 +792,15 @@ class NumParser:
 
         text = re.sub(r"([0-9,.]*[0-9]+\s*)(bitcoins|bitcoin)", r"\1btc", text) # 10000 bitcoins -> 10000 btc
         text = re.sub(r"\b(us)(?=[\d,.]+)", r"\1 ", text, flags=re.IGNORECASE) # US71.37 -> US 71.37
-        text = re.sub(r"(?<![A-Z\d,.])([0-9,.]+)(₿|¢|₡|₫|₾|₵|₹|円|圓|₭|₥|ரூ|₩|′|″|”|Å|Ω|Ω)", r"\1 \2", text) # 71\u00a2 -> 71 \u00a2
-        text = re.sub(r"([₡|₫|₵|¥|₥|$|₿|¢|₡|₫|₾|₵|₹|円|圓|₭|₥|ரூ|₩]+[0-9,.]*[0-9]+)(-)([₡|₫|₵|¥|₥|$|₿|¢|₡|₫|₾|₵|₹|円|圓|₭|₥|ரூ|₩]+[0-9,.]*[0-9]+)", r"\1 \2 \3", text) # $102-$110 -> $102 - $110
+        text = re.sub(r"(?<![A-Z\d,.])([0-9,.]+)(₿|¢|₡|₫|₾|₵|₹|元|円|圓|₭|₥|ரூ|₩|′|″|”|Å|Ω|Ω)", r"\1 \2", text) # 71\u00a2 -> 71 \u00a2
+        text = re.sub(r"([₡|₫|₵|¥|₥|$|₿|¢|₡|₫|₾|₵|₹|元|円|圓|₭|₥|ரூ|₩]+[0-9,.]*[0-9]+)(-)([₡|₫|₵|¥|₥|$|₿|¢|₡|₫|₾|₵|₹|元|円|圓|₭|₥|ரூ|₩]+[0-9,.]*[0-9]+)", r"\1 \2 \3", text) # $102-$110 -> $102 - $110
 
         text = re.sub(r"([0-9,.]*[0-9]+\s*)(mB|gB|kB|tB)\b", lambda x: x.group(1) + x.group(2).upper(), text) # 10 mB -> 10 MB
         text = re.sub(r"([0-9,.]*[0-9]+\s*)(mb|Mb|gb|Gb|kb|Kb|tb|Tb)\b", lambda x: x.group(1) + x.group(2).upper()[:1]+"bit", text) # 10 mb -> 10 Mbit
 
         text = re.sub(r"([a-z]+)(-)(a)(-)([a-z]+)", r"\1 \3 \5", text) # 12-cent-a-share -> 12-cent a share
 
-        text = re.sub(r"(?<![\d|a-zA-Z])\+(?!\s?\d{2}\s?[(]?\d{4}[)]?\s?\d{4,7}\b)", r"up ", text) # +0.2% -> up 0.2%
+        text = re.sub(r"(?<![\^|\d|a-zA-Z])\+(?!\s?\d{2}\s?[(]?\d{4}[)]?\s?\d{4,7}\b)", r"up ", text) # +0.2% -> up 0.2%
         text = re.sub(r"minus-([\d,.,,]+)", r"-\1", text) # minus-130 -> -130
         text = re.sub(r"[\s]-([\d,.,,]+)", r" minus \1", text) # -5 -> minus 5
         text = re.sub(r"^-([\d,.,,]+)", r"minus \1", text) # when at the beginning of the line
@@ -676,22 +812,26 @@ class NumParser:
 
         text = re.sub(r"([a-z,A-Z])(=)([0-9,.]*[0-9]+)", r"\3 \1", text) # e.g. Y=28,030 -> 28,030 Y
 
-        # add dot or question mark and additional space before the end of the sentence if not there
+        # add dot, question mark or exclamation mark and additional space before the end of the sentence if not there
         if text.endswith(' .'):
-            return text
+            return text,old_to_new_suffixes
         if text.endswith('?'):
-            return text[:-1]+' ?'
+            return text[:-1]+' ?',old_to_new_suffixes
+        if text.endswith('!'):
+            return text[:-1]+' !',old_to_new_suffixes
         if text.endswith(' .\n'):
-            return text[:-1]
+            return text[:-1],old_to_new_suffixes
         if text.endswith('.\n'):
-            return text[:-2]+' .'
+            return text[:-2]+' .',old_to_new_suffixes
         if text.endswith('?\n'):
-            return text[:-2]+' ?'
+            return text[:-2]+' ?',old_to_new_suffixes
+        if text.endswith('!\n'):
+            return text[:-2]+' !',old_to_new_suffixes
         if text.endswith(' \n'):
-            return text[:-1]+'.'
+            return text[:-1]+'.',old_to_new_suffixes
         if text.endswith('\n'):
-            return text[:-1]+' .'
-        return text+' .' if not text.endswith('.') else text[:-1]+' .'
+            return text[:-1]+' .',old_to_new_suffixes
+        return (text+' .',old_to_new_suffixes) if not text.endswith('.') else (text[:-1]+' .',old_to_new_suffixes)
 
     def _postprocess_nouns(self, tuples, nouns):
         nouns_copy = nouns.copy()
@@ -745,7 +885,7 @@ class NumParser:
                             nouns.remove(noun_2)
                         except ValueError:
                             continue
-        
+
         # remove nouns that consist only of stopwords
         for noun in nouns_copy:
             if len(self._remove_stopwords_from_noun(noun[:-1])) == 0:
@@ -802,9 +942,7 @@ class NumParser:
                     for token in span:
                         token._.set("ignore", True)
         for ent in doc.ents:
-            #print(ent, ent.label_)
             if ent.label_ in ["DATE", "TIME"]:
-                #print(ent, ent.label_)
                 span = doc.char_span(ent.start_char, ent.end_char)
                 if span is not None:
                     if any(month in span.text for month in MONTHS):
@@ -816,7 +954,7 @@ class NumParser:
                         continue
                     if ent.label_=="DATE" and any(t.text.isdigit() or t.pos_ == "NUM" for t in span):
                         for token in span:
-                            token._.set("consider", True) # extract DATE entities, keep them only if they have proper unit
+                            token._.set("consider_date", True) # extract DATE entities, keep them only if they have proper unit
                     else:
                         for token in span:
                             token._.set("ignore", True)
@@ -837,7 +975,7 @@ class NumParser:
 
     def _retokenize(self, doc): # 'km', '/', 'h' (from km/h) -> 'km/h'
         with doc.retokenize() as retokenizer:
-            
+
             # retokenize the fractions from number_lookup.py
             for k, v in maps["fractions"].items(): # e.g. half, third
                 expression = rf"\b{k}\b"
@@ -856,7 +994,8 @@ class NumParser:
                     if span:
                         retokenizer.merge(span, attrs={"POS": "NUM"})
 
-            expression = r"[0-9,.]*[0-9]+×10\^[-|−]?\d+" # 1.38×10^10
+            # retokenize the scientific notation format
+            expression = r"[0-9,.]*[0-9]+[×|x]+10\^?[−|-]?\d+" # e.g. 1.38×10^10
             for match in re.finditer(expression, doc.text):
                 start, end = match.span()
                 span = doc.char_span(start, end)
@@ -866,7 +1005,19 @@ class NumParser:
                     except ValueError:
                         logging.warning('\033[93m' + f"Can't merge non-disjoint spans. '{span}' is already part of tokens to merge." + '\033[0m')
 
-            expression = r"\b\d{1}[/|⁄]+\d+\b" # 1/16 of a US pint, 1⁄32 of a US quart, and 1⁄128 of a US gallon
+            # retokenize the comma-separated format for numbers (decimal and thousands separator)
+            expression = r"\b\d{1,3}(,\d{3,})+(\.\d+)?\b" # e.g. 34,567.89, 64,863.10
+            for match in re.finditer(expression, doc.text):
+                start, end = match.span()
+                span = doc.char_span(start, end)
+                if span:
+                    try:
+                        retokenizer.merge(span, attrs={"POS": "NUM"})
+                    except ValueError:
+                        logging.warning('\033[93m' + f"Can't merge non-disjoint spans. '{span}' is already part of tokens to merge." + '\033[0m')
+
+            # retokenize fractions
+            expression = r"\b\d{1}[/|⁄]+\d+\b" # e.g. 1/16 of a US pint, 1⁄32 of a US quart, and 1⁄128 of a US gallon
             for match in re.finditer(expression, doc.text):
                 start, end = match.span()
                 span = doc.char_span(start, end)
@@ -886,7 +1037,7 @@ class NumParser:
                     except ValueError:
                         logging.warning('\033[93m' + f"Can't merge non-disjoint spans. '{span}' is already part of tokens to merge." + '\033[0m')
 
-            expression = r"\bsq\s(m|ft)\b" # sq m, sq ft
+            expression = r"\bsq\s(m|ft)\b" # e.g. sq m, sq ft
             for match in re.finditer(expression, doc.text):
                 start, end = match.span()
                 span = doc.char_span(start, end)
@@ -926,7 +1077,8 @@ class NumParser:
                     except ValueError:
                         logging.warning('\033[93m' + f"Can't merge non-disjoint spans. '{span}' is already part of tokens to merge." + '\033[0m')
 
-            expression = r"[\b|\s](-)([\d,.,,]+)\b" # negative numbers: e.g. '-5'
+            # retokenize negative number
+            expression = r"[\b|\s](-)([\d,.,,]+)\b" # e.g. '-5'
             for match in re.finditer(expression, doc.text):
                 start, end = match.span()
                 span = doc.char_span(start, end)
@@ -964,7 +1116,7 @@ class NumParser:
 
         # similar clause structure
         for i, bound_2 in enumerate(bounds):
-            if bound_1 != bound_2 and (bound_1[-1]+1==bound_2[0] or bound_2[-1]+1==bound_1[0]): # look only at different but adjacent subsenetences
+            if bound_1 != bound_2 and (bound_1[-1]+1 == bound_2[0] or bound_2[-1]+1 == bound_1[0]): # look only at different but adjacent subsenetences
                 if doc[bound_1[0]].pos_ in ["SCONJ"]:
                     doc_1 = doc[bound_1[0]+1:bound_1[1]]
                 else:
@@ -972,11 +1124,10 @@ class NumParser:
                 doc_2 = doc[bound_2[0]:bound_2[1]]
                 pos_1 = [tok.pos_ for tok in doc_1 if tok.pos_ not in ["PUNCT"]]
                 pos_2 = [tok.pos_ for tok in doc_2 if tok.pos_!="PUNCT"]
-                ratio = fuzz.partial_ratio(" ".join(pos_1), " ".join(pos_2))
+                ratio = numpy.average([fuzz.token_sort_ratio(" ".join(pos_1), " ".join(pos_2)), fuzz.partial_ratio(" ".join(pos_1), " ".join(pos_2)), fuzz.ratio(" ".join(pos_1), " ".join(pos_2))])
                 # consider ratio, token like 'while', 'whilst' or 'whereas' and the position of the quantity in the sentence
-                if ratio == 100 or (ratio >= 60 and (set(t.text for t in doc) & set(["while", "whilst", "whereas", "but", "and"]))) and (abs((bound_1[-1]-unitless[1][0].i) - (bound_2[-1]-triples[-i][1][0].i)) < 3):
+                if ratio == 100 or (ratio >= 58 and (set(t.text for t in doc) & set(["while", "whilst", "whereas", "but", "and"]))) and (abs((bound_1[-1]-unitless[1][0].i) - (bound_2[-1]-triples[-i][1][0].i)) < 3):
                     logging.info('\033[93m' + f"Shared unit found in \"{doc}\" for {unitless} and {triples[-i]}" + '\033[0m\n')
-                    #logging.info('\033[93m Shared unit found: %s %s and %s\033[0m', doc, unitless, triples[-i])
                     unitless[2] = triples[-i][2] # assign unit
                     return tuple(unitless)
 
@@ -984,7 +1135,7 @@ class NumParser:
 
 
     # noinspection PyProtectedMember
-    def _match_tuples(self, candidates, text, doc, boundaries):
+    def _match_tuples(self, candidates, doc, boundaries):
         triples = []
         bound = []
         quantity = []
@@ -1020,9 +1171,7 @@ class NumParser:
                 if len(q_list)>1 and len(b_list)>0:
                     for q_element in q_list.copy():
                         if q_element.i + 1 == b_list[0].i and not any(prep == b.text for prep in ["to", "out", "of", "-"] for b in b_list): # distinguish ranges and fractions
-                            #print("here remove ", q_element)
                             q_list.remove(q_element)
-                #print(token, b_list, q_list, u_list)
 
             if len(u_list) > 2 and len([t_unit for t_unit in u_list if t_unit.pos_ == "PROPN"]) >= len(u_list)/2 and not any(t_unit for t_unit in u_list if t_unit.pos_ == "SYM" or len(t_unit.text)<=3):
                 # e.g. 575 Wilbraham Road, but 'US $', '30 Mbps plan' or '2.4 Ghz' should be extracted
@@ -1033,72 +1182,75 @@ class NumParser:
 
             possible_compound_value = False
 
-            if len([q for q in q_list if q.text in (maps["scales"].keys() | maps["string_num_map"].keys())]) >= 3:
-                possible_compound = [q for q in q_list if q.text in (maps["scales"].keys() | maps["string_num_map"].keys())]
-                if sorted([token.i for token in possible_compound]) == list(range(min(token.i for token in possible_compound), max(token.i for token in possible_compound)+1)):
-                    possible_compound_value = True # e.g. twenty-eight thousand six hundred forty-two
-                
-            if not possible_compound_value and (len(q_list) == 3 and all(is_digit(q.text) for q in q_list) or len([q for q in q_list if is_digit(q.text) or q.text.replace(".", "").replace(",","").isdigit() or q.text in (maps["fractions"].keys() | maps["string_num_map"].keys())])==3): # e.g. [160, 180, 200] or [3, 4, 5]
-                range_l = [q for q in q_list if q._.range_l]
-                range_r = [q for q in q_list if q._.range_r]
-                if range_l and range_r:
-                    if len(range_l) > len(range_r): # 180-200 and 160-200
-                        new_candidate = candidate.copy() # [from, 160, to, $, 180, 200, 20]
-                        new_candidate.remove(range_l[1]) # [from, 160, to, $, 200, 20]
-                        candidate.remove(range_l[0]) # [from, to, $, 180, 200, 20]
-                        candidates_proned.append(new_candidate) # [[from, to, $, 180, 200, 20], [$, 220, 38], [$, 300, 41]] -> [[from, to, $, 180, 200, 20], [$, 220, 38], [$, 300, 41], [from, 160, to, $, 200, 20]]
-                        q_list.remove(range_l[0]) # [160, 180, 200] -> [180, 200]
+            if not all(q._.first_compl_num or q._.second_compl_num for q in q_list):
 
-                    elif len(range_l) < len(range_r): # 180-160 and 180-200
-                        new_candidate = candidate.copy()
-                        new_candidate.remove(range_r[1])
-                        candidate.remove(range_r[0])
+                if len([q for q in q_list if q.text in (maps["scales"].keys() | maps["string_num_map"].keys())]) >= 3:
+                    possible_compound = [q for q in q_list if q.text in (maps["scales"].keys() | maps["string_num_map"].keys())]
+                    if sorted([token.i for token in possible_compound]) == list(range(min(token.i for token in possible_compound), max(token.i for token in possible_compound)+1)):
+                        possible_compound_value = True # e.g. twenty-eight thousand six hundred forty-two
+
+                if not possible_compound_value and (len(q_list) == 3 and all(is_digit(q.text) for q in q_list) or len([q for q in q_list if is_digit(q.text) or q.text.replace(".", "").replace(",","").isdigit() or q.text in (maps["fractions"].keys() | maps["string_num_map"].keys())])==3): # e.g. [160, 180, 200] or [3, 4, 5]
+                    range_l = [q for q in q_list if q._.range_l]
+                    range_r = [q for q in q_list if q._.range_r]
+                    if range_l and range_r:
+                        if len(range_l) > len(range_r): # 180-200 and 160-200
+                            new_candidate = candidate.copy() # [from, 160, to, $, 180, 200, 20]
+                            new_candidate.remove(range_l[1]) # [from, 160, to, $, 200, 20]
+                            candidate.remove(range_l[0]) # [from, to, $, 180, 200, 20]
+                            candidates_proned.append(new_candidate) # [[from, to, $, 180, 200, 20], [$, 220, 38], [$, 300, 41]] -> [[from, to, $, 180, 200, 20], [$, 220, 38], [$, 300, 41], [from, 160, to, $, 200, 20]]
+                            q_list.remove(range_l[0]) # [160, 180, 200] -> [180, 200]
+
+                        elif len(range_l) < len(range_r): # 180-160 and 180-200
+                            new_candidate = candidate.copy()
+                            new_candidate.remove(range_r[1])
+                            candidate.remove(range_r[0])
+                            candidates_proned.append(new_candidate)
+                            q_list.remove(range_r[0])
+
+                        elif len(range_l)==len(range_r)==2: # e.g. [3, 4] [4, 5]
+                            new_candidate = candidate.copy() # [3, to, 4, 5, percent, pressure, 3]
+                            new_candidate.remove(range_r[1]) # [3, to, 4, percent, pressure, 3]
+                            candidate.remove(range_l[0]) # [to, 4, 5, percent, pressure, 3]
+                            candidates_proned.append(new_candidate)
+                            q_list.remove(range_l[0])
+
+                        """elif len(range_l)==len(range_r)==1:
+                            print(candidate, candidates_proned)
+                            min_index = min(token.i for token in range_l+range_r)
+                            min_index_token = [token for token in range_l+range_r if token.i == min_index][0]
+                            candidate = candidate[candidate.index(min_index_token)]
+                            print(candidate, candidates_proned)"""
+
+                    elif not range_l and not range_r: # e.g. we have to maintain this for 40, 50, 60 years
+                        new_candidate = candidate.copy() # [40, 50, 60, years, 17]
+                        new_candidate_2 = candidate.copy()
+                        candidate.remove(q_list[1])
+                        candidate.remove(q_list[2])
+                        new_candidate.remove(q_list[2])
+                        new_candidate.remove(q_list[0])
+                        new_candidate_2.remove(q_list[0])
+                        new_candidate_2.remove(q_list[1])
                         candidates_proned.append(new_candidate)
-                        q_list.remove(range_r[0])
+                        candidates_proned.append(new_candidate_2) # [([], [40], [years], 17), ([], [50], [years], 17), ([], [60], [years], 17)]
+                        q_list = q_list[:1]
 
-                    elif len(range_l)==len(range_r)==2: # e.g. [3, 4] [4, 5]
-                        new_candidate = candidate.copy() # [3, to, 4, 5, percent, pressure, 3]
-                        new_candidate.remove(range_r[1]) # [3, to, 4, percent, pressure, 3]
-                        candidate.remove(range_l[0]) # [to, 4, 5, percent, pressure, 3]
-                        candidates_proned.append(new_candidate)
-                        q_list.remove(range_l[0])
+                elif len(q_list) >= 4 and len([is_digit(q.text) for q in q_list if is_digit(q.text) or q.text.replace(".", "").replace(",", "").isdigit()]) == 4:
+                    values = sorted([q for q in q_list if is_digit(q.text) or q.text.replace(".", "").replace(",", "").isdigit()], key=lambda t: t.i) # [2,500, 250, 50, 10]
+                    scales = sorted([q for q in q_list if q not in values]) # [million, million, million, million]
+                    new_candidate = candidate.copy()
+                    if len(values) == len(scales):
+                        [new_candidate.remove(value) for value in values[:2]+scales[:2]] # [to, $, 20, million, to, $, 24, million, 34]
+                        [candidate.remove(value) for value in values[2:]+scales[2:]] # [46, million, to, $, 50, million, to, $, 34]
+                        candidates_proned.append(new_candidate) # [[46, million, to, $, 50, million, to, $, 34], [to, $, 20, million, to, $, 24, million, 34]]
+                        [q_list.remove(value) for value in values[2:]+scales[2:]] # [46, million, 50, million]
+                    else:
 
-                    """elif len(range_l)==len(range_r)==1:
-                        print(candidate, candidates_proned)
-                        min_index = min(token.i for token in range_l+range_r)
-                        min_index_token = [token for token in range_l+range_r if token.i == min_index][0]
-                        candidate = candidate[candidate.index(min_index_token)]
-                        print(candidate, candidates_proned)"""
-                
-                elif not range_l and not range_r: # e.g. we have to maintain this for 40, 50, 60 years
-                    new_candidate = candidate.copy() # [40, 50, 60, years, 17]
-                    new_candidate_2 = candidate.copy()
-                    candidate.remove(q_list[1])
-                    candidate.remove(q_list[2])
-                    new_candidate.remove(q_list[2])
-                    new_candidate.remove(q_list[0])
-                    new_candidate_2.remove(q_list[0])
-                    new_candidate_2.remove(q_list[1])
-                    candidates_proned.append(new_candidate)
-                    candidates_proned.append(new_candidate_2) # [([], [40], [years], 17), ([], [50], [years], 17), ([], [60], [years], 17)]
-                    q_list = q_list[:1]
+                        [new_candidate.remove(value) for value in values[:2]] # [from, to, 50, no, more, 10, 17]
+                        [candidate.remove(value) for value in values[2:]] # [from, 2,500, to, 250, no, more, 17]
+                        candidates_proned.append(new_candidate) # [[from, 2,500, to, 250, no, more, 17], [from, to, 50, no, more, 10, 17]]
+                        [q_list.remove(value) for value in values[2:]] # [2,500, 250]
 
-            elif len(q_list) >= 4 and len([is_digit(q.text) for q in q_list if is_digit(q.text) or q.text.replace(".", "").replace(",", "").isdigit()]) == 4:
-                values = sorted([q for q in q_list if is_digit(q.text) or q.text.replace(".", "").replace(",", "").isdigit()], key=lambda t: t.i) # [2,500, 250, 50, 10]
-                scales = sorted([q for q in q_list if q not in values]) # [million, million, million, million]
-                new_candidate = candidate.copy()
-                if len(values) == len(scales):
-                    [new_candidate.remove(value) for value in values[:2]+scales[:2]] # [to, $, 20, million, to, $, 24, million, 34]
-                    [candidate.remove(value) for value in values[2:]+scales[2:]] # [46, million, to, $, 50, million, to, $, 34]
-                    candidates_proned.append(new_candidate) # [[46, million, to, $, 50, million, to, $, 34], [to, $, 20, million, to, $, 24, million, 34]]
-                    [q_list.remove(value) for value in values[2:]+scales[2:]] # [46, million, 50, million]
-                else:
-                    [new_candidate.remove(value) for value in values[:2]] # [from, to, 50, no, more, 10, 17]
-                    [candidate.remove(value) for value in values[2:]] # [from, 2,500, to, 250, no, more, 17]
-                    candidates_proned.append(new_candidate) # [[from, 2,500, to, 250, no, more, 17], [from, to, 50, no, more, 10, 17]]
-                    [q_list.remove(value) for value in values[2:]] # [2,500, 250]
-
-            if len(u_list) == 0 and q_list and not any(q._.consider for q in q_list) and [triple[2] for triple in triples if triple[2] and triple[1]]: # unitless and potential shared unit
+            if len(u_list) == 0 and q_list and not any(q._.consider or q._.consider_date for q in q_list) and [triple[2] for triple in triples if triple[2] and triple[1]]: # unitless and potential shared unit
                 triple = self._shared_unit_check(doc, boundaries, [b_list, q_list, u_list, candidate[-1]], [triple for triple in triples if triple[2] and triple[1]])
                 triples.append((triple[0], triple[1], triple[2], triple[3]))
             else:
@@ -1126,10 +1278,10 @@ class NumParser:
 
         referred_nouns = self._extend_root(referred_nouns)
 
-        referred_nouns.extend([[token, token.i] for token in doc if not token._.ignore_noun and\
-                                                                    (token.dep_ in ["nsubj", "nsubjpass", "dobj"] and token.pos_ in ["NOUN", "PROPN", "PRON", "ADJ", "DET", "ADV"]) #or\
-                                                                    #(token.dep_ in ["pobj"] and token.pos_ in ["NOUN", "PROPN"])
-                                                                    ])
+        referred_nouns.extend([[token, token.i] for token in doc if not token._.ignore_noun and \
+                               (token.dep_ in ["nsubj", "nsubjpass", "dobj"] and token.pos_ in ["NOUN", "PROPN", "PRON", "ADJ", "DET", "ADV"]) #or\
+                               #(token.dep_ in ["pobj"] and token.pos_ in ["NOUN", "PROPN"])
+                               ])
 
         if referred_nouns:
             if root_flag:
@@ -1204,13 +1356,10 @@ class NumParser:
                 quantity_index = max([t.i for t in tuple[1]]+[t.i for t in tuple[2][:index+1]])
             distances = [(token.i - (quantity_index + index)) for token in doc if token.text in ["for", "of", "off"]] # e.g. '$52,000 for CN'
 
-            if distances:
+            if distances and not self.ignore_some_rules:
                 j = min(abs(dist) for dist in distances) if {1,2} & set(distances) else 0
                 if j and doc[quantity_index + index + j] not in tuple[2]:
                     if [child for child in doc[quantity_index + index + j].children if (child.pos_ not in ["NUM"] and not child._.ignore_noun and not child in tuple[2] and not child.text.lower() in self.nlp.Defaults.stop_words)]: # only if there are children, otherwise ignore
-                        #related_nouns.append([doc[quantity_index + index + j]])
-                        #for child in doc[quantity_index + index + j].children:
-                        #    related_nouns[-1].append(child)
                         related_nouns.append(list(doc[quantity_index + index + j].children))
                         related_nouns[-1].append(quantity_index + index + j)
                         related_nouns[-1][:-1] = sorted(related_nouns[-1][:-1], key=lambda t: t.i)
@@ -1242,7 +1391,6 @@ class NumParser:
 
             # 'for'-pattern: if there exists, 'for <MONEY_SYMBOL>' in the text, then the noun before 'for' is the concept
             if not flag and "for" in list(token.text for token in tuple[1][0].ancestors) and (any(token.start <= tuple[1][0].i <= token.end for token in [ent for ent in doc.ents if ent.label_ == "MONEY"]) or set(t.text for t in tuple[2]) & MONEY_SYMBOL):
-                #pot_token = [t for l in [list(sorted(list(token.ancestors), key=lambda t: abs(tuple[1][0].i-t.i))) for token in tuple[1][0].ancestors if token.text=="for"] for t in l if t.pos_ in ["NOUN", "PROPN", "ADJ", "VERB", "AUX"]]
                 pot_token = [t.head.head.head for t in tuple[2]]
                 if pot_token:
                     if pot_token[0].pos_ in ["VERB", "AUX"]: # a seat was sold for down $ 5,000
@@ -1314,14 +1462,12 @@ class NumParser:
                 if (char_part+" "+digit_part in doc.text and char_part.lower() not in maps["bounds"] and char_part.lower() not in ["age", "between", "than", "from"]) or char_part in ["GMT", "index", "Max"]:
                     doc[match[1][1]]._.set("ignore", True) # not extract 11 (the number, NUM) from 'iphone 11' as Quantity
                     doc[match[1][0]]._.set("ignore", True) # e.g. Big 12
-                    #print("here set ignore", doc[match[1][0]], doc[match[1][0]]._.ignore, doc[match[1][1]], doc[match[1][1]]._.ignore)
                     continue
 
             if self.nlp.vocab[match[0]].text in ["NUM_DIRECT_PROPN"]:
                 char_part = doc[match[1][0]].text if not is_digit(re.sub('[.,,]', '', doc[match[1][0]].text)) else doc[match[1][1]].text
                 if char_part in ["Max", "Pro", "Mini"]: # to filter out things like iphone 11 Pro
                     doc[match[1][0]]._.set("ignore", True)
-                    #print("here set ignore", doc[match[1][0]])
                     continue
 
             # to filter out not real quantities, e.g. 'sp 500', 'BBC One'
@@ -1329,14 +1475,12 @@ class NumParser:
                 if (doc[match[1][0]-1].pos_ == "NOUN" and doc[match[1][0]+1].pos_ in ["VERB", "AUX"]) or doc[match[1][0]-1].pos_ == "PROPN":
                     continue
 
-            if not set(doc[token].text for token in match[1]) & {"between"} and abs(max(match[1]) - min(match[1])) > 5 and not any(doc[token]._.in_bracket for token in range(min(match[1]),max(match[1])+1)): # e.g. 9 billion shekels ($2.408 billion) a year
+            if not set(doc[token].text for token in match[1]) & {"between", "from"} and abs(max(match[1]) - min(match[1])) > 5 and not any(doc[token]._.in_bracket for token in range(min(match[1]),max(match[1])+1)): # e.g. 9 billion shekels ($2.408 billion) a year
                 continue
 
             for token_id in match[1]:
                 if not doc[token_id]._.ignore:
-                    # if self.nlp.vocab[match[0]].text=="DIM2":
-                    #     import pdb
-                    #     pdb.set_trace()
+
                     entries = set()
                     for v in anchor.values():
                         entries.update(v)
@@ -1370,7 +1514,7 @@ class NumParser:
                 fraction = False
                 negative_number = False
                 scale_m = False
-                
+
                 # 'minus'-approach: when extracted as unit
                 if len(tuple[1]) == 1 and any(token.text == "minus" for token in tuple[2]):
                     tuple[2].remove(tuple[2][[token.text == "minus" for token in tuple[2]].index(True)])
@@ -1382,13 +1526,34 @@ class NumParser:
                     negative_number = True
 
                 # 'm'-approach
-                if len(tuple[2]) > 1 and tuple[2][0].text == "m": # e.g. 1.2m tons, 60 to 90m subscribers
+                if len(tuple[2]) > 1 and tuple[2][0].text == "m" and any(token.pos_ in ["NOUN", "PROPN"] for token in tuple[2][1:]): # e.g. 1.2m tons, 60 to 90m subscribers
                     tuple[2].remove(tuple[2][0])
                     scale_m = True
 
-                # import pdb
-                # pdb.set_trace()
-                if any(t._.range_l for t in tuple[1]) and any(t._.range_r for t in tuple[1]):
+                if any(t._.first_compl_num for t in tuple[1]) and any(t._.second_compl_num for t in tuple[1]):
+                    left_num = [t for t in tuple[1] if t._.first_compl_num]
+                    right_num = [t for t in tuple[1] if t._.second_compl_num]
+                    left_unit = [t for t in tuple[2] if t._.first_compl_num]
+                    right_unit = [t for t in tuple[2] if t._.second_compl_num]
+                    norm_number_l = NumberNormalizer.normalize_number_token(left_num)
+                    norm_number_r = [NumberNormalizer.normalize_number_token([r]) for r in right_num]
+                    norm_unit_l = NumberNormalizer.normalize_unit_token(left_unit, text)[0]
+                    norm_unit_r = [NumberNormalizer.normalize_unit_token([r], text)[0] for r in right_unit]
+
+                    if norm_number_l is None or norm_number_r is None:
+                        continue
+
+                    num = norm_number_l
+                    for num_r, unit_r in zip(norm_number_r, norm_unit_r):
+                        if unit_r in unit_conversion and norm_unit_l in unit_conversion[unit_r]: # because of wrong disambiguatio of pound to pound sterling
+                            num += num_r*unit_conversion[unit_r][norm_unit_l]
+
+                    number = Value(num, tuple[1], self.overload)
+                    for token in right_unit:
+                        tuple[2].remove(token)
+
+                elif any(t._.range_l for t in tuple[1]) and any(t._.range_r for t in tuple[1]):
+
                     left = [t for t in tuple[1] if t._.range_l]
                     right = [t for t in tuple[1] if t._.range_r]
                     if left and right: # e.g. [24.2, 33] [33]
@@ -1419,7 +1584,7 @@ class NumParser:
                                 norm_number_scale *= NumberNormalizer.normalize_number_token([scale])
                     else:
                         norm_number_scale = 1
-                    
+
                     # check if number token was successfully normalized
                     if norm_number_l is None:
                         norm_number_l = norm_number_r
@@ -1471,6 +1636,7 @@ class NumParser:
                         fraction = True
 
                 else:
+
                     fraction = any(t._.fraction for t in tuple[1])
                     if len(tuple[1])>1 and any(t._.ignore for t in tuple[1]):
                         tagged_with_ignore = [t for t in tuple[1] if t._.ignore]
@@ -1508,10 +1674,10 @@ class NumParser:
                 if set(norm_unit.split(" ")) & BLACK_LIST_UNITS or {token.text for token in tuple[2]} & BLACK_LIST_UNITS:
                     norm_unit = "-"
 
-                if any(token._.consider for token in tuple[1]) and not in_unit_list:
+                if (any(token._.consider or token._.consider_date for token in tuple[1]) or set(norm_unit.split(" ")) & set(MONTHS)) and not in_unit_list:
                     for token in tuple[1]:
                         token._.set("ignore",True)
-                    continue # skip quantity since not real (e.g. 575 Wilbraham Road; DATE entities and <number>-<number> quantities without proper unit)
+                    continue # skip quantity since not real (e.g. 575 Wilbraham Road; 6 October; DATE entities and <number>-<number> quantities without proper unit)
 
                 # mark tokens that are part of a quantity
                 if index not in [None, -1]:
@@ -1538,6 +1704,7 @@ class NumParser:
                 if fraction and not in_unit_list: # e.g. 'One out of three Germans is vaccinated'
                     unit = Unit(tuple[2], "% " + norm_unit, tuple[2][:index+1] if index not in [None, -1] else tuple[2], in_unit_list, keys, self.overload)
                 elif any(token._.one_of_noun for token in tuple[2]): # consider subtree
+
                     k = [token._.one_of_noun for token in tuple[2]].index(True)
                     unit = Unit(tuple[2], norm_unit, doc[list(tuple[2][k].subtree)[0].i:list(tuple[2][k].subtree)[-1].i+1], in_unit_list, keys, self.overload)
                 elif index not in [None, -1] and len(tuple[2]) > 1:
@@ -1563,7 +1730,7 @@ class NumParser:
                         referred_noun.append(pot_ref_nouns[0])
                         ref_noun_flag = True
 
-                if len(unit.unit) > 1 and index not in [None, -1]: # whole list with units is not the unit
+                if len(unit.unit) > 1 and index not in [None, -1] and ((any(token.text=="of" for token in unit.unit) and not self.ignore_some_rules) or not any(token.text=="of" for token in unit.unit)): # whole list with units is not the unit
                     if index + 1 < len(unit.unit):
                         pot_ref_nouns = list(list(token.subtree) for token in unit.unit[index+1:] if token.pos_ in ["NOUN","PROPN"] and not token._.ignore_noun) # observe the next tokens and their subtrees
                         pot_ref_nouns = sorted(list(set(token for subtree in pot_ref_nouns for token in subtree)), key=lambda t: t.i)
@@ -1594,23 +1761,15 @@ class NumParser:
                     # when the nsubj is DET then follow the tree to the actual nsubj
                     # otherwise assign the subtree of the nsubj as concept for that number
                     pot_ref_nouns = [(list(t.subtree), t, t.pos_) for list_t in [t for t in [list(token.children) for token in sorted(list(set().union(*[list(t.ancestors) for t in tuple[1]])), key=lambda t: (tuple[1][0].i-t.i)) if token.pos_ in ["VERB","AUX"]]] for t in sorted(list_t, key= lambda t: (tuple[1][0].i-t.i)) if t.dep_ in ["nsubj","nsubjpass"] and t not in tuple[1]+tuple[2] and t.i<tuple[1][0].i]
-                    #print(tuple, list(sorted(list(tuple[1][0].ancestors), key=lambda t: abs(tuple[1][0].i-t.i))))
-                    #print([list(token.children) for token in list(sorted(list(tuple[1][0].ancestors), key=lambda t: abs(tuple[1][0].i-t.i))) if token.pos_ in ["VERB","AUX"]])
-                    #print([(list(t.subtree), t, t.pos_) for list_t in [t for t in [list(token.children) for token in list(sorted(list(tuple[1][0].ancestors), key=lambda t: abs(tuple[1][0].i-t.i))) if token.pos_ in ["VERB","AUX"]]] for t in list_t if t.dep_ in ["nsubj"] and t not in tuple[1]+tuple[2]])
-                    #print()
-                    #print(tuple, pot_ref_nouns)
                     if pot_ref_nouns:
                         if pot_ref_nouns[0][-1] == "DET": # e.g. which
-                            #print([t for t in list(pot_ref_nouns[0][1].ancestors) if t.dep_ in ["nsubj", "nsubjpass"]])
                             pot_noun = [t for t in list(pot_ref_nouns[0][1].ancestors) if t.dep_ in ["nsubj", "nsubjpass"]]
                             if pot_noun:
                                 referred_noun.append(list(pot_noun[0].subtree))
-                                #print(pot_noun[0], list(pot_noun[0].subtree))
                                 ref_noun_flag = True
                         elif pot_ref_nouns[0][-1] in ["NOUN", "PROPN", "ADJ"]:
                             if not (pot_ref_nouns[0][-1] in ["ADJ"] and len(pot_ref_nouns[0][0])==1 and pot_ref_nouns[0][0][0].is_stop):
                                 referred_noun.append(pot_ref_nouns[0][0])
-                                #print(tuple, pot_ref_nouns[0][0])
                                 ref_noun_flag = True
 
                 # follow dependency tree approach
@@ -1620,8 +1779,6 @@ class NumParser:
                 # e.g. Senard, 65, now faces the immediate task of soothing relations with Nissan, which is 43.4 percent-owned by Renault.
                 if not ref_noun_flag:
                     pot_ref_nouns = [head for head in [token.head for token in sorted(list(tuple[1][0].ancestors), key=lambda t: abs(tuple[1][0].i-t.i)) if token.pos_ in ["VERB","AUX"] and token.dep_ in ["relcl"]] if head.pos_ in ["PROPN","NOUN"]]
-                    #print([token for token in sorted(list(tuple[1][0].ancestors),key=lambda t: abs(tuple[1][0].i-t.i)) if token.pos_ in ["VERB", "AUX"] and token.dep_ in ["relcl"]])
-                    #print([head for head in [token.head for token in sorted(list(tuple[1][0].ancestors), key=lambda t: abs(tuple[1][0].i-t.i)) if token.pos_ in ["VERB", "AUX"] and token.dep_ in ["relcl"]] if head.pos_ in ["PROPN", "NOUN"]])
                     if pot_ref_nouns:
                         if pot_ref_nouns[0].dep_ in ["appos"]: # e.g. Ford (F) which has 13000 workers in the ...
                             referred_noun.append(list(pot_ref_nouns[0].head.subtree))
@@ -1637,23 +1794,17 @@ class NumParser:
                     pot_ref_nouns = [list(t.subtree) for list_t in [t for t in [list(token.children) for token in list(tuple[1][0].ancestors) if token.dep_=="ROOT"]] for t in list_t if t.dep_ in ["nsubj"]]
                     if pot_ref_nouns and not (set(tuple[1]+tuple[2]) & set(pot_ref_nouns[0])):
                         referred_noun.append(pot_ref_nouns[0])
-                        #print(pot_ref_nouns[0])
                         ref_noun_flag = True
-                        root_nsubj = True
-                
+                        #root_nsubj = True # for the part with global referred concepts that is currently not used
+
                 if not ref_noun_flag:
                     # follow dependency tree approach
                     # check whether there is VERB in the ancestors of the number
                     # then check if there is dobj in the children of the first found VERB
                     # when the dobj is NOUN or PROPN, then its subtree is assigned as concept for the quantity
                     pot_ref_nouns = [(list(t.subtree), t, t.pos_) for list_t in [t for t in [list(token.children) for token in sorted(list(set().union(*[list(t.ancestors) for t in tuple[1]])), key=lambda t: abs(tuple[1][0].i-t.i)) if token.pos_ in ["VERB","AUX"]]] for t in list_t if t.dep_ in ["dobj"] and t not in tuple[1]+tuple[2]]
-                    #print(tuple, list(sorted(list(tuple[1][0].ancestors), key=lambda t: abs(tuple[1][0].i-t.i))))
-                    #print([list(token.children) for token in list(sorted(list(tuple[1][0].ancestors), key=lambda t: abs(tuple[1][0].i-t.i))) if token.pos_ in ["VERB","AUX"]])
-                    #print([(list(t.subtree), t, t.pos_) for list_t in [t for t in [list(token.children) for token in list(sorted(list(tuple[1][0].ancestors), key=lambda t: abs(tuple[1][0].i-t.i))) if token.pos_ in ["VERB","AUX"]]] for t in list_t if t.dep_ in ["dobj"] and t not in tuple[1]+tuple[2]])
-                    #print()
-                    #print(tuple, pot_ref_nouns)
                     if pot_ref_nouns:
-                        if pot_ref_nouns[0][-1] in ["NOUN", "PROPN"] and len(pot_ref_nouns[0][1]) > 1:
+                        if pot_ref_nouns[0][-1] in ["NOUN", "PROPN"] and len(pot_ref_nouns[0][1]) > 1:# this was 0 before
                             referred_noun.append(pot_ref_nouns[0][0])
                             ref_noun_flag = True
 
@@ -1681,18 +1832,28 @@ class NumParser:
                         referred_noun.append(ref_noun_to_append)
                         ref_noun_flag = True"""
 
+                if not ref_noun_flag:
+                    ans=tuple[1][0].ancestors
+                    if tuple[1][0].dep_=="nummod" and tuple[1][0].head.pos_ in ["NOUN","NN","PROPN"]:
+                        referred_noun.append([tuple[1][0].head])
+                    for an in ans:
+                        if an.dep_=="appos" :
+                            referred_noun.append([an])
+
+
+
                 # default case
                 # when there is one input sentence (according to spacy sentenizer)
                 # and only one global noun or one quantity, then use the (first) noun
                 if not ref_noun_flag and len(list(doc.sents)) == 1 and nouns and (len(nouns)==1 or len(tuples)==1):
                     referred_noun.append(nouns[0][:-1])
                     ref_noun_flag = True
-                    
+
 
                 referred_noun = self.postprocess_referred_noun(ref_noun_flag, referred_noun.copy(), unit, index, slice_unit, tuple)
                 referred_noun = self.postprocess_one_of_quantity(referred_noun.copy(), tuple, unit)
 
-                quant = Quantity(number, bound, unit, referred_noun, all(t._.in_bracket for t in tuple[1]+tuple[2]))
+                quant = Quantity(number, bound, unit, referred_noun, all(t._.in_bracket for t in tuple[1]+tuple[2]), self.overload)
 
                 # drop if no number found
                 if number: # and unit:
@@ -1703,21 +1864,29 @@ class NumParser:
                 return not token.pos_ in ["NUM"]
             return not token._.quantity_part
 
-        #print("text", doc)
+        # e.g. The Dow Jones and the S&P 500 closed down by 2.5% and 1.8%, respectively.
+        if {"respectively"} & set(token.text for token in doc):
+            concepts = self.find_respectively_concepts([token for token in doc if token.text=="respectively"])
+            if concepts:
+                # assign the parts to the quantities
+                for i, quantity in enumerate(sorted(result, key=lambda t: t.value.span[0].i)):
+                    quantity.referred_concepts = [concepts[i%len(concepts)]]
+
         for quantity in sorted(result, key=lambda t: t.value.span[0].i):
-            #print("before", quantity.referred_concepts)
             # cut noun if it contains tokens that are part of a quantity
             for i, ref_noun_list in enumerate(quantity.referred_concepts):
                 if ref_noun_list and all(t._.quantity_part for t in ref_noun_list) and [q for q in result if set(q.value.span+q.unit.unit)&set(ref_noun_list)] and len(quantity.referred_concepts)==1:
-                    if self.overload: # use computed char_indices
-                        # check if the quantity is in brackets and whether the other quantity is before it in the text
-                        if quantity.in_bracket and min(list(itertools.chain(*quantity.value.char_indices))) > max(list(itertools.chain(*[q for q in result if set(q.value.span+q.unit.unit)&set(ref_noun_list)][0].value.char_indices))):
-                            quantity.referred_concepts = [q for q in result if set(q.value.span+q.unit.unit)&set(ref_noun_list)][0].referred_concepts # take the concept from the other quantity when no other concepts found for this quantity
-                    # else compute them
+                    # use computed char_indices
+                    # check if the quantity is in brackets and whether the other quantity is before it in the text
+                    if self.overload and quantity.in_bracket and min(list(itertools.chain(*quantity.value.char_indices))) > max(list(itertools.chain(*[q for q in result if set(q.value.span+q.unit.unit)&set(ref_noun_list)][0].value.char_indices))):
+                        quantity.referred_concepts = [q for q in result if set(q.value.span+q.unit.unit)&set(ref_noun_list)][0].referred_concepts # take the concept from the other quantity when no other concepts found for this quantity
+                    # else compute them and check
                     elif quantity.in_bracket and min(list(itertools.chain(*[(token.idx, token.idx + len(token.text)) for token in quantity.value.span]))) > max(list(itertools.chain(*[(token.idx, token.idx + len(token.text)) for token in [q for q in result if set(q.value.span+q.unit.unit)&set(ref_noun_list)][0].value.span]))):
                         quantity.referred_concepts = [q for q in result if set(q.value.span+q.unit.unit)&set(ref_noun_list)][0].referred_concepts # take the concept from the other quantity when no other concepts found for this quantity
                     else:
                         quantity.referred_concepts = [q for q in result if set(q.value.span+q.unit.unit)&set(ref_noun_list)][0].referred_concepts # take the concept from the other quantity when no other concepts found for this quantity
+                    if all(t._.quantity_part for concept in quantity.referred_concepts for t in concept) and set(quantity.value.span+quantity.unit.unit)&set(token for concept in quantity.referred_concepts for token in concept):
+                        quantity.referred_concepts = [] # concept points to the quantity itself => empty
                     if quantity.change.change == "=": # shared bound (for quantities in brackets)
                         quantity.change = [q for q in result if set(q.value.span+q.unit.unit)&set(ref_noun_list)][0].change
                     break
@@ -1727,6 +1896,14 @@ class NumParser:
 
             # check for overlapping concepts
             # e.g. [men, aged, 18, 34] and [men]
+            def donewk(k):
+                newk = []
+                for i in k:
+                    if i not in newk:
+                        newk.append(i)
+                return newk
+            quantity.referred_concepts= donewk(quantity.referred_concepts)
+
             nouns_copy = quantity.referred_concepts.copy()
             for noun in nouns_copy:
                 for _, noun_2 in itertools.product(noun, nouns_copy[:nouns_copy.index(noun):] + nouns_copy[nouns_copy.index(noun)+1:]):
@@ -1742,14 +1919,33 @@ class NumParser:
                             except ValueError:
                                 continue
 
-            #print("after", quantity.referred_concepts, "\n")
-
         for quantity in result:
             quantity.transform_concept_to_dict()
 
-        #print(result, "\n________________________")
-
         return sorted(result, key=lambda t: t.value.span[0].i)
+
+
+    def find_respectively_concepts(self, respectively_token):
+        # start with the token "respectively"
+        # follow the heads til the ROOT
+        # then consider the subtree and split it into the parts
+        # ruturn the concepts parts
+        head_token = respectively_token[0].head
+        head_token_old = respectively_token[0]
+        while not head_token == head_token_old or not head_token.dep_ in ["ROOT"]:
+            head_token_old = head_token
+            head_token = head_token_old.head
+        pot_nouns = list(itertools.takewhile(lambda t: t != head_token if head_token.pos_ in ["VERB"] else t != respectively_token[0].head, list(head_token.subtree)))
+        and_token = [token for token in pot_nouns if token.text in ["and", ","] and pot_nouns.index(token) != 0]
+        if and_token:
+            concepts = []
+            for token in and_token:
+                and_index = pot_nouns.index(token)
+                concepts.append(self._remove_stopwords_from_noun(pot_nouns[:and_index]))
+                pot_nouns = pot_nouns[and_index+1:]
+            concepts.append(self._remove_stopwords_from_noun(pot_nouns))
+            return list(filter(None, concepts))
+        return []
 
 
     def postprocess_referred_noun(self, ref_noun_flag, referred_noun, unit, index, slice_unit, tuple):
@@ -1773,32 +1969,215 @@ class NumParser:
                 referred_noun = [] # concept becomes empty
         return referred_noun
 
+    def _replace_indicies_in_text(self,to_be_replaced,text,replaced_checks=None):
+        norm_text=""
+        end_index=None
+        pervious_start_index,pervious_end_index=0,0
+        for key,value in to_be_replaced.items():
+            start_index,end_index=key
+            if pervious_start_index==start_index:
+                norm_text=norm_text+text[pervious_start_index:start_index]+" "+value
+            else:
+                if replaced_checks:
+                    if end_index in [k[0] for k in replaced_checks.keys()] :
+                        norm_text=norm_text+text[pervious_start_index:start_index]+value+" "
+                    elif  start_index in [k[1] for k in replaced_checks.keys()]:
+                        norm_text=norm_text+text[pervious_start_index:start_index]+" " +value
+                    else:
+                        norm_text=norm_text+text[pervious_start_index:start_index]+value
+                else:
+                    norm_text=norm_text+text[pervious_start_index:start_index]+value
+
+            pervious_start_index=end_index
+        if end_index:
+            norm_text=norm_text+text[end_index:]
+        return norm_text
+
+
     def _normalize_text(self, tuples, doc):
         text = str(doc)
-        norm_text = ""
+        to_be_replaced = {}
+        for quantity in tuples:
+            char_indices = quantity.get_char_indices()
+            value_char_indices = char_indices["value"]
+            unit_char_indices = char_indices["unit"]
+            for i, idx_tuple in enumerate(value_char_indices):
+                to_be_replaced[idx_tuple] = quantity.value.get_str_value(i)
+            if unit_char_indices:
+                for idx_tuple in unit_char_indices:
+                    if quantity.unit.scientific and quantity.unit.norm_unit not in ["-","% -",""] and not quantity.unit.norm_unit.startswith("-"):
+                        to_be_replaced[idx_tuple] = quantity.unit.norm_unit
+        to_be_replaced = dict(sorted(to_be_replaced.items()))
+        norm_text=self._replace_indicies_in_text(to_be_replaced,text)
+        return norm_text
+
+    def _normalize_text_values_only(self, tuples, doc):
+        text = str(doc)
         to_be_replaced = {}
 
         for quantity in tuples:
             char_indices = quantity.get_char_indices()
             value_char_indices = char_indices["value"]
-            unit_char_indices = char_indices["unit"]
-            for i,idx_tuple in enumerate(value_char_indices):
+            for i, idx_tuple in enumerate(value_char_indices):
                 to_be_replaced[idx_tuple] = quantity.value.get_str_value(i)
+
+        to_be_replaced = dict(sorted(to_be_replaced.items()))
+        norm_text=self._replace_indicies_in_text(to_be_replaced,text)
+        return norm_text
+
+    def _normalize_text_units_only(self, tuples, doc):
+        text = str(doc)
+        to_be_replaced = {}
+        to_be_replaced_vals={}
+
+        for quantity in tuples:
+            char_indices = quantity.get_char_indices()
+            value_char_indices = char_indices["value"]
+            unit_char_indices = char_indices["unit"]
+            for i, idx_tuple in enumerate(value_char_indices):
+                to_be_replaced_vals[idx_tuple] = quantity.value.get_str_value(i)
             if unit_char_indices:
                 for idx_tuple in unit_char_indices:
-                    to_be_replaced[idx_tuple] = quantity.unit.norm_unit
+                    if quantity.unit.scientific and quantity.unit.norm_unit not in ["-","% -",""] and not quantity.unit.norm_unit.startswith("-"):
+                        to_be_replaced[idx_tuple] = quantity.unit.norm_unit
         to_be_replaced = dict(sorted(to_be_replaced.items()))
+        norm_text=self._replace_indicies_in_text(to_be_replaced,text,to_be_replaced_vals)
+        return norm_text
 
-        replacements = {}
-        for key in to_be_replaced:
-            if key[0] in [k[1] for k in to_be_replaced.keys()]: # e.g. 2.1%
-                replacements[text[key[0]:key[-1]]] = " "+to_be_replaced[key] # always have a space between value and unit
+    def _replace_indicies_in_text_with_idx(self,to_be_replaced,text,replaced_checks=None):
+        norm_text=""
+        end_index=None
+        pervious_start_index,pervious_end_index=0,0
+        for key,value in to_be_replaced.items():
+            start_index,end_index=key
+            if pervious_start_index==start_index:
+                norm_text=norm_text+text[pervious_start_index:start_index]+" "+value
             else:
-                replacements[text[key[0]:key[-1]]] = to_be_replaced[key]
-        replacements = dict((re.escape(k), v) for k, v in replacements.items())
+                if replaced_checks:
+                    if end_index in [k[0] for k in replaced_checks.keys()] :
+                        norm_text=norm_text+text[pervious_start_index:start_index]+value+" "
+                    elif  start_index in [k[1] for k in replaced_checks.keys()]:
+                        norm_text=norm_text+text[pervious_start_index:start_index]+" " +value
+                    else:
+                        norm_text=norm_text+text[pervious_start_index:start_index]+value
+                else:
+                    norm_text=norm_text+text[pervious_start_index:start_index]+value
 
-        if replacements:
-            pattern = re.compile("|".join(replacements.keys()))
-            norm_text = pattern.sub(lambda m: replacements[re.escape(m.group(0))], text)
+            pervious_start_index=end_index
+        if end_index:
+            norm_text=norm_text+text[end_index:]
+        return norm_text
+    def _normalize_text_scientific_notation(self, tuples, text):
 
-        return norm_text if norm_text else text
+
+        norm_text=""
+        end_index=None
+        pervious_start_index,pervious_end_index=0,0
+        list_of_val_indicies=[]
+        list_of_unit_indices=[]
+        replace_dictionary_unit={}
+        for quantity in tuples:
+            char_indices = quantity.get_scientific_char_indices()
+            if quantity.unit.scientific and  quantity.unit.norm_unit not in ["-","% -",""] and not quantity.unit.norm_unit.startswith("-") :
+                for i in range(len(char_indices["unit"])):
+                    to_be_replaced=quantity.unit.norm_unit
+                    start_index,end_index=char_indices["unit"][i]
+                    if text[start_index-1]!=" ":
+                        to_be_replaced=" "+to_be_replaced
+
+                    if end_index<len(text) and text[end_index]!=" ":
+                        to_be_replaced=to_be_replaced+" "
+                    if i>0:
+                        to_be_replaced=" "
+                    replace_dictionary_unit[char_indices["unit"][i]]={"replace":to_be_replaced,"original":text[start_index:end_index]}
+            list_of_val_indicies.append(copy.deepcopy(char_indices["value"]))
+            list_of_unit_indices.append(copy.deepcopy(char_indices["unit"]))
+        org_unit_indicies=copy.deepcopy(list_of_unit_indices)
+        org_val_indices=copy.deepcopy(list_of_val_indicies)
+
+        for key,value in sorted(replace_dictionary_unit.items()):
+            start_index,end_index=key
+            norm_text=norm_text+text[pervious_start_index:start_index]+value["replace"]
+            pervious_start_index=end_index
+
+            for identifier in range(len(list_of_unit_indices)):
+                for index in range(len(list_of_unit_indices[identifier])):
+                    if org_unit_indicies[identifier][index][0]==start_index:
+                        list_of_unit_indices[identifier][index]=self._adjust_index_end(list_of_unit_indices[identifier][index], len(value["replace"]) - len(value["original"]))
+                    elif org_unit_indicies[identifier][index][0]>start_index:
+                        list_of_unit_indices[identifier][index]=self._adjust_index_both(list_of_unit_indices[identifier][index], len(value["replace"]) - len(value["original"]))
+                    if index<len(org_val_indices[identifier]) and org_val_indices[identifier][index][0]>start_index:
+                        list_of_val_indicies[identifier][index]=self._adjust_index_both(list_of_val_indicies[identifier][index],  len(value["replace"]) - len(value["original"]))
+        if end_index:
+            norm_text=norm_text+text[end_index:]
+        if len(replace_dictionary_unit)==0:
+            norm_text=text
+        for quantity,value_char_indices,unit_char_indices in zip(tuples,list_of_val_indicies,list_of_unit_indices):
+            quantity.set_scientific_char_indices_nromalized(value_char_indices,unit_char_indices)
+
+        return norm_text
+
+
+
+
+    def _adjust_index_both(self, old_index, by):
+        new_tuple_1=old_index[0]+by
+        new_tuple_2=old_index[1]+by
+        return (new_tuple_1,new_tuple_2)
+
+    def _adjust_index_end(self, old_index, by):
+        new_tuple_1=old_index[0]
+        new_tuple_2=old_index[1]+by
+        return (new_tuple_1,new_tuple_2)
+
+    def _normalize_text_scientific_notation_values_only(self, tuples, text):
+        """returns the preprocessed text, where the values (numbers) have been replace with their short scientific notation"""
+
+        norm_text=""
+        end_index=None
+        pervious_start_index,pervious_end_index=0,0
+        list_of_val_indicies=[]
+        list_of_unit_indices=[]
+        notations=[]
+        replace_dictionary_vals={}
+        for quantity in tuples:
+
+            char_indices = quantity.get_char_indices()
+            for i in range(len(char_indices["value"])):
+                start_index,end_index=char_indices["value"][i]
+                to_be_replaced= quantity.value.get_simplified_scientific_notation()
+                if isinstance(to_be_replaced,tuple):
+                    to_be_replaced=to_be_replaced[i]
+                notations.append(to_be_replaced)
+                replace_dictionary_vals[char_indices["value"][i]]={"replace":to_be_replaced,"original":text[start_index:end_index]}
+            list_of_val_indicies.append(copy.deepcopy(char_indices["value"]))
+            list_of_unit_indices.append(copy.deepcopy(char_indices["unit"]))
+        org_unit_indicies=copy.deepcopy(list_of_unit_indices)
+        org_val_indices=copy.deepcopy(list_of_val_indicies)
+        for key,value in sorted(replace_dictionary_vals.items()):
+            start_index,end_index=key
+            norm_text=norm_text+text[pervious_start_index:start_index]+value["replace"]
+            pervious_start_index=end_index
+            for identifier in range(len(list_of_val_indicies)):
+                for index in range(len(list_of_val_indicies[identifier])):
+                    if org_val_indices[identifier][index][0]==start_index:
+                        list_of_val_indicies[identifier][index]=self._adjust_index_end(list_of_val_indicies[identifier][index], len(value["replace"]) - len(value["original"]))
+                    elif org_val_indices[identifier][index][0]>start_index:
+                        list_of_val_indicies[identifier][index]=self._adjust_index_both(list_of_val_indicies[identifier][index], len(value["replace"]) - len(value["original"]))
+            for identifier2 in range(len(list_of_unit_indices)):
+                for val_index in range(len(list_of_unit_indices[identifier2])):
+                    if org_unit_indicies[identifier2][val_index][0]>start_index:
+                        list_of_unit_indices[identifier2][val_index]=self._adjust_index_both(list_of_unit_indices[identifier2][val_index],  len(value["replace"]) - len(value["original"]))
+
+
+        if end_index:
+            norm_text=norm_text+text[end_index:]
+
+        for quantity,value_char_indices,unit_char_indices in zip(tuples,list_of_val_indicies,list_of_unit_indices):
+            quantity.set_scientific_char_indices(value_char_indices,unit_char_indices)
+
+        if len(norm_text)==0:
+            norm_text=text
+
+        return norm_text,notations
+
