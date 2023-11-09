@@ -33,7 +33,7 @@ pip install CQE
 ```
 
 ### Usage
-Create a `NumParser` and parse some text or sentence.
+Create a `CQE` and parse some text or sentence.
 ```python
 from CQE import CQE
 
@@ -46,7 +46,7 @@ print(result)
 ```
 Use the overload option for additional functionality. The NumParser will compute the span indices of the Quantity, the normalized input sentence, the long and the simplified scientific notation of the Value, whether the unit is scientific or noun based and the unit surface forms.
 ```python
-parser = CQE.NumParser(overload=True)
+parser = CQE.CQE(overload=True)
 text = "The sp 500 was down 2.1% and nasdaq fell 2.5%."
 result = parser.parse(text)
 
