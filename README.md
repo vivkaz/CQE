@@ -1,4 +1,5 @@
 # CQE
+## This branch is kept as the last state before submission of the paper (EMNLP2023) for recent changes and updates go to [Version2](https://github.com/vivkaz/CQE/tree/version2)
 ## Evaultion and data in [CQE_Evaluation](https://github.com/satya77/CQE_Evaluation).
 
 A Framework for Comprehensive Quantity Extraction. This repository contains code for the paper:
