@@ -37,7 +37,7 @@ Create a `NumParser` and parse some text or sentence.
 ```python
 from CQE import CQE
 
-parser = CQE.NumParser()
+parser = CQE.CQE()
 text = "The sp 500 was down 2.1% and nasdaq fell 2.5%."
 result = parser.parse(text)
 print(result)
