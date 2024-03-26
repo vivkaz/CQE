@@ -13,13 +13,24 @@ Institute of Computer Science, Heidelberg University
 
 If you found this useful, consider citing us: 
 ```
-@misc{almasian2023cqe,
-      title={CQE: A Comprehensive Quantity Extractor}, 
-      author={Satya Almasian and Vivian Kazakova and Philip Göldner and Michael Gertz},
-      year={2023},
-      eprint={2305.08853},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{DBLP:conf/emnlp/AlmasianKG023,
+  author       = {Satya Almasian and
+                  Vivian Kazakova and
+                  Philip G{\"{o}}ldner and
+                  Michael Gertz},
+  editor       = {Houda Bouamor and
+                  Juan Pino and
+                  Kalika Bali},
+  title        = {{CQE:} {A} Comprehensive Quantity Extractor},
+  booktitle    = {Proceedings of the 2023 Conference on Empirical Methods in Natural
+                  Language Processing, {EMNLP} 2023, Singapore, December 6-10, 2023},
+  pages        = {12845--12859},
+  publisher    = {Association for Computational Linguistics},
+  year         = {2023},
+  url          = {https://aclanthology.org/2023.emnlp-main.793},
+  timestamp    = {Wed, 13 Dec 2023 17:20:20 +0100},
+  biburl       = {https://dblp.org/rec/conf/emnlp/AlmasianKG023.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
 ```
 ### Prerequisites
